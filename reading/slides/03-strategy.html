@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>03 どこから読むか | 論文の読み方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">03 どこから読むか</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 03</div>
+  <h1>どこから読むか</h1>
+  <p class="sub">全部は読まない。しかし全部チェックする</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>読む順序と、段階を踏んだ読み方を実践できる</li>
+      <li>精読する論文を絞り込める</li>
+      <li>読まないと決めた論文も後から引けるように整理できる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>読む順序<span class="en">Reading order</span></h2>
+  <p class="slide__lead">頭から順に読まない。<b>この順に読んで、さらに読む必要があれば精読する。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <ol class="steps big" style="margin:0">
+          <li><b>論文題目</b>　Title<br><span class="tight" style="color:var(--ink-2)">対象・手法・主張が凝縮されている</span></li>
+          <li><b>概要</b>　Abstract<br><span class="tight" style="color:var(--ink-2)">論文のエッセンス</span></li>
+          <li><b>はじめに</b>　Introduction<br><span class="tight" style="color:var(--ink-2)">論文の全体像とストーリー</span></li>
+          <li><b>結論</b>　Conclusion<br><span class="tight" style="color:var(--ink-2)">成果と、残された課題</span></li>
+        </ol>
+        <p class="tight" style="margin-top:10px">
+          ここまでで <b>10〜15 分</b>。この 4 つで「読む価値があるか」はほぼ判断できる。</p>
+      </div>
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">なぜこの順なのか</b>
+          <b>「概要」と「はじめに」を読めば、論文の要旨は分かる。</b>
+          概要には論文のエッセンスが、はじめにには論文の全体像が書かれているからである
+          （<a href="02-imrad.html">トピック 02</a>）。
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">成果がはっきりしない論文は読まない</b>
+          概要と序論を読んでも「何が明らかになったのか」が分からない論文は、
+          本文を読んでも分からないことが多い。<b>時間は有限である。</b>
+          ただし「自分の知識不足で分からない」場合と混同しないこと
+          （<a href="01-principles.html">トピック 01</a>）。
+        </div>
+        <p class="tighter">※ 図表を先に眺めてから本文に入る読み方も有効である。<b>ただし数値は条件とセットで読む。</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>3 段階で読む<span class="en">Three passes</span></h2>
+  <p class="slide__lead">1 本の論文に最初から数時間かけない。<b>段階ごとに「次へ進むか」を判断する。</b></p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:8em">段階</th><th style="width:6em">時間</th><th>読む範囲</th><th>判断すること</th></tr></thead>
+      <tbody>
+        <tr><th>① 選別</th><td>3〜5 分</td><td>題目・概要・見出し・図表のキャプション・結論</td><td>読む価値があるか／どの箱に分類するか</td></tr>
+        <tr><th>② 通読</th><td>30〜60 分</td><td>①＋序論・関連研究・考察。式の導出と実装の詳細は飛ばす</td><td><b>主張と根拠の骨格</b>を掴めたか／精読が必要か</td></tr>
+        <tr><th>③ 精読</th><td>数時間〜</td><td>全体。式を追い、実験条件を確認し、<b>自分なら同じ結論に至るか</b>を検証する</td><td>再現できるか／どこが弱点か</td></tr>
+      </tbody>
+    </table>
+    <div class="cols cols-2" style="margin-top:12px">
+      <div class="note note--rule" style="margin-top:0">
+        <b class="note__t" data-icon="◆">割合の目安</b>
+        <span class="tight">
+        100 本を <b>①選別</b> → 20 本を <b>②通読</b> → 3〜5 本を <b>③精読</b><br>
+        卒業研究なら、精読するのは<b>最終的に 5〜10 本</b>程度で足りることが多い。</span>
+      </div>
+      <div class="note note--tip" style="margin-top:0">
+        <b class="note__t" data-icon="★">参考</b>
+        <span class="tight">
+        この段階的な読み方は <b>S. Keshav, “How to Read a Paper,” ACM SIGCOMM CCR, 2007</b>
+        でよく知られている。2 ページの短い文章なので、一度読んでおくとよい。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>サーベイ時の読み方<span class="en">Surveying</span></h2>
+  <p class="slide__lead">研究を始めるときは、大量の論文を扱う。<b>読む／読まないの線引きが勝負になる。</b></p>
+  <div class="slide__body">
+    <ol class="steps big" style="margin:0 0 10px">
+      <li><b>精読する論文は極力減らす</b><br>
+        <span class="tight" style="color:var(--ink-2)">全部を精読するには時間が足りない。読むと決めた論文だけに時間を使う。</span></li>
+      <li><b>全部は読まないが、全部チェックする</b><br>
+        <span class="tight" style="color:var(--ink-2)">読まなくても「あること」は知っておく。必要に応じて後から読めるようにしておく。</span></li>
+      <li><b>必要な論文はしっかり精読する</b><br>
+        <span class="tight" style="color:var(--ink-2)">必要に応じて、その論文の参考文献をさらに追う（<a href="15-tracking.html">トピック 15</a>）。</span></li>
+    </ol>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">「あることは知っておく」が効いてくる場面</b>
+      <span class="tight">
+      ・卒論の関連研究を書くとき、「この分野にはこういう種類の研究がある」と俯瞰できる<br>
+      ・口頭試問で「○○の研究は知っていますか」と聞かれたときに答えられる<br>
+      ・半年後に「そういえば似た研究があった」と思い出して引ける<br>
+      <b>そのためには、上手な整理法が必要である。</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>読む／読まないの判断<span class="en">Screening</span></h2>
+  <p class="slide__lead">5 分の選別で、この観点をチェックする。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="card" style="border-top:5px solid var(--cud-blue)">
+        <div class="card__h">精読に進める候補</div>
+        <ul class="ticks tight">
+          <li>自分の研究テーマと<b>問題設定が重なる</b></li>
+          <li>自分が使おうとしている<b>手法・データセット・評価指標</b>を使っている</li>
+          <li>概要に<b>具体的な数値</b>が書かれている</li>
+          <li>査読のある論文誌・国際会議の論文である（<a href="04-bibliography.html">トピック 04</a>）</li>
+          <li><b>多くの論文から引用されている</b></li>
+          <li>サーベイ論文である（分野を俯瞰できる）</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-vermilion)">
+        <div class="card__h">いったん保留にする</div>
+        <ul class="ticks tight">
+          <li>概要を読んでも<b>何が明らかになったか分からない</b></li>
+          <li>結果に<b>数値がない</b>（「有効であることを確認した」だけ）</li>
+          <li>問題設定が自分のテーマから遠い</li>
+          <li>同じ著者の<b>より新しい論文</b>がある</li>
+          <li>より広く読まれている<b>類似の論文</b>がある</li>
+        </ul>
+        <p class="tighter" style="margin:.4em 0 0"><b>「捨てる」のではなく「保留」にする。</b>記録は残す。</p>
+      </div>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">判断してよいこと・いけないこと</b>
+      <b>「自分に必要か」は判断してよい。「論文として良いか悪いか」を 5 分で判断してはいけない。</b>
+      必要性と質は別の話である。
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>精読の進め方<span class="en">Deep reading</span></h2>
+  <p class="slide__lead">精読は「時間をかけて読む」ことではない。<b>検証しながら読む</b>ことである。</p>
+  <div class="slide__body">
+    <ol class="steps tight" style="margin:0">
+      <li><b>用語と記号を先に確定させる</b><br>
+        準備の章・記号表を先に押さえる。定義されていない記号が出てきたら印を付ける</li>
+      <li><b>前提と仮定を書き出す</b><br>
+        何を信頼し、何を攻撃者に許し、何を対象外としているか（<a href="13-security.html">トピック 13</a>）</li>
+      <li><b>手法を自分の言葉で図にする</b><br>
+        入力 → 処理 → 出力。描けなければ、まだ理解していない</li>
+      <li><b>実験条件を表にまとめる</b><br>
+        データ・環境・比較対象・指標。書かれていない欄は「不明」と書く</li>
+      <li><b>主張と根拠を線で結ぶ</b><br>
+        考察の各主張について、「その根拠はどの数値か」を対応づける</li>
+      <li><b>自分なら同じ結論を出すかを考える</b><br>
+        出さないなら、どこで意見が分かれるのかを書き留める（<a href="14-critical.html">トピック 14</a>）</li>
+    </ol>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">印刷して読む</b>
+      精読は紙のほうが速い。余白に「?」「!」「→ 要確認」を書き込む。
+      画面では見落とす限定句が、紙だと目に留まる。
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>読んだら必ず残す<span class="en">Leave a record</span></h2>
+  <p class="slide__lead">読んだ記憶は 2 週間で消える。<b>記録だけが残る。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-green)">
+          <div class="card__h">最低限これだけは残す（5 行メモ）</div>
+          <ol class="tight" style="margin:.3em 0 0;padding-left:1.4em">
+            <li><b>書誌情報</b>（著者・題目・掲載先・年）</li>
+            <li><b>この論文は何を明らかにしたか</b>（1 文）</li>
+            <li><b>どうやって確かめたか</b>（1 文）</li>
+            <li><b>限界・前提</b>（1 文）</li>
+            <li><b>自分の研究との関係</b>（1 文）</li>
+          </ol>
+        </div>
+        <p class="tighter" style="margin-top:8px">
+          ⑤ がいちばん大事である。<b>「自分にとって何なのか」</b>を書いていない記録は、後で使えない。</p>
+      </div>
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">ワークシートを使う</b>
+          この資料には、上記を含む
+          <a href="../worksheet.html"><b>論文精読ワークシート</b></a>を用意してある。
+          入力内容はブラウザに保存され、<b>Markdown で書き出して</b>自分のノートに貼れる。
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">やってはいけない記録</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li>概要をコピーして貼るだけ<br>
+              <span style="color:var(--ink-2)">→ 自分の言葉に直していないと、後で読んでも理解が戻らない</span></li>
+            <li>PDF を集めるだけで読まない<br>
+              <span style="color:var(--ink-2)">→ フォルダが増えるだけで、何も残らない</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">読む技術とは、読まない判断を素早く下す技術でもある。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>読む順序は<b>題目 → 概要 → はじめに → 結論</b></li>
+        <li><b>選別（5 分）→ 通読（1 時間）→ 精読（数時間）</b>の 3 段階</li>
+        <li>段階ごとに「次へ進むか」を判断する</li>
+        <li><b>精読する論文は極力減らす</b></li>
+      </ul>
+      <ul class="ticks">
+        <li><b>全部は読まないが、全部チェックする</b></li>
+        <li>読まないと決めた論文も、<b>記録は残す</b></li>
+        <li>精読は「検証しながら読む」こと</li>
+        <li>読んだら<b>5 行メモ</b>。特に「自分の研究との関係」</li>
+      </ul>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">今日からできること</b>
+      気になっている論文を 1 本開いて、<b>5 分だけ</b>使って題目・概要・見出し・結論を読み、
+      「精読するか／保留か」を決めてみる。これが選別である。
+    </div>
+    <div class="deck-end">
+      <a href="02-imrad.html"><b>◀ 前のトピック</b>02 論文の構造（IMRAD）</a>
+      <a href="04-bibliography.html"><b>次のトピック ▶</b>04 書誌情報を読む</a>
+      <a href="../worksheet.html"><b>ツール</b>論文精読ワークシート</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

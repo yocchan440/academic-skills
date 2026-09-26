@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>14 批判的に読む | 論文の読み方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">14 批判的に読む</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 14</div>
+  <h1>批判的に読む</h1>
+  <p class="sub">正確に理解してから、はじめて評価する</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>批判的読解と粗探しの違いを説明できる</li>
+      <li>査読者の観点で論文を点検できる</li>
+      <li>批判を、自分の研究に使える形で記録できる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>批判的に読むとは何か<span class="en">Critical reading</span></h2>
+  <p class="slide__lead">粗探しではない。<b>主張と根拠の対応を確かめる</b>ことである。</p>
+  <div class="slide__body">
+    <div class="ng-ok">
+      <div class="ex-box ex-ng">
+        <span class="ex-box__t">粗探し</span>
+        <ul class="tight" style="margin:.2em 0;padding-left:1.2em">
+          <li>「データが少ない」（何件なら十分なのか？）</li>
+          <li>「実環境で評価していない」（それは限界として書いてある）</li>
+          <li>「この手法は古い」（発表当時は最新だった）</li>
+          <li>「自分ならこうする」（この論文の評価ではない）</li>
+        </ul>
+        <p class="tighter" style="margin:.3em 0 0">
+          <b>論文を読まなくても言える批判</b>は、批判ではない。</p>
+      </div>
+      <div class="ex-box ex-ok">
+        <span class="ex-box__t">批判的読解</span>
+        <ul class="tight" style="margin:.2em 0;padding-left:1.2em">
+          <li>「5.2 の結論は、4.3 の実験条件からは導けない」</li>
+          <li>「脅威モデルでは攻撃者が手法を知らないと仮定しているが、5.4 ではその前提が使われていない」</li>
+          <li>「概要の 0.93 は短縮 URL 検体での値だが、概要にはその限定が書かれていない」</li>
+        </ul>
+        <p class="tighter" style="margin:.3em 0 0">
+          <b>論文を正確に読んだ人にしか言えない</b>指摘である。</p>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">順序が大事</b>
+      <b>① まず書いてあるとおりに正確に理解する → ② そのうえで主張と根拠の対応を検査する。</b>
+      理解する前に評価を始めると、自分の誤読を論文の欠陥だと思い込む。
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>査読者の 5 つの問い<span class="en">Five questions</span></h2>
+  <p class="slide__lead">論文を審査する人は、この観点で読む。<b>読者も同じ観点で読める。</b></p>
+  <div class="slide__body">
+    <ol class="steps big" style="margin:0">
+      <li><b>問題は本当に問題か</b>（新規性・重要性）<br>
+        <span class="tight" style="color:var(--ink-2)">Gap の主張は妥当か。すでに解決されていないか</span></li>
+      <li><b>主張は根拠に支えられているか</b>（妥当性）<br>
+        <span class="tight" style="color:var(--ink-2)">各主張について、その根拠となる数値・実験・文献があるか</span></li>
+      <li><b>評価は公正か</b>（信頼性）<br>
+        <span class="tight" style="color:var(--ink-2)">データ・比較・条件に偏りはないか（<a href="09-evaluation.html">トピック 09</a>）</span></li>
+      <li><b>主張の範囲は適切か</b>（過大主張の有無）<br>
+        <span class="tight" style="color:var(--ink-2)">実験した範囲を超えて一般化していないか</span></li>
+      <li><b>第三者が再現できるか</b>（再現性）<br>
+        <span class="tight" style="color:var(--ink-2)">条件・パラメータ・データが揃っているか（<a href="08-method.html">トピック 08</a>）</span></li>
+    </ol>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">②がいちばん実践的</b>
+      考察の主張に<b>ひとつずつ線を引き</b>、「その根拠はどの図表か」を書き込む。
+      根拠に辿り着けない主張が見つかったら、それがこの論文の弱いところである。
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>よくある弱点のパターン<span class="en">Common weaknesses</span></h2>
+  <p class="slide__lead">査読を通った論文にも、これらは残っている。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:11em">パターン</th><th>具体的には</th></tr></thead>
+      <tbody>
+        <tr><th>過大な一般化</th><td>1 つのデータセットの結果を、あらゆる場合に成り立つかのように書く</td></tr>
+        <tr><th>相関と因果の混同</th><td>「A が増えると B が減る」を「A が B を減らす」と述べる</td></tr>
+        <tr><th>比較の非対称</th><td>提案手法だけを調整し、比較手法は既定値のまま</td></tr>
+        <tr><th>指標の選択</th><td>不均衡データで Accuracy だけを報告する</td></tr>
+        <tr><th>データの偏り</th><td>正例と負例の出所が違い、内容以外の手がかりで分離できてしまう</td></tr>
+        <tr><th>脅威モデルのすり替え</th><td>弱い攻撃者を仮定しておき、結論では一般的な安全性を主張する</td></tr>
+        <tr><th>限界の不記載</th><td>Limitations がなく、主張の有効範囲が示されない</td></tr>
+        <tr><th>概要と本文の不一致</th><td>概要の数値に、本文にある限定条件が付いていない</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">弱点を見つけても、決めつけない</b>
+      「不正だ」「隠している」は<b>推理</b>である。
+      <b>「〜は書かれていない」「〜の根拠は示されていない」</b>という事実の形で記録する
+      （<a href="01-principles.html">トピック 01</a>）。
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>言いすぎを見抜く<span class="en">Overclaiming</span></h2>
+  <p class="slide__lead">実験した範囲と、主張している範囲を突き合わせる。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="card" style="border-top:5px solid var(--cud-green)">
+        <div class="card__h">実験した範囲（4 章より）</div>
+        <ul class="ticks tight">
+          <li>PhishTank 収集の 12,400 件</li>
+          <li>2025 年 4 月取得</li>
+          <li>日本語・英語のサイト</li>
+          <li>短縮 URL 検体は 1,830 件</li>
+          <li>単一の計算機環境</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-vermilion)">
+        <div class="card__h">結論の記述（6 章より）</div>
+        <p class="q tight" style="margin:.2em 0">提案手法により、短縮 URL を用いたフィッシング攻撃を実用的に防ぐことが可能となった。</p>
+        <p class="tighter" style="margin:.4em 0 0">
+          <b>「実用的に防ぐ」</b>は実験していない。測ったのは F 値であり、
+          <b>実運用での防御効果ではない</b>。<br>
+          <b>「可能となった」</b>は言い切り。実験範囲を超えている。</p>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">読者としての正しい受け取り方</b>
+      <span class="tight">
+      ✗ 「この手法を使えばフィッシングを防げる」<br>
+      ✓ 「PhishTank 由来の 1,830 件の短縮 URL 検体において、F 値 0.93 が報告されている。
+      実運用での防御効果は評価されていない」<br>
+      — <b>この形で記録しておけば、自分の卒論で安全に引用できる。</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>自分の理解を検証する<span class="en">Verify your understanding</span></h2>
+  <p class="slide__lead">批判の前に、<b>自分が正しく読めているか</b>を確かめる。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">理解できたかのテスト</div>
+          <ol class="tight" style="margin:.2em 0 0;padding-left:1.4em">
+            <li><b>論文を閉じて</b>、手法の図を描けるか</li>
+            <li>この論文の<b>Gap と目的を 1 文ずつ</b>言えるか</li>
+            <li>核心の数値を、<b>条件つきで</b>言えるか</li>
+            <li><b>この手法が破れる条件</b>を 1 つ挙げられるか</li>
+            <li>研究室のメンバーに<b>3 分で説明</b>できるか</li>
+          </ol>
+        </div>
+        <p class="tighter" style="margin-top:8px">
+          ④ができると、批判的読解の入口に立っている。<b>⑤ができたら、その論文は身についている。</b></p>
+      </div>
+      <div>
+        <div class="note note--warn" style="margin-top:0">
+          <b class="note__t" data-icon="▲">「分からない」を批判にすり替えない</b>
+          自分の知識不足による「分からない」を、
+          「この論文は説明が足りない」と判断してしまう事故は非常に多い。<br>
+          <b>まず自分の理解不足を疑う。</b>調べても埋まらないときに、はじめて論文側の問題を疑う
+          （<a href="01-principles.html">トピック 01</a>）。
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">人に説明すると分かる</b>
+          輪講・ゼミで発表すると、<b>自分がどこを理解していないか</b>が必ず露見する。
+          質問されて答えられなかった箇所が、あなたの理解の穴である。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>批判を記録する<span class="en">Recording your critique</span></h2>
+  <p class="slide__lead">批判は、そのままでは使えない。<b>自分の研究に接続する形で残す。</b></p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:9em">見つけたこと</th><th>記録の形</th><th style="width:13em">使いみち</th></tr></thead>
+      <tbody>
+        <tr><th>評価されていない条件</th><td>「文献 [5] は〜の条件では評価していない」</td><td><b>自分の研究の Gap</b></td></tr>
+        <tr><th>破れる可能性</th><td>「〜の前提が崩れると、手法が機能しない可能性がある」</td><td>自分の研究テーマ／考察で議論</td></tr>
+        <tr><th>過大な主張</th><td>「実験範囲は〜だが、結論では〜と述べている」</td><td><b>引用時に範囲を限定</b>して書く</td></tr>
+        <tr><th>不明な条件</th><td>「比較手法の実装元は記載されていない」</td><td>数値を引用するときの注記</td></tr>
+        <tr><th>相反する結果</th><td>「文献 [3] と [7] で結論が異なる」</td><td>関連研究の章で<b>対比</b>として使える</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">批判は Gap になる</b>
+      <b>「誰も○○の条件では評価していない」</b>という記録が 1 つあれば、
+      それがあなたの卒業研究の出発点になる。
+      <b>批判的に読むことは、研究テーマを探すことと同じ作業である。</b>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">批判的読解は、論文を貶すことではなく、正確に位置づけることである。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li><b>理解してから評価する。</b>順序を逆にしない</li>
+        <li>論文を読まなくても言える批判は、批判ではない</li>
+        <li>査読者の<b>5 つの問い</b>で点検する</li>
+        <li>主張それぞれに<b>根拠が対応しているか</b>を見る</li>
+      </ul>
+      <ul class="ticks">
+        <li>弱点を見つけても<b>決めつけない</b>。事実の形で記録する</li>
+        <li><b>実験範囲と主張範囲</b>を突き合わせる</li>
+        <li>「分からない」を批判にすり替えない</li>
+        <li><b>批判は自分の研究の Gap になる</b></li>
+      </ul>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">査読される側になったとき</b>
+      ここで身につけた観点は、そのまま<b>自分の卒論を点検する観点</b>になる。
+      自分の論文に同じ質問を向けてみる。
+    </div>
+    <div class="deck-end">
+      <a href="13-security.html"><b>◀ 前のトピック</b>13 セキュリティ分野の論文を読む</a>
+      <a href="15-tracking.html"><b>次のトピック ▶</b>15 文献を辿る・整理する</a>
+      <a href="../worksheet.html"><b>ツール</b>論文精読ワークシート</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

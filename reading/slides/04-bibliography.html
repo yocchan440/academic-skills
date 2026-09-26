@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>04 書誌情報を読む | 論文の読み方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+<style>
+  .firstpage{
+    font-family:var(--ff-mincho); background:var(--surface);
+    border:1px solid var(--line); border-radius:8px; padding:14px 18px; line-height:1.6;
+  }
+  .firstpage .fp{ display:block; margin:.3em 0; }
+  .firstpage .n{
+    display:inline-block; min-width:1.5em; text-align:center; font-family:var(--ff-ud);
+    background:var(--ec,#0072B2); color:#fff; border-radius:999px;
+    font-size:.6em; font-weight:700; padding:0 .3em; margin-right:.5em; vertical-align:.15em;
+  }
+  .firstpage .t-venue{ font-size:.82em; color:#4A4F55; }
+  .firstpage .t-kind{ font-size:.82em; font-weight:700; }
+  .firstpage .t-title{ font-size:1.18em; font-weight:700; line-height:1.4; }
+  .firstpage .t-auth{ font-size:.9em; }
+  .firstpage .t-abs{ font-size:.8em; color:#2C3136; text-align:justify; }
+  .firstpage .t-kw{ font-size:.8em; }
+</style>
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">04 書誌情報を読む</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 04</div>
+  <h1>書誌情報を読む</h1>
+  <p class="sub">本文を読む前に、1 ページ目から分かること</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>論文の 1 ページ目にある情報を読み取れる</li>
+      <li>掲載先から査読の有無と信頼度を判断できる</li>
+      <li>情報セキュリティ分野の主要な発表先を知る</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>論文の 1 ページ目<span class="en">The first page</span></h2>
+  <p class="slide__lead">本文に入る前に、この 6 つを確認する。<b>ここだけで読む価値の 8 割は判断できる。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="firstpage tight">
+        <span class="fp t-venue"><span class="n e1" style="--ec:#0072B2">1</span>情報処理学会論文誌　Vol.63　No.9　1234–1245　(Sep. 2022)</span>
+        <span class="fp t-kind"><span class="n" style="--ec:#D55E00">2</span>［研究論文］</span>
+        <span class="fp t-title"><span class="n" style="--ec:#009E73">3</span>短縮 URL に頑健なフィッシングサイト検知手法</span>
+        <span class="fp t-auth"><span class="n" style="--ec:#2B7FB5">4</span>東海 太郎<sup>1,a)</sup>　情報 花子<sup>2</sup>　<span style="color:#767C83">1) ○○大学情報通信学部　2) △△株式会社</span></span>
+        <span class="fp t-abs"><span class="n" style="--ec:#A8558B">5</span><b>概要：</b>フィッシングサイトの検知では URL 文字列の語彙的特徴量が広く用いられているが、URL 短縮サービスが使われた場合に性能が低下する。本研究では…F 値は 0.71 から 0.93 へ向上した。</span>
+        <span class="fp t-kw"><span class="n" style="--ec:#A97400">6</span><b>キーワード：</b>フィッシング検知, 機械学習, URL 短縮, Web セキュリティ</span>
+      </div>
+      <table class="t tighter">
+        <thead><tr><th style="width:2.5em">#</th><th>項目</th><th>読み取ること</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><th>掲載誌・巻号・年</th><td>どこに載ったか、<b>いつの研究か</b></td></tr>
+          <tr><td>2</td><th>論文種別</th><td>研究論文かレターか、<b>査読の有無</b></td></tr>
+          <tr><td>3</td><th>題目</th><td>対象・手法・主張</td></tr>
+          <tr><td>4</td><th>著者・所属</th><td>研究グループ、大学か企業か</td></tr>
+          <tr><td>5</td><th>概要</th><td><b>論文のエッセンス</b></td></tr>
+          <tr><td>6</td><th>キーワード</th><td>分野の位置づけ、<b>次の検索語</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">キーワードは検索に使う</b>
+      著者が付けたキーワードは、<b>その分野で実際に使われている用語</b>である。
+      自分の検索語がヒットしないときは、論文のキーワード欄から語を借りる（<a href="15-tracking.html">トピック 15</a>）。
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>査読があるかどうか<span class="en">Peer review</span></h2>
+  <p class="slide__lead">どこに載っているかで、<b>その主張がどれだけ検証を経ているか</b>が変わる。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:12em">種類</th><th style="width:7em">査読</th><th>読むときの扱い</th></tr></thead>
+      <tbody>
+        <tr><th>論文誌（Transactions, Journal）</th><td><b>あり（厳格）</b></td><td>主張の裏づけに使える。改訂を経ており記述も整う</td></tr>
+        <tr><th>主要国際会議（Proc. …）</th><td><b>あり（厳格）</b></td><td>同上。分野によっては論文誌より重視される場もある</td></tr>
+        <tr><th>ワークショップ</th><td>あり（緩め）</td><td>新しいアイデアの提示が多い。検証は限定的</td></tr>
+        <tr><th>国内シンポジウム・研究会</th><td><b>会議による</b></td><td><b>査読の有無を確認して使う</b></td></tr>
+        <tr><th>全国大会・大会予稿</th><td>なし</td><td>速報。主張の根拠としては弱い</td></tr>
+        <tr><th>プレプリント（arXiv, IACR ePrint）</th><td><b>なし</b></td><td><b>誰のチェックも受けていない</b></td></tr>
+        <tr><th>技術ブログ・ベンダーレポート</th><td>なし</td><td>学術的主張の裏づけには使わない</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">査読を通っていても正しいとは限らない</b>
+      査読は「一定の水準を満たすか」の確認であって、<b>内容が正しいことの保証ではない</b>（<a href="14-critical.html">トピック 14</a>）。
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>情報セキュリティ分野の主な発表先<span class="en">Venues</span></h2>
+  <p class="slide__lead">名前を見て「どのくらいの場か」が分かるようになると、文献の取捨選択が速くなる。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">国際会議</div>
+          <p class="tighter" style="margin:.2em 0"><b>最難関（いわゆる四大）</b><br>
+            IEEE S&amp;P（Oakland）／USENIX Security／ACM CCS／NDSS</p>
+          <p class="tighter" style="margin:.2em 0"><b>主要</b><br>
+            ACSAC／ESORICS／AsiaCCS／RAID／DIMVA／PETS（PoPETs）／IMC（計測）／WWW</p>
+          <p class="tighter" style="margin:.2em 0 0"><b>暗号理論</b><br>
+            CRYPTO／EUROCRYPT／ASIACRYPT／PKC／TCC（IACR 主催）</p>
+        </div>
+        <div class="card" style="border-left:5px solid var(--cud-green);margin-top:12px">
+          <div class="card__h">論文誌</div>
+          <p class="tighter" style="margin:.2em 0 0">
+            IEEE TDSC／IEEE TIFS／ACM TOPS／Computers &amp; Security／Journal of Cryptology</p>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-orange)">
+          <div class="card__h">国内</div>
+          <p class="tighter" style="margin:.2em 0"><b>論文誌</b><br>
+            情報処理学会論文誌（IPSJ）／電子情報通信学会論文誌（IEICE）</p>
+          <p class="tighter" style="margin:.2em 0"><b>シンポジウム</b><br>
+            CSS（コンピュータセキュリティシンポジウム）／SCIS（暗号と情報セキュリティシンポジウム）／MWS</p>
+          <p class="tighter" style="margin:.2em 0 0"><b>研究会</b><br>
+            CSEC（コンピュータセキュリティ）／SPT（セキュリティ心理学とトラスト）／IOT／ISEC</p>
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">国内から英論文へ</b>
+          国内シンポジウム・研究会の論文は日本語で読める。
+          <b>その参考文献に挙げられている英語論文を読む</b>と、英語が苦手でも
+          分野へのとっかかりが得られる（<a href="12-english.html">トピック 12</a>）。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>論文の種別と、いつの研究か<span class="en">Type and recency</span></h2>
+  <p class="slide__lead">同じ「論文」でも、求められている水準が違う。<b>年号は特に重要である。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <table class="t tighter">
+          <thead><tr><th>種別</th><th>性格</th></tr></thead>
+          <tbody>
+            <tr><th>研究論文（Regular / Full）</th><td>完結した研究。新規性・有効性・信頼性が問われる</td></tr>
+            <tr><th>レター／ショートペーパー</th><td>速報。分量が短く、検証も限定的</td></tr>
+            <tr><th>サーベイ／レビュー論文</th><td>分野の俯瞰。<b>入口として最良</b></td></tr>
+            <tr><th>システム論文／実装報告</th><td>作って動かした報告。有用性の議論が中心</td></tr>
+            <tr><th>SoK（Systematization of Knowledge）</th><td>知識の体系化。セキュリティ分野に特有の形式</td></tr>
+            <tr><th>ポジションペーパー</th><td>主張・提言。実験の裏づけは薄い</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="note note--warn" style="margin-top:0">
+          <b class="note__t" data-icon="▲">セキュリティ分野は「古さ」が効く</b>
+          攻撃も防御も環境も変わり続けるため、<b>数年前の結果がそのまま成り立つとは限らない</b>。
+          <ul class="tight" style="margin:.3em 0 0;padding-left:1.2em">
+            <li>測定研究は、<b>いつ測ったか</b>で結果がまったく変わる</li>
+            <li>「現在広く使われている」という記述は、<b>執筆時点</b>の話である</li>
+            <li>攻撃手法は後から<b>対策される</b>／防御手法は後から<b>破られる</b></li>
+          </ul>
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">古い論文が価値を持つ場合</b>
+          多くの論文から引用され続けている古い論文は、<b>その分野の基礎・原点</b>である。
+          最新の動向とは別に、必ず目を通しておく（<a href="15-tracking.html">トピック 15</a>）。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>著者・所属・識別子<span class="en">Authors and identifiers</span></h2>
+  <p class="slide__lead">同じ論文が複数の版で出回っていることがある。<b>どの版を読んでいるかを意識する。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">著者・所属から分かること</div>
+          <ul class="ticks tighter">
+            <li><b>研究グループ</b>が分かる。同じ著者の他の論文を辿れる</li>
+            <li>大学か企業か。企業なら<b>実データ</b>を持っている可能性がある</li>
+            <li>第一著者が学生、最終著者が指導教員という構成が多い</li>
+            <li>所属機関がベンダーの場合、<b>自社製品の評価</b>が含まれることがある（利益相反の可能性を頭に置く）</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-green)">
+          <div class="card__h">識別子と版</div>
+          <dl class="terms tighter">
+            <dt>DOI</dt><dd>電子データの恒久的な識別子。<code>https://doi.org/10.…</code> で必ず辿れる</dd>
+            <dt>arXiv / ePrint 版</dt><dd><b>査読前</b>の版。会議版と内容が違うことがある</dd>
+            <dt>Extended version</dt><dd>会議版に証明や追加実験を足した版。<b>詳細はこちらにある</b></dd>
+            <dt>Camera-ready</dt><dd>最終版。引用はこれを使う</dd>
+          </dl>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">引用するときは出版版を</b>
+          プレプリントを読んで理解したとしても、<b>引用するのは査読を通った出版版</b>にする。
+          ページ番号や結果が異なることがある。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">本文を開く前の 2 分で、読み方が決まる。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>1 ページ目の<b>6 項目</b>（掲載誌・種別・題目・著者・概要・キーワード）を確認する</li>
+        <li><b>査読の有無</b>で主張の扱いを変える</li>
+        <li>プレプリントは<b>誰のチェックも受けていない</b></li>
+        <li>査読付きでも正しいとは限らない</li>
+      </ul>
+      <ul class="ticks">
+        <li>セキュリティ分野は<b>いつの研究か</b>が特に重要</li>
+        <li>多く引用されている古い論文は<b>分野の原点</b></li>
+        <li><b>サーベイ／SoK</b> は分野の入口として最良</li>
+        <li>引用は<b>出版版</b>を使う</li>
+      </ul>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">記録しておくこと</b>
+      読んだ論文の<b>書誌情報は、読んだその場で</b>文献管理ツールに登録する。
+      後から探し直すのは時間の無駄である（<a href="15-tracking.html">トピック 15</a>）。
+    </div>
+    <div class="deck-end">
+      <a href="03-strategy.html"><b>◀ 前のトピック</b>03 どこから読むか</a>
+      <a href="05-abstract.html"><b>次のトピック ▶</b>05 概要の読み方</a>
+      <a href="15-tracking.html"><b>関連</b>15 文献を辿る・整理する</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

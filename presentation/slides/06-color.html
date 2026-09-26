@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>06 配色 | 卒研発表の仕方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+<style>
+  .swatch{ display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:.4em 0; }
+  .swatch div{ border-radius:6px; padding:.4em .6em; font-size:12.5px; font-weight:700;
+               border:1px solid rgba(0,0,0,.15); }
+  .pale{ background:#F6D8DC; color:#C9A9AE; }
+  .vivid{ background:#D55E00; color:#fff; }
+  .demo{ border-radius:8px; padding:12px 16px; }
+</style>
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">06 配色</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 06</div>
+  <h1>配色</h1>
+  <p class="sub">色に意味を持たせ、最後まで一貫して使う</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>色を使う前に「何のための色か」を答えられる</li>
+      <li>プロジェクタで再現できる色を選べる</li>
+      <li>色覚の多様性に配慮した配色ができる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>その色には意味があるか<span class="en">Does the color mean something?</span></h2>
+  <p class="slide__lead">文字に色をつけたがる人がいる。<b>それはどんな意味があるのか。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">色の使い方の原則</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li><b>強調したいだけなら、1 色あれば十分</b></li>
+            <li>ある項目と<b>対応づけて</b>表現したいのであれば、2〜3 色使うこともある</li>
+            <li><b>発表全体で一貫した配色</b>にする</li>
+            <li>意味のない色は<b>使わない</b></li>
+          </ul>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">一貫していない配色</b>
+          3 枚目で「提案手法＝青」だったのに、7 枚目で「提案手法＝赤」になっている。
+          聴衆はそこで<b>「？」</b>となる（<a href="02-with-audience.html">トピック 02</a>）。
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">よい色の使い方の例</div>
+          <p class="tight" style="margin:.2em 0">
+            <span style="color:#0072B2;font-weight:700">■ 青＝提案手法</span>
+            <span style="color:#767C83;font-weight:700">■ 灰＝従来手法</span><br>
+            グラフでも、表でも、構成図でも<b>常にこの対応</b>を守る。</p>
+          <p class="tight" style="margin:.5em 0 0">
+            <span style="color:#D55E00;font-weight:700">■ 朱＝ここを見てほしい</span><br>
+            強調はこの 1 色だけ。<b>全スライドを通して、この色は「注目」の意味しか持たない</b>。</p>
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">色を決めるタイミング</b>
+          スライドを作り始める<b>前</b>に決める。作りながら決めると、必ず一貫しなくなる。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>プロジェクタは色を再現できない<span class="en">Projectors wash out color</span></h2>
+  <p class="slide__lead">モニタで見ているときと、プロジェクタに投影したときでは<b>発色が違う。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="demo" style="border:2px dashed var(--bad);background:#fff">
+        <b class="tight" style="color:#A34600">✗ 淡い色は飛ぶ</b>
+        <div class="swatch" style="grid-template-columns:repeat(2,1fr)">
+          <div class="pale">淡いピンク</div>
+          <div style="background:#D9E8F5;color:#A8BFD1">淡い水色</div>
+          <div style="background:#E3F2E0;color:#AFCBAA">淡い緑</div>
+          <div style="background:#F5F0D6;color:#C9C09A">淡い黄</div>
+        </div>
+        <p class="tighter" style="margin:.5em 0 0">
+          <b>淡い色はプロジェクタでは表現できない。</b>会場が明るければ、ほぼ白に見える。</p>
+      </div>
+      <div class="demo" style="border:2px solid var(--good);background:#fff">
+        <b class="tight" style="color:#00537F">✓ はっきりした色を使う</b>
+        <div class="swatch" style="grid-template-columns:repeat(2,1fr)">
+          <div style="background:#000;color:#fff">黒 #000000</div>
+          <div style="background:#D55E00;color:#fff">朱 #D55E00</div>
+          <div style="background:#0072B2;color:#fff">青 #0072B2</div>
+          <div style="background:#009E73;color:#fff">緑 #009E73</div>
+        </div>
+        <p class="tighter" style="margin:.5em 0 0">
+          <b>黒と赤（朱）だけあれば、普通はいける。</b>必要なら青を足す。</p>
+      </div>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">薄いグレーの文字を使わない</b>
+      「上品に見せたい」という理由で薄いグレーを使うと、投影した瞬間に<b>消える</b>。
+      補足情報であっても、<b>読める濃さ</b>にする。読ませたくないなら、そもそも載せない。
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">本番の会場で確認する</b>
+      可能なら、発表する部屋のプロジェクタで<b>実際に投影して確認する</b>。
+      会場の照明が明るいほど、色は飛ぶ。
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>色覚の多様性に配慮する<span class="en">Color universal design</span></h2>
+  <p class="slide__lead">日本人男性の約 5% は色の見え方が異なる。<b>審査員の中にいる前提で作る。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">3 つの原則</b>
+          <ol class="tight" style="margin:.2em 0 0;padding-left:1.3em">
+            <li><b>色だけに意味を持たせない</b><br>
+              線種（実線・破線）、マーカーの形、ラベルを併用する</li>
+            <li><b>赤と緑だけで区別しない</b><br>
+              最も見分けにくい組み合わせ</li>
+            <li><b>明度差をつける</b><br>
+              グレースケールにしても区別できるか</li>
+          </ol>
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">確認方法</b>
+          作ったスライドを<b>グレースケールで印刷</b>してみる。
+          区別できなければ作り直す。これが最も簡単で確実なテストである。
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">推奨配色（Okabe–Ito の 8 色）</div>
+          <div class="swatch">
+            <div style="background:#000000;color:#fff">黒 #000000</div>
+            <div style="background:#E69F00">橙 #E69F00</div>
+            <div style="background:#56B4E9">空 #56B4E9</div>
+            <div style="background:#009E73;color:#fff">緑 #009E73</div>
+            <div style="background:#F0E442">黄 #F0E442</div>
+            <div style="background:#0072B2;color:#fff">青 #0072B2</div>
+            <div style="background:#D55E00;color:#fff">朱 #D55E00</div>
+            <div style="background:#CC79A7">赤紫 #CC79A7</div>
+          </div>
+          <p class="tighter" style="margin:.5em 0 0">
+            系列が 2 つなら<b>青 #0072B2</b> と<b>朱 #D55E00</b>。3 つなら<b>緑 #009E73</b> を足す。
+            この組み合わせは<b>どの色覚型でも区別できる</b>。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>背景と文字のコントラスト<span class="en">Background and contrast</span></h2>
+  <p class="slide__lead">背景は<b>白か、ごく薄い色</b>。凝った背景は情報を邪魔する。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:5em">評価</th><th style="width:12em">背景</th><th>理由</th></tr></thead>
+      <tbody>
+        <tr><td>◎</td><td><b>白＋黒文字</b></td><td>最も読みやすい。明るい部屋でも問題ない</td></tr>
+        <tr><td>○</td><td>ごく薄いグレー／クリーム＋黒文字</td><td>白のまぶしさが減る</td></tr>
+        <tr><td>△</td><td>濃紺＋白文字</td><td>暗室ならきれい。<b>明るい部屋だと沈む</b></td></tr>
+        <tr><td>✗</td><td>写真・グラデーション背景</td><td>文字が読めない。情報と競合する</td></tr>
+        <tr><td>✗</td><td>ロゴ・飾り枠が毎ページ大きく入る</td><td>情報を置ける面積が減る</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">迷ったら白背景・黒文字</b>
+      会場の照明条件は当日まで分からない。<b>白背景・黒文字は、どんな条件でも破綻しない。</b>
+      凝ったデザインで評価が上がることはない。<b>読めることが評価される。</b>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">研究室・大学のテンプレートがある場合</b>
+      指定があればそれに従う。ただし、<b>文字サイズと配色は自分で調整してよい</b>ことが多い。
+      テンプレートのまま文字が小さくなっていないか確認する。
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">色は装飾ではなく、情報である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li><b>色に意味を持たせる。</b>意味のない色は使わない</li>
+        <li>強調は<b>1 色</b>で足りる</li>
+        <li><b>発表全体で一貫</b>させる。作り始める前に決める</li>
+        <li>モニタとプロジェクタは<b>別物</b></li>
+      </ul>
+      <ul class="ticks">
+        <li><b>淡い色は投影で飛ぶ。</b>はっきりした色を使う</li>
+        <li><b>黒と朱</b>があれば普通はいける</li>
+        <li>色だけに頼らず<b>線種・形・ラベル</b>を併用</li>
+        <li>背景は<b>白、文字は黒</b>が最も安全</li>
+      </ul>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">この資料自体がその例</b>
+      この教材も Okabe–Ito の配色で作られており、色だけで意味を区別していない。
+      グレースケールで印刷しても内容が判別できる。
+    </div>
+    <div class="deck-end">
+      <a href="05-fonts.html"><b>◀ 前のトピック</b>05 文字とフォント</a>
+      <a href="07-figures.html"><b>次のトピック ▶</b>07 図表の見せ方</a>
+      <a href="../checklist.html"><b>ツール</b>発表前チェックリスト</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>03 概要（アブストラクト） | 卒業論文の書き方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+<style>
+  /* 二重色分け：背景ブロック = IMRAD、文字色 = 6 構成要素 */
+  .dual__row{
+    display:grid; grid-template-columns:8.6em 1fr; gap:0 14px; align-items:start;
+    padding:8px 14px; border-radius:8px; margin-bottom:5px;
+  }
+  .dual__tag{
+    font-size:.72em; font-weight:700; line-height:1.5;
+    border-left:5px solid; padding-left:.6em;
+  }
+  .dual__tag small{ display:block; font-size:.86em; font-weight:400; color:#3A4046; }
+  .dual__row p{ margin:0; font-family:var(--ff-mincho); text-indent:0; text-align:justify; }
+  .dual__row sup{ font-family:var(--ff-ud); font-weight:700; font-size:.66em; vertical-align:.45em; }
+  .t1{ color:#0B5A8A; } .t2{ color:#A8471A; } .t3{ color:#00614A; }
+  .t4{ color:#26648A; } .t5{ color:#8C3E6B; } .t6{ color:#8A5A00; }
+</style>
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">03 概要（アブストラクト）</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 03</div>
+  <h1>概要（アブストラクト）</h1>
+  <p class="sub">論文全体を 1 ページに凝縮する</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>概要と序論の違いを説明できる</li>
+      <li>IMRAD の 4 要素／ガイドラインの 6 要素で概要を構成できる</li>
+      <li>色分けされた実例を読み解き、自分の概要を自己点検できる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>概要の役割<span class="en">Abstract</span></h2>
+  <p class="slide__lead">概要は論文の要約である。<b>概要を読めば、論文に何が書いてあるのか分かる</b>ようにする。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--why" style="margin-top:0">
+          <b class="note__t" data-icon="？">誰が、いつ読むのか</b>
+          検索結果の一覧を眺めている読者が、<b>この論文を読むかどうかを決めるために</b>読む。
+          多くの読者にとって、概要が<b>唯一読む部分</b>になる。
+        </div>
+        <ul class="ticks tight">
+          <li>単独で読んで意味が通ること（本文を読まなくても分かる）</li>
+          <li>図表・文献番号・略語の初出定義なしで読めること</li>
+          <li>結果を<b>具体的な数値で</b>書くこと</li>
+          <li>本文にないことを書かないこと</li>
+        </ul>
+      </div>
+      <div>
+        <div class="note note--warn" style="margin-top:0">
+          <b class="note__t" data-icon="▲">概要に書かないもの</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li>「本論文の構成は以下の通りである」</li>
+            <li>図 1、表 2 などの参照</li>
+            <li>[3] などの文献番号</li>
+            <li>長い背景説明（それは序論の仕事）</li>
+            <li>「〜について述べる」だけで中身がない文</li>
+          </ul>
+        </div>
+        <div class="note note--rule">
+          <b class="note__t" data-icon="◆">卒論のルール</b>
+          <b>1 ページ分をきっちり埋める。余白は認めない。</b>
+          埋まらないのは、論じ尽くしていないからである。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>概要 ≠ 序論<span class="en">Abstract is not Introduction</span></h2>
+  <p class="slide__lead">最もよくある誤解。序論を短くしたものは、概要ではない。</p>
+  <div class="slide__body">
+    <table class="t">
+      <thead><tr><th style="width:8em"></th><th>概要</th><th>序論</th></tr></thead>
+      <tbody>
+        <tr><th>含む範囲</th><td><b>論文全体</b>（序論＋方式＋実験＋評価・考察）</td><td>研究の<b>入口だけ</b>（背景・課題・目的）</td></tr>
+        <tr><th>結果</th><td><b>書く（数値つきで）</b></td><td>書かない（貢献として要約するのみ）</td></tr>
+        <tr><th>長さ</th><td>1 ページ（400〜600 字程度）</td><td>2〜3 ページ</td></tr>
+        <tr><th>文献引用</th><td>しない</td><td>する</td></tr>
+        <tr><th>書く時期</th><td><b>いちばん最後</b></td><td>本文が固まってから</td></tr>
+      </tbody>
+    </table>
+    <div class="ng-ok" style="margin-top:14px">
+      <div class="ex-box ex-ng">
+        <span class="ex-box__t">序論のコピーになっている概要</span>
+        <p class="q tight">近年、フィッシング詐欺による被害が増加している。従来の検知手法には課題がある。本研究では、この課題を解決する新しい手法を提案する。</p>
+        <p class="tight" style="margin:.3em 0 0">→ <b>手法も実験も結果も書かれていない。</b>これでは読む価値を判断できない。</p>
+      </div>
+      <div class="ex-box ex-ok">
+        <span class="ex-box__t">論文全体が入っている概要</span>
+        <p class="q tight">…本研究では HTML 構造特徴量を併用する検知手法を提案した。PhishTank から収集した 12,400 件を用いて評価した結果、短縮 URL を含む検体に対する F 値は従来手法の 0.71 から 0.93 へ向上した。…</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>概要は IMRAD で書く<span class="en">Abstract = IMRAD in miniature</span></h2>
+  <p class="slide__lead">概要とは、<b>論文全体の IMRAD を 1 ページに圧縮したもの</b>である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="elem e1"><div class="elem__h"><span class="elem__n">I</span>Introduction ／ 背景・目的</div>
+          <div class="tight">この分野で何が問題になっていて、本研究は何を明らかにしようとしたのか。</div></div>
+        <div class="elem e3"><div class="elem__h"><span class="elem__n">M</span>Methods ／ 手法</div>
+          <div class="tight">誰を／何を対象に、どのような方法で調べたのか。規模・期間・条件を具体的に。</div></div>
+        <div class="elem e6"><div class="elem__h"><span class="elem__n">R</span>Results ／ 結果</div>
+          <div class="tight">何が得られたのか。<b>必ず数値を入れる。</b></div></div>
+        <div class="elem e5"><div class="elem__h"><span class="elem__n">D</span>Discussion ／ 考察・結論</div>
+          <div class="tight">その結果から何が言えるのか。誰が、何をすべきなのか。</div></div>
+      </div>
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">分量の目安</b>
+          <table class="t tight" style="margin-top:.3em">
+            <tbody>
+              <tr><th>I 背景・目的</th><td class="num">25〜30%</td></tr>
+              <tr><th>M 手法</th><td class="num">20〜25%</td></tr>
+              <tr><th>R 結果</th><td class="num">25〜30%</td></tr>
+              <tr><th>D 考察・結論</th><td class="num">20〜25%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">ありがちな偏り</b>
+          背景が全体の 7 割を占め、結果が 1 行しかない概要。
+          <b>読者が知りたいのは R と D である。</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>実例 ①　IMRAD による色分け<span class="en">Worked example</span></h2>
+  <p class="slide__lead">論文タイトル：<span class="q">地方自治体における標的型攻撃メール訓練の教育効果と持続性に関する実証研究</span></p>
+  <div class="slide__body">
+    <div class="legend">
+      <span class="e1"><i></i><b>Introduction</b>　背景・目的</span>
+      <span class="e3"><i></i><b>Methods</b>　手法</span>
+      <span class="e6"><i></i><b>Results</b>　結果</span>
+      <span class="e5"><i></i><b>Discussion</b>　考察・結論</span>
+    </div>
+    <div class="paper">
+      <p><span class="mk e1"><sup>I</sup>地方自治体の情報システム標準化が進む中、標的型攻撃に対する人的防御の要としてメール訓練が広く実施されているが、形式的な訓練の反復が職員の学習意欲低下や「慣れ」を招く懸念が指摘されている。本研究は、訓練の手法およびフィードバックの質が、職員の不審メール検知能力の維持に与える影響を明らかにすることを目的とした。</span><span class="mk e3"><sup>M</sup>研究では、A 県内の 3 自治体に所属する一般行政職員 1,500 名を対象に、2023 年 4 月から 2 年間の追跡調査を実施した。被験者を「従来の通知型訓練群」と「即時フィードバックおよび部門間競争要素を含む能動型訓練群」に無作為に割り当て、四半期ごとに異なるシナリオの擬似攻撃メールを送信し、開封率、報告率、および初動対応時間の推移を定量的に比較分析した。</span><span class="mk e6"><sup>R</sup>調査の結果、通知型訓練群では開始から約 6 ヶ月で開封率の改善が頭打ちとなり、訓練効果の減衰（rebound effect）が確認された。対照的に、能動型訓練群では 2 年経過後も開封率は 3% 未満に抑制され、不審メールの報告率は対照群と比較して有意に高い数値（p &lt; 0.01）を示した。特に、即時フィードバック機能は、誤開封時の心理的負担を軽減し、学習機会へと転換させる効果が見られた。</span><span class="mk e5"><sup>D</sup>以上の結果から、自治体のセキュリティ意識向上施策において、単なる訓練回数の増加は必ずしも長期的な行動変容には寄与しないことが示唆される。組織的なレジリエンスを維持するためには、訓練をコンプライアンス遵守の確認手段としてではなく、職員の自律的な防御行動を称賛し強化するエンゲージメントの機会として再定義する必要がある。</span></p>
+    </div>
+    <p class="tighter" style="margin-top:8px">注目すべき点：<b>結果（R）に具体的な数値と有意水準がある</b>。考察（D）が「だから何をすべきか」まで踏み込んでいる。</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>もっと細かく：6 つの構成要素<span class="en">Six elements</span></h2>
+  <p class="slide__lead">IMRAD の I を 3 つに割ると、書くべきことがはっきりする。<b>この 6 つを順に埋めれば概要はできる。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="elem e1"><div class="elem__h"><span class="elem__n">①</span>Importance ／ 研究の重要性</div>
+          <div class="tight">この分野がなぜ重要か。社会的・技術的な必要性。</div></div>
+        <div class="elem e2"><div class="elem__h"><span class="elem__n">②</span>Gap ／ 既存研究の欠落</div>
+          <div class="tight">しかし、何がまだ分かっていないのか。</div></div>
+        <div class="elem e3"><div class="elem__h"><span class="elem__n">③</span>Objective ／ 研究の目的</div>
+          <div class="tight">そこで本研究は何を明らかにするのか。</div></div>
+      </div>
+      <div>
+        <div class="elem e4"><div class="elem__h"><span class="elem__n">④</span>Method ／ 手法</div>
+          <div class="tight">どうやって調べたのか。対象・規模・期間・手続き。</div></div>
+        <div class="elem e5"><div class="elem__h"><span class="elem__n">⑤</span>Key findings ／ 主要な発見</div>
+          <div class="tight">何が分かったのか。数値で。</div></div>
+        <div class="elem e6"><div class="elem__h"><span class="elem__n">⑥</span>Implications ／ 示唆・意義</div>
+          <div class="tight">だから何が言えるのか。誰が何をすべきか。</div></div>
+      </div>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">書き出しのテンプレート</b>
+      <span class="tight">
+      ①<span class="q">近年、〜が重要となっている。</span>　②<span class="q">しかし、〜については明らかになっていない。</span>　③<span class="q">本研究の目的は、〜を明らかにすることである。</span><br>
+      ④<span class="q">〜を対象に、〜により〜を分析した。</span>　⑤<span class="q">その結果、〜が明らかになった。</span>　⑥<span class="q">この結果は、〜を示唆している。</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>実例 ②　6 要素による色分け<span class="en">Worked example</span></h2>
+  <p class="slide__lead">論文タイトル：<span class="q">地方自治体における持続的なセキュリティ意識向上のための要因分析</span></p>
+  <div class="slide__body">
+    <div class="legend">
+      <span class="e1"><i></i><b>① Importance</b></span>
+      <span class="e2"><i></i><b>② Gap</b></span>
+      <span class="e3"><i></i><b>③ Objective</b></span>
+      <span class="e4"><i></i><b>④ Method</b></span>
+      <span class="e5"><i></i><b>⑤ Key findings</b></span>
+      <span class="e6"><i></i><b>⑥ Implications</b></span>
+    </div>
+    <div class="paper">
+      <p><span class="mk e1"><sup>①</sup>近年、地方自治体を標的としたサイバー攻撃は激化しており、職員一人ひとりのセキュリティ意識の維持は行政機能の継続性において喫緊の課題となっている。</span><span class="mk e2"><sup>②</sup>多くの自治体で標的型攻撃メール訓練が実施されているが、その効果が長期的にどのように推移するか、またどのような要因が職員の意識維持に寄与するかに関する実証的な研究は限定的である。</span><span class="mk e3"><sup>③</sup>本研究の主たる目的は、定期的な訓練と事後教育が、一般行政職員の不審メール検知能力および報告行動に与える長期的影響を明らかにすることである。</span><span class="mk e4"><sup>④</sup>A 県の 3 つの自治体職員計 1,500 名を対象に、2 年間にわたる追跡調査を実施し、訓練メールの開封率・報告率の推移およびアンケートによる意識調査データを混合研究法により分析した。</span><span class="mk e5"><sup>⑤</sup>分析の結果、単なる訓練の繰り返しだけでは 6 ヶ月程度で慣れによる効果減衰が見られる一方、部門ごとの競争要素や即時のポジティブなフィードバックを導入した場合、意識レベルが有意に維持されることが明らかになった。</span><span class="mk e6"><sup>⑥</sup>この結果は、自治体のセキュリティ対策において、単発的なコンプライアンス遵守型の訓練から、職員の自律的な関与を促すエンゲージメント重視型のプログラムへの転換が必要であることを示唆している。</span></p>
+    </div>
+    <p class="tighter" style="margin-top:8px">
+      ①→② は<b>「〜が重要である。しかし〜は分かっていない」</b>という落差をつくる。この落差が大きいほど、③の目的に説得力が生まれる。
+    </p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>実例 ③　二重の色分け<span class="en">IMRAD × Six elements</span></h2>
+  <p class="slide__lead">同じ概要を 2 つの視点で見る。<b>背景の帯＝IMRAD の 4 要素、文字色＝6 構成要素。</b></p>
+  <div class="slide__body">
+    <div class="legend tighter">
+      <span><i style="border-color:#9AA0A6;background:#E3EEF7"></i><b>背景＝IMRAD</b></span>
+      <span class="t1"><i style="border-color:currentColor;background:currentColor"></i><b>文字色＝① Importance</b></span>
+      <span class="t2"><i style="border-color:currentColor;background:currentColor"></i><b>② Gap</b></span>
+      <span class="t3"><i style="border-color:currentColor;background:currentColor"></i><b>③ Objective</b></span>
+      <span class="t4"><i style="border-color:currentColor;background:currentColor"></i><b>④ Method</b></span>
+      <span class="t5"><i style="border-color:currentColor;background:currentColor"></i><b>⑤ Key findings</b></span>
+      <span class="t6"><i style="border-color:currentColor;background:currentColor"></i><b>⑥ Implications</b></span>
+    </div>
+    <div class="tighter">
+      <div class="dual__row bgI">
+        <span class="dual__tag" style="border-color:#0072B2">Introduction<small>背景・目的</small></span>
+        <p><span class="t1"><sup>①</sup>地方自治体の情報システム標準化が進む中、標的型攻撃に対する人的防御の要としてメール訓練が広く実施されているが、</span><span class="t2"><sup>②</sup>形式的な訓練の反復が職員の学習意欲低下や「慣れ」を招く懸念が指摘されている。</span><span class="t3"><sup>③</sup>本研究は、訓練の手法およびフィードバックの質が、職員の不審メール検知能力の維持に与える影響を明らかにすることを目的とした。</span></p>
+      </div>
+      <div class="dual__row bgM">
+        <span class="dual__tag" style="border-color:#009E73">Methods<small>手法</small></span>
+        <p><span class="t4"><sup>④</sup>研究では、A 県内の 3 自治体に所属する一般行政職員 1,500 名を対象に、2023 年 4 月から 2 年間の追跡調査を実施した。被験者を「従来の通知型訓練群」と「即時フィードバックおよび部門間競争要素を含む能動型訓練群」に無作為に割り当て、四半期ごとに異なるシナリオの擬似攻撃メールを送信し、開封率、報告率、および初動対応時間の推移を定量的に比較分析した。</span></p>
+      </div>
+      <div class="dual__row bgR">
+        <span class="dual__tag" style="border-color:#E69F00">Results<small>結果</small></span>
+        <p><span class="t5"><sup>⑤</sup>調査の結果、通知型訓練群では開始から約 6 ヶ月で開封率の改善が頭打ちとなり、訓練効果の減衰（rebound effect）が確認された。対照的に、能動型訓練群では 2 年経過後も開封率は 3% 未満に抑制され、不審メールの報告率は対照群と比較して有意に高い数値（p &lt; 0.01）を示した。特に、即時フィードバック機能は、誤開封時の心理的負担を軽減し、学習機会へと転換させる効果が見られた。</span></p>
+      </div>
+      <div class="dual__row bgD">
+        <span class="dual__tag" style="border-color:#CC79A7">Discussion<small>考察・結論</small></span>
+        <p><span class="t6"><sup>⑥</sup>以上の結果から、自治体のセキュリティ意識向上施策において、単なる訓練回数の増加は必ずしも長期的な行動変容には寄与しないことが示唆される。組織的なレジリエンスを維持するためには、訓練をコンプライアンス遵守の確認手段としてではなく、職員の自律的な防御行動を称賛し強化するエンゲージメントの機会として再定義する必要がある。</span></p>
+      </div>
+    </div>
+    <p class="tighter" style="margin:8px 0 0">IMRAD の <b>Introduction だけが ①②③ の 3 要素</b>に分かれている。ここが概要でいちばん書きにくい部分である。</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <h2>2 つの見方の対応関係<span class="en">Mapping</span></h2>
+  <p class="slide__lead">IMRAD の <b>I だけが 3 つの要素に分かれる</b>。ここが概要の書きにくい部分である。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:12em">IMRAD（4 要素）</th><th style="width:14em">ガイドライン（6 要素）</th><th>その要素が答えていること</th></tr></thead>
+      <tbody>
+        <tr><th rowspan="3" style="background:#E3EEF7">Introduction<br>背景・目的</th><td>① Importance</td><td>なぜこの分野が重要なのか</td></tr>
+        <tr><td>② Gap</td><td>しかし何が分かっていないのか</td></tr>
+        <tr><td>③ Objective</td><td>だから本研究は何を明らかにするのか</td></tr>
+        <tr><th style="background:#DCF0EA">Methods<br>手法</th><td>④ Method</td><td>それをどう調べたのか</td></tr>
+        <tr><th style="background:#FDF0DB">Results<br>結果</th><td>⑤ Key findings</td><td>何が分かったのか</td></tr>
+        <tr><th style="background:#F8E9F1">Discussion<br>考察・結論</th><td>⑥ Implications</td><td>だから何が言えるのか</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">卒論で最も欠けやすいのは ② Gap</b>
+      「〜が重要である。本研究では〜を提案する」と、<b>①から③へ飛んでしまう</b>概要が非常に多い。
+      ② が無いと、<b>その研究をやる理由が存在しない</b>ことになる。必ず「しかし」の一文を入れる。
+    </div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <h2>悪い概要を直す<span class="en">Before / After</span></h2>
+  <p class="slide__lead">研究テーマ例：<b>短縮 URL に頑健なフィッシングサイト検知手法</b></p>
+  <div class="slide__body">
+    <div class="ex-box ex-ng" style="margin-bottom:10px">
+      <span class="ex-box__t">Before</span>
+      <p class="q tighter" style="margin:.2em 0">近年、フィッシング詐欺による被害が拡大しており、大きな問題となっている。そこで本研究では、機械学習を用いたフィッシングサイト検知システムを開発した。実験の結果、良好な精度が得られたので、本手法は有効であると考えられる。今後は精度のさらなる向上を目指したい。</p>
+      <p class="tighter" style="margin:.3em 0 0">
+        ② Gap がない ／ ④ 手法の中身がない ／ ⑤ 数値がない（「良好な精度」） ／ ⑥ 示唆がなく感想で終わっている ／ 分量も足りない</p>
+    </div>
+    <div class="ex-box ex-ok">
+      <span class="ex-box__t">After</span>
+      <p class="q tighter" style="margin:.2em 0"><sup>①</sup>フィッシングサイトの検知は、利用者を金銭被害から守るうえで重要な防御手段である。<sup>②</sup>従来手法の多くは URL 文字列の語彙的特徴量に依存しており、攻撃者が URL 短縮サービスを用いた場合に判別性能が大きく低下することが指摘されているが、この低下を定量的に評価した研究は少ない。<sup>③</sup>本研究の目的は、URL 文字列に依存しない特徴量を導入することで、短縮 URL を含む検体に対しても安定した検知性能が得られるかを明らかにすることである。<sup>④</sup>提案手法では、ページの HTML から DOM の階層構造・外部リソース参照・フォーム要素の 27 次元の特徴量を抽出し、勾配ブースティング決定木により分類する。PhishTank および Tranco から収集した 12,400 件を用い、従来の URL 特徴量のみを用いる手法と 5 分割交差検証により比較した。<sup>⑤</sup>その結果、全検体に対する F 値は 0.94 と従来手法（0.91）と同等であったが、短縮 URL を含む 1,830 件に限ると F 値は 0.71 から 0.93 へ向上した。特徴量の寄与分析からは、外部リソースのドメイン分散度が最も判別に寄与していることが示された。<sup>⑥</sup>この結果は、URL 文字列に依存しない特徴量を併用することで、短縮 URL による回避を実用的な範囲で抑制できることを示している。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <h2>概要の自己点検<span class="en">Self-check</span></h2>
+  <p class="slide__lead">提出前に、この 10 項目を機械的に確認する。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks tight">
+        <li>① 重要性：なぜこの分野が大事かが書かれているか</li>
+        <li>② <b>Gap</b>：「しかし〜は分かっていない」があるか</li>
+        <li>③ 目的：<b>「本研究の目的は〜を明らかにすることである」</b>の 1 文があるか</li>
+        <li>④ 手法：対象・規模・期間・条件が具体的か</li>
+        <li>⑤ 結果：<b>数値</b>が入っているか</li>
+      </ul>
+      <ul class="ticks tight">
+        <li>⑥ 示唆：「だから何が言えるか」で終わっているか</li>
+        <li>本文にないことを書いていないか</li>
+        <li>図表番号・文献番号を使っていないか</li>
+        <li>略語をいきなり使っていないか</li>
+        <li><b>1 ページを埋めているか</b></li>
+      </ul>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">決定的なテスト</b>
+      概要だけを他人に読ませて、<b>「で、何が分かったの？」と聞かれたら失格</b>である。
+      逆に「なるほど、それで本文はどうなってるの？」と聞かれたら成功。
+    </div>
+    <div class="deck-end">
+      <a href="02-structure.html"><b>◀ 前のトピック</b>02 論文の構成と章立て</a>
+      <a href="04-introduction.html"><b>次のトピック ▶</b>04 序論（はじめに）</a>
+      <a href="../checklist.html"><b>ツール</b>提出前チェックリスト</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

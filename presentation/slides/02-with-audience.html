@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>02 聴衆とともに進める | 卒研発表の仕方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+<style>
+  .svgbox{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:10px 14px; }
+  .svgbox svg{ display:block; width:100%; height:auto; }
+  .svgbox text{ font-family:var(--ff-ud); }
+</style>
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">02 聴衆とともに進める</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 02</div>
+  <h1>聴衆とともに進める</h1>
+  <p class="sub">聴衆が「？」と思ったら、その時点で失敗である</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>聴衆が「？」と思ったとき、何が起きるかを説明できる</li>
+      <li>「？」が生まれる典型パターンを知り、事前に潰せる</li>
+      <li>聴衆が納得したまま進む発表を設計できる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>この資料で最も重要なこと<span class="en">The single most important thing</span></h2>
+  <p class="slide__lead">短いプレゼンにおいて最も重要なのは、<b>聴衆がちゃんと理解して話が進むこと</b>である。</p>
+  <div class="slide__body">
+    <div class="note note--rule" style="margin-top:0">
+      <b class="note__t" data-icon="◆">原則</b>
+      <p class="big" style="margin:.3em 0">
+        プレゼンにおいて<span class="kw">聴衆が「？」と思うことがあれば、それは失敗である。</span></p>
+      <p class="tight" style="margin:.4em 0 0">
+        発表の途中で分からないことがあると、聴衆はそこで<b>思考を「分からなかったことの理解」に持っていく</b>。
+        すると、その先の話を聞いてくれなくなる。</p>
+    </div>
+    <div class="note note--why">
+      <b class="note__t" data-icon="？">なぜ短い発表ほど致命的なのか</b>
+      90 分の授業なら、聴衆は 5 分後に追いつける。<b>8 分の発表では追いつけない。</b>
+      1 回の「？」で、残りの時間すべてが無駄になる。
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">目指す状態</b>
+      聴衆が常に<b>「うんうん。そうだね。その通りだよ」</b>と納得している状態で進める。
+      これがプレゼンの理想形である。
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>「？」が起きると何が起こるか<span class="en">What happens after a "?"</span></h2>
+  <p class="slide__lead">聴衆の理解は、一度切れると戻らない。</p>
+  <div class="slide__body">
+    <div class="svgbox">
+      <svg viewBox="0 0 1000 268" role="img" aria-label="発表の進行に対する聴衆の理解度のグラフ。スライド3で「？」が起きると、以降の理解度が低いまま戻らないことを示している。">
+        <!-- 軸 -->
+        <line x1="96" y1="212" x2="964" y2="212" stroke="#16181A" stroke-width="2"/>
+        <line x1="96" y1="44" x2="96" y2="212" stroke="#16181A" stroke-width="2"/>
+        <text x="86" y="58" font-size="14" fill="#4A4F55" text-anchor="end">理解</text>
+        <text x="86" y="208" font-size="14" fill="#4A4F55" text-anchor="end">不明</text>
+        <text x="964" y="258" font-size="14" fill="#4A4F55" text-anchor="end">発表の進行 →</text>
+
+        <!-- スライド目盛り -->
+        <g font-size="13" fill="#767C83" text-anchor="middle">
+          <text x="150" y="233">S1</text><text x="250" y="233">S2</text><text x="350" y="233">S3</text>
+          <text x="450" y="233">S4</text><text x="550" y="233">S5</text><text x="650" y="233">S6</text>
+          <text x="750" y="233">S7</text><text x="850" y="233">S8</text>
+        </g>
+
+        <!-- 理解できている区間 -->
+        <polyline points="150,68 250,66 338,70" fill="none" stroke="#0072B2" stroke-width="6" stroke-linecap="round"/>
+        <text x="150" y="52" font-size="13" font-weight="700" fill="#00537F">納得しながら聞いている</text>
+
+        <!-- 「？」以降 -->
+        <polyline points="362,86 400,150 450,178 550,190 650,194 750,196 850,197"
+                  fill="none" stroke="#767C83" stroke-width="6" stroke-dasharray="11 9" stroke-linecap="round"/>
+
+        <!-- 「？」 -->
+        <line x1="350" y1="96" x2="350" y2="212" stroke="#D55E00" stroke-width="2" stroke-dasharray="4 4"/>
+        <circle cx="350" cy="72" r="21" fill="#D55E00"/>
+        <text x="350" y="81" font-size="25" font-weight="700" fill="#fff" text-anchor="middle">?</text>
+        <text x="128" y="152" font-size="15" font-weight="700" fill="#A34600">ここで「？」が起きた</text>
+        <text x="128" y="174" font-size="13.5" fill="#4A4F55">未定義の用語／飛躍／読めない図</text>
+        <path d="M 330 166 L 348 166 L 348 100" fill="none" stroke="#D55E00" stroke-width="2"/>
+
+        <text x="470" y="132" font-size="15" font-weight="700" fill="#3A4046">聴衆は「さっきの意味」を考え続ける</text>
+        <text x="470" y="154" font-size="13.5" fill="#767C83">→ スライドを見逃す・話を聞き逃す</text>
+
+        <!-- 届かない成果 -->
+        <rect x="694" y="42" width="266" height="58" rx="8" fill="#FBE7DA" stroke="#D55E00" stroke-width="2"/>
+        <text x="710" y="67" font-size="15" font-weight="700" fill="#A34600">本当に伝えたかった成果</text>
+        <text x="710" y="88" font-size="13.5" fill="#A34600">は、ここで話される。届かない。</text>
+        <line x1="800" y1="100" x2="800" y2="188" stroke="#D55E00" stroke-width="2" stroke-dasharray="4 4"/>
+      </svg>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">「あとで分かるだろう」は起きない</b>
+      聴衆は、分からなかった箇所を抱えたまま聞き続ける。
+      <b>発表の後半に置いた「いちばん伝えたい成果」ほど、届かなくなる。</b>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>推理小説を書いているのではない<span class="en">Not a mystery novel</span></h2>
+  <p class="slide__lead">我々は、<b>科学的事実に基づいた論文</b>を発表している。伏線も、どんでん返しもいらない。</p>
+  <div class="slide__body">
+    <table class="t">
+      <thead><tr><th style="width:9em"></th><th>推理小説</th><th>研究発表</th></tr></thead>
+      <tbody>
+        <tr><th>情報の出し方</th><td>伏せておいて、最後に明かす</td><td><b>先に結論を言い、あとで根拠を示す</b></td></tr>
+        <tr><th>読者・聴衆の状態</th><td>「どうなるんだろう」と<b>分からないまま</b>進む</td><td><b>常に分かったまま</b>進む</td></tr>
+        <tr><th>引っかかり</th><td>意図的に作る（面白さ）</td><td><b>1 つでもあれば失敗</b></td></tr>
+        <tr><th>順序</th><td>作者の演出で決める</td><td>背景 → 課題 → 提案 → 評価 → 結論で<b>決まっている</b></td></tr>
+      </tbody>
+    </table>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">だから、結論は先に言う</b>
+      <span class="q tight">「本研究では、短縮 URL を含む場合でも検知性能が維持できることを示しました。以下、その方法と結果を説明します。」</span><br>
+      — 最初にこう言っておけば、聴衆は<b>「その根拠を聞く」という姿勢</b>で残り 7 分を聞ける。
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">やってはいけない</b>
+      「結果は後ほど示します」「詳しくは後で説明します」を<b>多用しない</b>。
+      聴衆は「後で」を覚えていられない。<b>その場で分かる形で話す。</b>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>「？」が生まれる典型パターン<span class="en">Where confusion comes from</span></h2>
+  <p class="slide__lead">事前に潰せるものばかりである。<b>リハーサルで他人に聞いてもらえば見つかる。</b></p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:12em">パターン</th><th>聴衆の頭の中</th><th style="width:15em">対処</th></tr></thead>
+      <tbody>
+        <tr><th>定義していない用語</th><td>「○○って何だ？」</td><td>初出時に<b>一言で</b>説明する</td></tr>
+        <tr><th>説明していない略語</th><td>「ABE？」</td><td>正式名称とともに 1 回だけ定義する</td></tr>
+        <tr><th>論理の飛躍</th><td>「なぜそうなる？」</td><td>途中の 1 ステップを足す</td></tr>
+        <tr><th>読めない図・小さい文字</th><td>「この軸は何？」</td><td>大きくする。不要な要素を消す</td></tr>
+        <tr><th>数値の条件が不明</th><td>「何と比べて？」</td><td>数値には必ず比較対象を添える</td></tr>
+        <tr><th>スライドと話の不一致</th><td>「今どこの話？」</td><td>話している箇所を<b>指す</b>（<a href="12-posture.html">トピック 12</a>）</td></tr>
+        <tr><th>急に出てくる前提</th><td>「そんな前提あった？」</td><td>前提は<b>使う前に</b>示す</td></tr>
+        <tr><th>スライドを戻す</th><td>「さっきの話に戻った？」</td><td><b>同じスライドを再掲</b>する（<a href="08-antipatterns.html">トピック 08</a>）</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>「？」を潰す 5 つの技術<span class="en">Five techniques</span></h2>
+  <p class="slide__lead">難しいことではない。<b>順番と、一度に出す量の問題である。</b></p>
+  <div class="slide__body">
+    <ol class="steps big" style="margin:0">
+      <li><b>必要なものを、必要になる前に出す</b><br>
+        <span class="tight" style="color:var(--ink-2)">用語・記号・前提は、使う 1 枚前までに説明しておく</span></li>
+      <li><b>1 枚で 1 つのことだけ言う</b><br>
+        <span class="tight" style="color:var(--ink-2)">2 つ言いたいなら 2 枚にする。同時に出すと、どちらも届かない</span></li>
+      <li><b>つなぎの言葉を入れる</b><br>
+        <span class="tight" style="color:var(--ink-2)">「ここまでが課題です。ここからは、それをどう解決したかを説明します」</span></li>
+      <li><b>聴衆の顔を見る</b><br>
+        <span class="tight" style="color:var(--ink-2)">頷いているか、眉をひそめているか。伝わっていなければ、その場で言い換える</span></li>
+      <li><b>専門外の人にリハーサルを見てもらう</b><br>
+        <span class="tight" style="color:var(--ink-2)">同じ研究室の人は分かってしまう。<b>分からない人にこそ見せる</b></span></li>
+    </ol>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">③ が効く理由</b>
+      つなぎの言葉は、聴衆に<b>「今どこにいるか」</b>を教える。
+      これがあると、目次スライドは要らなくなる（<a href="08-antipatterns.html">トピック 08</a>）。
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>聴衆はスライドしか理解しない<span class="en">They read, they don't listen</span></h2>
+  <p class="slide__lead">厳しい前提だが、そう思って作ったほうが、結果的に伝わる。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">前提</b>
+          <b>あなたがしゃべっていることは、聴衆には届いていないと思ってください。
+          スライドに書いてあることしか、聴衆は理解しないと思ってください。</b>
+        </div>
+        <p class="tight">聴衆は、スライドが切り替わった瞬間に<b>まず読む</b>。
+        読んでいる間は、あなたの話を聞いていない。</p>
+      </div>
+      <div>
+        <div class="note note--warn" style="margin-top:0">
+          <b class="note__t" data-icon="▲">だからといって、文を書くのは論外</b>
+          文を書けば、聴衆は<b>読むことに専念して話を聞かなくなる</b>。
+          しかも読み終わる前にスライドが切り替わり、<b>全部を諦める</b>。
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">では何を書くのか</b>
+          <b>一目で意味が取れる短い語</b>を置き、話で肉づけする。
+          詳しくは <a href="04-what-to-write.html">トピック 04「スライドに何を書くか」</a>。
+        </div>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">2 つの原則を同時に満たす</b>
+      <span class="tight">
+      ・<b>スライドに書いていないことは伝わらない</b>　→　要点は必ずスライドに置く<br>
+      ・<b>スライドに文を書くと読まれて聞かれない</b>　→　置くのは語であって文ではない<br>
+      この 2 つを両立させるのが、スライド作りの本質である。</span>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">この 1 枚だけ覚えて帰ってもよい。</p>
+  <div class="slide__body">
+    <div class="note note--rule" style="margin-top:0">
+      <b class="note__t" data-icon="◆">最重要</b>
+      <p class="big" style="margin:.3em 0">
+        聴衆が常に<span class="kw">「うんうん。そうだね。その通りだよ」</span>と納得している状態で進める。<br>
+        一度でも「？」と思わせたら、そこから先は届かない。</p>
+    </div>
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>「？」が起きると、聴衆は<b>そこで思考を止める</b></li>
+        <li>短い発表では<b>追いつけない</b></li>
+        <li>推理小説ではない。<b>結論を先に言う</b></li>
+      </ul>
+      <ul class="ticks">
+        <li>用語・前提は<b>使う前に</b>出す</li>
+        <li><b>1 枚 1 メッセージ</b></li>
+        <li><b>専門外の人</b>にリハーサルを見てもらう</li>
+      </ul>
+    </div>
+    <div class="deck-end">
+      <a href="01-what.html"><b>◀ 前のトピック</b>01 卒研発表とは何か</a>
+      <a href="03-structure.html"><b>次のトピック ▶</b>03 発表の構成と時間配分</a>
+      <a href="../plan.html"><b>ツール</b>発表設計シート</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

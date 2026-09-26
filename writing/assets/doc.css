@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* =====================================================================
+   スクロール型ページ（ハブ / ガイドライン / チェックリスト）
+   ===================================================================== */
+
+.sitehead{
+  background:var(--surface); border-bottom:1px solid var(--line);
+  position:sticky; top:0; z-index:30;
+}
+.sitehead__in{
+  max-width:1100px; margin:0 auto; padding:10px 24px;
+  display:flex; align-items:center; gap:16px; font-size:14px;
+}
+.sitehead__logo{ font-weight:700; text-decoration:none; color:var(--ink); white-space:nowrap; }
+.sitehead__logo span{ color:var(--cud-blue); }
+.sitehead nav{ display:flex; gap:4px; flex-wrap:wrap; margin-left:auto; }
+.sitehead nav a{
+  text-decoration:none; color:var(--ink-2); padding:.2em .8em; border-radius:999px;
+}
+.sitehead nav a:hover{ background:var(--surface-2); color:var(--ink); }
+.sitehead nav a[aria-current="page"]{ background:var(--tint-blue); color:var(--cud-blue); font-weight:700; }
+
+.wrap{ max-width:1100px; margin:0 auto; padding:0 24px 80px; }
+.wrap--narrow{ max-width:880px; }
+
+/* ---------- ヒーロー ---------- */
+.hero{
+  padding:56px 0 34px; border-bottom:2px solid var(--line);
+}
+.hero .kicker{ font-size:14px; font-weight:700; color:var(--cud-blue); letter-spacing:.14em; }
+.hero h1{ font-size:42px; margin:.15em 0 .25em; line-height:1.24; }
+.hero p{ font-size:17px; color:var(--ink-2); margin:0; max-width:64ch; }
+.hero__band{
+  height:8px; border-radius:4px; margin-bottom:26px;
+  background:linear-gradient(90deg,var(--cud-blue) 0 25%,var(--cud-green) 25% 50%,
+                             var(--cud-orange) 50% 75%,var(--cud-purple) 75% 100%);
+}
+
+/* ---------- セクション ---------- */
+.sec{ padding:38px 0 0; }
+.sec > h2{
+  font-size:26px; margin:0 0 6px;
+  padding-left:14px; border-left:7px solid var(--cud-blue);
+}
+.sec > .sec__lead{ color:var(--ink-2); margin:0 0 20px; font-size:15.5px; }
+
+.sec h3{
+  font-size:19px; margin:26px 0 8px; padding-bottom:4px;
+  border-bottom:1px solid var(--line);
+}
+.sec h4{ font-size:16px; margin:18px 0 6px; color:var(--ink-2); }
+.sec p{ margin:.5em 0; }
+.sec ul,.sec ol{ margin:.5em 0; padding-left:1.5em; }
+.sec li{ margin:.25em 0; }
+
+/* ---------- トピックカード（ハブ） ---------- */
+.topics{
+  display:grid; gap:16px; grid-template-columns:repeat(auto-fill,minmax(310px,1fr));
+  margin-top:8px;
+}
+.topic{
+  display:flex; flex-direction:column; gap:6px;
+  background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:18px 20px 16px; text-decoration:none; color:var(--ink);
+  border-top:5px solid var(--tc, var(--cud-blue));
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.topic:hover{ transform:translateY(-2px); box-shadow:var(--shadow); }
+.topic__n{
+  font-size:12px; font-weight:700; letter-spacing:.1em; color:var(--tc, var(--cud-blue));
+}
+.topic__t{ font-size:19px; font-weight:700; line-height:1.35; }
+.topic__d{ font-size:14px; color:var(--ink-2); line-height:1.7; }
+.topic__k{ font-size:12px; color:var(--ink-3); margin-top:auto; padding-top:8px; }
+
+/* ---------- ガイドライン：規則番号つき項目 ---------- */
+.rulelist{ list-style:none; padding:0; margin:14px 0; counter-reset:r; }
+.rulelist > li{
+  counter-increment:r; position:relative;
+  background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--cud-blue);
+  border-radius:0 10px 10px 0; padding:12px 16px 12px 58px; margin:10px 0;
+}
+.rulelist > li::before{
+  content:attr(data-id); position:absolute; left:10px; top:12px;
+  font-size:12px; font-weight:700; color:#fff; background:var(--cud-blue);
+  border-radius:6px; padding:.15em .5em; letter-spacing:.03em;
+}
+.rulelist > li > b{ display:block; font-size:16px; margin-bottom:.15em; }
+.rulelist > li p{ margin:.25em 0; font-size:14.5px; }
+
+/* ---------- チェックリスト ---------- */
+.ck-toolbar{
+  position:sticky; top:49px; z-index:20;
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:10px 16px; margin:18px 0 8px;
+  display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+}
+.ck-toolbar button{
+  font-family:inherit; font-size:13px; font-weight:700; cursor:pointer;
+  background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:.3em 1em;
+}
+.ck-toolbar button:hover{ background:var(--surface-2); }
+.ck-meter{ flex:1; min-width:180px; height:12px; background:var(--surface-2);
+           border-radius:999px; overflow:hidden; border:1px solid var(--line); }
+.ck-meter i{ display:block; height:100%; width:0; background:var(--cud-green); transition:width .2s; }
+.ck-count{ font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; }
+
+.ck-group{ margin:22px 0 0; }
+.ck-group > h3{
+  display:flex; align-items:center; gap:.6em;
+  font-size:18px; margin:0 0 8px; padding:0 0 5px; border-bottom:2px solid var(--line);
+}
+.ck-group > h3 .ck-gcount{ font-size:13px; color:var(--ink-3); font-weight:700; margin-left:auto; }
+
+.ck{ list-style:none; padding:0; margin:0; }
+.ck > li{
+  background:var(--surface); border:1px solid var(--line); border-radius:8px;
+  margin:6px 0; padding:0; overflow:hidden;
+}
+.ck label{
+  display:grid; grid-template-columns:auto 1fr; gap:.8em; align-items:start;
+  padding:10px 14px; cursor:pointer;
+}
+.ck input[type="checkbox"]{
+  width:20px; height:20px; margin:.2em 0 0; accent-color:#009E73; cursor:pointer; flex:none;
+}
+.ck .ck-t{ font-size:15px; line-height:1.65; }
+.ck .ck-s{ display:block; font-size:13px; color:var(--ink-2); margin-top:.15em; }
+.ck .ck-ref{ font-size:12px; color:var(--ink-3); }
+.ck .ck-ref a{ color:var(--ink-3); }
+.ck > li:has(input:checked){ background:var(--tint-green); border-color:var(--cud-green); }
+.ck > li:has(input:checked) .ck-t{ color:var(--ink-2); }
+.ck > li.crit{ border-left:5px solid var(--cud-vermilion); }
+.ck > li.crit .ck-t::after{
+  content:"必須"; font-size:11px; font-weight:700; color:#fff; background:var(--cud-vermilion);
+  border-radius:4px; padding:.05em .5em; margin-left:.6em; vertical-align:.1em;
+}
+
+/* ---------- 目次（ガイドライン用） ---------- */
+.mini-toc{
+  background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:16px 22px; margin:24px 0 0;
+}
+.mini-toc h2{ font-size:15px; margin:0 0 .5em; color:var(--ink-2); }
+.mini-toc ol{ margin:0; padding-left:1.4em; columns:2; column-gap:28px; font-size:14.5px; }
+.mini-toc li{ margin:.2em 0; break-inside:avoid; }
+
+.sitefoot{
+  border-top:1px solid var(--line); margin-top:56px; padding:22px 0 40px;
+  font-size:13px; color:var(--ink-3);
+}
+
+@media (max-width:760px){
+  .hero h1{ font-size:32px; }
+  .cols-2,.cols-3,.cols-25,.cols-52,.ng-ok{ grid-template-columns:1fr; }
+  .mini-toc ol{ columns:1; }
+}
+
+@media print{
+  .sitehead,.ck-toolbar,.sitefoot{ position:static; }
+  .topic{ break-inside:avoid; }
+  .ck > li,.rulelist > li{ break-inside:avoid; }
+}
+
+/* 3 部作トップへ戻るリンク */
+.sitehead nav a.nav-up{
+  margin-left:.5em; padding-left:1em; border-left:1px solid var(--line);
+  color:var(--ink-3); font-weight:700; border-radius:0;
+}
+.sitehead nav a.nav-up:hover{ background:transparent; color:var(--cud-blue); }

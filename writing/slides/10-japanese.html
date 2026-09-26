@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>10 日本語表記のルール | 卒業論文の書き方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">10 日本語表記のルール</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 10</div>
+  <h1>日本語表記のルール</h1>
+  <p class="sub">内容以前に、ここで落とされる</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>句読点・括弧・英数字の全角／半角を正しく使い分けられる</li>
+      <li>「こと・もの・ため」と漢字の使いすぎに対処できる</li>
+      <li>表記ゆれを検出して統一できる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>まずこの 5 つ<span class="en">The big five</span></h2>
+  <p class="slide__lead">指導の場で最も多く指摘される 5 項目。提出前に必ず全文を確認する。</p>
+  <div class="slide__body">
+    <ol class="steps big" style="margin:0">
+      <li><b>段落の頭は全角 1 文字下げる</b><br>
+        <span class="tight" style="color:var(--ink-2)">小学校で習う（義務教育）。字下げのない段落は段落ではない。</span></li>
+      <li><b>和文中の句読点は「、。」または「，．」。全角文字。</b><br>
+        <span class="tight" style="color:var(--ink-2)">論文全体でどちらかに統一する。半角のカンマ・ピリオドは絶対に使わない。</span></li>
+      <li><b>和文中の括弧は全角（　）、英文中の括弧は半角 ( )</b><br>
+        <span class="tight" style="color:var(--ink-2)">○ 属性ベース暗号（ABE）　× 属性ベース暗号(ABE)</span></li>
+      <li><b>文中の英数字は原則、半角文字</b><br>
+        <span class="tight" style="color:var(--ink-2)">○ 12 件　× １２件</span></li>
+      <li><b>本文は明朝体、章題はゴシック体</b><br>
+        <span class="tight" style="color:var(--ink-2)">強調は太字ゴシック。日本語にイタリック（斜体）は使わない。</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>句読点と括弧<span class="en">Punctuation</span></h2>
+  <p class="slide__lead">全角か半角か。ここは<b>絶対に</b>ぶれてはいけない。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <table class="t tight">
+          <caption>句読点（どちらかに統一）</caption>
+          <thead><tr><th>スタイル</th><th>読点</th><th>句点</th><th>よく使う分野</th></tr></thead>
+          <tbody>
+            <tr><td>A</td><td>、</td><td>。</td><td>人文系・一般的な文書</td></tr>
+            <tr><td>B</td><td>，</td><td>．</td><td>理工系の論文誌（情報処理学会など）</td></tr>
+          </tbody>
+        </table>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">絶対にやってはいけない混在</b>
+          <p class="q tight" style="margin:.2em 0">提案手法は高速である，しかし精度は低い。</p>
+          <p class="tight" style="margin:.2em 0 0">A と B を混ぜる／半角の <code>,</code> <code>.</code> を使う。
+          <b>学科・研究室の指定があればそれに従う。</b></p>
+        </div>
+      </div>
+      <div>
+        <table class="t tight">
+          <caption>括弧の使い分け</caption>
+          <thead><tr><th>場面</th><th>正しい</th><th>誤り</th></tr></thead>
+          <tbody>
+            <tr><td>和文中</td><td class="q">属性ベース暗号（ABE）</td><td class="q">属性ベース暗号(ABE)</td></tr>
+            <tr><td>英文中</td><td class="q">Attribute-Based Encryption (ABE)</td><td class="q">Attribute-Based Encryption（ABE）</td></tr>
+            <tr><td>引用符</td><td class="q">「慣れ」を招く</td><td class="q">"慣れ"を招く</td></tr>
+            <tr><td>文献番号</td><td class="q">提案している [4]．</td><td class="q">提案している．[4]</td></tr>
+          </tbody>
+        </table>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">覚え方</b>
+          <b>括弧の中身の言語に合わせる。</b>中身が日本語を含むなら全角、英数字のみで周囲も英文なら半角。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>英数字・単位・記号<span class="en">Numbers and units</span></h2>
+  <p class="slide__lead">半角が原則。ただし、前後のアキ（空白）にも作法がある。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:11em">項目</th><th>✓ 正しい</th><th>✗ 誤り</th></tr></thead>
+      <tbody>
+        <tr><th>算用数字</th><td class="q">12 件、2025 年</td><td class="q">１２件、２０２５年</td></tr>
+        <tr><th>英単語</th><td class="q">HTML 構造を用いる</td><td class="q">ＨＴＭＬ構造を用いる</td></tr>
+        <tr><th>和欧間のアキ</th><td class="q">Python 3.12 を用いた</td><td class="q">Python3.12を用いた</td></tr>
+        <tr><th>単位</th><td class="q">32 GB、1.5 秒、87 億円</td><td class="q">32GB、1.5秒</td></tr>
+        <tr><th>パーセント</th><td class="q">64.6%（または 64.6 %）</td><td class="q">64.6％（全角）</td></tr>
+        <tr><th>桁区切り</th><td class="q">1,500 名</td><td class="q">1500名</td></tr>
+        <tr><th>範囲</th><td class="q">2021 年から 2024 年まで</td><td class="q">2021〜2024年</td></tr>
+        <tr><th>数え方</th><td class="q">3 つの自治体、第 1 章</td><td class="q">三つの自治体、第一章</td></tr>
+        <tr><th>慣用句の数字</th><td class="q">一般的、一部、第三者</td><td class="q">1 般的、1 部、第 3 者</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">判断の基準</b>
+      <b>数えられるもの＝算用数字</b>（3 つ、12 件）。<b>数える意味がない慣用表現＝漢数字</b>（一般的、一方、第三者）。
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>「こと」「もの」「ため」<span class="en">Formal nouns</span></h2>
+  <p class="slide__lead">この 3 語は<b>文章を一気に冗長にする</b>。使うときは十分に注意する。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">原則</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li>形式名詞（実体を指さない）は<b>ひらがな</b><br>
+              ○ 〜すること　× 〜する事</li>
+            <li>実質名詞（実体を指す）は<b>漢字</b><br>
+              ○ 事件、物体、為替</li>
+            <li>そもそも<b>削れないか</b>を先に考える</li>
+          </ul>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">「ため」の二義性</b>
+          <p class="q tight" style="margin:.2em 0">通信量が増加するため、圧縮を行う。</p>
+          <p class="tight" style="margin:.2em 0 0">
+          <b>理由</b>（増加するので）なのか<b>目的</b>（増加させるために）なのか区別できない。
+          理由なら<b>「〜ので」「〜から」</b>、目的なら<b>「〜するために」</b>と書き分ける。</p>
+        </div>
+      </div>
+      <div>
+        <table class="t tight">
+          <caption>削れる「こと」</caption>
+          <thead><tr><th>✗ 冗長</th><th>✓ 簡潔</th></tr></thead>
+          <tbody>
+            <tr><td class="q">検知することができる</td><td class="q">検知できる</td></tr>
+            <tr><td class="q">高速化することが可能である</td><td class="q">高速化できる</td></tr>
+            <tr><td class="q">比較を行うことにより</td><td class="q">比較により</td></tr>
+            <tr><td class="q">重要であることが分かった</td><td class="q">重要であった</td></tr>
+            <tr><td class="q">〜という問題があることが指摘されている</td><td class="q">〜という問題が指摘されている</td></tr>
+            <tr><td class="q">実装を行うこととした</td><td class="q">実装した</td></tr>
+          </tbody>
+        </table>
+        <p class="tighter" style="margin-top:6px">
+          参考：<span style="word-break:break-all">https://tech-writ-lit.com/monokototame/</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>漢字の使いすぎに注意<span class="en">Too many kanji</span></h2>
+  <p class="slide__lead">補助的な語（副詞・接続詞・補助動詞）は、ひらがなで書くのが読みやすい。</p>
+  <div class="slide__body">
+    <div class="cols cols-3">
+      <table class="t tighter">
+        <thead><tr><th>✗ 漢字</th><th>✓ ひらがな</th></tr></thead>
+        <tbody>
+          <tr><td>〜する事で</td><td>〜することで</td></tr>
+          <tr><td>〜する為に</td><td>〜するために</td></tr>
+          <tr><td>即ち</td><td>すなわち</td></tr>
+          <tr><td>〜の時</td><td>〜のとき</td></tr>
+          <tr><td>出来る</td><td>できる</td></tr>
+          <tr><td>従って</td><td>したがって</td></tr>
+          <tr><td>但し</td><td>ただし</td></tr>
+        </tbody>
+      </table>
+      <table class="t tighter">
+        <thead><tr><th>✗ 漢字</th><th>✓ ひらがな</th></tr></thead>
+        <tbody>
+          <tr><td>及び</td><td>および</td></tr>
+          <tr><td>又は</td><td>または</td></tr>
+          <tr><td>或いは</td><td>あるいは</td></tr>
+          <tr><td>更に</td><td>さらに</td></tr>
+          <tr><td>殆ど</td><td>ほとんど</td></tr>
+          <tr><td>全て</td><td>すべて</td></tr>
+          <tr><td>尚</td><td>なお</td></tr>
+        </tbody>
+      </table>
+      <table class="t tighter">
+        <thead><tr><th>✗ 漢字</th><th>✓ ひらがな</th></tr></thead>
+        <tbody>
+          <tr><td>無い</td><td>ない</td></tr>
+          <tr><td>予め</td><td>あらかじめ</td></tr>
+          <tr><td>〜して頂く</td><td>〜していただく</td></tr>
+          <tr><td>〜の様な</td><td>〜のような</td></tr>
+          <tr><td>沢山</td><td>（数値に置換）</td></tr>
+          <tr><td>行なう</td><td>行う（送り仮名）</td></tr>
+          <tr><td>表わす</td><td>表す（送り仮名）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">目安</b>
+      日本語の文章は<b>漢字 3 割・ひらがな 7 割</b>程度が読みやすいとされる。
+      画面が黒っぽく見えたら、漢字が多すぎる合図である。<br>
+      <span class="tight">参考：<span style="word-break:break-all">https://blog.ashija.net/2017/12/21/post-2465/</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>表記ゆれを撲滅する<span class="en">Consistency</span></h2>
+  <p class="slide__lead">同じものは、論文全体で<b>必ず同じ言葉・同じ表記</b>で書く。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <table class="t tight">
+          <caption>よくある表記ゆれ</caption>
+          <thead><tr><th>ゆれ</th><th>どちらかに統一</th></tr></thead>
+          <tbody>
+            <tr><td>手法／方式／方法／アプローチ</td><td>論文全体で 1 語に決める</td></tr>
+            <tr><td>ユーザ／ユーザー／利用者</td><td>1 語に決める</td></tr>
+            <tr><td>サーバ／サーバー</td><td>1 語に決める</td></tr>
+            <tr><td>データベース／DB</td><td>初出で定義し、以降は一方に</td></tr>
+            <tr><td>提案手法／本手法／我々の手法</td><td>「提案手法」に統一</td></tr>
+            <tr><td>図1／図 1／Fig.1</td><td>1 形式に統一</td></tr>
+          </tbody>
+        </table>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">固有名詞は正確に</b>
+          <span class="q">chatgpt</span>？ <span class="q">ChatGpt</span>？ — 正しくは <b>ChatGPT</b>。<br>
+          <b>JavaScript</b>（Javascript ではない）、<b>GitHub</b>（Github ではない）、
+          <b>Wi-Fi</b>（WiFi ではない）、<b>PyTorch</b>（Pytorch ではない）。
+          <b>公式サイトで確認する。</b>
+        </div>
+      </div>
+      <div>
+        <div class="note note--tip" style="margin-top:0">
+          <b class="note__t" data-icon="★">機械的に見つける</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li>エディタの検索で「ユーザ」を検索し、ヒット箇所をすべて目視する</li>
+            <li>Word なら［検索と置換］、VS Code なら全文検索</li>
+            <li>用語集（自分用の対訳表）を作り、迷ったら見る</li>
+          </ul>
+          <pre class="code" style="margin-top:8px"><span class="cm"># 表記ゆれの候補を洗い出す例</span>
+grep -n -E "ユーザー?|サーバー?" thesis.tex
+grep -n -E "手法|方式|方法" thesis.tex | wc -l</pre>
+        </div>
+        <p class="tighter" style="margin-top:6px">※ 用語を途中で変えたくなったら、<b>全置換してから</b>先へ進む。あとで直そうとすると必ず取り残す。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>その他のよくある誤り<span class="en">Other common mistakes</span></h2>
+  <p class="slide__lead">見た瞬間に「推敲していないな」と分かってしまう類のもの。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:11em">項目</th><th>✗</th><th>✓</th></tr></thead>
+      <tbody>
+        <tr><th>ら抜き言葉</th><td class="q">検知できれる、見れる</td><td class="q">検知できる、見られる</td></tr>
+        <tr><th>い抜き言葉</th><td class="q">増加してる</td><td class="q">増加している</td></tr>
+        <tr><th>重言</th><td class="q">まず最初に、後で後述する、約 10 件程度</td><td class="q">まず、後述する、約 10 件</td></tr>
+        <tr><th>二重否定</th><td class="q">〜でないとは言えない</td><td class="q">〜である可能性がある</td></tr>
+        <tr><th>接続詞の多用</th><td class="q">また、〜。また、〜。また、〜。</td><td class="q">（文を統合するか、順序を示す語に変える）</td></tr>
+        <tr><th>体言止め</th><td class="q">提案手法の精度は 0.94。</td><td class="q">提案手法の精度は 0.94 であった。</td></tr>
+        <tr><th>感嘆符・疑問符</th><td class="q">驚くべき結果である！</td><td class="q">（本文では使わない）</td></tr>
+        <tr><th>三点リーダ</th><td class="q">などなど...</td><td class="q">など（…を使う場合は 2 つ重ねる）</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">文体は「である調」</b>
+      「〜だ」は使わない。「〜です・ます」も使わない。<b>論文全体で統一</b>する。
+      （詳細は <a href="01-basics.html">トピック 01</a>）
+    </div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <h2>推敲の実践<span class="en">Proofreading</span></h2>
+  <p class="slide__lead">表記の誤りは、読み返すだけでは見つからない。<b>手順にして潰す。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <ol class="steps tight" style="margin:0">
+          <li><b>印刷する</b><br>画面では見えない誤りが紙では見える</li>
+          <li><b>声に出して読む</b><br>息が続かない文は長すぎる</li>
+          <li><b>検索で機械的に潰す</b><br>「事で」「為に」「出来」「という」など</li>
+          <li><b>一晩寝かせる</b><br>翌日読むと別人の文章に見える</li>
+          <li><b>他人に読ませる</b><br>同期の学生と相互にチェックする</li>
+        </ol>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-vermilion)">
+          <div class="card__h">検索して潰すリスト</div>
+          <p class="tighter" style="margin:.2em 0">
+            <code>事で</code> <code>事が</code> <code>為に</code> <code>出来</code> <code>無い</code>
+            <code>及び</code> <code>又は</code> <code>更に</code> <code>即ち</code> <code>但し</code><br>
+            <code>することができる</code> <code>を行う</code> <code>という</code> <code>かなり</code>
+            <code>非常に</code> <code>とても</code> <code>ある程度</code> <code>だ。</code>
+            <code>です</code> <code>ます</code> <code>(</code> <code>)</code></p>
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">ツールを併用する</b>
+          <span class="tight">
+          ・Word の文章校正、一太郎の校正支援<br>
+          ・textlint（技術文書向けのルールセットあり）<br>
+          ・生成 AI に「この段落の表記ゆれを指摘して」と頼む<br>
+          　※ <b>書き換えさせるのではなく、指摘させる</b>。判断は自分で行う
+          （<a href="13-ai-ethics.html">トピック 13</a>）</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">表記は、内容を評価してもらうための<b>入場券</b>である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>段落の頭は<b>全角 1 字下げ</b></li>
+        <li>句読点は<b>全角</b>。「、。」か「，．」に統一</li>
+        <li>和文中の括弧は<b>全角</b>、英文中は半角</li>
+        <li>英数字は<b>半角</b>。和欧間に半角アキ</li>
+        <li>文献番号は<b>句点の前</b>：〜である [4]．</li>
+      </ul>
+      <ul class="ticks">
+        <li>「こと・もの・ため」は削れないか考える</li>
+        <li>補助的な語は<b>ひらがな</b>で</li>
+        <li>同じものは<b>同じ言葉</b>で書く</li>
+        <li>固有名詞は<b>公式表記</b>を確認する</li>
+        <li>印刷・音読・検索で潰す</li>
+      </ul>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">早見表として使う</b>
+      この 10 項目は <a href="../guideline.html">執筆ガイドライン</a>と
+      <a href="../checklist.html">提出前チェックリスト</a>にも収録してある。提出直前に必ず通す。
+    </div>
+    <div class="deck-end">
+      <a href="09-conclusion.html"><b>◀ 前のトピック</b>09 結論（まとめ）</a>
+      <a href="11-figures-tables.html"><b>次のトピック ▶</b>11 図表の作法</a>
+      <a href="../checklist.html"><b>ツール</b>提出前チェックリスト</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

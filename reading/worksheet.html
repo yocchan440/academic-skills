@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>論文精読ワークシート | 論文の読み方</title>
+<meta name="description" content="論文 1 本を精読しながら記入するワークシートと、読み落としを防ぐチェックリスト。">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/doc.css">
+</head>
+<body data-store="reading-worksheet-v1">
+
+<header class="sitehead">
+  <div class="sitehead__in">
+    <a class="sitehead__logo" href="index.html">論文の<span>読み方</span></a>
+    <nav>
+      <a href="index.html">資料一覧</a>
+      <a href="phrases.html">定型表現の一覧</a>
+      <a href="worksheet.html" aria-current="page">精読ワークシート</a>
+    
+      <a href="../index.html" class="nav-up">Academic Skills ▲</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap wrap--narrow">
+
+  <section class="hero">
+    <div class="hero__band"></div>
+    <div class="kicker">READING WORKSHEET</div>
+    <h1>論文精読ワークシート</h1>
+    <p>論文 1 本を読みながら、上から順に埋めてください。入力内容はこのブラウザに保存されるので、
+       数日に分けて読み進められます。読み終えたら <b>［Markdown でコピー］</b> で書き出して、
+       自分のノートや文献管理ツールに貼り付けてください。</p>
+  </section>
+
+  <div class="ck-toolbar">
+    <span class="ck-count">0 / 0</span>
+    <span class="ck-meter"><i></i></span>
+    <button type="button" data-act="copy">Markdown でコピー</button>
+    <button type="button" data-act="only" aria-pressed="false">未チェックのみ表示</button>
+    <button type="button" data-act="print">印刷</button>
+    <button type="button" data-act="reset">リセット</button>
+  </div>
+
+  <p class="ws-hint">
+    <b>1 本ごとに 1 枚使います。</b>次の論文を読むときは、
+    ［Markdown でコピー］で書き出してから［リセット］してください。
+  </p>
+
+  <div class="sec" style="padding-top:6px">
+
+  <!-- ============ 1 ============ -->
+  <section class="ck-group">
+    <h3>1　書誌情報<span class="ck-gcount"></span></h3>
+    <div class="ws-box">
+      <div class="ws-row"><span class="ws-label">題目</span>
+        <input type="text" data-k="title" placeholder="論文のタイトル"></div>
+      <div class="ws-row"><span class="ws-label">著者</span>
+        <input type="text" data-k="authors" placeholder="第一著者ら"></div>
+      <div class="ws-row"><span class="ws-label">掲載先・年<small>査読の有無も</small></span>
+        <input type="text" data-k="venue" placeholder="例：IEEE S&amp;P 2024（査読あり）／情報処理学会論文誌 Vol.63 No.9 (2022)"></div>
+      <div class="ws-row"><span class="ws-label">DOI / URL</span>
+        <input type="text" data-k="doi" placeholder="10.xxxx/xxxxx"></div>
+      <div class="ws-row"><span class="ws-label">読んだ日／段階<small>選別・通読・精読</small></span>
+        <input type="text" data-k="when" placeholder="例：2026-01-15　精読"></div>
+    </div>
+  </section>
+
+  <!-- ============ 2 ============ -->
+  <section class="ck-group">
+    <h3>2　論文の骨格<span class="ck-gcount"></span></h3>
+    <p class="ws-hint">概要・序論・結論から取り出します（<a href="slides/05-abstract.html">トピック 05</a>・<a href="slides/06-introduction.html">06</a>・<a href="slides/10-conclusion.html">10</a>）。
+      <b>論文の言葉をそのまま写さず、自分の言葉に直してください。</b></p>
+    <div class="ws-box">
+      <div class="ws-row"><span class="ws-label">① Gap<small>何が分かっていなかったか</small></span>
+        <textarea data-k="gap" rows="2" placeholder="「しかし〜は明らかになっていない」の一文を、自分の言葉で"></textarea></div>
+      <div class="ws-row"><span class="ws-label">② 目的<small>何を明らかにしようとしたか</small></span>
+        <textarea data-k="objective" rows="2" placeholder="「本研究の目的は〜」の一文"></textarea></div>
+      <div class="ws-row"><span class="ws-label">③ 手法<small>どうやって確かめたか</small></span>
+        <textarea data-k="method" rows="2" placeholder="対象・規模・期間・手続き"></textarea></div>
+      <div class="ws-row"><span class="ws-label">④ 主要な結果<small>数値と、その条件</small></span>
+        <textarea data-k="results" rows="3" placeholder="例：短縮 URL 検体 1,830 件において F 値 0.71 → 0.93（PhishTank 2025-04 取得）"></textarea></div>
+      <div class="ws-row"><span class="ws-label">⑤ 示唆<small>だから何が言えるか</small></span>
+        <textarea data-k="implications" rows="2" placeholder="著者が主張している含意"></textarea></div>
+    </div>
+  </section>
+
+  <!-- ============ 3 ============ -->
+  <section class="ck-group">
+    <h3>3　前提・限界<span class="ck-gcount"></span></h3>
+    <p class="ws-hint">ここが埋まっていない論文は、主張の範囲が判断できません（<a href="slides/08-method.html">トピック 08</a>・<a href="slides/13-security.html">13</a>）。
+      <b>書かれていない場合は「記載なし」と書いてください。</b></p>
+    <div class="ws-box">
+      <div class="ws-row"><span class="ws-label">前提・仮定<small>何を所与としているか</small></span>
+        <textarea data-k="assumptions" rows="2" placeholder="例：攻撃者は特徴量の詳細を知らない／端末は信頼できる"></textarea></div>
+      <div class="ws-row"><span class="ws-label">脅威モデル<small>攻撃者の目的・能力・知識</small></span>
+        <textarea data-k="threat" rows="3" placeholder="セキュリティ分野の論文では必ず記入。記載がなければ「記載なし」"></textarea></div>
+      <div class="ws-row"><span class="ws-label">対象外<small>扱わないと明言されているもの</small></span>
+        <textarea data-k="scope" rows="2" placeholder="例：マルウェア感染、DNS 改ざんは対象外"></textarea></div>
+      <div class="ws-row"><span class="ws-label">限界<small>Limitations</small></span>
+        <textarea data-k="limitations" rows="3" placeholder="著者が認めている限界。本文に散っていることもある"></textarea></div>
+      <div class="ws-row"><span class="ws-label">今後の課題<small>著者が未解決と認めたこと</small></span>
+        <textarea data-k="future" rows="2" placeholder="研究テーマの種になる"></textarea></div>
+    </div>
+  </section>
+
+  <!-- ============ 4 ============ -->
+  <section class="ck-group">
+    <h3>4　疑問・批判<span class="ck-gcount"></span></h3>
+    <p class="ws-hint">事実の形で書きます（<a href="slides/14-critical.html">トピック 14</a>）。
+      <b>「〜は書かれていない」「〜の根拠は示されていない」</b>のように。決めつけは書きません。</p>
+    <div class="ws-box">
+      <div class="ws-row"><span class="ws-label">書かれていなかったこと</span>
+        <textarea data-k="missing" rows="2" placeholder="例：比較手法の実装元が記載されていない"></textarea></div>
+      <div class="ws-row"><span class="ws-label">根拠が弱いと感じた主張</span>
+        <textarea data-k="weak" rows="2" placeholder="例：5.3 の「実用的に防げる」は、実運用での評価がない"></textarea></div>
+      <div class="ws-row"><span class="ws-label">分からなかったこと<small>知識不足／記述不足／論理の欠陥のどれか</small></span>
+        <textarea data-k="unclear" rows="2" placeholder="例：式(3) の導出が追えない（知識不足かもしれない → 要確認）"></textarea></div>
+    </div>
+  </section>
+
+  <!-- ============ 5 ============ -->
+  <section class="ck-group">
+    <h3>5　自分の研究との関係<span class="ck-gcount"></span></h3>
+    <p class="ws-hint">これがワークシートで<b>いちばん大事な欄</b>です。ここを書かない記録は、後で使えません。</p>
+    <div class="ws-box">
+      <div class="ws-row"><span class="ws-label">自分の研究との関係<small>どう使うか</small></span>
+        <textarea data-k="relation" rows="3" placeholder="例：比較対象として使う／この Gap を引き継ぐ／手法の一部を借りる／関連研究の章で引用する"></textarea></div>
+      <div class="ws-row"><span class="ws-label">引用するときの書き方<small>条件を限定した形で</small></span>
+        <textarea data-k="citation" rows="3" placeholder="例：文献 [n] は、PhishTank 由来の短縮 URL 検体 1,830 件において F 値 0.93 を報告している。ただし実運用での評価は行われていない。"></textarea></div>
+      <div class="ws-row"><span class="ws-label">次に読む文献<small>参考文献・被引用から</small></span>
+        <textarea data-k="next" rows="2" placeholder="この論文の参考文献 [3][7] / この論文を引用している新しい論文"></textarea></div>
+      <div class="ws-row"><span class="ws-label">3 分で説明するなら<small>ゼミで話すつもりで</small></span>
+        <textarea data-k="pitch" rows="3" placeholder="この論文は、〜という問題に対して、〜という方法で、〜を明らかにした。ただし〜という限界がある。"></textarea></div>
+    </div>
+  </section>
+
+  <!-- ============ 6 ============ -->
+  <section class="ck-group">
+    <h3>6　読み落としのチェック<span class="ck-gcount"></span></h3>
+    <p class="ws-hint">精読した論文について、最後に通してください。</p>
+    <ul class="ck">
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">書かれていないことを、自分で補完していない</span>
+        <span class="ck-s">「たぶんこうだろう」で読んだ箇所がないか。推理していないか。</span>
+        <span class="ck-ref"><a href="slides/01-principles.html">トピック 01</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">事実（〜であった）と解釈（〜と考えられる）を区別して読んだ</span>
+        <span class="ck-ref"><a href="slides/01-principles.html">トピック 01</a>　<a href="phrases.html#d">定型表現 D</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">数値を、条件とセットで記録した</span>
+        <span class="ck-s">どのデータを、どの条件で、どの指標で測った値か。</span>
+        <span class="ck-ref"><a href="slides/09-evaluation.html">トピック 09</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">主張を狭めている限定句（〜の場合、〜を前提として）を拾った</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">「精度」が Accuracy か Precision かを確認した</span>
+        <span class="ck-ref"><a href="slides/09-evaluation.html">トピック 09</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">データセットの出典・取得時期・件数・内訳を確認した</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">比較対象と、その実装の出所を確認した</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">序論の目的と結論が同じことを言っているか確認した</span>
+        <span class="ck-ref"><a href="slides/10-conclusion.html">トピック 10</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">限界（Limitations）を読んだ</span>
+        <span class="ck-s">独立した節がない場合は、前提・条件・考察から拾う。</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">分からなかった箇所を、知識不足／記述不足／論理の欠陥に分けた</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">公開コード・データがあるか確認した</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">論文を閉じて、手法の図を自分で描けた</span>
+        <span class="ck-ref"><a href="slides/14-critical.html">トピック 14</a></span></span></label></li>
+    </ul>
+  </section>
+
+  <!-- ============ 7 ============ -->
+  <section class="ck-group">
+    <h3>7　セキュリティ分野の論文の場合<span class="ck-gcount"></span></h3>
+    <p class="ws-hint">情報セキュリティ分野の論文では、これも確認します（<a href="slides/13-security.html">トピック 13</a>）。</p>
+    <ul class="ck">
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">脅威モデルを読み、攻撃者の目的・能力・知識を書き出した</span>
+        <span class="ck-s">書かれていない場合は「評価できない」と記録する。</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">何を信頼する前提か（端末・サーバ・認証局など）を確認した</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">「対象外」と明言されている攻撃を確認した</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">安全性の根拠の種類を判別した</span>
+        <span class="ck-s">形式的証明／形式手法／経験的評価／既知攻撃への耐性／ヒューリスティック。</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">検知率だけでなく、誤検知率（FPR）も確認した</span>
+        <span class="ck-s">率を実運用の件数に直して考えた。</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">回避可能性（適応的攻撃）の議論があるか確認した</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">測定研究の場合、いつ・どこを測ったかを確認した</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">この論文を破った、あるいは反証した後続研究がないか確認した</span>
+        <span class="ck-s">Google Scholar の「引用元」をたどる。</span>
+        <span class="ck-ref"><a href="slides/15-tracking.html">トピック 15</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">倫理・開示に関する記述を読んだ</span></span></label></li>
+    </ul>
+  </section>
+
+  </div>
+
+  <div class="note note--tip" style="margin-top:28px">
+    <b class="note__t" data-icon="★">書き出したあとに</b>
+    ［Markdown でコピー］で書き出した内容は、文献管理ツールのメモ欄や、
+    自分の研究ノートにそのまま貼れます。<b>10 本たまれば、関連研究の章の下書きになります。</b><br>
+    なお、入力内容はこのブラウザ（この端末）にのみ保存されます。別の PC では引き継がれません。
+  </div>
+
+  <footer class="sitefoot">
+    論文の読み方 — 論文精読ワークシート
+  </footer>
+
+</div>
+
+<script src="assets/doc.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# 指導用の元資料（配布物・著作物を含むため公開しない）
+ref/
+
+# 作業用の一時ファイル
+_*.html
+_*.py
+_*.txt
+_*.js
+
+# OS / エディタ
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>01 論文を読むということ | 論文の読み方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">01 論文を読むということ</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 01</div>
+  <h1>論文を読むということ</h1>
+  <p class="sub">推理しない。書いてあることを、書いてあるとおりに読む</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>論文の読み方が小説の読み方と何が違うのかを説明できる</li>
+      <li>事実・解釈・示唆を語尾で読み分けられる</li>
+      <li>「書かれていないこと」を正しく扱える</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>なぜ論文を読むのか<span class="en">Why read papers?</span></h2>
+  <p class="slide__lead">目的が違えば、読み方も、かける時間もまったく変わる。<b>まず目的を決める。</b></p>
+  <div class="slide__body">
+    <table class="t">
+      <thead><tr><th style="width:11em">目的</th><th>知りたいこと</th><th style="width:9em">読み方</th></tr></thead>
+      <tbody>
+        <tr><th>分野の全体像を掴む</th><td>どんな研究があるのか、主流は何か</td><td>タイトルと概要を大量に</td></tr>
+        <tr><th>自分の研究の位置づけ</th><td>すでにやられていることは何か</td><td>概要＋序論＋関連研究</td></tr>
+        <tr><th>手法を再現・実装する</th><td>どうやっているのか</td><td><b>提案手法と実験を精読</b></td></tr>
+        <tr><th>主張の妥当性を検証する</th><td>本当にそう言えるのか</td><td><b>全体を批判的に精読</b></td></tr>
+        <tr><th>書き方を学ぶ</th><td>どう論を立てているか</td><td>構成と表現に注目</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">全部を精読しようとしない</b>
+      1 本を精読すると数時間かかる。研究に必要な文献は数十本ある。
+      <b>精読する論文は極力減らす。</b>そのために、速く読んで捨てる技術が必要になる（<a href="03-strategy.html">トピック 03</a>）。
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>論文は小説ではない<span class="en">A paper is not a novel</span></h2>
+  <p class="slide__lead">この資料でいちばん伝えたいこと。<b>論文の読み方は、文学の読み方の逆である。</b></p>
+  <div class="slide__body">
+    <table class="t">
+      <thead><tr><th style="width:9em"></th><th>小説・エッセイ</th><th>学術論文</th></tr></thead>
+      <tbody>
+        <tr><th>行間</th><td>読む。書かれていないことを想像する</td><td><b>読まない。</b>書かれていないことは想像しない</td></tr>
+        <tr><th>伏線</th><td>ある。後で回収される</td><td><b>ない。</b>必要なことは必要な場所に書いてある</td></tr>
+        <tr><th>解釈</th><td>読者によって違ってよい</td><td><b>一通りでなければならない</b></td></tr>
+        <tr><th>表現</th><td>多様であることが価値</td><td><b>定型的であることが価値</b>（<a href="11-phrases.html">トピック 11</a>）</td></tr>
+        <tr><th>読者の仕事</th><td>味わう・想像する</td><td><b>正確に受け取る・検証する</b></td></tr>
+      </tbody>
+    </table>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">言い換えると</b>
+      <span class="big">論文を読むときに、<span class="kw">推理してはいけない</span>。
+      書いてあることを、書いてあるとおりに解釈する。それだけである。</span>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>大原則 ① 推理しない<span class="en">Do not infer</span></h2>
+  <p class="slide__lead">「たぶん著者はこう言いたいのだろう」— <b>そこから誤読が始まる。</b></p>
+  <div class="slide__body">
+    <div class="ex-box ex-ng" style="margin-bottom:10px">
+      <span class="ex-box__t">論文の記述</span>
+      <p class="q tight" style="margin:.2em 0">提案手法の検知精度は 96.2% であり、従来手法より高い値を示した。</p>
+    </div>
+    <div class="cols cols-2">
+      <div class="ex-box ex-ng">
+        <span class="ex-box__t">推理してしまった読み方</span>
+        <ul class="tight" style="margin:.2em 0;padding-left:1.2em">
+          <li>同じデータセットで比較したのだろう</li>
+          <li>同じ計算機環境で測ったのだろう</li>
+          <li>「精度」は Accuracy のことだろう</li>
+          <li>従来手法は論文 [3] の手法だろう</li>
+        </ul>
+        <p class="tighter" style="margin:.3em 0 0">→ <b>どれも書かれていない。</b>推測を積み重ねた上で「この手法は優れている」と結論するのは、論文を読んだことにならない。</p>
+      </div>
+      <div class="ex-box ex-ok">
+        <span class="ex-box__t">書いてあるとおりの読み方</span>
+        <ul class="tight" style="margin:.2em 0;padding-left:1.2em">
+          <li>提案手法の値は 96.2% である（事実）</li>
+          <li>著者は従来手法より高いと述べている（主張）</li>
+          <li><b>比較条件は、この記述からは分からない</b></li>
+          <li><b>「精度」の定義は、この記述からは分からない</b></li>
+        </ul>
+        <p class="tighter" style="margin:.3em 0 0">→ 分からないことは<b>「分からない」と保留</b>し、他の節（実験の章）を探しに行く。それでも見つからなければ、<b>「書かれていない」が結論</b>である。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>大原則 ② 書いていないことは、ない<span class="en">Absence is information</span></h2>
+  <p class="slide__lead">書かれていないことを、読者が好意的に補ってはいけない。<b>「書かれていない」こと自体が情報である。</b></p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:15em">論文に書かれていないもの</th><th>✗ してはいけない解釈</th><th>✓ 正しい解釈</th></tr></thead>
+      <tbody>
+        <tr><th>実験環境</th><td>普通の PC で測ったのだろう</td><td>再現に必要な情報が欠けている</td></tr>
+        <tr><th>比較手法の実装元</th><td>著者らが公平に実装したのだろう</td><td>比較の公正さは検証できない</td></tr>
+        <tr><th>データセットの内訳</th><td>バランスは取れているのだろう</td><td>偏りの有無は分からない</td></tr>
+        <tr><th>脅威モデル</th><td>一般的な攻撃者を想定しているのだろう</td><td><b>安全性の主張範囲が不明である</b></td></tr>
+        <tr><th>ある既知手法への言及</th><td>著者は知らなかったのだろう</td><td>言及がない、という事実のみ</td></tr>
+        <tr><th>限界・今後の課題</th><td>限界はないのだろう</td><td>著者が限界を述べていない</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">読みながら書き留める</b>
+      「書かれていなかったこと」のメモは、<b>そのままあなたの研究の種になる</b>。
+      「誰も○○の条件では評価していない」— それは <a href="../index.html">論文の書き方</a>でいう Gap そのものである。
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>大原則 ③ 語尾を正確に読む<span class="en">Read the verb endings</span></h2>
+  <p class="slide__lead">論文の語尾は、著者が<b>どこまで言い切れるか</b>を示す信号である。読み飛ばしてはいけない。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:4em">強さ</th><th style="width:16em">表現</th><th>読み方</th></tr></thead>
+      <tbody>
+        <tr><td>強</td><td class="q">〜である／〜であった／〜を示した</td><td><b>観測された事実。</b>著者が責任を持つ</td></tr>
+        <tr><td>↑</td><td class="q">〜が明らかになった／〜を確認した</td><td>実験・調査で確かめた事実</td></tr>
+        <tr><td>中</td><td class="q">〜と考えられる／〜と推察される</td><td><b>著者の解釈。</b>事実ではない</td></tr>
+        <tr><td>↓</td><td class="q">〜が示唆される</td><td>傾向が見えた程度。断定していない</td></tr>
+        <tr><td>弱</td><td class="q">〜の可能性がある／〜かもしれない</td><td><b>仮説。</b>根拠は弱い</td></tr>
+        <tr><td>—</td><td class="q">〜が期待される／〜が望まれる</td><td><b>著者の願望。</b>検証されていない</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">特に注意する 2 つ</b>
+      <span class="tight">
+      ・<b>「有意差は認められなかった」≠「差はない」。</b>この実験では差を検出できなかった、という意味である<br>
+      ・<b>「〜と考えられる」を引用するときは、事実として引用しない。</b>
+      「文献 [5] は〜と推察している」と書く（<a href="14-critical.html">トピック 14</a>）</span>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>大原則 ④ 条件と限定を読み落とさない<span class="en">Read the qualifiers</span></h2>
+  <p class="slide__lead">論文に書いてあることには、<b>すべて意味がある。</b>特に、主張を狭めている言葉。</p>
+  <div class="slide__body">
+    <div class="ex-box ex-ok" style="margin-bottom:10px">
+      <span class="ex-box__t">限定句に印を付けながら読む</span>
+      <p class="q big" style="margin:.2em 0">
+        <span class="mk e2"><sup>条件</sup>本実験の条件下では</span>、
+        <span class="mk e1"><sup>対象</sup>PhishTank から収集した 12,400 件のデータセットにおいて</span>、
+        提案手法は
+        <span class="mk e3"><sup>限定</sup>短縮 URL を含む検体に対しても</span>
+        F 値 0.93 を
+        <span class="mk e6"><sup>語尾</sup>維持した</span>。</p>
+      <p class="tighter" style="margin:.4em 0 0">
+        この 1 文が保証しているのは<b>「この条件・このデータ・この検体種別に限って、0.93 だった」</b>だけである。
+        別のデータセットで 0.93 が出るとは<b>一言も書いていない</b>。</p>
+    </div>
+    <div class="cols cols-2">
+      <div class="card" style="border-left:5px solid var(--cud-vermilion)">
+        <div class="card__h">見逃しやすい限定の言葉</div>
+        <p class="tight" style="margin:.2em 0 0">
+          <span class="q">〜の場合／〜を前提として／〜に限り／〜の範囲では／〜と仮定すると／
+          〜を除いて／本実験では／評価に用いた〜において／理論上は／最大で</span></p>
+      </div>
+      <div class="card" style="border-left:5px solid var(--cud-blue)">
+        <div class="card__h">読むときの習慣</div>
+        <ul class="ticks tighter">
+          <li>主張の文を見つけたら、<b>その文の中の限定句に線を引く</b></li>
+          <li>「この主張はどこまで成り立つのか」を一言でメモする</li>
+          <li>限定句のない強い主張は、<b>むしろ疑う</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>大原則 ⑤ 分からないことを記録する<span class="en">Record what you don't understand</span></h2>
+  <p class="slide__lead">分からないまま読み飛ばすのが最も危険である。<b>分からないことを分けて考える。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-3">
+      <div class="card" style="border-top:5px solid var(--cud-blue)">
+        <div class="card__h">A 知識が足りない</div>
+        <p class="tight">前提となる技術・用語を知らない。</p>
+        <p class="tight" style="color:var(--ink-2)"><b>対処：</b>その用語を調べる。参考文献をたどる。教科書に戻る。</p>
+        <p class="tight" style="margin-bottom:0">→ <b>自分の側の問題。</b>埋められる。</p>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-orange)">
+        <div class="card__h">B 書かれていない</div>
+        <p class="tight">論文に情報そのものがない。</p>
+        <p class="tight" style="color:var(--ink-2)"><b>対処：</b>他の節・付録・著者の別論文・公開コードを探す。</p>
+        <p class="tight" style="margin-bottom:0">→ <b>論文の側の問題。</b>見つからなければ「不明」と記録する。</p>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-vermilion)">
+        <div class="card__h">C 論理が通っていない</div>
+        <p class="tight">書いてあるが、筋が通らない。</p>
+        <p class="tight" style="color:var(--ink-2)"><b>対処：</b>何度か読み直す。それでも通らないなら、そう記録する。</p>
+        <p class="tight" style="margin-bottom:0">→ <b>論文の弱点。</b>指摘できる価値がある。</p>
+      </div>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">A を B や C と取り違えない</b>
+      自分の知識不足を「この論文は説明が足りない」と判断してしまう事故は、初学者に非常に多い。
+      <b>まず A を疑う。</b>そのうえで、調べても埋まらなければ B・C を疑う。
+    </div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <h2>やってはいけない読み方<span class="en">Anti-patterns</span></h2>
+  <p class="slide__lead">どれも「読んだつもり」になる読み方である。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:11em">やり方</th><th>何が起きるか</th></tr></thead>
+      <tbody>
+        <tr><th>頭から一字一句読む</th><td>3 ページで力尽きる。<b>目的に応じて読む順を変える</b>（<a href="03-strategy.html">トピック 03</a>）</td></tr>
+        <tr><th>図と表だけ見る</th><td>条件が分からないまま数値だけ覚える。<b>数値は条件とセット</b>である</td></tr>
+        <tr><th>結論だけ読む</th><td>その結論が成り立つ範囲を取り違える</td></tr>
+        <tr><th>著者の意図を忖度する</th><td>書かれていない主張を著者に帰属させてしまう</td></tr>
+        <tr><th>訳文だけで判断する</th><td>限定句や語尾のニュアンスが落ちる。<b>原文で確認する</b></td></tr>
+        <tr><th>AI の要約だけ読む</th><td>読んだのは AI であって、あなたではない（<a href="16-ai-tools.html">トピック 16</a>）</td></tr>
+        <tr><th>批判せずに受け入れる</th><td>査読を通った論文にも誤りはある（<a href="14-critical.html">トピック 14</a>）</td></tr>
+        <tr><th>批判だけして学ばない</th><td>粗探しは読解ではない。<b>まず正確に理解してから評価する</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">5 つの大原則。すべては「書いてあるとおりに読む」に帰着する。</p>
+  <div class="slide__body">
+    <ol class="steps big" style="margin:0">
+      <li><b>推理しない。</b>「たぶんこうだろう」で補完しない</li>
+      <li><b>書いていないことは「ない」。</b>好意的に補わない。その空白は記録する</li>
+      <li><b>語尾を正確に読む。</b>事実／解釈／示唆／願望を区別する</li>
+      <li><b>条件と限定を読み落とさない。</b>主張はその範囲でのみ成り立つ</li>
+      <li><b>分からないことを記録する。</b>知識不足か、記述不足か、論理の欠陥かを分ける</li>
+    </ol>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">次にやること</b>
+      論文は決まった型（IMRAD）で書かれている。型を知れば、どこに何が書いてあるかが分かり、探しながら読めるようになる。
+    </div>
+    <div class="deck-end">
+      <a href="../index.html"><b>戻る</b>資料一覧</a>
+      <a href="02-imrad.html"><b>次のトピック ▶</b>02 論文の構造（IMRAD）</a>
+      <a href="../worksheet.html"><b>ツール</b>論文精読ワークシート</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

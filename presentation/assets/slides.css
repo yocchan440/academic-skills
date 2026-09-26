@@ -1,0 +1,159 @@
+@charset "utf-8";
+/* =====================================================================
+   HTML スライド（16:9 / 1280x720 固定ステージを JS で等比拡大）
+   ===================================================================== */
+
+body.deckbody{
+  height:100vh; overflow:hidden;
+  background:
+    radial-gradient(1200px 600px at 50% -10%, #FFFFFF 0%, var(--bg) 60%);
+  display:flex; flex-direction:column;
+}
+
+/* ---------- 上部バー ---------- */
+.topbar{
+  flex:none; height:44px; display:flex; align-items:center; gap:14px;
+  padding:0 16px; background:var(--surface); border-bottom:1px solid var(--line);
+  font-size:13px; z-index:20;
+}
+.topbar__home{
+  display:inline-flex; align-items:center; gap:.4em;
+  font-weight:700; text-decoration:none; color:var(--ink);
+  border:1px solid var(--line); border-radius:999px; padding:.15em .9em;
+}
+.topbar__home:hover{ background:var(--tint-blue); border-color:var(--cud-blue); }
+.topbar__title{ font-weight:700; color:var(--ink-2); }
+.topbar__num{ font-weight:700; color:var(--ink-2); }
+.topbar__spacer{ flex:1; }
+.topbar button{
+  font-family:inherit; font-size:13px; font-weight:700; color:var(--ink);
+  background:var(--surface); border:1px solid var(--line);
+  border-radius:8px; padding:.2em .8em; cursor:pointer;
+}
+.topbar button:hover{ background:var(--surface-2); }
+
+/* ---------- 進捗 ---------- */
+.progress{ flex:none; height:4px; background:var(--line-2); }
+.progress__bar{ height:100%; width:0; background:var(--accent); transition:width .18s ease; }
+
+/* ---------- ステージ ---------- */
+.stage{ flex:1; position:relative; overflow:hidden; }
+.deck{
+  width:1280px; height:720px;
+  position:absolute; left:50%; top:50%;
+  transform:translate(-50%,-50%) scale(1); transform-origin:center center;
+}
+
+/* ---------- スライド ---------- */
+.slide{
+  position:absolute; inset:0;
+  display:none; flex-direction:column;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  padding:34px 52px 44px;
+  overflow:hidden;
+}
+.slide.is-active{ display:flex; }
+.slide::before{
+  content:""; position:absolute; left:0; right:0; top:0; height:6px;
+  background:linear-gradient(90deg,var(--cud-blue) 0 25%,var(--cud-green) 25% 50%,
+                             var(--cud-orange) 50% 75%,var(--cud-purple) 75% 100%);
+  border-radius:14px 14px 0 0;
+}
+
+.slide h2{
+  font-size:33px; margin:6px 0 4px; letter-spacing:.01em;
+}
+.slide h2 .en{ font-size:.52em; color:var(--ink-3); font-weight:700; margin-left:.7em; }
+.slide__lead{
+  font-size:16px; color:var(--ink-2); margin:0 0 14px;
+  padding-bottom:12px; border-bottom:2px solid var(--line);
+}
+/* --bs は slides.js が内容量に応じて 1.00〜0.78 の範囲で自動調整する */
+.slide__body{ flex:1; min-height:0; font-size:calc(17px * var(--bs, 1)); }
+.slide__body > :first-child{ margin-top:0; }
+.slide__foot{
+  flex:none; margin-top:10px; padding-top:8px; border-top:1px solid var(--line-2);
+  font-size:12px; color:var(--ink-3); display:flex; justify-content:space-between;
+}
+
+/* 表紙スライド */
+.slide--cover{ justify-content:center; align-items:flex-start; padding:60px 70px; }
+.slide--cover .kicker{
+  font-size:15px; font-weight:700; color:var(--cud-blue); letter-spacing:.12em;
+}
+.slide--cover h1{ font-size:52px; margin:.2em 0 .1em; line-height:1.25; }
+.slide--cover .sub{ font-size:20px; color:var(--ink-2); margin:.4em 0 1.4em; }
+.slide--cover .meta{ font-size:14px; color:var(--ink-3); }
+.slide--cover .goals{ margin-top:22px; font-size:16px; }
+
+/* 節区切りスライド */
+.slide--part{ justify-content:center; background:var(--tint-blue); }
+.slide--part h2{ font-size:42px; }
+
+/* スライド内の余白調整 */
+.slide__body .note:first-child{ margin-top:0; }
+.slide__body .tight{ font-size:.912em; }
+.slide__body .tighter{ font-size:.853em; line-height:1.65; }
+.slide__body .big{ font-size:1.118em; }
+
+/* ---------- ナビゲーションボタン ---------- */
+.navbtn{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:44px; height:64px; border:1px solid var(--line); background:rgba(255,255,255,.85);
+  border-radius:10px; cursor:pointer; font-size:20px; color:var(--ink-2);
+  display:grid; place-items:center; z-index:10;
+}
+.navbtn:hover{ background:#fff; color:var(--ink); border-color:var(--cud-blue); }
+.navbtn[disabled]{ opacity:.25; cursor:default; }
+.navbtn--prev{ left:10px; }
+.navbtn--next{ right:10px; }
+
+/* ---------- 目次オーバーレイ ---------- */
+.toc{
+  position:fixed; inset:0; z-index:50; background:rgba(250,249,247,.97);
+  display:none; flex-direction:column; padding:28px 32px;
+}
+.toc.is-open{ display:flex; }
+.toc__h{ font-size:20px; font-weight:700; margin-bottom:4px; }
+.toc__hint{ font-size:13px; color:var(--ink-3); margin-bottom:16px; }
+.toc__list{
+  flex:1; overflow:auto; display:grid; gap:10px;
+  grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); align-content:start;
+}
+.toc__item{
+  text-align:left; font-family:inherit; cursor:pointer;
+  background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--line);
+  border-radius:8px; padding:9px 13px; font-size:14px; color:var(--ink);
+}
+.toc__item:hover{ border-left-color:var(--cud-blue); background:var(--tint-blue); }
+.toc__item.is-current{ border-left-color:var(--cud-orange); background:var(--tint-orange); }
+.toc__item b{ color:var(--ink-3); font-size:12px; display:block; }
+
+/* ---------- 次のトピックへ ---------- */
+.deck-end{
+  display:flex; gap:14px; flex-wrap:wrap; margin-top:18px;
+}
+.deck-end a{
+  text-decoration:none; color:var(--ink); background:var(--surface);
+  border:1px solid var(--line); border-radius:10px; padding:10px 16px; font-size:15px;
+}
+.deck-end a:hover{ border-color:var(--cud-blue); background:var(--tint-blue); }
+.deck-end a b{ display:block; font-size:12px; color:var(--ink-3); }
+
+/* ---------- 印刷（全スライドを縦に並べる） ---------- */
+@media print{
+  @page{ size:A4 landscape; margin:10mm; }
+  body.deckbody{ height:auto; overflow:visible; display:block; }
+  .topbar,.progress,.navbtn,.toc{ display:none !important; }
+  .stage{ display:block; overflow:visible; }
+  .deck{ width:auto; height:auto; position:static; transform:none !important; }
+  .slide{
+    position:relative; inset:auto; display:flex !important;
+    break-after:page; page-break-after:always;
+    box-shadow:none; border:1px solid #bbb; height:auto; min-height:170mm; margin-bottom:6mm;
+  }
+  .slide:last-child{ break-after:auto; page-break-after:auto; }
+}

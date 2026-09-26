@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>執筆ガイドライン | 卒業論文の書き方</title>
+<meta name="description" content="卒業論文の執筆規則を番号つきで一覧にしたガイドライン。">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/doc.css">
+<style>
+  .rulelist.g-b > li{ border-left-color:var(--cud-green); }
+  .rulelist.g-b > li::before{ background:var(--cud-green); }
+  .rulelist.g-c > li{ border-left-color:var(--cud-purple); }
+  .rulelist.g-c > li::before{ background:#A8558B; }
+  .rulelist.g-d > li{ border-left-color:var(--cud-vermilion); }
+  .rulelist.g-d > li::before{ background:var(--cud-vermilion); }
+  .rulelist.g-e > li{ border-left-color:var(--cud-orange); }
+  .rulelist.g-e > li::before{ background:#A97400; }
+  .rulelist.g-f > li{ border-left-color:var(--cud-sky); }
+  .rulelist.g-f > li::before{ background:#2B7FB5; }
+  .rulelist.g-g > li{ border-left-color:#000; }
+  .rulelist.g-g > li::before{ background:#000; }
+  .rulelist.g-h > li{ border-left-color:#56B4E9; }
+  .rulelist.g-h > li::before{ background:#1F5F82; }
+  .ex-inline{ display:grid; grid-template-columns:1.6em 1fr; gap:.1em .4em;
+              font-family:var(--ff-mincho); font-size:14.5px; margin:.4em 0 0; }
+  .ex-inline b{ font-family:var(--ff-ud); }
+  .ex-inline .x{ color:#A34600; font-weight:700; }
+  .ex-inline .o{ color:#00537F; font-weight:700; }
+</style>
+</head>
+<body>
+
+<header class="sitehead">
+  <div class="sitehead__in">
+    <a class="sitehead__logo" href="index.html">卒業論文の<span>書き方</span></a>
+    <nav>
+      <a href="index.html">資料一覧</a>
+      <a href="guideline.html" aria-current="page">執筆ガイドライン</a>
+      <a href="checklist.html">提出前チェックリスト</a>
+    
+      <a href="../index.html" class="nav-up">Academic Skills ▲</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap wrap--narrow">
+
+  <section class="hero">
+    <div class="hero__band"></div>
+    <div class="kicker">WRITING GUIDELINE</div>
+    <h1>執筆ガイドライン</h1>
+    <p>卒業論文を書くうえで守るべき規則 119 項目を、分野ごとに番号をつけて一覧にしています。
+       書きながら手元に置き、迷ったときに引いてください。各規則の詳しい解説は、リンク先のスライド資料にあります。</p>
+  </section>
+
+  <nav class="mini-toc">
+    <h2>目次</h2>
+    <ol>
+      <li><a href="#a">A　文章の大原則</a></li>
+      <li><a href="#b">B　論文の構成</a></li>
+      <li><a href="#c">C　各章の要件</a></li>
+      <li><a href="#d">D　日本語の表記</a></li>
+      <li><a href="#e">E　図表</a></li>
+      <li><a href="#f">F　引用と参考文献</a></li>
+      <li><a href="#g">G　研究倫理と生成 AI</a></li>
+      <li><a href="#h">H　Overleaf と LaTeX</a></li>
+    </ol>
+  </nav>
+
+  <!-- ================= A ================= -->
+  <section class="sec" id="a">
+    <h2>A　文章の大原則</h2>
+    <p class="sec__lead">詳しい解説：<a href="slides/01-basics.html">トピック 01 論文執筆の大原則</a></p>
+    <ol class="rulelist">
+      <li data-id="A-01"><b>論文は「主張」と「証拠」で構成する</b>
+        <p>卒業論文は作業報告書ではない。「何が分かっていなかったか」を示し、「自分がそれをどう埋めたか」を証拠とともに示す文書である。</p></li>
+      <li data-id="A-02"><b>読者は「少し分野が違う第三者」と想定する</b>
+        <p>指導教員や研究室のメンバーではない。研究室の内輪の言葉、読者の予備知識に頼らない。</p></li>
+      <li data-id="A-03"><b>文体は「である調」に統一する</b>
+        <p>「〜だ」は使わない。「です・ます」も使わない。断定の強さは確信度に応じて調整する（である／と考えられる／が示唆される／の可能性がある）。</p>
+        <div class="ex-inline"><span class="x">✗</span><span>提案手法は従来手法より高速だ。</span><span class="o">✓</span><span>提案手法は従来手法より高速である。</span></div></li>
+      <li data-id="A-04"><b>1 段落に 1 話題だけを書く</b>
+        <p>段落の先頭にトピックセンテンス（その段落の主張を 1 文で）を置き、以降の文で根拠・データ・具体例により支える。</p></li>
+      <li data-id="A-05"><b>段落の頭は全角 1 文字下げる</b>
+        <p>改行しただけでは段落にならない。</p></li>
+      <li data-id="A-06"><b>主語を省略しない</b>
+        <p>誰が行ったのかを明示する。「本研究では」「著者は」「提案手法は」「○○らは [n]」を使う。一人称「私は」は使わない。</p></li>
+      <li data-id="A-07"><b>事実と意見を分けて書く</b>
+        <p>文献に基づく事実、自分の実験で得た事実、著者の解釈を 1 文に混ぜない。語尾で区別する（〜であった／〜と考えられる）。</p></li>
+      <li data-id="A-08"><b>曖昧な形容詞を数値に置き換える</b>
+        <p>「かなり」「多くの」「ほとんど」「速い」を見つけたら、数値と単位で書けないか検討する。</p>
+        <div class="ex-inline"><span class="x">✗</span><span>この結果は従来研究よりかなり良い。</span><span class="o">✓</span><span>この結果は従来研究より 30% 高速である。</span></div></li>
+      <li data-id="A-09"><b>主語と述語を対応させ、一文を短くする</b>
+        <p>目安は一文 60 字前後。読点が 3 つ以上必要になったら、文を分けるか箇条書きにできないか検討する。</p></li>
+      <li data-id="A-10"><b>口語表現を使わず、冗長な言い回しを削る</b>
+        <p>「なので」「でも」「ちゃんと」「いろいろな」は使わない。「〜することによって」は「〜により」、「〜することが可能である」は「〜できる」に置き換える。</p></li>
+      <li data-id="A-11"><b>略語は初出時に定義する</b>
+        <p>正式名称を書き、括弧内または「以下 ○○」として略語を示す。定義は 1 回だけ行い、以降は略語を用いる。</p>
+        <div class="ex-inline"><span class="o">✓</span><span>属性ベース暗号（Attribute-Based Encryption、以下 ABE）</span></div></li>
+      <li data-id="A-12"><b>用語は論文全体で統一する</b>
+        <p>「手法」と「方式」、「ユーザ」と「利用者」を混ぜない。同じものは必ず同じ語で呼ぶ。</p></li>
+      <li data-id="A-13"><b>主張には必ず根拠を添える</b>
+        <p>根拠のない意見は「お気持ちの表明」であり、科学的な記述ではない。参考文献または自分のデータで補強する。「みんなそう考えている」と書きたいときは、そう書いた文献を複数挙げる。</p></li>
+      <li data-id="A-14"><b>固有名詞は公式の表記で書く</b>
+        <p>ChatGPT、JavaScript、GitHub、Wi-Fi、PyTorch など、大文字・小文字・ハイフンを公式サイトで確認する。</p></li>
+    </ol>
+  </section>
+
+  <!-- ================= B ================= -->
+  <section class="sec" id="b">
+    <h2>B　論文の構成</h2>
+    <p class="sec__lead">詳しい解説：<a href="slides/02-structure.html">トピック 02 論文の構成と章立て</a>／<a href="slides/14-process.html">トピック 14 執筆の進め方</a></p>
+    <ol class="rulelist g-b">
+      <li data-id="B-01"><b>IMRAD 形式に従う</b>
+        <p>情報系の論文は Introduction（序論）／Method（手法）／Results（結果）and Discussion（考察）の構成で書く。学術論文は散文ではないため、決められた型に従う必要がある。</p></li>
+      <li data-id="B-02"><b>標準的な章構成を用いる</b>
+        <p>概要／1. 序論／2. 関連研究／3. 提案方式／4. 実験／5. 評価・考察／6. 結論／（謝辞）／参考文献／（付録）。関連研究は提案方式の後ろに置く構成もある。</p></li>
+      <li data-id="B-03"><b>概要・謝辞・参考文献・付録に章番号を付けない</b>
+        <p>これらは論証の本体ではないため、章番号の対象外である。</p></li>
+      <li data-id="B-04"><b>本文は明朝体、章題・節題はゴシック体にする</b>
+        <p>強調は太字ゴシック。日本語にイタリック（斜体）は使わない。</p></li>
+      <li data-id="B-05"><b>見出しの階層は 3 段までにする</b>
+        <p>1.／1.1／1.1.1 まで。4 段以上が必要になったら、構成そのものを見直す。</p></li>
+      <li data-id="B-06"><b>節を 1 つだけ作らない</b>
+        <p>2.1 を作るなら 2.2 も存在する。1 つしかないなら節に分ける必要がない。</p></li>
+      <li data-id="B-07"><b>節題は体言止めで表現を揃える</b>
+        <p>「URL 特徴量を使う」ではなく「URL 特徴量を用いる手法」。同じ階層の見出しは文法的な形を揃える。</p></li>
+      <li data-id="B-08"><b>番号は処理系に自動で振らせる</b>
+        <p>LaTeX なら <code>\section</code>／<code>\label</code>／<code>\ref</code>、Word ならスタイルと相互参照を使う。手入力した番号は、章を入れ替えた瞬間に壊れる。</p></li>
+      <li data-id="B-09"><b>序論・実験・考察・結論・概要の一貫性を保つ</b>
+        <p>序論で掲げた目的を検証するために実験・調査をし、考察し、まとめる。目的外のことはやらない。実験の途中で目的が変わったら、序論を書き直す。</p></li>
+      <li data-id="B-10"><b>書く順番は「提案 → 実験 → 考察 → 関連研究 → 序論 → 結論 → 概要」</b>
+        <p>自分が最もよく分かっているところから書く。概要は必ず最後に書く。</p></li>
+      <li data-id="B-11"><b>白紙から書き始めず、先にアウトラインを作る</b>
+        <p>章・節の見出しだけを全部書き、各節に 1 行のメモを添えて、指導教員に見せる。見出しが書けない部分は、研究がまだ足りていない部分である。</p></li>
+      <li data-id="B-12"><b>学科・研究室指定の様式を最優先する</b>
+        <p>余白・フォント・ページ数・提出形式の規定がある場合は、本ガイドラインより優先する。</p></li>
+    </ol>
+  </section>
+
+  <!-- ================= C ================= -->
+  <section class="sec" id="c">
+    <h2>C　各章の要件</h2>
+    <p class="sec__lead">詳しい解説：<a href="slides/03-abstract.html">トピック 03</a>〜<a href="slides/09-conclusion.html">09</a></p>
+    <ol class="rulelist g-c">
+      <li data-id="C-01"><b>概要は論文全体の要約にする</b>
+        <p>概要 ≠ 序論。序論＋方式＋実験＋評価・考察のエッセンスを書く。基本的に IMRAD を書く。</p></li>
+      <li data-id="C-02"><b>概要は 1 ページ分をきっちり埋める</b>
+        <p>余白は認めない。論じ尽くす。</p></li>
+      <li data-id="C-03"><b>概要に結果の数値を必ず書く</b>
+        <p>「良好な精度が得られた」ではなく「F 値は 0.71 から 0.93 へ向上した」と書く。</p></li>
+      <li data-id="C-04"><b>概要に図表番号・文献番号・構成の案内を書かない</b>
+        <p>概要は単独で読んで意味が通る必要がある。</p></li>
+      <li data-id="C-05"><b>概要は 6 要素で構成する</b>
+        <p>① Importance（重要性）② Gap（既存研究の欠落）③ Objective（目的）④ Method（手法）⑤ Key findings（主要な発見）⑥ Implications（示唆）。特に ② が抜けやすい。</p></li>
+      <li data-id="C-06"><b>序論には論文のストーリーを書く</b>
+        <p>現状（背景・社会的要求）→ 問題点・課題 → 本研究（何をどう解決するか、何が新しいか、なぜ今までできなかったか）→ 貢献と構成、の 4 ブロックで書く。</p></li>
+      <li data-id="C-07"><b>序論の背景は数値と出典で示す</b>
+        <p>「近年注目されている」だけでは中身がない。誰が、どれだけ、いつ、を出典つきで書く。</p></li>
+      <li data-id="C-08"><b>研究目的を 1 文で言い切る</b>
+        <p>「本研究の目的は、〜することにより、〜を明らかにすることである。」システムの開発は手段であり、研究目的ではない。</p></li>
+      <li data-id="C-09"><b>序論に個人的な動機を書かない</b>
+        <p>「興味を持った」「学んだことを活かしたい」は研究の必要性ではない。必要性は社会や技術の側にある。</p></li>
+      <li data-id="C-10"><b>貢献は箇条書きにし、動詞で終える</b>
+        <p>「設計した」「示した」「明らかにした」。「〜を行った」だけでは貢献にならない。</p></li>
+      <li data-id="C-11"><b>関連研究は羅列せず、分類して整理する</b>
+        <p>分類の軸（アプローチ別、入力データ別、適用場面別など）を 1〜2 つ決め、まず全体像を示してから個別の研究を述べる。</p></li>
+      <li data-id="C-12"><b>関連研究は客観的な事実で記述する</b>
+        <p>主観的に貶さない。「不十分である」ではなく「〜については報告されていない」「〜を前提としているため、〜の場合には適用できない」と書く。</p></li>
+      <li data-id="C-13"><b>関連研究の章は「本研究の位置づけ」で締める</b>
+        <p>自分の研究との差分（何が同じで何が違うか、何をやって何はやらないか）を言い切る。比較表を併用すると効果的である。</p></li>
+      <li data-id="C-14"><b>提案方式は 6 つの問いに答える</b>
+        <p>何をするか／なぜ必要か・適用範囲は／どうやるか／なぜそれで解決するか・根拠は／解決すると何が起きるか／その影響は。特に「なぜそれで解決するのか」が抜けやすい。</p></li>
+      <li data-id="C-15"><b>提案方式は第三者が再現できる水準で書く</b>
+        <p>設計方針 → 全体構成 → 各構成要素 → 動作例 → 前提と適用範囲、の順に記述する。</p></li>
+      <li data-id="C-16"><b>記号は使う前に定義し、数式には式番号を付ける</b>
+        <p>数式の直後に「ここで ○ は △ を表す」と記号の意味を書く。同じ記号を別の意味で使い回さない。</p></li>
+      <li data-id="C-17"><b>実験の目的を最初に書く</b>
+        <p>目的のない実験は、やりたいことをやっているだけであり、科学ではない。RQ（研究上の問い）に番号を付けると、考察と対応づけやすい。</p></li>
+      <li data-id="C-18"><b>実験の条件・環境・対象を漏れなく書く</b>
+        <p>ハードウェア、OS、ライブラリのバージョン、データセットの出典・取得日・件数、パラメータ、乱数シード、試行回数、比較対象、評価指標の定義。</p></li>
+      <li data-id="C-19"><b>比較の公正さを自己点検する</b>
+        <p>提案手法だけをチューニングしていないか、テストデータで学習していないか、都合の良い 1 回だけを載せていないか。条件は明記する。</p></li>
+      <li data-id="C-20"><b>アンケートでは集団の選定と質問文の誘導に注意する</b>
+        <p>意図的に集団を選んでいないか。誘導質問（「便利だと思いませんか」）、ダブルバーレル質問になっていないか。実施前に指導教員に見せる。</p></li>
+      <li data-id="C-21"><b>統計処理は検定名・有意水準・p 値・標本サイズを明記する</b>
+        <p>「有意差がない」を「差がない」と書かない。自信がないなら検定を無理に使わず、記述統計を丁寧に示す。</p></li>
+      <li data-id="C-22"><b>結果（事実）と考察（解釈）を書き分ける</b>
+        <p>結果は「〜であった」、考察は「〜と考えられる」。考察は 結果の要約 → 解釈 → 根拠 → 含意 の 4 段で書く。</p></li>
+      <li data-id="C-23"><b>図表を貼るだけでなく、本文で数値を説明する</b>
+        <p>最も重要な数値を本文に書き出し、図表のどこを見ればよいかを示し、RQ との対応を述べる。</p></li>
+      <li data-id="C-24"><b>研究の限界を 2〜3 点、誠実に書く</b>
+        <p>データの限界、設定の限界、手法の限界、評価の限界。「時間がなかった」は限界ではなく言い訳である。</p></li>
+      <li data-id="C-25"><b>データが支える範囲を超えた主張をしない</b>
+        <p>相関を因果と言い換えない。「本実験の条件下では」「評価に用いたデータセットにおいて」と範囲を限定する。</p></li>
+      <li data-id="C-26"><b>結論で新しいことを言わない</b>
+        <p>結論は論文全体の総括である。本文で議論していない主張・データ・文献を持ち出さない。持ち出したくなったら、それは本文に書くべきものである。</p></li>
+      <li data-id="C-27"><b>結論は 6 要素で構成する</b>
+        <p>① 問題提起 ② 主要な発見 ③ 示唆・意義 ④ 研究の限界 ⑤ 今後の課題 ⑥ 強い結び。</p></li>
+      <li data-id="C-28"><b>今後の課題は限界から導き、具体的に書く</b>
+        <p>「さらなる精度の向上を目指したい」では次の人が引き継げない。何を対象に何を行う必要があるのかを書く。</p></li>
+      <li data-id="C-29"><b>謝辞は章番号なしで、結論の後・参考文献の前に置く</b>
+        <p>謝辞は、著者にはならないが研究に寄与した人を記録し、資金やデータの出所を明示するための、論文の一部である。詳しくは<a href="slides/15-acknowledgment.html">トピック 15</a>。</p></li>
+      <li data-id="C-30"><b>謝辞は貢献の大きい順に書く</b>
+        <p>指導教員 → 審査員 → 研究室のメンバー → 技術的支援・データ提供 → 調査協力者 → 研究費、の順が一般的である。分量は半ページ程度。文体は謝辞の中で統一する。</p></li>
+      <li data-id="C-31"><b>謝辞で氏名・肩書き・所属を正確に書く</b>
+        <p>異体字（髙／高、﨑／崎）に注意する。職位は教授・准教授・講師・助教を正しく用いる。前年度の卒論を流用して氏名を直し忘れる事故が多い。</p></li>
+      <li data-id="C-32"><b>謝辞に個人情報・私的な感謝・ユーモアを書かない</b>
+        <p>被験者は「ご協力いただいた皆様」とする。外部機関や企業の名前を出す場合は、事前に相手の許可を取る。生成 AI は謝辞の対象ではない（利用は本文または注記で開示する）。</p></li>
+    </ol>
+  </section>
+
+  <!-- ================= D ================= -->
+  <section class="sec" id="d">
+    <h2>D　日本語の表記</h2>
+    <p class="sec__lead">詳しい解説：<a href="slides/10-japanese.html">トピック 10 日本語表記のルール</a></p>
+    <ol class="rulelist g-d">
+      <li data-id="D-01"><b>和文中の句読点は全角の「、。」または「，．」を用いる</b>
+        <p>論文全体でどちらかに統一する。半角のカンマ・ピリオドは使わない。<b>絶対である。</b></p></li>
+      <li data-id="D-02"><b>和文中の括弧は全角、英文中の括弧は半角を用いる</b>
+        <div class="ex-inline"><span class="o">✓</span><span>属性ベース暗号（ABE）</span><span class="x">✗</span><span>属性ベース暗号(ABE)</span></div></li>
+      <li data-id="D-03"><b>文中の英数字は原則として半角文字を用いる</b>
+        <p>「1」「2」は可、「１」「２」は不可。</p></li>
+      <li data-id="D-04"><b>和文と欧文・数字の間に半角のアキを入れる</b>
+        <div class="ex-inline"><span class="o">✓</span><span>Python 3.12 を用いた／32 GB のメモリ</span><span class="x">✗</span><span>Python3.12を用いた／32GBのメモリ</span></div></li>
+      <li data-id="D-05"><b>数えられるものは算用数字、慣用表現は漢数字で書く</b>
+        <p>「3 つの自治体」「第 1 章」／「一般的」「一方」「第三者」。</p></li>
+      <li data-id="D-06"><b>4 桁以上の数値には桁区切りを入れる</b>
+        <p>1,500 名。表の中では位取りを揃える。</p></li>
+      <li data-id="D-07"><b>形式名詞「こと・もの・ため」はひらがなで書く</b>
+        <p>実体を指す場合（事件、物体）は漢字。そもそも削れないかを先に考える。</p>
+        <div class="ex-inline"><span class="x">✗</span><span>検知することができる</span><span class="o">✓</span><span>検知できる</span></div></li>
+      <li data-id="D-08"><b>「ため」の理由と目的を書き分ける</b>
+        <p>理由なら「〜ので」「〜から」、目的なら「〜するために」。どちらとも読める文にしない。</p></li>
+      <li data-id="D-09"><b>補助的な語はひらがなで書く</b>
+        <p>事で→ことで、為に→ために、即ち→すなわち、〜の時→〜のとき、出来る→できる、従って→したがって、但し→ただし、及び→および、又は→または、更に→さらに、殆ど→ほとんど、全て→すべて、尚→なお、無い→ない、予め→あらかじめ、〜の様な→〜のような。</p></li>
+      <li data-id="D-10"><b>送り仮名を正しく使う</b>
+        <p>行なう→行う、表わす→表す、問合せ→問い合わせ。</p></li>
+      <li data-id="D-11"><b>ら抜き・い抜き言葉を使わない</b>
+        <div class="ex-inline"><span class="x">✗</span><span>見れる／増加してる</span><span class="o">✓</span><span>見られる／増加している</span></div></li>
+      <li data-id="D-12"><b>重言を避ける</b>
+        <p>「まず最初に」→「まず」、「後で後述する」→「後述する」、「約 10 件程度」→「約 10 件」。</p></li>
+      <li data-id="D-13"><b>本文中で体言止め・感嘆符・疑問符を使わない</b>
+        <p>「精度は 0.94。」ではなく「精度は 0.94 であった。」</p></li>
+      <li data-id="D-14"><b>表記ゆれを撲滅する</b>
+        <p>ユーザ／ユーザー、サーバ／サーバー、手法／方式、図1／図 1 — いずれかに統一し、全文検索で確認する。</p></li>
+      <li data-id="D-15"><b>同じ接続詞を連続して使わない</b>
+        <p>「また、〜。また、〜。」が続いたら、文を統合するか、順序・対比を示す語に置き換える。</p></li>
+    </ol>
+  </section>
+
+  <!-- ================= E ================= -->
+  <section class="sec" id="e">
+    <h2>E　図表</h2>
+    <p class="sec__lead">詳しい解説：<a href="slides/11-figures-tables.html">トピック 11 図表の作法</a></p>
+    <ol class="rulelist g-e">
+      <li data-id="E-01"><b>図題は図の下、表題は表の上に置く</b>
+        <p>図 1 提案方式のシステム構成図 → 図の下。表 2 提案方式と従来方式の比較 → 表の上。</p></li>
+      <li data-id="E-02"><b>すべての図表を本文中で番号により引用する</b>
+        <p>本文から引用されていない図表は載せない。</p></li>
+      <li data-id="E-03"><b>図表は本文で説明する</b>
+        <p>「〜を図 1 に示す」だけで終えない。あくまで図は補足資料であり、論じるのは文章である。</p>
+        <div class="ex-inline"><span class="x">✗</span><span>〜を手順通り進めていく（図 2）。</span><span class="o">✓</span><span>処理の流れを図 2 に示す。まず入力 URL を…</span></div></li>
+      <li data-id="E-04"><b>キャプションだけで内容が分かるように書く</b>
+        <p>「図 3 結果」ではなく「図 3 検体種別ごとの F 値の比較」。</p></li>
+      <li data-id="E-05"><b>図と表は別系列で、本文に登場する順に番号を振る</b></li>
+      <li data-id="E-06"><b>表の罫線は極力減らす</b>
+        <p>上端・見出し下・下端の 3 本が基本。縦罫は原則として引かない。セルの塗りつぶしもしない。</p></li>
+      <li data-id="E-07"><b>数値は右揃えにし、有効数字を揃える</b>
+        <p>0.9 と 0.94 を同じ列に混ぜない。</p></li>
+      <li data-id="E-08"><b>単位は見出しに一度だけ書く</b>
+        <p>「判定時間 [秒]」として、各セルからは単位を省く。</p></li>
+      <li data-id="E-09"><b>棒グラフの縦軸は 0 から始める</b>
+        <p>途中から始めると差が誇張され、データの歪曲とみなされる。</p></li>
+      <li data-id="E-10"><b>グラフには軸ラベル・単位・目盛り・凡例を入れる</b>
+        <p>複数回試行した場合はエラーバーも示す。</p></li>
+      <li data-id="E-11"><b>色だけに意味を持たせない</b>
+        <p>線種（実線・破線）、マーカーの形、ハッチングを併用する。赤と緑だけで区別しない。グレースケールで印刷して判別できるか確認する。</p></li>
+      <li data-id="E-12"><b>図はベクタ形式（PDF・SVG）で作成する</b>
+        <p>スクリーンショットは PNG で 300 dpi 以上。Excel のグラフを画面撮影して貼らない。</p></li>
+      <li data-id="E-13"><b>図中の文字は、印刷して読める大きさにする</b>
+        <p>論文に貼ると縮小される。本文と同程度の見た目になるよう、作図側で大きめに設定する。</p></li>
+      <li data-id="E-14"><b>他人の図表を引用する場合は出典を明記する</b>
+        <p>キャプションに「（文献 [3] の Fig. 2 を引用）」または「〜をもとに作成」と記す。学会によっては別途許諾が必要である。</p></li>
+    </ol>
+  </section>
+
+  <!-- ================= F ================= -->
+  <section class="sec" id="f">
+    <h2>F　引用と参考文献</h2>
+    <p class="sec__lead">詳しい解説：<a href="slides/12-references.html">トピック 12 引用と参考文献</a></p>
+    <ol class="rulelist g-f">
+      <li data-id="F-01"><b>引用は文中で使う</b>
+        <p>文献番号は句点の前に置く。</p>
+        <div class="ex-inline"><span class="o">✓</span><span>このような方式を山根らが提案している [4]．</span><span class="x">✗</span><span>このような方式を山根らが提案している．[4]</span></div></li>
+      <li data-id="F-02"><b>引用の 7 条件を満たす</b>
+        <p>①公表済みの著作物 ②公正な慣行に合致 ③正当な範囲内 ④主従関係が明確 ⑤引用部分が明確 ⑥引用の必然性 ⑦出所の明示（著作権法第 32 条）。</p></li>
+      <li data-id="F-03"><b>引用部分を括弧などで明示する</b>
+        <p>要約・言い換えの場合も、出所の明示は必須である。語順を入れ替えただけのものは言い換えにならない。</p></li>
+      <li data-id="F-04"><b>孫引きをしない</b>
+        <p>他の論文の引用リストからコピーせず、必ず原典を読む。入手できない場合は「[5] による」と明記する。</p></li>
+      <li data-id="F-05"><b>出所は恒久的な識別子で示す</b>
+        <p>DOI があれば DOI（例：10.1021/jo0349227）を書く。図書は ISBN を添える。</p></li>
+      <li data-id="F-06"><b>雑誌論文は「著者、標題、雑誌名、巻、号、ページ、発行年」を書く</b>
+        <div class="ex-inline"><span class="o">例</span><span>山田太郎：偏微分方程式の数値解法，情報処理，Vol.1, No.1, pp.6〜10（1960）．</span></div></li>
+      <li data-id="F-07"><b>単行本は「著者、書名、ページ数、発行所、発行年」を書く</b>
+        <div class="ex-inline"><span class="o">例</span><span>大山一夫：電子計算機，p.300，情報出版，東京（1991）.</span></div></li>
+      <li data-id="F-08"><b>会議論文は会議名・収録シリーズ・出版社を含める</b>
+        <div class="ex-inline"><span class="o">例</span><span>R. Canetti, S. Halevi, and J. Katz, “Chosen-ciphertext security from identity-based encryption,” Proc. Eurocrypt 2004, LNCS 3027, pp.207–222, Springer, 2004.</span></div></li>
+      <li data-id="F-09"><b>Web ページは著者（組織）・タイトル・URL・参照日を書く</b>
+        <p>URL だけを並べない。Web ページばかりの文献リストは調査不足とみなされる。</p></li>
+      <li data-id="F-10"><b>参考文献の書式を統一する</b>
+        <p>著者名の区切り、ページの表記、年の括弧をすべての文献で揃える。BibTeX を使えば自動的に統一される。</p></li>
+      <li data-id="F-11"><b>適切な情報が過不足なく含まれているか確認する</b>
+        <p>巻号やページの欠落、著者名の文字化けは、自動取得した書誌情報によく見られる。原典と照合する。</p></li>
+      <li data-id="F-12"><b>本文で引用していない文献をリストに残さない</b></li>
+      <li data-id="F-13"><b>卒業論文では参考文献 15 件以上を目安とし、査読付き論文を中心にする</b>
+        <p>論文誌（Transactions, Journal）や主要国際会議（Proc. …）は査読あり。研究会報告・全国大会予稿・プレプリントは査読なしであることが多い。</p></li>
+    </ol>
+  </section>
+
+  <!-- ================= G ================= -->
+  <section class="sec" id="g">
+    <h2>G　研究倫理と生成 AI</h2>
+    <p class="sec__lead">詳しい解説：<a href="slides/13-ai-ethics.html">トピック 13 研究倫理と生成 AI</a></p>
+    <ol class="rulelist g-g">
+      <li data-id="G-01"><b>ねつ造・改ざん・剽窃を行わない</b>
+        <p>存在しないデータ・文献・URL を書くこと、データを都合よく書き換えること、出所を示さず他人の著作物を使うこと。いずれも科学的不正であり、発覚した時点で卒業は認められない。</p></li>
+      <li data-id="G-02"><b>生成 AI の利用は妨げない。ただし結果のすべての責任は著者が負う</b>
+        <p>AI が生成した誤りも、著者であるあなたの誤りとして扱われる。</p></li>
+      <li data-id="G-03"><b>自分が理解していない文章を論文に書かない</b>
+        <p>「これはどういう意味ですか」と聞かれて説明できないことは認められない。平たく言えば、AI が言っていることが分からないなら、使ってはいけない。</p></li>
+      <li data-id="G-04"><b>AI が挙げた参考文献・URL は必ず自分で検索して確認する</b>
+        <p>存在しない文献の記載はねつ造にあたる。</p></li>
+      <li data-id="G-05"><b>AI には書かせるのではなく、指摘させる</b>
+        <p>AI は単語と単語をそれらしく繋いでいるだけであり、論理的不整合・説明不足・粒度の混在を平気で出力する。自分の文章の問題点を指摘させ、判断は自分で行う。</p></li>
+      <li data-id="G-06"><b>人を対象とする調査は事前に確認・同意・匿名化を行う</b>
+        <p>目的の説明と同意取得、データの保管と廃棄、所属機関の倫理審査の要否を、実施前に確認する。</p></li>
+      <li data-id="G-07"><b>他人のシステムに無断でアクセス・攻撃しない</b>
+        <p>研究目的であっても不正アクセス禁止法違反になる。実験は自分の管理下の環境で行う。脆弱性を発見した場合は、公表前に開発者へ連絡する。</p></li>
+      <li data-id="G-08"><b>OSS のライセンスとデータセットの利用条件を守る</b>
+        <p>必要な著作権表示を行い、再配布の可否を確認する。</p></li>
+      <li data-id="G-09"><b>判断に迷ったら、実施前に指導教員に相談する</b>
+        <p>「やってしまってから相談」では取り返しがつかない場合がある。</p></li>
+    </ol>
+  </section>
+
+  <!-- ================= H ================= -->
+  <section class="sec" id="h">
+    <h2>H　Overleaf と LaTeX</h2>
+    <p class="sec__lead">配布テンプレート <code>sotsuron2025je.zip</code> を使う場合の規則。詳しい解説：<a href="slides/16-latex.html">トピック 16 Overleaf と LaTeX</a></p>
+    <ol class="rulelist g-h">
+      <li data-id="H-01"><b>コンパイラは LuaLaTeX、メイン文書は <code>00_MAIN.tex</code> に設定する</b>
+        <p>Overleaf の <code>Menu</code> から設定する。テンプレートは <code>jlreq</code> と <code>luatexja</code> を使うため、pdfLaTeX では通らない。メイン文書の指定を誤ると一部の章しか出力されない。</p></li>
+      <li data-id="H-02"><b><code>latexmkrc</code> を編集しない</b>
+        <p>参考文献を pBibTeX で処理するための設定ファイルである。</p></li>
+      <li data-id="H-03"><b>各章のファイルでは <code>\chapter</code> を書かず、<code>\section</code> から書く</b>
+        <p>章は <code>00_MAIN.tex</code> 側で宣言されている。章構成を変えるときだけ <code>00_MAIN.tex</code> を編集する。</p></li>
+      <li data-id="H-04"><b>見出しの階層を飛ばさない</b>
+        <p><code>\section</code> → <code>\subsection</code> → <code>\subsubsection</code> の順に使う。番号は自動で振られるので、「4.2.1」のように手で書かない。</p></li>
+      <li data-id="H-05"><b>段落は空行で区切る。<code>\\</code> で段落を作らない</b>
+        <p>字下げは自動で入るため、全角スペースを入れない。原稿は 1 文ごとに改行して書くと、修正箇所を探しやすい。</p></li>
+      <li data-id="H-06"><b>図表・式・章節の参照は <code>\label</code> と <code>\ref</code> で行う</b>
+        <p>接頭辞で種類が分かるようにする（<code>chap:</code> <code>sec:</code> <code>fig:</code> <code>tbl:</code> <code>eq:</code> <code>lst:</code>）。<code>\label</code> は <code>\caption</code> の直後に置く。</p></li>
+      <li data-id="H-07"><b>図は <code>figure</code> 環境で <code>\caption</code> を後ろに、表は <code>table</code> 環境で <code>\caption</code> を前に置く</b>
+        <p>配置指定は <code>[tbp]</code> を基本とし、<code>[h]</code> を多用しない。表の罫線は <code>booktabs</code> の <code>\toprule</code> <code>\midrule</code> <code>\bottomrule</code> を使う。</p></li>
+      <li data-id="H-08"><b>参考文献は <code>22_References.bib</code> に登録し、<code>\cite</code> で引用する</b>
+        <p><code>\cite</code> していない文献は出力されない。自動取得した書誌情報は原典と照合する。</p></li>
+      <li data-id="H-09"><b>エラーは最初の 1 件から読む</b>
+        <p>後続のエラーは巻き添えであることが多い。取れない場合は、直前に書き足した部分を <code>%</code> でコメントアウトして、通る状態まで戻す。</p></li>
+      <li data-id="H-10"><b>提出前に <code>Recompile from scratch</code> を一度実行する</b>
+        <p>目次・図目次・表目次のページ番号を確定させ、<code>??</code> や <code>[?]</code> が残っていないことを確認する。</p></li>
+    </ol>
+  </section>
+
+  <section class="sec">
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">このガイドラインの使い方</b>
+      印刷して手元に置き、章を書き終えるたびに該当する節を読み返してください。
+      提出前には <a href="checklist.html">提出前チェックリスト</a>を頭から通してください。
+    </div>
+  </section>
+
+  <footer class="sitefoot">
+    卒業論文の書き方 — 執筆ガイドライン<br>
+    学科・研究室が定める執筆要領がある場合は、そちらを優先してください。
+  </footer>
+
+</div>
+</body>
+</html>

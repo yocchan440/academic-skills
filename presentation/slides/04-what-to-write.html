@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>04 スライドに何を書くか | 卒研発表の仕方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+<style>
+  .mini{ background:var(--surface); border:2px solid var(--line); border-radius:8px;
+         padding:14px 18px; }
+  .mini h4{ font-size:1.05em; margin:0 0 .5em; padding-bottom:.25em;
+            border-bottom:3px solid var(--cud-blue); }
+  .mini ul{ margin:.3em 0 0; padding-left:1.3em; }
+  .mini li{ margin:.3em 0; }
+  .mini.dense{ font-size:.78em; line-height:1.55; }
+</style>
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">04 スライドに何を書くか</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 04</div>
+  <h1>スライドに何を書くか</h1>
+  <p class="sub">文を書かない。かといって、何も書かないわけでもない</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>スライドに文を書いてはいけない理由を説明できる</li>
+      <li>ペグワードという考え方を使える</li>
+      <li>1 枚 1 メッセージと余白を守れる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>2 つの相反する前提<span class="en">Two constraints</span></h2>
+  <p class="slide__lead">この 2 つを同時に満たすことが、スライド作りの本質である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="card" style="border-top:5px solid var(--cud-blue)">
+        <div class="card__h">前提 ①　話は届かない</div>
+        <p class="tight"><b>あなたがしゃべっていることは、聴衆には届いていないと思ってください。
+        スライドに書いてあることしか、聴衆は理解しないと思ってください。</b></p>
+        <p class="tight" style="margin-bottom:0">→ だから<b>要点は必ずスライドに置く</b>。</p>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-vermilion)">
+        <div class="card__h">前提 ②　文を書くと読まれる</div>
+        <p class="tight">スライドが切り替わると、聴衆は<b>まず読む</b>。読んでいる間、話は聞いていない。
+        文が長ければ、読み終わる前に次のスライドへ行き、<b>すべてを諦める</b>。</p>
+        <p class="tight" style="margin-bottom:0">→ だから<b>文を書いてはいけない</b>。</p>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">結論</b>
+      <span class="big">スライドに置くのは<b>文</b>ではなく<b>語</b>である。<br>
+      語を見せ、話で肉づけする。</span>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>文を書いたスライドはこうなる<span class="en">Why sentences fail</span></h2>
+  <p class="slide__lead">同じ内容を、2 通りで作ってみる。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="mini dense" style="border-color:var(--bad);border-style:dashed">
+          <h4 style="border-bottom-color:var(--bad)">提案手法</h4>
+          <p style="margin:.3em 0">　本研究では、URL 文字列の語彙的特徴量に依存しない検知手法を提案する。提案手法では、ページの HTML から DOM の階層構造、外部リソース参照、フォーム要素に関する 27 次元の特徴量を抽出し、勾配ブースティング決定木により分類を行う。これにより、攻撃者が URL 短縮サービスを利用した場合でも、判別に必要な情報が失われないという利点がある。</p>
+        </div>
+        <p class="tighter" style="margin-top:8px">
+          <span style="color:#A34600;font-weight:700">✗</span>
+          聴衆は 20 秒かけて読む。その間、話は聞いていない。
+          読み終わる頃にはスライドが切り替わる。<b>何も残らない。</b></p>
+      </div>
+      <div>
+        <div class="mini">
+          <h4>提案手法：URL に依存しない特徴量</h4>
+          <ul>
+            <li><b>入力</b>　ページの HTML</li>
+            <li><b>特徴量</b>　DOM 構造 ／ 外部参照 ／ フォーム　<b>27 次元</b></li>
+            <li><b>分類器</b>　勾配ブースティング決定木</li>
+            <li style="color:#A34600"><b>ねらい</b>　URL を短縮されても情報が失われない</li>
+          </ul>
+        </div>
+        <p class="tighter" style="margin-top:8px">
+          <span style="color:#00537F;font-weight:700">✓</span>
+          3 秒で全体の形が入る。あとは<b>話で肉づけできる</b>。
+          「ねらい」の 1 行があるので、<b>なぜそうするのか</b>も伝わる。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>ペグワードという考え方<span class="en">Peg words</span></h2>
+  <p class="slide__lead">スライドに置く語は、話を掛けるための<b>杭（peg）</b>である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">ペグワードとは</b>
+          スライドに置いた短い語が<b>杭</b>になり、そこに話を掛けていく。
+          聴衆は杭を目で追いながら、話を聞いて理解する。
+          <p class="tight" style="margin:.4em 0 0">
+            ・<b>杭は少ないほうがよい</b>（1 枚に 3〜5 個）<br>
+            ・<b>杭は一目で読める長さ</b>（10 字前後）<br>
+            ・<b>杭の順に話す</b>（順番を飛ばさない）</p>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-green)">
+          <div class="card__h">杭と話の対応</div>
+          <p class="tight" style="margin:.2em 0">
+            <b>スライドの杭：</b><span class="q">外部参照　27 次元</span></p>
+          <p class="tight" style="margin:.2em 0">
+            <b>そのとき話すこと：</b><span class="q">「ページが外部から読み込んでいる画像やスクリプトが、いくつのドメインに散らばっているかを数えます。これを含めて 27 個の特徴量を作りました。」</span></p>
+          <p class="tighter" style="margin:.5em 0 0">
+            杭は 8 文字、話は 70 文字。<b>この比率が正しい。</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">杭を読み上げるだけにしない</b>
+      スライドに書いてある語を、そのまま声に出すだけなら<b>あなたが立っている意味がない</b>。
+      杭は目で読ませ、<b>話では杭に書いていないことを言う</b>。
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>1 枚 1 メッセージ<span class="en">One message per slide</span></h2>
+  <p class="slide__lead">そのスライドで聴衆に<b>持ち帰ってほしいこと</b>を、1 つに決める。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">見出しをメッセージにする</b>
+          <span class="tight">
+          ✗「実験結果」… 何の結果かが分からない<br>
+          ✓「<b>短縮 URL でも F 値 0.93 を維持</b>」… 見ただけで結論が分かる</span>
+          <p class="tight" style="margin:.4em 0 0">
+            見出しを<b>体言止めの名詞</b>ではなく<b>言いたいこと</b>にすると、
+            聴衆はそのスライドの意味を最初の 1 秒で理解できる。</p>
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">検査のしかた</b>
+          各スライドの見出しだけを並べて読む。<b>それだけで発表の筋が通れば成功。</b>
+          これは論文のトピックセンテンスと同じ考え方である。
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">見出しを並べた例</div>
+          <ol class="tight" style="margin:.2em 0 0;padding-left:1.4em">
+            <li>フィッシング被害は 3 年で 3.3 倍</li>
+            <li>URL 文字列に頼る手法は短縮 URL に弱い</li>
+            <li>URL に依存しない特徴量を使う</li>
+            <li>HTML の構造から 27 次元を抽出</li>
+            <li>12,400 件で従来手法と比較</li>
+            <li><b>短縮 URL でも F 値 0.93 を維持</b></li>
+            <li>効いたのは外部参照の分散度</li>
+            <li>まとめ</li>
+          </ol>
+          <p class="tighter" style="margin:.4em 0 0">
+            見出しだけで話が通っている。<b>これが良い構成である。</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>黒率と余白<span class="en">Ink ratio and white space</span></h2>
+  <p class="slide__lead">スライドの<b>黒率（文字の多さ）</b>が高いほど、見にくくなる。余白は適切に駆使する。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">目安</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li>1 枚の文字数は<b>100 字以内</b>（見出し含む）</li>
+            <li>箇条書きは<b>5 項目まで</b></li>
+            <li>1 項目は<b>1 行に収める</b>（折り返したら長すぎ）</li>
+            <li>入れ子は<b>2 階層まで</b></li>
+            <li>周囲と項目間に<b>余白を残す</b></li>
+          </ul>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">詰め込みたくなったら</b>
+          <b>スライドを分ける</b>か、<b>予備スライドに回す</b>（<a href="09-backup.html">トピック 09</a>）。
+          縮小して詰め込むのは、いちばんやってはいけない対処である。
+        </div>
+      </div>
+      <div>
+        <div class="note note--tip" style="margin-top:0">
+          <b class="note__t" data-icon="★">文字を大きくすれば、自動的に守れる</b>
+          <b>文字を大きくすれば、文章は書けなくなる。</b>書けるのは箇条書きだけになる。
+          つまり「文字を大きくする」というルールを守るだけで、
+          黒率も、1 枚 1 メッセージも、自然に守られる（<a href="05-fonts.html">トピック 05</a>）。
+        </div>
+        <div class="note note--rule">
+          <b class="note__t" data-icon="◆">最後の確認</b>
+          作ったスライドを<b>縮小表示（一覧表示）</b>して眺める。
+          <b>真っ黒に見える枚</b>があれば、それは作り直す。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">スライドは「読ませる資料」ではなく「話を掛ける杭」である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>聴衆は<b>スライドに書いてあることしか理解しない</b></li>
+        <li>しかし<b>文を書くと読まれて話が聞かれない</b></li>
+        <li>置くのは<b>文ではなく語</b></li>
+        <li>語は<b>ペグ（杭）</b>。話を掛けていく</li>
+      </ul>
+      <ul class="ticks">
+        <li>杭は 1 枚に <b>3〜5 個</b>、10 字前後</li>
+        <li><b>1 枚 1 メッセージ</b>。見出しを結論にする</li>
+        <li>1 枚 <b>100 字以内</b>、箇条書き 5 項目まで</li>
+        <li>黒率が高い枚は<b>作り直す</b></li>
+      </ul>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">作ったあとにやること</b>
+      スライドだけを見て、<b>自分が何を話すつもりだったか思い出せるか</b>を確認する。
+      思い出せないなら杭が足りない。読むだけで意味が完結するなら杭が多すぎる。
+    </div>
+    <div class="deck-end">
+      <a href="03-structure.html"><b>◀ 前のトピック</b>03 発表の構成と時間配分</a>
+      <a href="05-fonts.html"><b>次のトピック ▶</b>05 文字とフォント</a>
+      <a href="../checklist.html"><b>ツール</b>発表前チェックリスト</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

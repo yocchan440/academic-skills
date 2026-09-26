@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>16 Overleaf と LaTeX | 卒業論文の書き方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+<style>
+  /* 入力（ソース）と出力（組版結果）を並べて見せる */
+  .io{ display:grid; grid-template-columns:1fr 1fr; gap:14px; align-items:start; }
+  .io__h{ font-size:.76em; font-weight:700; color:var(--ink-2); margin:0 0 .3em;
+          letter-spacing:.06em; }
+  .io__h::before{ content:attr(data-k) "　"; color:var(--cud-blue); }
+  .texout{
+    font-family:var(--ff-mincho); background:var(--surface);
+    border:1px solid var(--line); border-radius:8px; padding:12px 16px;
+    line-height:1.85;
+  }
+  .texout h3{ font-family:var(--ff-ud); font-size:1.02em; margin:.5em 0 .25em; }
+  .texout h4{ font-family:var(--ff-ud); font-size:.95em; margin:.5em 0 .25em; }
+  .texout h5{ font-family:var(--ff-ud); font-size:.9em; margin:.5em 0 .25em; }
+  .texout h3:first-child,.texout h4:first-child{ margin-top:0; }
+  .texout p{ margin:.25em 0; text-indent:1em; }
+  .texout .cap{ text-align:center; font-size:.9em; text-indent:0; }
+  .texout .ph{ border:1px dashed var(--line); border-radius:6px; background:var(--surface-2);
+               color:var(--ink-3); text-align:center; padding:14px 0; font-size:.8em;
+               font-family:var(--ff-ud); text-indent:0; }
+  pre.code{ margin:0; }
+  .filelist td code{ white-space:nowrap; }
+</style>
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">16 Overleaf と LaTeX</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 16</div>
+  <h1>Overleaf と LaTeX</h1>
+  <p class="sub">配布テンプレートで卒業論文を書く</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>Overleaf にテンプレートを取り込み、正しい設定でコンパイルできる</li>
+      <li>見出し・段落・図表・数式・引用を LaTeX で書ける</li>
+      <li>よくあるエラーを自分で読み解いて直せる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>なぜ LaTeX で書くのか<span class="en">Why LaTeX?</span></h2>
+  <p class="slide__lead">LaTeX は「見た目を作る」道具ではない。<b>「これは何か」を書くと、体裁は自動で付いてくる</b>仕組みである。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">自動でやってくれること</div>
+          <ul class="ticks tight">
+            <li>章・節の<b>番号</b>（入れ替えても振り直される）</li>
+            <li><b>目次・図目次・表目次</b></li>
+            <li>図表の<b>番号と配置</b></li>
+            <li>本文からの<b>相互参照</b>（図 3、表 2、式 (1)）</li>
+            <li>参考文献の<b>番号と並び順、書式の統一</b></li>
+            <li>数式の組版</li>
+          </ul>
+        </div>
+        <p class="tighter" style="margin-top:8px">
+          つまり <a href="02-structure.html">トピック 02</a>・<a href="11-figures-tables.html">11</a>・<a href="12-references.html">12</a>
+          で「手で書くな」と言った番号類は、<b>すべて LaTeX の仕事</b>である。</p>
+      </div>
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">Overleaf を使う</b>
+          ブラウザだけで動く LaTeX 環境。<b>インストール不要</b>で、
+          保存・履歴・共有が自動。指導教員と同じ画面を見ながら相談できる。
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">最初の 30 分だけ我慢する</b>
+          最初はエラーが出て進まない。<b>それは全員が通る道</b>である。
+          このトピックの内容を一度通して読めば、卒論を書き切るのに必要な範囲はほぼ足りる。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>Overleaf での最初の 3 手順<span class="en">Setup</span></h2>
+  <p class="slide__lead">ここを間違えると<b>必ずコンパイルに失敗する</b>。最初に一度だけ設定する。</p>
+  <div class="slide__body">
+    <ol class="steps big" style="margin:0 0 10px">
+      <li><b>プロジェクトを作る</b><br>
+        <span class="tight" style="color:var(--ink-2)">Overleaf の
+        <code>New Project</code> → <code>Upload Project</code> に、配布された
+        <code>sotsuron2025je.zip</code> をそのままドラッグする。展開は不要。</span></li>
+      <li><b>コンパイラを LuaLaTeX にする</b><br>
+        <span class="tight" style="color:var(--ink-2)">左上の <code>Menu</code> → <code>Compiler</code> を
+        <b>LuaLaTeX</b> に変更する。テンプレートは <code>jlreq</code> と
+        <code>luatexja</code> を使っているため、pdfLaTeX では通らない。</span></li>
+      <li><b>メイン文書を <code>00_MAIN.tex</code> にする</b><br>
+        <span class="tight" style="color:var(--ink-2)">同じ <code>Menu</code> の
+        <code>Main document</code> で <b><code>00_MAIN.tex</code></b> を選ぶ。
+        ここを間違えると、章の一部しか出力されない。</span></li>
+    </ol>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">確認</b>
+      <code>Recompile</code> を押して、<b>表紙・内容梗概・目次・各章が出た PDF</b> が表示されれば成功である。
+      初回は数十秒かかることがある。
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">触らないファイル</b>
+      <code>latexmkrc</code> は参考文献の処理方法（pBibTeX）を指定している設定ファイルである。<b>編集しない。</b>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>テンプレートのファイル構成<span class="en">File layout</span></h2>
+  <p class="slide__lead"><code>00_MAIN.tex</code> が司令塔で、各章は別ファイル。<b>自分が書くのは章のファイルだけ</b>である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <table class="t tighter filelist">
+        <thead><tr><th>ファイル</th><th>中身</th></tr></thead>
+        <tbody>
+          <tr><td><code>00_MAIN.tex</code></td><td><b>全体の設定と章立て。</b>表紙の題目・氏名・年月はここで直す</td></tr>
+          <tr><td><code>latexmkrc</code></td><td>参考文献処理の設定（<b>触らない</b>）</td></tr>
+          <tr><td><code>10_Abstract.tex</code></td><td>内容梗概</td></tr>
+          <tr><td><code>11_Introduction.tex</code></td><td>序論</td></tr>
+          <tr><td><code>12_Prepare.tex</code></td><td>準備（前提知識・関連技術）</td></tr>
+          <tr><td><code>13_RelatedWorks.tex</code></td><td>関連研究</td></tr>
+          <tr><td><code>14_Research.tex</code></td><td>調査・提案・実験</td></tr>
+          <tr><td><code>15_Discussion.tex</code></td><td>結果および考察</td></tr>
+          <tr><td><code>16_Conclusion.tex</code></td><td>結論</td></tr>
+          <tr><td><code>21_Acknowledgment.tex</code></td><td>謝辞（<a href="15-acknowledgment.html">トピック 15</a>）</td></tr>
+          <tr><td><code>22_References.bib</code></td><td>参考文献データベース</td></tr>
+          <tr><td><code>23_Related.tex</code></td><td>関連業績（学会発表など）</td></tr>
+        </tbody>
+      </table>
+      <div>
+        <div class="io" style="grid-template-columns:1fr">
+          <div>
+            <p class="io__h" data-k="00_MAIN.tex">章はここで宣言されている</p>
+<pre class="code">\mainmatter
+\chapter{序論}
+\label{chap:introduction}
+\input{11_Introduction}
+
+\chapter{準備}
+\label{chap:prepare}
+\input{12_Prepare}
+<span class="cm">%（以下、同様に続く）</span></pre>
+          </div>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">重要</b>
+          <b><code>\chapter</code> は <code>00_MAIN.tex</code> 側にある。</b>
+          各章のファイルでは <code>\chapter</code> を書かず、<b><code>\section</code> から</b>書き始める。
+          章の構成を変えたいときだけ <code>00_MAIN.tex</code> を編集する。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>見出しの階層<span class="en">Sectioning</span></h2>
+  <p class="slide__lead">使うのは <code>\section</code> / <code>\subsection</code> / <code>\subsubsection</code> の 3 つ。<b>階層は飛ばさない。</b></p>
+  <div class="slide__body">
+    <div class="io">
+      <div>
+        <p class="io__h" data-k="入力">14_Research.tex</p>
+<pre class="code">\section{データセット}
+本研究では，PhishTank から収集した…
+
+\section{実験方法}
+\subsection{実験環境}
+実験は表\ref{tbl:env}の環境で行った．
+
+\subsection{評価指標}
+\subsubsection{適合率と再現率}
+適合率 $P$ を次式で定義する．
+
+\subsubsection{F 値}
+F 値は適合率と再現率の調和平均である．</pre>
+      </div>
+      <div>
+        <p class="io__h" data-k="出力">PDF</p>
+        <div class="texout tight">
+          <h3>4.1　データセット</h3>
+          <p>本研究では，PhishTank から収集した…</p>
+          <h3>4.2　実験方法</h3>
+          <h4>4.2.1　実験環境</h4>
+          <p>実験は表 4.1 の環境で行った．</p>
+          <h4>4.2.2　評価指標</h4>
+          <h5>適合率と再現率</h5>
+          <p>適合率 <i>P</i> を次式で定義する．</p>
+          <h5>F 値</h5>
+          <p>F 値は適合率と再現率の調和平均である．</p>
+        </div>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">階層のルール</b>
+      <span class="tight">
+      ・<code>\chapter</code>（章）＝ <code>00_MAIN.tex</code>　→　<code>\section</code>（節）　→　<code>\subsection</code>（項）　→　<code>\subsubsection</code>　→　<code>\paragraph</code>（見出しが行頭に入る小見出し。めったに使わない）<br>
+      ・<b>階層を飛ばさない。</b><code>\section</code> の直後にいきなり <code>\subsubsection</code> を置かない<br>
+      ・目次には <code>\subsection</code> までが載る設定になっている<br>
+      ・<b>「4.2.1」と手で書かない。</b>番号は自動で振られる</span>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>段落・改行・字下げ<span class="en">Paragraphs</span></h2>
+  <p class="slide__lead">LaTeX では<b>空行が段落の区切り</b>である。字下げは自動で入る。</p>
+  <div class="slide__body">
+    <div class="io">
+      <div>
+        <p class="io__h" data-k="入力">11_Introduction.tex</p>
+<pre class="code">フィッシング対策協議会への報告件数は，
+2021 年の約 52 万件から 2024 年には
+約 172 万件へと 3.3 倍に増加した\cite{apc2024}．
+利用者を保護するためには，
+フィッシングサイトを自動的に検知する
+技術が不可欠である．
+
+従来手法の多くは URL 文字列の
+語彙的特徴量に依存している．</pre>
+        <p class="tighter" style="margin-top:6px">
+          <b>1 文ごとに改行</b>して書くのがコツ。出力は変わらないが、直したい文をすぐ探せる。</p>
+      </div>
+      <div>
+        <p class="io__h" data-k="出力">PDF</p>
+        <div class="texout tight">
+          <p>　フィッシング対策協議会への報告件数は，2021 年の約 52 万件から 2024 年には約 172 万件へと 3.3 倍に増加した [1]．利用者を保護するためには，フィッシングサイトを自動的に検知する技術が不可欠である．</p>
+          <p>　従来手法の多くは URL 文字列の語彙的特徴量に依存している．</p>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">やってはいけないこと</b>
+          <span class="tight">
+          ・段落を分けるために <code>\\</code> を使う（行を折るだけで段落にならない）<br>
+          ・字下げのために全角スペースを入れる（自動で入る）<br>
+          ・空行を 2 行以上あける（意味は 1 行と同じ）</span>
+        </div>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">句読点</b>
+      配布テンプレートの本文は<b>「，．」</b>で書かれている。それに合わせる（<a href="10-japanese.html">トピック 10</a>）。
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>相互参照 <code>\label</code> と <code>\ref</code><span class="en">Cross references</span></h2>
+  <p class="slide__lead">番号を手で書かない。<b>名前を付けて、名前で呼ぶ。</b></p>
+  <div class="slide__body">
+    <div class="io">
+      <div>
+        <p class="io__h" data-k="入力">名前を付ける／呼ぶ</p>
+<pre class="code"><span class="cm">% 図に名前を付ける（caption の直後に置く）</span>
+\caption{提案手法のシステム構成}
+\label{fig:system}
+
+<span class="cm">% 本文から呼ぶ</span>
+提案手法の構成を図\ref{fig:system}に示す．
+実験環境を表\ref{tbl:env}に示す．
+適合率は式(\ref{eq:precision})で定義される．
+詳細は\ref{sec:dataset}節で述べる．</pre>
+      </div>
+      <div>
+        <p class="io__h" data-k="ラベルの命名規則">接頭辞で種類が分かるようにする</p>
+        <table class="t tighter">
+          <thead><tr><th>対象</th><th>接頭辞</th><th>例</th></tr></thead>
+          <tbody>
+            <tr><td>章</td><td><code>chap:</code></td><td><code>chap:introduction</code></td></tr>
+            <tr><td>節</td><td><code>sec:</code></td><td><code>sec:dataset</code></td></tr>
+            <tr><td>図</td><td><code>fig:</code></td><td><code>fig:system</code></td></tr>
+            <tr><td>表</td><td><code>tbl:</code></td><td><code>tbl:env</code></td></tr>
+            <tr><td>式</td><td><code>eq:</code></td><td><code>eq:precision</code></td></tr>
+            <tr><td>プログラム</td><td><code>lst:</code></td><td><code>lst:extract</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">参照が <code>??</code> になるとき</b>
+      <span class="tight">
+      ・<b>もう一度コンパイルする</b>（番号は 2 回目のコンパイルで確定する。Overleaf は通常自動で処理する）<br>
+      ・それでも直らなければ <code>\label</code> のつづり間違い。<b>大文字・小文字も区別される</b><br>
+      ・<code>\label</code> を <code>\caption</code> より<b>前</b>に置くと、番号がずれる</span>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>図の入れ方<span class="en">Figures</span></h2>
+  <p class="slide__lead"><b>図題は下。</b><code>\caption</code> を <code>\includegraphics</code> の<b>後ろ</b>に書く。</p>
+  <div class="slide__body">
+    <div class="io">
+      <div>
+        <p class="io__h" data-k="入力">figure 環境</p>
+<pre class="code">\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=10cm]{fig/system.pdf}
+  \caption{提案手法のシステム構成}
+  \label{fig:system}
+\end{figure}</pre>
+        <p class="tighter" style="margin-top:8px">
+          画像は Overleaf の左のファイル一覧で <code>Upload</code> する。
+          <code>fig</code> フォルダを作って入れておくと整理しやすい。
+          <b>グラフ・構成図は PDF か SVG</b> で（<a href="11-figures-tables.html">トピック 11</a>）。</p>
+      </div>
+      <div>
+        <p class="io__h" data-k="出力">PDF</p>
+        <div class="texout tight">
+          <p class="ph">［　図　］</p>
+          <p class="cap">図 3.1　提案手法のシステム構成</p>
+        </div>
+        <div class="note note--rule">
+          <b class="note__t" data-icon="◆"><code>[tbp]</code> とは</b>
+          <span class="tight">
+          図を置いてよい場所の指定。<b>t</b>＝ページ上部、<b>b</b>＝下部、<b>p</b>＝図だけのページ、<b>h</b>＝書いた位置。<br>
+          <b><code>[h]</code> を多用しない。</b>LaTeX が置き場所を探せなくなり、図が全部末尾に飛ぶ。</span>
+        </div>
+      </div>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">図は必ず本文で引用して説明する</b>
+      <code>\ref{fig:system}</code> で本文から引用し、何を表しているかを文章で述べる。
+      貼っただけの図は載せてはいけない。
+    </div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <h2>表の入れ方<span class="en">Tables</span></h2>
+  <p class="slide__lead"><b>表題は上。</b><code>\caption</code> を <code>tabular</code> の<b>前</b>に書く。罫線は <code>booktabs</code> の 3 本。</p>
+  <div class="slide__body">
+    <div class="io">
+      <div>
+        <p class="io__h" data-k="入力">table 環境</p>
+<pre class="code">\begin{table}[tbp]
+  \caption{提案手法と従来手法の比較}
+  \label{tbl:compare}
+  \centering
+  \small
+  \begin{tabular}{@{}lrr@{}}
+    \toprule
+    手法 &amp; 全体 F 値 &amp; 短縮 URL F 値 \\
+    \midrule
+    Ma ら\cite{ma2009} &amp; 0.95 &amp; 0.68 \\
+    田中ら\cite{tanaka2022} &amp; 0.91 &amp; 0.71 \\
+    \textbf{提案手法} &amp; 0.94 &amp; \textbf{0.93} \\
+    \bottomrule
+  \end{tabular}
+\end{table}</pre>
+      </div>
+      <div>
+        <p class="io__h" data-k="出力">PDF</p>
+        <div class="texout tight">
+          <p class="cap">表 5.2　提案手法と従来手法の比較</p>
+          <table class="t tighter" style="margin-top:.3em">
+            <thead><tr><th>手法</th><th style="text-align:right">全体 F 値</th><th style="text-align:right">短縮 URL F 値</th></tr></thead>
+            <tbody>
+              <tr><td>Ma ら [3]</td><td class="num">0.95</td><td class="num">0.68</td></tr>
+              <tr><td>田中ら [6]</td><td class="num">0.91</td><td class="num">0.71</td></tr>
+              <tr><td><b>提案手法</b></td><td class="num">0.94</td><td class="num"><b>0.93</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note note--rule">
+          <b class="note__t" data-icon="◆">列の指定</b>
+          <span class="tight">
+          <code>{@{}lrr@{}}</code> … <b>l</b>＝左揃え、<b>r</b>＝右揃え、<b>c</b>＝中央、
+          <b>p{3cm}</b>＝幅指定で折り返し。<code>@{}</code> は左右の余白を詰める指定。<br>
+          <b>数値の列は <code>r</code>。</b>縦罫（<code>|</code>）は使わない。</span>
+        </div>
+      </div>
+    </div>
+    <p class="tighter" style="margin-top:6px">
+      セルの区切りは <code>&amp;</code>、行の終わりは <code>\\</code>。表の作成は
+      <b>Tables Generator</b>（<span style="word-break:break-all">https://www.tablesgenerator.com/</span>）を使うと速い。</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <h2>数式とソースコード<span class="en">Equations and listings</span></h2>
+  <p class="slide__lead">数式は <code>equation</code>、ソースコードは <code>lstlisting</code>。どちらも番号と参照が自動。</p>
+  <div class="slide__body">
+    <div class="io">
+      <div>
+        <p class="io__h" data-k="数式">文中と別行立て</p>
+<pre class="code"><span class="cm">% 文中の数式は $ ... $ で囲む</span>
+適合率 $P$ と再現率 $R$ を用いる．
+
+<span class="cm">% 別行立て（番号が付く）</span>
+\begin{equation}
+  F = \frac{2PR}{P+R}
+  \label{eq:fmeasure}
+\end{equation}
+
+F 値は式(\ref{eq:fmeasure})で定義される．</pre>
+        <p class="tighter" style="margin-top:6px">
+          <b>変数は必ず <code>$ $</code> の中に。</b>地の文に <code>_</code> や <code>^</code> を書くとエラーになる。</p>
+      </div>
+      <div>
+        <p class="io__h" data-k="ソースコード">lstlisting（設定済み）</p>
+<pre class="code">\begin{figure}[tbp]
+\begin{lstlisting}
+Contact: mailto:security@example.jp
+Expires: 2026-04-01T08:59:59.999Z
+Preferred-Languages: ja, en
+\end{lstlisting}
+\caption{security.txt の記述例}
+\label{lst:securitytxt}
+\end{figure}</pre>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">注意</b>
+          <span class="tight">
+          <code>lstlisting</code> の中では LaTeX のコマンドは<b>そのまま文字として</b>出力される。<br>
+          <b>プログラム全文を貼らない。</b>本文で説明する数行だけを載せ、
+          全体は付録か公開リポジトリへ。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <h2>引用と参考文献<span class="en">Citations</span></h2>
+  <p class="slide__lead">文献は <code>22_References.bib</code> に貯める。<b>番号・並び順・書式はすべて自動</b>で統一される。</p>
+  <div class="slide__body">
+    <div class="io">
+      <div>
+        <p class="io__h" data-k="① 22_References.bib に登録">Google Scholar などから取得して貼る</p>
+<pre class="code">@article{tanaka2022,
+  author  = {田中太郎 and 山田花子},
+  title   = {{URL 特徴量に基づくフィッシング検知}},
+  journal = {情報処理学会論文誌},
+  volume  = {63}, number  = {9},
+  pages   = {1--10},
+  year    = {2022}
+}</pre>
+        <p class="io__h" data-k="② 本文から引用" style="margin-top:10px"></p>
+<pre class="code">同様の手法が提案されている\cite{tanaka2022}．
+複数まとめる場合は\cite{ma2009,tanaka2022}．</pre>
+      </div>
+      <div>
+        <p class="io__h" data-k="出力">本文と巻末</p>
+        <div class="texout tight">
+          <p>　同様の手法が提案されている [6]．</p>
+          <p style="text-indent:0;margin-top:.8em"><b>参考文献</b></p>
+          <p style="text-indent:0;font-size:.92em">[6] 田中太郎, 山田花子: URL 特徴量に基づくフィッシング検知, 情報処理学会論文誌, Vol.63, No.9, pp.1–10 (2022).</p>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">ここで詰まりやすい</b>
+          <span class="tight">
+          ・<b><code>\cite</code> していない文献は出力されない</b>（.bib に書いただけでは載らない）<br>
+          ・<code>Citation ... undefined</code> → キーのつづり間違い、または
+          <code>Recompile from scratch</code> が必要<br>
+          ・<code>{{ }}</code> で囲んだ部分は<b>大文字・小文字がそのまま</b>保たれる</span>
+        </div>
+      </div>
+    </div>
+    <p class="tighter" style="margin-top:6px">
+      文献番号は<b>句点の前</b>に置く。書き方の詳細は <a href="12-references.html">トピック 12</a>。</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide">
+  <h2>特殊な文字とコマンド<span class="en">Special characters</span></h2>
+  <p class="slide__lead">そのまま書くとエラーになる文字がある。<b>この表は覚えなくてよいが、場所は覚えておく。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <table class="t tighter">
+        <caption>エスケープが必要な文字</caption>
+        <thead><tr><th>出したい文字</th><th>書き方</th><th>本来の意味</th></tr></thead>
+        <tbody>
+          <tr><td>%</td><td><code>\%</code></td><td>コメントの開始</td></tr>
+          <tr><td>&amp;</td><td><code>\&amp;</code></td><td>表の列区切り</td></tr>
+          <tr><td>_</td><td><code>\_</code></td><td>数式の下付き</td></tr>
+          <tr><td>#</td><td><code>\#</code></td><td>コマンドの引数</td></tr>
+          <tr><td>$</td><td><code>\$</code></td><td>数式の開始・終了</td></tr>
+          <tr><td>{ }</td><td><code>\{ \}</code></td><td>引数の囲み</td></tr>
+          <tr><td>\</td><td><code>\textbackslash</code></td><td>コマンドの開始</td></tr>
+        </tbody>
+      </table>
+      <div>
+        <table class="t tighter">
+          <caption>よく使うコマンド</caption>
+          <thead><tr><th>用途</th><th>書き方</th></tr></thead>
+          <tbody>
+            <tr><td>ファイル名・コマンド名</td><td><code>\verb|security.txt|</code></td></tr>
+            <tr><td>URL</td><td><code>\url{https://example.jp/}</code></td></tr>
+            <tr><td>脚注（Web 参照など）</td><td><code>\footnote{\url{...}}</code></td></tr>
+            <tr><td>太字（強調）</td><td><code>\textbf{提案手法}</code></td></tr>
+            <tr><td>長い引用</td><td><code>\begin{quote} ... \end{quote}</code></td></tr>
+            <tr><td>箇条書き（順序なし）</td><td><code>\begin{itemize}\item ...</code></td></tr>
+            <tr><td>箇条書き（番号付き）</td><td><code>\begin{enumerate}\item ...</code></td></tr>
+          </tbody>
+        </table>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★"><code>\verb</code> が便利</b>
+          <code>\verb|...|</code> の中は<b>どんな文字もそのまま</b>出る。
+          ファイルパスや設定値を書くときに使う。区切り文字は <code>|</code> 以外でもよい。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide">
+  <h2>よくあるエラーと対処<span class="en">Troubleshooting</span></h2>
+  <p class="slide__lead">エラーメッセージは<b>最初の 1 件</b>を見る。後続はその巻き添えであることが多い。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:17em">メッセージ</th><th>原因</th><th>対処</th></tr></thead>
+      <tbody>
+        <tr><td><code>Undefined control sequence</code></td><td>コマンド名のつづり間違い</td><td>該当行のコマンドを確認する</td></tr>
+        <tr><td><code>Missing $ inserted</code></td><td>地の文に <code>_</code> や <code>^</code> を書いた</td><td><code>\_</code> にするか <code>$ $</code> で囲む</td></tr>
+        <tr><td><code>File ... not found</code></td><td>画像のパス・拡張子が違う</td><td>左のファイル一覧と綴りを照合する</td></tr>
+        <tr><td><code>Runaway argument?</code></td><td><code>}</code> の閉じ忘れ</td><td>直前に書き足した箇所を見る</td></tr>
+        <tr><td><code>Reference ... undefined</code></td><td>ラベル名の間違い／未コンパイル</td><td>もう一度コンパイルする</td></tr>
+        <tr><td><code>Citation ... undefined</code></td><td>.bib のキー違い／未処理</td><td><code>Recompile from scratch</code> を試す</td></tr>
+        <tr><td><code>Overfull \hbox</code>（警告）</td><td>行が右にはみ出した</td><td>多くは無視してよい。URL なら <code>\url{}</code> を使う</td></tr>
+        <tr><td>図が変な場所に出る</td><td>置き場所を探せていない</td><td><code>[h]</code> をやめて <code>[tbp]</code> にする</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">エラーが取れなくなったら</b>
+      <b>直前に書き足した部分を <code>%</code> でコメントアウトして、通る状態まで戻す。</b>
+      どこで壊れたかが分かる。大きな塊は <code>\begin{comment} ... \end{comment}</code> で一時的に消せる。
+    </div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide">
+  <h2>執筆を楽にするコツ<span class="en">Practical tips</span></h2>
+  <p class="slide__lead">半年つきあう道具である。最初に習慣を作っておく。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <ul class="ticks tight">
+          <li><b>1 文ごとに改行する</b><br>
+            <span style="color:var(--ink-2)">出力は変わらない。直したい文にすぐ辿り着ける</span></li>
+          <li><b>こまめに <code>Recompile</code> する</b><br>
+            <span style="color:var(--ink-2)">1 節書くごと。まとめて書くとエラーの原因が特定できない</span></li>
+          <li><b>通る状態を保つ</b><br>
+            <span style="color:var(--ink-2)">書きかけは <code>%</code> でコメントアウトしておく</span></li>
+          <li><b>メモは <code>%</code> で残す</b><br>
+            <span style="color:var(--ink-2)"><code>% TODO: ここに実験結果の表を入れる</code></span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="note note--tip" style="margin-top:0">
+          <b class="note__t" data-icon="★">Overleaf の機能を使う</b>
+          <span class="tight">
+          ・<b>History</b>（履歴）… いつでも過去の版に戻せる。バックアップは自動<br>
+          ・<b>Share</b> … 指導教員に読み取り／編集権限を渡せる<br>
+          ・<b>Menu → Download → PDF</b> … 提出用の PDF を取得<br>
+          ・<b>Menu → Download → Source</b> … 一式を zip で保存（学期末に手元にも残す）</span>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">提出前に</b>
+          <span class="tight">
+          ・<b><code>Recompile from scratch</code></b> を一度実行し、警告が残っていないか確認する<br>
+          ・目次・図目次・表目次のページ番号が本文と合っているか<br>
+          ・<code>??</code> や <code>[?]</code> が残っていないか</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">LaTeX は「書くこと」に集中させてくれる道具である。番号と体裁は任せる。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>Overleaf の設定は <b>Compiler = LuaLaTeX</b>、<b>Main document = 00_MAIN.tex</b></li>
+        <li><code>\chapter</code> は <code>00_MAIN.tex</code>。各章は <b><code>\section</code> から</b>書く</li>
+        <li>段落の区切りは<b>空行</b>。<code>\\</code> で段落を作らない</li>
+        <li><b>1 文 1 行</b>で書くと後が楽</li>
+        <li>番号は <code>\label</code> と <code>\ref</code> で呼ぶ。<b>手で書かない</b></li>
+      </ul>
+      <ul class="ticks">
+        <li>図は <code>figure</code>、<b><code>\caption</code> は後ろ</b></li>
+        <li>表は <code>table</code>、<b><code>\caption</code> は前</b>。罫線は <code>booktabs</code></li>
+        <li>文献は <code>22_References.bib</code> ＋ <code>\cite</code></li>
+        <li><code>% &amp; _ #</code> は<b>エスケープ</b>が必要</li>
+        <li>エラーは<b>最初の 1 件</b>を読む</li>
+      </ul>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">最初にやること</b>
+      配布された <code>sotsuron2025je.zip</code> を Overleaf に上げて、
+      <b>表紙の題目と氏名を自分のものに書き換えてコンパイルしてみる。</b>
+      PDF が出れば、環境の準備は終わりである。
+    </div>
+    <div class="deck-end">
+      <a href="14-process.html"><b>◀ 関連</b>14 執筆の進め方</a>
+      <a href="../index.html"><b>戻る</b>資料一覧</a>
+      <a href="../checklist.html"><b>ツール</b>提出前チェックリスト</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

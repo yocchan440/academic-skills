@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>11 図表の作法 | 卒業論文の書き方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+<style>
+  /* 悪い例の表（罫線だらけ） */
+  table.t-bad{ width:100%; border-collapse:collapse; font-size:14px; background:#fff; }
+  table.t-bad th,table.t-bad td{ border:1px solid #444; padding:.35em .6em; text-align:left; }
+  table.t-bad th{ background:#D9D9D9; }
+  .swatch{ display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:.4em 0; }
+  .swatch div{ border-radius:6px; padding:.35em .6em; font-size:12.5px; font-weight:700;
+               border:1px solid rgba(0,0,0,.15); }
+</style>
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">11 図表の作法</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 11</div>
+  <h1>図表の作法</h1>
+  <p class="sub">図は補足資料。論じるのは本文である</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>図表の番号・キャプション・引用の作法を守れる</li>
+      <li>罫線を減らした読みやすい表を作れる</li>
+      <li>色覚の多様性に配慮したグラフを作れる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>図表の 3 原則<span class="en">Three rules</span></h2>
+  <p class="slide__lead">この 3 つを外すと、内容以前に減点される。</p>
+  <div class="slide__body">
+    <ol class="steps big" style="margin:0 0 10px">
+      <li><b>図題は下、表題は上に置く</b><br>
+        <span class="tight" style="color:var(--ink-2)">図 1 提案方式のシステム構成図 → <b>図の下</b>　／　表 2 提案方式と従来方式の比較 → <b>表の上</b></span></li>
+      <li><b>本文中で必ず番号で引用する</b><br>
+        <span class="tight" style="color:var(--ink-2)">引用されていない図表は、載せてはいけない。</span></li>
+      <li><b>本文で内容を説明する</b><br>
+        <span class="tight" style="color:var(--ink-2)">「〜を図 1 に示す」で終わらせない。図は補足資料であり、論じるのは文章である。</span></li>
+    </ol>
+    <div class="ng-ok">
+      <div class="ex-box ex-ng">
+        <span class="ex-box__t">許されない引用のしかた</span>
+        <p class="q tight" style="margin:.2em 0">〜を手順通り進めていく（図 2）。</p>
+        <p class="tighter" style="margin:.2em 0 0">括弧書きで図を指すだけ。本文だけ読んでも意味が通らない。</p>
+      </div>
+      <div class="ex-box ex-ok">
+        <span class="ex-box__t">正しい引用のしかた</span>
+        <p class="q tight" style="margin:.2em 0">処理の流れを図 2 に示す。まず入力 URL をヘッドレスブラウザで開き、…</p>
+        <p class="tighter" style="margin:.2em 0 0">本文だけ読んでも流れが分かる。図はそれを補強する。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>キャプションの書き方<span class="en">Captions</span></h2>
+  <p class="slide__lead">キャプションは、<b>本文を読まなくても何の図表か分かる</b>ように書く。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <table class="t tight">
+          <thead><tr><th>✗</th><th>✓</th></tr></thead>
+          <tbody>
+            <tr><td class="q">図 1 システム</td><td class="q">図 1 提案手法のシステム構成</td></tr>
+            <tr><td class="q">図 3 結果</td><td class="q">図 3 検体種別ごとの F 値の比較</td></tr>
+            <tr><td class="q">表 2 比較</td><td class="q">表 2 提案手法と従来手法の機能比較</td></tr>
+            <tr><td class="q">図 5 グラフ</td><td class="q">図 5 学習データ量に対する F 値の変化</td></tr>
+          </tbody>
+        </table>
+        <div class="note note--rule">
+          <b class="note__t" data-icon="◆">番号の付け方</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li>図と表は<b>別系列</b>で通し番号（図 1、図 2 …／表 1、表 2 …）</li>
+            <li>本文に<b>登場する順</b>に番号を振る</li>
+            <li>番号は<b>手入力しない</b>（LaTeX なら <code>\label</code> と <code>\ref</code>）</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">配置の実際</div>
+          <div style="border:1px dashed var(--line);border-radius:8px;padding:10px;text-align:center;background:var(--surface-2)">
+            <div style="font-size:12px;color:var(--ink-3);padding:18px 0">［　図　］</div>
+          </div>
+          <p class="tight" style="text-align:center;margin:.3em 0 14px">図 1　提案手法のシステム構成</p>
+          <p class="tight" style="text-align:center;margin:0 0 .3em">表 1　実験環境</p>
+          <div style="border:1px dashed var(--line);border-radius:8px;padding:10px;text-align:center;background:var(--surface-2)">
+            <div style="font-size:12px;color:var(--ink-3);padding:18px 0">［　表　］</div>
+          </div>
+        </div>
+        <p class="tighter" style="margin-top:8px">※ 図表は、それを引用した段落の<b>直後か、同じページの上部</b>に配置する。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>表の罫線は極力減らす<span class="en">Fewer rules</span></h2>
+  <p class="slide__lead">罫線は情報ではない。<b>読者の視線を邪魔しないぶんだけ、数字が見やすくなる。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="ex-box ex-ng">
+        <span class="ex-box__t">全部のマスを囲んでいる</span>
+        <table class="t-bad">
+          <thead><tr><th>手法</th><th>全体 F 値</th><th>短縮 URL F 値</th><th>判定時間</th></tr></thead>
+          <tbody>
+            <tr><td>Ma ら [3]</td><td>0.95</td><td>0.68</td><td>0.02 秒</td></tr>
+            <tr><td>田中ら [6]</td><td>0.91</td><td>0.71</td><td>0.31 秒</td></tr>
+            <tr><td>提案手法</td><td>0.94</td><td>0.93</td><td>0.84 秒</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ex-box ex-ok">
+        <span class="ex-box__t">三本線の表（横罫のみ・縦罫なし）</span>
+        <table class="t tighter">
+          <thead><tr><th>手法</th><th>全体 F 値</th><th>短縮 URL F 値</th><th>判定時間</th></tr></thead>
+          <tbody>
+            <tr><td>Ma ら [3]</td><td class="num">0.95</td><td class="num">0.68</td><td class="num">0.02 秒</td></tr>
+            <tr><td>田中ら [6]</td><td class="num">0.91</td><td class="num">0.71</td><td class="num">0.31 秒</td></tr>
+            <tr><td><b>提案手法</b></td><td class="num">0.94</td><td class="num"><b>0.93</b></td><td class="num">0.84 秒</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">表づくりのルール</b>
+      <span class="tight">
+      ・罫線は<b>上端・見出し下・下端の 3 本</b>が基本。縦罫は原則なし<br>
+      ・数値は<b>小数点で桁を揃える</b>（右揃え）　・有効数字を揃える（0.9 と 0.94 を混ぜない）<br>
+      ・単位は<b>見出しに一度だけ</b>（「判定時間 [秒]」として各セルの「秒」を省く）<br>
+      ・セルの背景を塗りつぶさない。強調は<b>太字</b>で足りる</span>
+      <p class="tighter" style="margin:.4em 0 0">参考：<span style="word-break:break-all">https://www.juen.ac.jp/psych/nakayama/making/03.html</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>グラフの選び方<span class="en">Choosing a chart</span></h2>
+  <p class="slide__lead">見せたい関係によって、使うべきグラフは決まっている。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:11em">見せたいこと</th><th style="width:10em">適したグラフ</th><th>注意点</th></tr></thead>
+      <tbody>
+        <tr><th>カテゴリ間の量の比較</th><td>棒グラフ</td><td><b>縦軸は 0 から</b>始める。途中から始めると差が誇張される</td></tr>
+        <tr><th>時間による変化</th><td>折れ線グラフ</td><td>点を打ち、線種も変える（色だけに頼らない）</td></tr>
+        <tr><th>2 変数の関係</th><td>散布図</td><td>相関係数を添える。因果とは言わない</td></tr>
+        <tr><th>分布・ばらつき</th><td>箱ひげ図、ヒストグラム</td><td>平均だけでは分布が見えない</td></tr>
+        <tr><th>構成比</th><td>積み上げ棒グラフ</td><td>円グラフは<b>比較が苦手</b>。項目が 3 つ以上なら棒に</td></tr>
+        <tr><th>複数指標の総合評価</th><td>表</td><td>レーダーチャートは軸の順序で印象が変わる</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">グラフで嘘をつかない</b>
+      <span class="tight">
+      ・縦軸を途中から始めて差を大きく見せる　・軸の目盛りを不等間隔にする<br>
+      ・3D グラフで奥行きをつける（手前が大きく見える）　・都合の良い期間だけを切り取る<br>
+      これらは<b>意図がなくてもデータの歪曲</b>とみなされる。</span>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>グラフに必ず入れるもの<span class="en">Chart checklist</span></h2>
+  <p class="slide__lead">1 つでも欠けると、読者はグラフを読めない。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <ul class="ticks tight">
+          <li><b>両軸のラベル</b>（何を表すか）</li>
+          <li><b>単位</b>（[秒]、[%]、[件]）</li>
+          <li><b>目盛りの数値</b></li>
+          <li><b>凡例</b>（系列が 2 つ以上のとき）</li>
+          <li><b>エラーバー</b>（複数回試行した場合）</li>
+          <li><b>キャプション</b>（図の下）</li>
+          <li><b>本文での説明</b></li>
+        </ul>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">文字の大きさ</b>
+          論文に貼ると縮小される。<b>本文と同じかやや小さい程度</b>の見た目になるように、
+          グラフ側のフォントサイズを大きめに設定する。
+          印刷して読めなければ作り直す。
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-green)">
+          <div class="card__h">ファイル形式</div>
+          <dl class="terms tighter">
+            <dt>PDF / SVG（ベクタ）</dt><dd>グラフ・構成図は必ずこちら。拡大してもぼやけない</dd>
+            <dt>PNG（ラスタ）</dt><dd>スクリーンショットなど。<b>300 dpi 以上</b>で保存する</dd>
+            <dt>JPEG</dt><dd>写真以外には使わない。文字がにじむ</dd>
+          </dl>
+          <pre class="code" style="margin-top:8px"><span class="cm"># matplotlib でベクタ出力</span>
+plt.savefig("fig/f1.pdf", bbox_inches="tight")</pre>
+        </div>
+        <p class="tighter" style="margin-top:6px">※ Excel のグラフをスクリーンショットで貼るのは<b>最悪の選択</b>。PDF で書き出す。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>色覚の多様性に配慮する<span class="en">Color Universal Design</span></h2>
+  <p class="slide__lead">日本人男性の約 5% は色の見え方が異なる。<b>審査員の中にいる前提で作る。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">3 つの原則</b>
+          <ol class="tight" style="margin:.2em 0 0;padding-left:1.3em">
+            <li><b>色だけに意味を持たせない</b><br>線種（実線・破線）、マーカーの形、ハッチングを併用する</li>
+            <li><b>赤と緑だけで区別しない</b><br>最も見分けにくい組み合わせ</li>
+            <li><b>明度差をつける</b><br>グレースケールで印刷しても区別できるか確認する</li>
+          </ol>
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">確認方法</b>
+          作ったグラフを<b>グレースケールで印刷</b>してみる。区別できなければ作り直す。
+          これが最も簡単で確実なテストである。
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">推奨配色（Okabe–Ito の 8 色）</div>
+          <div class="swatch">
+            <div style="background:#000000;color:#fff">黒 #000000</div>
+            <div style="background:#E69F00">橙 #E69F00</div>
+            <div style="background:#56B4E9">空 #56B4E9</div>
+            <div style="background:#009E73;color:#fff">緑 #009E73</div>
+            <div style="background:#F0E442">黄 #F0E442</div>
+            <div style="background:#0072B2;color:#fff">青 #0072B2</div>
+            <div style="background:#D55E00;color:#fff">朱 #D55E00</div>
+            <div style="background:#CC79A7">赤紫 #CC79A7</div>
+          </div>
+          <p class="tighter" style="margin:.5em 0 0">系列が 2 つなら<b>青 #0072B2</b>と<b>朱 #D55E00</b>。
+          3 つなら<b>緑 #009E73</b>を足す。この組み合わせはどの色覚型でも区別できる。</p>
+          <p class="tighter" style="margin:.4em 0 0">この教材自体も、この配色で作られている。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>LaTeX での図表の入れ方<span class="en">LaTeX</span></h2>
+  <p class="slide__lead">番号・参照は処理系に任せる。手で「図 3」と書かない。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <pre class="code"><span class="cm">% ---- 図（キャプションは下） ----</span>
+\begin{figure}[tb]
+  \centering
+  \includegraphics[width=8cm]{fig/system.pdf}
+  \caption{提案手法のシステム構成}
+  \label{fig:system}
+\end{figure}
+
+<span class="cm">% 本文からの参照</span>
+提案手法の構成を図\ref{fig:system}に示す．</pre>
+      </div>
+      <div>
+        <pre class="code"><span class="cm">% ---- 表（キャプションは上・booktabs） ----</span>
+\usepackage{booktabs}
+
+\begin{table}[tb]
+  \centering
+  \caption{提案手法と従来手法の比較}
+  \label{tab:compare}
+  \begin{tabular}{lrr}
+    \toprule
+    手法 &amp; 全体 F 値 &amp; 短縮 URL F 値 \\
+    \midrule
+    Ma ら~\cite{ma2009} &amp; 0.95 &amp; 0.68 \\
+    提案手法            &amp; 0.94 &amp; 0.93 \\
+    \bottomrule
+  \end{tabular}
+\end{table}</pre>
+      </div>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">便利なツール</b>
+      <span class="tight">
+      ・<b>Tables Generator</b>（<span style="word-break:break-all">https://www.tablesgenerator.com/</span>）… Excel から貼り付けて表を生成できる<br>
+      ・<code>booktabs</code> … <code>\toprule</code> <code>\midrule</code> <code>\bottomrule</code> で三本線の表になる。<code>[h]</code> の多用はレイアウトを崩す<br>
+      ・Overleaf と配布テンプレートでの書き方は <a href="16-latex.html">トピック 16</a> で詳しく扱う</span>
+    </div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">図表は、読者が最初に目を留める場所である。手を抜くと真っ先にばれる。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li><b>図題は下、表題は上</b></li>
+        <li>本文で<b>番号で引用</b>し、<b>内容を説明</b>する</li>
+        <li>括弧書きの参照（図 2）は使わない</li>
+        <li>キャプションだけで内容が分かるように書く</li>
+        <li>表の罫線は<b>三本線</b>。縦罫は原則なし</li>
+      </ul>
+      <ul class="ticks">
+        <li>棒グラフの縦軸は<b>0 から</b></li>
+        <li>軸ラベル・単位・凡例を必ず入れる</li>
+        <li><b>色だけに意味を持たせない</b></li>
+        <li>グレースケール印刷で確認する</li>
+        <li>グラフ・構成図は<b>PDF/SVG</b>で貼る</li>
+      </ul>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">最後の確認</b>
+      図表を 1 つずつ指さして、<b>「これは本文のどこで引用されているか」</b>を答える。
+      答えられない図表は、削るか本文を書き足す。
+    </div>
+    <div class="deck-end">
+      <a href="10-japanese.html"><b>◀ 前のトピック</b>10 日本語表記のルール</a>
+      <a href="12-references.html"><b>次のトピック ▶</b>12 引用と参考文献</a>
+      <a href="../guideline.html"><b>ツール</b>執筆ガイドライン</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

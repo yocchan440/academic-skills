@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>05 文字とフォント | 卒研発表の仕方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+<style>
+  .fsample{ background:var(--surface); border:1px solid var(--line); border-radius:8px;
+            padding:12px 16px; text-align:center; }
+  .fsample .lbl{ font-size:12px; color:var(--ink-2); display:block; margin-bottom:.3em; }
+  .fsample .big1{ font-size:30px; font-weight:700; line-height:1.3; }
+  .f-min{ font-family:"BIZ UDPMincho","BIZ UDP明朝","Yu Mincho","游明朝","MS PMincho",serif; }
+  .f-goth{ font-family:"BIZ UDPGothic","BIZ UDPゴシック","Meiryo","Yu Gothic UI",sans-serif; }
+  .sizebar{ display:grid; grid-template-columns:5.5em 1fr; gap:.3em 10px; align-items:center; }
+  .sizebar .s{ font-weight:700; text-align:right; font-size:13px; color:var(--ink-2); }
+</style>
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">05 文字とフォント</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 05</div>
+  <h1>文字とフォント</h1>
+  <p class="sub">読めない文字は、書いていないのと同じ</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>プレゼンでゴシック体を使う理由を説明できる</li>
+      <li>適切なフォントを選べる</li>
+      <li>後ろの席から読める文字サイズを判断できる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>フォントは原則ゴシック体<span class="en">Use sans-serif</span></h2>
+  <p class="slide__lead">明朝体のセリフ（飾り）は、<b>プロジェクタ程度の解像度では見えなくなる。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="fsample" style="border:2px dashed var(--bad);background:var(--tint-vermilion)">
+        <span class="lbl">✗ 明朝体　— 細い線とセリフが飛ぶ</span>
+        <span class="big1 f-min">提案手法の検知性能</span>
+        <p class="tighter" style="margin:.6em 0 0">
+          横線が細く、はらい・とめの飾りがある。投影すると<b>線が消えて読めなくなる</b>。</p>
+      </div>
+      <div class="fsample" style="border:2px solid var(--good);background:var(--tint-blue)">
+        <span class="lbl">✓ ゴシック体　— 線の太さが一定</span>
+        <span class="big1 f-goth">提案手法の検知性能</span>
+        <p class="tighter" style="margin:.6em 0 0">
+          線の太さが均一。<b>投影しても、離れて見ても形が保たれる</b>。</p>
+      </div>
+    </div>
+    <div class="note note--why">
+      <b class="note__t" data-icon="？">モニタとプロジェクタは別物である</b>
+      手元のモニタは高解像度・高コントラストなので、明朝体でもきれいに見える。
+      プロジェクタは解像度もコントラストも低く、部屋も明るい。
+      <b>モニタで確認して「読める」と判断してはいけない。</b>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">例外</b>
+      引用文をあえて区別したい場合など、<b>意図があれば</b>明朝体を使ってよい。
+      ただし十分に大きく、太めにすること。
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>どのフォントを使うか<span class="en">Which font</span></h2>
+  <p class="slide__lead">Windows なら、この順で検討する。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:5em">評価</th><th style="width:14em">フォント</th><th>理由</th></tr></thead>
+      <tbody>
+        <tr><td>◎ 推奨</td><td><b>UD デジタル教科書体</b></td><td>教育用に設計されたユニバーサルデザインフォント。見分けやすく、読み間違えにくい</td></tr>
+        <tr><td>◎ 推奨</td><td><b>BIZ UD ゴシック／UD ゴシック</b></td><td>同じく UD フォント。ビジネス文書向けで、投影にも強い</td></tr>
+        <tr><td>○ 可</td><td>メイリオ</td><td>画面表示用に作られており、投影でも読みやすい</td></tr>
+        <tr><td>○ 可</td><td>游ゴシック（Yu Gothic）</td><td>細さが気になる場合は<b>太字（Bold）で使う</b></td></tr>
+        <tr><td>✗ 避ける</td><td><b>MS ゴシック／MS P ゴシック</b></td><td>等幅の古いフォントで、字面が粗く、読みやすさが劣る</td></tr>
+        <tr><td>✗ 避ける</td><td>ポップ体・筆記体・デザイン書体</td><td>研究発表の場にふさわしくない。可読性も低い</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">他人の PC で発表するとき</b>
+      自分の PC にしかないフォントは、発表用 PC では<b>別のフォントに置き換わる</b>。
+      レイアウトが崩れ、文字がはみ出す。
+      <b>PDF に書き出して持っていく</b>か、<b>フォントを埋め込んで保存する</b>（<a href="16-onsite.html">トピック 16</a>）。
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>文字は大きく<span class="en">Make it big</span></h2>
+  <p class="slide__lead">文字は大きければ大きいほどよい。<b>迷ったら、もう一段大きくする。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <table class="t tight">
+          <caption>16:9 スライドでの目安（PowerPoint のポイント数）</caption>
+          <thead><tr><th>要素</th><th>サイズ</th></tr></thead>
+          <tbody>
+            <tr><th>スライド見出し</th><td class="num"><b>32 pt 以上</b></td></tr>
+            <tr><th>本文（箇条書き）</th><td class="num"><b>24 pt 以上</b></td></tr>
+            <tr><th>図の中の文字・軸ラベル</th><td class="num"><b>18 pt 以上</b></td></tr>
+            <tr><th>補足・出典</th><td class="num">14 pt 以上</td></tr>
+            <tr><th>これ以下</th><td colspan="1" class="num" style="color:#A34600"><b>使わない</b></td></tr>
+          </tbody>
+        </table>
+        <p class="tighter" style="margin-top:8px">
+          <b>論文の図をそのまま貼らない。</b>論文の図は紙で近くから見る前提で作られており、
+          投影すると軸ラベルが読めない。<b>発表用に作り直す。</b></p>
+      </div>
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">確認方法</b>
+          <ol class="tight" style="margin:.2em 0 0;padding-left:1.3em">
+            <li>スライドを<b>全画面表示</b>にする</li>
+            <li>ノート PC から<b>3〜4 m 離れる</b></li>
+            <li>それで読めなければ、<b>会場の後ろの席では読めない</b></li>
+          </ol>
+          <p class="tight" style="margin:.4em 0 0">
+            本番の会場が広いなら、実際に投影して後ろから見るのがいちばん確実である。</p>
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">大きくすることの副作用が、実は狙い</b>
+          <b>文字を大きくすれば、文章は書けなくなる。</b>箇条書きにしかならない。
+          つまり文字サイズを守るだけで、<a href="04-what-to-write.html">トピック 04</a> のルールも自動的に守られる。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>読みやすさのための細部<span class="en">Details</span></h2>
+  <p class="slide__lead">同じ文字サイズでも、これだけで読みやすさが変わる。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="card" style="border-top:5px solid var(--cud-green)">
+        <div class="card__h">やるとよいこと</div>
+        <ul class="ticks tight">
+          <li><b>行間を広めに</b>（1.3〜1.5 倍）</li>
+          <li>強調は<b>太字</b>で（下線・斜体は使わない）</li>
+          <li>英数字は<b>半角</b></li>
+          <li>和文と英数字の間に<b>半角アキ</b></li>
+          <li>単位を付ける（<span class="q">F 値 0.93</span>／<span class="q">1.2 秒</span>）</li>
+          <li>桁区切りを入れる（<span class="q">12,400 件</span>）</li>
+          <li>左揃えを基本にする</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-vermilion)">
+        <div class="card__h">やってはいけないこと</div>
+        <ul class="ticks tight">
+          <li>影・縁取り・グラデーションの文字装飾</li>
+          <li><b>斜体</b>（日本語では使わない）</li>
+          <li>文字の横方向の縮小（長体）で詰め込む</li>
+          <li>1 枚の中で<b>フォントを混在</b>させる</li>
+          <li>中央揃えの長い箇条書き</li>
+          <li>背景画像の上に直接文字を置く</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">装飾は読みやすさを下げる</b>
+      影や縁取りは、投影すると<b>文字の輪郭をぼかす</b>。
+      見栄えを良くしたつもりが、逆効果になる。<b>何も付けないのがいちばん読みやすい。</b>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">読めない文字は、書いていないのと同じである。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>フォントは<b>ゴシック体</b>。明朝のセリフは投影で消える</li>
+        <li>推奨は <b>UD デジタル教科書体・BIZ UD ゴシック</b></li>
+        <li><b>MS ゴシック</b>は避ける</li>
+        <li>他人の PC で発表するなら <b>PDF で持参</b></li>
+      </ul>
+      <ul class="ticks">
+        <li>見出し <b>32 pt</b>、本文 <b>24 pt</b>、図中 <b>18 pt</b> 以上</li>
+        <li><b>3〜4 m 離れて読めるか</b>で確認する</li>
+        <li>論文の図を<b>そのまま貼らない</b></li>
+        <li>装飾を付けない。強調は<b>太字</b>だけ</li>
+      </ul>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">文字を大きくすると、いいことしか起きない</b>
+      読みやすくなる。書ける量が減るので<b>要点が絞られる</b>。
+      余白ができて<b>見やすくなる</b>。読み上げる文がなくなるので<b>棒読みが減る</b>。
+    </div>
+    <div class="deck-end">
+      <a href="04-what-to-write.html"><b>◀ 前のトピック</b>04 スライドに何を書くか</a>
+      <a href="06-color.html"><b>次のトピック ▶</b>06 配色</a>
+      <a href="../checklist.html"><b>ツール</b>発表前チェックリスト</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

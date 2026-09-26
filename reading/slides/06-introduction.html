@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>06 序論の読み方 | 論文の読み方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">06 序論の読み方</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 06</div>
+  <h1>序論の読み方</h1>
+  <p class="sub">論文のストーリーを受け取る</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>序論の 4 ブロック構造を見分けられる</li>
+      <li>Gap の一文と目的の一文を確実に取り出せる</li>
+      <li>著者が主張している貢献を、正確に受け取れる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>序論は 4 つのブロックでできている<span class="en">Four blocks</span></h2>
+  <p class="slide__lead">著者はこの順に書く。<b>読者はこの順に探す。</b></p>
+  <div class="slide__body">
+    <div class="elem e1"><div class="elem__h"><span class="elem__n">A</span>現状 ／ 背景</div>
+      <div class="tight">この分野で今、何が起きているのか。数値と出典が付いているか。
+      <b>知っている分野なら読み飛ばしてよい。</b></div></div>
+    <div class="elem e2"><div class="elem__h"><span class="elem__n">B</span>問題点 ／ 課題（Gap）</div>
+      <div class="tight"><b>「しかし」から始まる段落。</b>従来研究がどこまでできて、何ができていないのか。
+      <b>ここを読み落とすと、論文の存在理由が分からなくなる。</b></div></div>
+    <div class="elem e3"><div class="elem__h"><span class="elem__n">C</span>本研究 ／ 目的とアプローチ</div>
+      <div class="tight">「本研究の目的は〜を明らかにすることである」。
+      <b>この 1 文が、論文全体の憲法である。</b>以降のすべてはこの文に奉仕している。</div></div>
+    <div class="elem e6"><div class="elem__h"><span class="elem__n">D</span>貢献と論文構成</div>
+      <div class="tight">貢献の箇条書きと、章立ての案内。<b>貢献リストは概要より具体的なことが多い。</b></div></div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">序論を読む目的はただ一つ</b>
+      <b>「この論文が答えようとしている問いは何か」</b>を 1 文で言えるようにすること。
+      それが言えないまま本文に進むと、何を読んでいるのか分からなくなる。
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>実例　序論を分解する<span class="en">Worked example</span></h2>
+  <p class="slide__lead">A → B → C → D が 1 本の線で繋がっているかを確認しながら読む。</p>
+  <div class="slide__body">
+    <div class="legend">
+      <span class="e1"><i></i><b>A 現状・背景</b></span>
+      <span class="e2"><i></i><b>B 課題（Gap）</b></span>
+      <span class="e3"><i></i><b>C 目的</b></span>
+      <span class="e6"><i></i><b>D 貢献</b></span>
+    </div>
+    <div class="paper tight" style="line-height:1.85">
+      <p><span class="mk e1"><sup>A</sup>フィッシング対策協議会への報告件数は、2021 年の約 52 万件から 2024 年には約 172 万件へと 3.3 倍に増加した [1]。利用者を保護するためには、フィッシングサイトを自動的に検知する技術が不可欠である。</span></p>
+      <p><span class="mk e2"><sup>B</sup>フィッシングサイトの自動検知については、URL 文字列の語彙的特徴量を用いる手法が広く研究されており、公開データセットに対して 95% を超える精度が報告されている [3][4]。これらの手法は、攻撃者が作成するドメイン名に特徴的な文字列パターンが現れることを前提としている。しかし、攻撃者が URL 短縮サービスを利用した場合、この前提は成立しない。短縮 URL を悪用したフィッシングの割合は増加傾向にあるが [5]、この条件下での検知性能を定量的に評価した研究は見当たらない。</span></p>
+      <p><span class="mk e3"><sup>C</sup>そこで本研究の目的は、URL 文字列に依存しない HTML 構造特徴量を導入することにより、短縮 URL を含むフィッシングサイトに対しても安定した検知性能が得られるかを明らかにすることである。</span></p>
+      <p><span class="mk e6"><sup>D</sup>本論文の貢献は、(1) URL に依存しない 27 次元の構造特徴量の設計、(2) 短縮 URL 検体 1,830 件における F 値 0.71 → 0.93 の改善の提示、(3) 特徴量の寄与分析の 3 点である。</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>Gap の一文を取り出す<span class="en">Finding the gap</span></h2>
+  <p class="slide__lead">序論でいちばん価値のある 1 文。<b>これがあなたの研究の出発点にもなる。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-vermilion)">
+          <div class="card__h">Gap を示す定型表現（和文）</div>
+          <p class="q tighter" style="margin:.2em 0">
+            しかし、〜は明らかになっていない<br>
+            〜については十分に検討されていない<br>
+            〜を定量的に評価した研究は見当たらない<br>
+            〜に関する実証的な研究は限定的である<br>
+            著者の知る限り、〜は報告されていない<br>
+            〜という前提は、〜の場合には成立しない</p>
+        </div>
+        <div class="card" style="border-left:5px solid var(--cud-vermilion);margin-top:10px">
+          <div class="card__h">Gap を示す定型表現（英文）</div>
+          <p class="tighter" style="margin:.2em 0;font-family:var(--ff-mono);font-size:13px">
+            However, ... remains unclear / unexplored<br>
+            Little attention has been paid to ...<br>
+            To the best of our knowledge, no prior work has ...<br>
+            Existing approaches assume ..., which does not hold ...<br>
+            ... has not been systematically evaluated</p>
+        </div>
+      </div>
+      <div>
+        <div class="note note--tip" style="margin-top:0">
+          <b class="note__t" data-icon="★">Gap は「反転」させて使える</b>
+          <span class="tight">
+          論文が主張する Gap は、<b>その論文が埋めた穴</b>である。
+          その論文が<b>埋めなかった穴</b>は、結論の「今後の課題」と Limitations にある。
+          <b>あなたの研究テーマは、そこから生まれる。</b></span>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">Gap の主張は検証する</b>
+          <span class="tight">
+          「〜は報告されていない」は<b>著者の調査範囲での話</b>である。
+          自分で検索して、実は先行研究があることは珍しくない。
+          特に <b>2〜3 年前の論文</b>では、その後に研究が出ている可能性が高い。</span>
+        </div>
+        <p class="tighter">定型表現の一覧は <a href="11-phrases.html">トピック 11</a> にまとめてある。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>貢献リストを正確に受け取る<span class="en">Reading the contributions</span></h2>
+  <p class="slide__lead">貢献は、著者が<b>「これをやった」と責任を持って主張していること</b>の一覧である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="ex-box ex-ok">
+        <span class="ex-box__t">書いてあること</span>
+        <p class="q tight" style="margin:.2em 0">(2) 短縮 URL 検体 1,830 件における F 値 0.71 → 0.93 の改善を示した</p>
+        <p class="tighter" style="margin:.4em 0 0">
+          ・対象は<b>短縮 URL 検体 1,830 件</b><br>
+          ・指標は <b>F 値</b><br>
+          ・<b>0.71 から 0.93</b> という具体的な数値<br>
+          ・動詞は<b>「示した」</b>＝ 実証したと主張している</p>
+      </div>
+      <div class="ex-box ex-ng">
+        <span class="ex-box__t">書いていないこと（推理してはいけない）</span>
+        <p class="tighter" style="margin:.2em 0">
+          ・全検体でも 0.93 になる<br>
+          ・他のデータセットでも同様になる<br>
+          ・0.71 の従来手法が最強の従来手法である<br>
+          ・実運用でも同じ性能が出る</p>
+        <p class="tighter" style="margin:.4em 0 0">
+          <b>どれも書いていない。</b>確かめたければ、実験の章を読む。</p>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">貢献の動詞に注目する</b>
+      <span class="tight">
+      <b>設計した／実装した</b>… 作った（有効かどうかは別）
+      <b>示した／明らかにした</b>… 実証したと主張している
+      <b>提案する</b>… 提示しただけの場合がある
+      <b>議論する／検討する</b>… <b>結論を出していない</b>ことが多い</span>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>序論を読むときの落とし穴<span class="en">Pitfalls</span></h2>
+  <p class="slide__lead">序論は著者が最も力を入れて書く場所である。<b>だからこそ、説得されすぎない。</b></p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:13em">序論の記述</th><th>読者がやりがちなこと</th><th>正しい扱い</th></tr></thead>
+      <tbody>
+        <tr><th>背景の大きな数値</th><td>問題の重大さを鵜呑みにする</td><td>出典 [n] を確認する。<b>その数値の定義と範囲</b>を見る</td></tr>
+        <tr><th>「〜が求められている」</th><td>需要があると信じる</td><td>誰が求めているのか。出典があるか</td></tr>
+        <tr><th>従来手法の限界の指摘</th><td>従来手法はダメだと理解する</td><td><b>どの条件で限界なのか</b>。全否定ではない</td></tr>
+        <tr><th>「本研究では〜を提案する」</th><td>提案＝有効と受け取る</td><td>提案は主張。<b>有効性は実験の章で確認</b>する</td></tr>
+        <tr><th>貢献の箇条書き</th><td>全部が実証済みだと思う</td><td>各項目の<b>動詞</b>を見る（設計した／示した）</td></tr>
+        <tr><th>論文構成の段落</th><td>読み飛ばす</td><td><b>どの章に何があるか</b>の地図。必ず読む</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">序論と結論を続けて読む</b>
+      序論を読んだら、<b>そのまま結論に飛ぶ</b>。
+      序論の目的と結論が同じことを言っているかを確認する。
+      ずれていたら、その論文の主張は揺れている（<a href="10-conclusion.html">トピック 10</a>）。
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">序論を読み終えたとき、この 2 文が言えればよい。</p>
+  <div class="slide__body">
+    <div class="note note--rule" style="margin-top:0">
+      <b class="note__t" data-icon="◆">序論から取り出す 2 文</b>
+      <p class="big" style="margin:.3em 0">
+        ①<b>これまで、〔　　　　　〕は明らかになっていなかった。</b><br>
+        ②<b>この論文は、〔　　　　　〕を明らかにしようとしている。</b></p>
+    </div>
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>序論は <b>A 現状 → B 課題 → C 目的 → D 貢献</b></li>
+        <li><b>B（Gap）と C（目的）の一文</b>を必ず取り出す</li>
+        <li>貢献リストは概要より具体的</li>
+      </ul>
+      <ul class="ticks">
+        <li>貢献の<b>動詞</b>で、主張の強さを読む</li>
+        <li>背景の数値は<b>出典を確認</b>する</li>
+        <li>序論を読んだら<b>そのまま結論へ</b></li>
+      </ul>
+    </div>
+    <div class="deck-end">
+      <a href="05-abstract.html"><b>◀ 前のトピック</b>05 概要の読み方</a>
+      <a href="07-related.html"><b>次のトピック ▶</b>07 関連研究の読み方</a>
+      <a href="11-phrases.html"><b>関連</b>11 論文の定型表現</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

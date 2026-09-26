@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>16 AI と読解支援ツール | 論文の読み方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">16 AI と読解支援ツール</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 16</div>
+  <h1>AI と読解支援ツール</h1>
+  <p class="sub">とても役立つ。ただし、読んだのはあなたではない</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>論文読解に特化したツールを知り、使い分けられる</li>
+      <li>AI に任せてよいこと・いけないことを判断できる</li>
+      <li>AI の出力を自分で検証する手順を持つ</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>基本方針<span class="en">Policy</span></h2>
+  <p class="slide__lead">正直な話、<b>とても役立つ。</b>論文を理解するスピードが従来とは段違いである。</p>
+  <div class="slide__body">
+    <div class="elem e3"><div class="elem__h"><span class="elem__n">1</span>汎用の生成 AI ではなく、特化型ツールを使う</div>
+      <div class="tight">SciSpace、NotebookLM、Paperguide、alphaXiv など。
+      <b>論文の本文を読ませたうえで答えるツール</b>のほうが、はるかに精度が高い。</div></div>
+    <div class="elem e1"><div class="elem__h"><span class="elem__n">2</span>AI に読解させても、あなたが読んだことにはならない</div>
+      <div class="tight">論文を読むという<b>経験</b>はしたほうがよいし、それ自体が重要な能力である。
+      <b>AI はあくまでサポートツール</b>だと思うこと。</div></div>
+    <div class="elem e2"><div class="elem__h"><span class="elem__n">3</span>AI に全幅の信頼はできない</div>
+      <div class="tight">ハルシネーションの可能性は否定できない。
+      <b>些細で繊細な、しかし重要な部分を読み飛ばされる</b>ことがある。
+      <b>真実は自分で確かめないとならない。</b></div></div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">この資料の立場</b>
+      <b>使ってよい。ただし、出力の責任はすべてあなたが負う。</b>
+      口頭試問で「この論文のここはどういう意味ですか」と聞かれて答えられなければ、
+      あなたはその論文を読んでいない。
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>論文読解に特化したツール<span class="en">Tools</span></h2>
+  <p class="slide__lead">いずれも<b>論文そのものを読み込ませて使う</b>。汎用チャットに題目だけ貼るのとは精度が違う。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:9em">ツール</th><th style="width:15em">URL</th><th>特徴</th></tr></thead>
+      <tbody>
+        <tr><th>SciSpace</th><td><span style="word-break:break-all">https://scispace.com/</span></td><td>PDF を読み込み、選択した箇所の解説や用語の説明をその場で表示できる</td></tr>
+        <tr><th>Gemini / NotebookLM</th><td><span style="word-break:break-all">https://notebooklm.google.com/</span></td><td>複数の PDF をまとめて読ませ、<b>出典つきで</b>回答させられる。横断的な整理に向く</td></tr>
+        <tr><th>Paperguide</th><td><span style="word-break:break-all">https://paperguide.ai/</span></td><td>文献管理と要約・比較を一体で扱える</td></tr>
+        <tr><th>alphaXiv</th><td><span style="word-break:break-all">https://www.alphaxiv.org/</span></td><td>arXiv 論文に対する解説・議論を閲覧できる</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">出典を示せるツールを選ぶ</b>
+      <b>「論文のどこにそう書いてあるか」を提示できるツール</b>を優先する。
+      該当箇所を自分で開いて確認できるからである。
+      出典を示せないツールの要約は、<b>検証のしようがない</b>。
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">アップロードする前に確認する</b>
+      未公開の原稿、共同研究先から受け取った資料、機密を含む文書は、
+      <b>外部サービスにアップロードしてよいか</b>を必ず確認する。
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>AI が得意なこと・苦手なこと<span class="en">Strengths and weaknesses</span></h2>
+  <p class="slide__lead">苦手なことは、<b>この資料が「重要」と言ってきた箇所</b>とほぼ一致する。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="card" style="border-top:5px solid var(--cud-green)">
+        <div class="card__h">得意なこと</div>
+        <ul class="ticks tight">
+          <li>長い英文の<b>大意</b>を掴ませる</li>
+          <li><b>用語</b>の一般的な説明</li>
+          <li>「この論文の主題は何か」という大掴みの質問</li>
+          <li>複数論文の<b>横断的な整理</b>の下書き</li>
+          <li>自分の理解が合っているかの<b>壁打ち</b></li>
+        </ul>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-vermilion)">
+        <div class="card__h">苦手なこと（＝人が確認する）</div>
+        <ul class="ticks tight">
+          <li><b>限定条件</b>の保持<br>
+            <span style="color:var(--ink-2)">「短縮 URL 検体において」が要約で落ちる</span></li>
+          <li><b>語尾の強さ</b>の区別<br>
+            <span style="color:var(--ink-2)">「と考えられる」が「である」になる</span></li>
+          <li><b>数値と条件の対応</b><br>
+            <span style="color:var(--ink-2)">どの表のどの行の値かがずれる</span></li>
+          <li><b>脅威モデル</b>の正確な再現</li>
+          <li><b>書かれていないこと</b>の扱い<br>
+            <span style="color:var(--ink-2)">もっともらしく補完してしまう＝推理</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">最大の危険</b>
+      AI は<b>「推理しない」ができない</b>。書かれていないことを、
+      それらしく埋めて出力する。
+      これは<a href="01-principles.html">トピック 01</a>で最も戒めた読み方そのものである。
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>使ってよい場面・危ない場面<span class="en">When to use</span></h2>
+  <p class="slide__lead">判断基準は<b>「AI の誤りを、自分で検出できるか」</b>である。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:5em">判定</th><th style="width:16em">使い方</th><th>理由</th></tr></thead>
+      <tbody>
+        <tr><td>✓ 安全</td><td>英文の段落の<b>大意</b>を掴む</td><td>原文と見比べて確認できる</td></tr>
+        <tr><td>✓ 安全</td><td>知らない<b>用語</b>を説明させる</td><td>教科書や他の論文で裏が取れる</td></tr>
+        <tr><td>✓ 安全</td><td>自分の理解を書いて<b>間違いを指摘</b>させる</td><td>判断は自分に残る</td></tr>
+        <tr><td>△ 注意</td><td>論文全体を<b>要約</b>させる</td><td>骨格を掴む用途なら可。<b>要約だけで理解した気にならない</b></td></tr>
+        <tr><td>△ 注意</td><td>複数論文の<b>比較表</b>を作らせる</td><td>下書きとして使い、<b>各セルを原典で確認</b>する</td></tr>
+        <tr><td>✗ 危険</td><td>読まずに<b>要約だけで引用</b>する</td><td>限定条件が落ちている。誤引用になる</td></tr>
+        <tr><td>✗ 危険</td><td><b>数値</b>を AI から取る</td><td>条件との対応がずれる。必ず本文の表から取る</td></tr>
+        <tr><td>✗ 危険</td><td><b>参考文献</b>を挙げさせる</td><td>存在しない文献を生成する。<b>ねつ造になる</b></td></tr>
+      </tbody>
+    </table>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">原則</b>
+      <b>理解の入口として使い、結論は自分で確かめる。</b>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>効果的な使い方<span class="en">How to ask</span></h2>
+  <p class="slide__lead">丸投げしない。<b>自分の理解をぶつけて、検証させる。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="ex-box ex-ng">
+        <span class="ex-box__t">丸投げ</span>
+        <p class="q tighter" style="margin:.2em 0">この論文を要約して。</p>
+        <p class="tighter" style="margin:.4em 0 0">
+          → もっともらしい要約が返ってくる。<b>条件も限界も落ちている</b>が、
+          読んでいないので気づけない。</p>
+      </div>
+      <div class="ex-box ex-ok">
+        <span class="ex-box__t">検証させる</span>
+        <p class="q tighter" style="margin:.2em 0">
+          私はこの論文を次のように理解しました。<b>論文の記述と照らして、誤りや抜けを指摘してください。</b>
+          該当箇所のページ・節番号も示してください。<br>
+          ・Gap：〜<br>・目的：〜<br>・手法：〜<br>・主要な結果：〜<br>・限界：〜</p>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">そのほか有効な聞き方</b>
+      <span class="tight">
+      ・<b>「この論文の脅威モデルを、攻撃者の目的・能力・知識・対象外に分けて、原文の記述を引用しながら示して」</b><br>
+      ・<b>「この数値が書かれている表と、その実験条件が書かれている節を教えて」</b>（→ 自分で開いて確認する）<br>
+      ・<b>「この論文で明示的に『対象外』『限界』とされている箇所をすべて列挙して」</b><br>
+      ・<b>「私が読み落としていそうな限定条件はあるか」</b></span>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">共通点</b>
+      どれも<b>「原文のどこか」を示させている</b>。示された箇所を自分で読めば、それは自分で読んだことになる。
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>検証の手順<span class="en">Verification</span></h2>
+  <p class="slide__lead">AI を使ったら、<b>必ずこの 4 つを自分で確認する。</b></p>
+  <div class="slide__body">
+    <ol class="steps big" style="margin:0">
+      <li><b>核心の数値を、本文の表で確認する</b><br>
+        <span class="tight" style="color:var(--ink-2)">値そのものと、その値がどの条件で得られたか</span></li>
+      <li><b>限定条件が落ちていないか確認する</b><br>
+        <span class="tight" style="color:var(--ink-2)">「〜において」「〜の場合」が要約から消えていないか</span></li>
+      <li><b>語尾を原文で確認する</b><br>
+        <span class="tight" style="color:var(--ink-2)">要約が「〜である」でも、原文が <code>suggest</code> なら解釈である</span></li>
+      <li><b>挙げられた文献が実在するか確認する</b><br>
+        <span class="tight" style="color:var(--ink-2)">検索して、実物を開く。<b>存在しない文献の記載はねつ造にあたる</b></span></li>
+    </ol>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">卒論で引用するなら</b>
+      引用する箇所は、<b>AI を経由せず、自分の目で原文を読む</b>。
+      引用の正確さの責任は、著者であるあなたにある。
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">AI は読む速度を上げる。<b>読む力そのものは、自分で読むことでしか身につかない。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>特化型ツール（SciSpace・NotebookLM など）を使う</li>
+        <li><b>出典を示せるツール</b>を優先する</li>
+        <li>AI は<b>限定条件・語尾・数値の対応</b>が苦手</li>
+        <li>AI は<b>「推理しない」ができない</b></li>
+      </ul>
+      <ul class="ticks">
+        <li><b>要約させるより、自分の理解を検証させる</b></li>
+        <li>数値と文献は<b>必ず原文で確認</b>する</li>
+        <li>引用箇所は<b>AI を経由しない</b></li>
+        <li>責任はすべて<b>自分</b>が負う</li>
+      </ul>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">最後に</b>
+      <b>AI に読解させても、あなたが読んだことにはならない。</b>
+      論文を読むという経験はしたほうがいいし、それは研究者にとって重要な能力である。
+      AI はあくまでサポートツールだと思うこと。
+    </div>
+    <div class="deck-end">
+      <a href="15-tracking.html"><b>◀ 前のトピック</b>15 文献を辿る・整理する</a>
+      <a href="../index.html"><b>戻る</b>資料一覧</a>
+      <a href="../worksheet.html"><b>ツール</b>論文精読ワークシート</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>12 引用と参考文献 | 卒業論文の書き方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+<style>
+  .ref-anat{ font-family:var(--ff-mincho); font-size:17px; line-height:2.5;
+             background:var(--surface); border:1px solid var(--line);
+             border-radius:8px; padding:16px 20px; }
+  .ref-anat .p{ padding:.1em .25em; border-radius:4px; background:var(--et);
+                box-shadow:inset 0 -.18em 0 var(--ec); }
+  .ref-anat .p b{ font-family:var(--ff-ud); font-size:.6em; font-weight:700;
+                  color:#fff; background:var(--ec); border-radius:4px;
+                  padding:.05em .4em; margin-right:.3em; vertical-align:.15em; }
+</style>
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">12 引用と参考文献</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 12</div>
+  <h1>引用と参考文献</h1>
+  <p class="sub">主張を補強する。そして、他人の成果に敬意を払う</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>引用が成立する条件を説明できる</li>
+      <li>本文中の引用を正しい位置・形式で書ける</li>
+      <li>参考文献リストを過不足なく、統一された書式で書ける</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>なぜ引用するのか<span class="en">Why cite?</span></h2>
+  <p class="slide__lead">2 つの理由がある。<b>論理の補強</b>と、<b>他人の成果の尊重</b>である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="card" style="border-top:5px solid var(--cud-blue)">
+        <div class="card__h">① 自分の論理を補強するため</div>
+        <p class="tight">自分の意見をただ述べることは、<b>「お気持ちの表明」</b>に過ぎない。</p>
+        <p class="tight">「この人もこの人もこう言っている」→ だから妥当である、と論理を支える。
+        これが<b>科学的な議論の作法</b>である。</p>
+        <p class="tight" style="margin-bottom:0">「みんなそう考えている」と書きたくなったら、<b>その「みんな」の文献を 3 つ挙げる。</b>
+        挙げられなければ、その「みんな」は自分の周囲の数名である。</p>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-vermilion)">
+        <div class="card__h">② 他人の著作物を適法に使うため</div>
+        <p class="tight">他人の文章・図・データを、出所を示さずに使えば<b>剽窃（盗用）</b>になる。
+        これは科学的不正であり、<b>発覚した時点で卒業は認められない</b>。</p>
+        <p class="tight" style="margin-bottom:0">著作権法第 32 条は、一定の条件を満たす場合に、著作権者の許諾なく引用できると定めている。
+        その条件を次のスライドで確認する。</p>
+      </div>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">引用が多いほど良いのか</b>
+      <b>必然性のある引用</b>であれば多くてよい。卒論では<b>15 件以上</b>が目安。
+      ただし、読んでいない文献を並べるのは逆効果。口頭試問で内容を聞かれる。
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>引用が成立する条件<span class="en">Conditions for quotation</span></h2>
+  <p class="slide__lead">著作権法第 32 条。以下をすべて満たす必要がある。</p>
+  <div class="slide__body">
+    <ol class="steps tight" style="margin:0">
+      <li><b>既に公表されている著作物</b>であること</li>
+      <li><b>「公正な慣行」</b>に合致すること</li>
+      <li>報道、批評、研究などのための<b>「正当な範囲内」</b>であること</li>
+      <li>引用部分とそれ以外の部分の<b>「主従関係」</b>が明確であること<br>
+        <span style="color:var(--ink-2)">— 自分の文章が「主」、引用が「従」。引用だらけのページは主従が逆転している</span></li>
+      <li>カギ括弧などにより<b>「引用部分」が明確</b>になっていること</li>
+      <li>引用を行う<b>「必然性」</b>があること</li>
+      <li><b>「出所の明示」</b>が行われていること</li>
+    </ol>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">図表を引用する場合</b>
+      他人の図表をそのまま載せるときは、キャプションに出典を明記する。<br>
+      <span class="q tight">図 2　従来手法のシステム構成（文献 [3] の Fig. 2 を引用）</span><br>
+      改変した場合は「〜をもとに作成」と書く。<b>学会によっては別途許諾が必要</b>なので確認する。
+    </div>
+    <p class="tighter" style="margin-top:6px">参考：公益社団法人 著作権情報センター
+      <span style="word-break:break-all">https://www.cric.or.jp/qa/hajime/hajime7.html</span></p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>引用と剽窃の境界<span class="en">Citation vs. plagiarism</span></h2>
+  <p class="slide__lead">「参考文献に挙げてあるから大丈夫」ではない。<b>どこからどこまでが引用か</b>を示す。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="ex-box ex-ng">
+        <span class="ex-box__t">剽窃になる</span>
+        <p class="q tighter" style="margin:.2em 0">　フィッシング検知においては、URL の語彙的特徴量が有効である。特に、ドメイン名の長さ、ハイフンの数、およびサブドメインの階層数が高い判別力を持つ。</p>
+        <p class="tighter" style="margin:.3em 0 0">文献 [3] の文章をほぼそのまま写しているのに、出所が示されていない。
+        <b>参考文献リストに [3] が載っていても剽窃である。</b></p>
+      </div>
+      <div class="ex-box ex-ok">
+        <span class="ex-box__t">正しい引用（直接引用）</span>
+        <p class="q tighter" style="margin:.2em 0">　Ma らは、URL の語彙的特徴量について「ドメイン名の長さ、ハイフンの数、およびサブドメインの階層数が高い判別力を持つ」と述べている [3]。</p>
+        <p class="tighter" style="margin:.3em 0 0">カギ括弧で引用部分を明示し、著者名と文献番号を示している。</p>
+      </div>
+    </div>
+    <div class="ex-box ex-ok" style="margin-top:10px">
+      <span class="ex-box__t">正しい引用（間接引用・要約）</span>
+      <p class="q tighter" style="margin:.2em 0">　Ma らは、URL の文字列から抽出した語彙的特徴量のみを用いて、95% を超える検知精度を達成している [3]。この手法で用いられる特徴量には、ドメイン名の長さやサブドメインの階層数が含まれる。</p>
+      <p class="tighter" style="margin:.3em 0 0"><b>自分の言葉で言い換えた場合も、出所の明示は必須。</b>語順を入れ替えただけのものは言い換えではない。</p>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">孫引きをしない</b>
+      他の論文の引用リストからコピーしただけの引用は、内容が違っていることが多い。<b>必ず原典を読む。</b>
+      どうしても原典が入手できない場合は「[5] による」と明記する。
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>本文中での引用の書き方<span class="en">In-text citation</span></h2>
+  <p class="slide__lead"><b>文献番号は文中で使う。</b>句点の後ろに置いてはならない。</p>
+  <div class="slide__body">
+    <div class="ng-ok">
+      <div class="ex-box ex-ng">
+        <span class="ex-box__t"></span>
+        <p class="q tight">このような方式を山根らが提案している．[4]</p>
+        <p class="q tight">報告件数は 3.3 倍に増加した。</p>
+        <p class="tighter" style="margin:.3em 0 0">番号が句点の外にある／そもそも出典がない</p>
+      </div>
+      <div class="ex-box ex-ok">
+        <span class="ex-box__t"></span>
+        <p class="q tight">このような方式を山根らが提案している [4]．</p>
+        <p class="q tight">報告件数は 3.3 倍に増加した [1]。</p>
+        <p class="tighter" style="margin:.3em 0 0"><b>番号は句点の前。</b>その文の内容の出所であることを示す</p>
+      </div>
+    </div>
+    <table class="t tight" style="margin-top:10px">
+      <thead><tr><th style="width:12em">パターン</th><th>書き方</th></tr></thead>
+      <tbody>
+        <tr><th>著者を主語にする</th><td class="q">田中らは、〜という手法を提案している [6]。</td></tr>
+        <tr><th>事実の出所を示す</th><td class="q">報告件数は 2024 年に約 172 万件に達した [1]。</td></tr>
+        <tr><th>複数の文献をまとめる</th><td class="q">同様の手法が複数提案されている [3][4][6]。</td></tr>
+        <tr><th>範囲で示す</th><td class="q">〜が広く研究されている [3]〜[7]。</td></tr>
+        <tr><th>段落全体の出所</th><td class="q">本節の内容は、特に断りのない限り文献 [8] に基づく。</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">番号の付け方</b>
+      <b>本文に登場する順</b>に 1 から振る（情報処理学会方式）。分野によっては著者名のアルファベット順。
+      <b>学会・学科の指定に従う。</b>LaTeX なら <code>\cite{}</code> が自動で処理する。
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>出所の明示に使う識別子<span class="en">Identifiers</span></h2>
+  <p class="slide__lead">URL は消える。<b>恒久的な識別子</b>があるなら、そちらを書く。</p>
+  <div class="slide__body">
+    <dl class="terms">
+      <dt>URI（Uniform Resource Identifier）</dt>
+      <dd>電子的な資源の識別子。例：<code>https://doi.org/10.1021/jo0349227</code></dd>
+      <dt>DOI（Digital Object Identifier）</dt>
+      <dd>電子データの恒久的な識別子。論文には基本的に付与されている。例：<code>10.1021/jo0349227</code><br>
+        <span style="color:var(--ink-2)">DOI があるなら、リンク切れする URL より DOI を書く。</span></dd>
+      <dt>ISBN（International Standard Book Number）</dt>
+      <dd>図書を一意に識別する番号。例：<code>978-4-274-06885-0</code></dd>
+    </dl>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">Web ページを参考文献にするとき</b>
+      <span class="tight">
+      ・<b>著者（組織名）、タイトル、URL、参照日</b>を必ず書く<br>
+      ・例：フィッシング対策協議会：月次報告書 2024 年 12 月，
+      <span style="word-break:break-all">https://www.antiphishing.jp/report/monthly/</span>（参照 2025-06-12）．<br>
+      ・<b>Web ページばかりの参考文献リストは、調査不足とみなされる。</b>査読付き論文を中心にする<br>
+      ・生成 AI が出力した URL は<b>必ず自分で開いて確認する</b>。存在しない URL の記載は<b>ねつ造</b>である</span>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>参考文献に書く項目<span class="en">What to include</span></h2>
+  <p class="slide__lead">種類ごとに、書くべき項目は決まっている。<b>過不足なく、書式を統一する。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <table class="t tight">
+          <thead><tr><th style="width:6em">種類</th><th>書くべき項目</th></tr></thead>
+          <tbody>
+            <tr><th>雑誌論文</th><td>著者、標題、雑誌名、巻、号、ページ、発行年</td></tr>
+            <tr><th>単行本</th><td>著者、書名、ページ数、発行所、発行年</td></tr>
+            <tr><th>会議論文</th><td>著者、標題、会議名（Proc.）、ページ、出版社、発行年</td></tr>
+            <tr><th>Web</th><td>著者（組織）、タイトル、URL、参照日</td></tr>
+            <tr><th>規格</th><td>発行団体、規格番号、標題、発行年</td></tr>
+          </tbody>
+        </table>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">書式は統一する</b>
+          著者名の区切り（「，」か「, 」）、ページの書き方（<code>pp.6〜10</code> か <code>pp.6-10</code>）、
+          年の括弧（<code>(1960)</code> か <code>，1960．</code>）— <b>全部の文献で揃える。</b>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">記載例（情報処理学会方式）</div>
+          <p class="q tighter" style="margin:.3em 0">[1] 山田太郎：偏微分方程式の数値解法，情報処理，Vol.1, No.1, pp.6〜10（1960）．</p>
+          <p class="q tighter" style="margin:.3em 0">[2] Feldman, J. and Gries, D.: Translater Writing System, Comm. ACM, Vol.11, No.2, pp.77-113（1968）.</p>
+          <p class="q tighter" style="margin:.3em 0">[3] 大山一夫：電子計算機，p.300，情報出版，東京（1991）.</p>
+          <p class="q tighter" style="margin:.3em 0 0">[4] Wilkes, M. V: Time Sharing Computer Systems, p.200, McDonald, New York（1990）.</p>
+        </div>
+        <p class="tighter" style="margin-top:8px">※ <b>参考文献に章番号は付けない。</b>「7. 参考文献」ではなく「参考文献」。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>参考文献の読み方 ①　会議録<span class="en">Conference paper</span></h2>
+  <p class="slide__lead">見慣れない略語の羅列に見えるが、構造は決まっている。</p>
+  <div class="slide__body">
+    <div class="ref-anat">
+      <span class="p e1"><b>著者名</b>R. Canetti, S. Halevi, and J. Katz,</span>
+      <span class="p e3"><b>タイトル</b>“Chosen-ciphertext security from identity-based encryption,”</span>
+      <span class="p e4"><b>発表会議名</b>Proc. Eurocrypt 2004,</span>
+      <span class="p e5"><b>収録雑誌名</b>LNCS 3027,</span>
+      <span class="p e6"><b>収録ページ</b>pp.207–222,</span>
+      <span class="p e2"><b>出版社名</b>Springer,</span>
+      <span class="p e1"><b>発行年</b>2004.</span>
+    </div>
+    <div class="cols cols-2" style="margin-top:12px">
+      <div class="note note--rule" style="margin-top:0">
+        <b class="note__t" data-icon="◆">読み取れること</b>
+        <ul class="tighter" style="margin:.2em 0 0;padding-left:1.2em">
+          <li><b>Proc.</b> は Proceeding（会議録）の略。<b>国際会議で発表された論文</b>である</li>
+          <li><b>Eurocrypt</b> は暗号分野の最難関国際会議の一つ</li>
+          <li><b>LNCS</b> は Lecture Notes in Computer Science。Springer のシリーズで、Vol. 3027 に収録</li>
+        </ul>
+      </div>
+      <div class="note note--tip" style="margin-top:0">
+        <b class="note__t" data-icon="★">文献の「格」を見分ける</b>
+        <span class="tighter">
+        会議名・論文誌名から、その論文がどの程度の審査を経ているかが分かる。<br>
+        <b>査読あり</b>：論文誌（Transactions, Journal）、主要国際会議（Proc. ...）<br>
+        <b>査読なし</b>：研究会報告、全国大会予稿、arXiv プレプリント<br>
+        → 主張の裏づけには<b>査読付き</b>を優先して使う。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <h2>参考文献の読み方 ②　論文誌<span class="en">Journal paper</span></h2>
+  <p class="slide__lead">和文論文誌も構造は同じ。著者が多い場合も全員書くのが原則。</p>
+  <div class="slide__body">
+    <div class="ref-anat">
+      <span class="p e1"><b>著者名</b>佐々木良一，日高悠，守谷隆史，谷山充洋，矢島敬士，八重樫清美，川島泰正，吉浦裕：</span>
+      <span class="p e3"><b>タイトル</b>多重リスクコミュニケータの開発と適用，</span>
+      <span class="p e5"><b>収録雑誌名</b>情報処理学会論文誌，</span>
+      <span class="p e4"><b>巻・号</b>Vol.49, No.9,</span>
+      <span class="p e6"><b>収録ページ</b>pp.3180–3190</span>
+      <span class="p e2"><b>発行年</b>(2008).</span>
+    </div>
+    <table class="t tighter" style="margin-top:12px">
+      <caption>参考文献でよく使われる英略語</caption>
+      <thead><tr><th>略語</th><th>正式</th><th>意味</th><th>略語</th><th>正式</th><th>意味</th></tr></thead>
+      <tbody>
+        <tr><td>Annu.</td><td>Annual</td><td>年報</td><td>Trans.</td><td>Transaction</td><td>会報、紀要</td></tr>
+        <tr><td>Conf.</td><td>Conference</td><td>会議</td><td>Proc.</td><td>Proceeding</td><td>会議録</td></tr>
+        <tr><td>J.</td><td>Journal</td><td>論文誌</td><td>Vol.</td><td>Volume</td><td>巻</td></tr>
+        <tr><td>Inf.</td><td>Information</td><td>情報</td><td>No.</td><td>Number</td><td>号</td></tr>
+        <tr><td>Int'l</td><td>International</td><td>国際</td><td>p. / pp.</td><td>Page / Pages</td><td>単ページ／複数ページ</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <h2>文献管理を自動化する<span class="en">Reference management</span></h2>
+  <p class="slide__lead">手で書くと必ずずれる。<b>ツールに任せて、書式の統一を機械的に保証する。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <pre class="code"><span class="cm">% refs.bib</span>
+@article{sasaki2008,
+  author  = {佐々木良一 and 日高悠 and 守谷隆史},
+  title   = {多重リスクコミュニケータの開発と適用},
+  journal = {情報処理学会論文誌},
+  volume  = {49}, number = {9},
+  pages   = {3180--3190},
+  year    = {2008}
+}
+
+<span class="cm">% 本文</span>
+〜が提案されている\cite{sasaki2008}．
+
+<span class="cm">% 末尾</span>
+\bibliographystyle{ipsjunsrt}
+\bibliography{refs}</pre>
+      </div>
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">BibTeX の利点</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li>番号が<b>自動</b>で振られる（順序を入れ替えても壊れない）</li>
+            <li>書式が<b>自動で統一</b>される</li>
+            <li>本文で引用していない文献は<b>出力されない</b></li>
+          </ul>
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">文献情報の入手</b>
+          <span class="tight">
+          ・Google Scholar の「引用」→ BibTeX<br>
+          ・IEEE Xplore / ACM DL の Export Citation<br>
+          ・CiNii の書き出し機能<br>
+          ・Zotero / Mendeley（PDF を放り込むだけで書誌を自動取得）</span>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">自動取得したら必ず目視</b>
+          著者名の文字化け、タイトルの大文字小文字、巻号の欠落はよくある。<b>原典と照合する。</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">引用の作法は、研究者コミュニティの一員としての最低限の礼儀である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>引用は<b>論理の補強</b>と<b>他人の成果の尊重</b>のため</li>
+        <li>引用部分を<b>明確にし</b>、<b>出所を明示</b>する</li>
+        <li>主従関係：自分の文章が「主」</li>
+        <li><b>文献番号は句点の前</b>：〜である [4]．</li>
+        <li>孫引きをしない。<b>必ず原典を読む</b></li>
+      </ul>
+      <ul class="ticks">
+        <li>DOI があるなら DOI を書く</li>
+        <li>Web は<b>参照日</b>を付ける</li>
+        <li><b>書式を統一</b>する（BibTeX が確実）</li>
+        <li>参考文献に<b>章番号は付けない</b></li>
+        <li>卒論の目安は<b>15 件以上</b>、査読付きを中心に</li>
+      </ul>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">科学的不正になる 3 つの行為</b>
+      <b>ねつ造</b>（存在しないデータ・文献・URL を書く）／<b>改ざん</b>（データを都合よく書き換える）／
+      <b>剽窃</b>（出所を示さず他人の著作物を使う）。いずれも<b>発覚した時点で卒業は認められない</b>。
+    </div>
+    <div class="deck-end">
+      <a href="11-figures-tables.html"><b>◀ 前のトピック</b>11 図表の作法</a>
+      <a href="15-acknowledgment.html"><b>次のトピック ▶</b>15 謝辞の書き方</a>
+      <a href="05-related-work.html"><b>関連</b>05 関連研究・従来方式</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

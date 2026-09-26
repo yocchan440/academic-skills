@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Academic Skills — 読む・書く・発表する</title>
+<meta name="description" content="情報系の学生が研究に取り組むための 3 つの教材。論文の読み方・卒業論文の書き方・卒研発表の仕方。">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/doc.css">
+<style>
+  /* ---------- ランディングページ専用 ---------- */
+  .lp-hero{ padding:58px 0 40px; border-bottom:2px solid var(--line); }
+  .lp-hero h1{ font-size:48px; line-height:1.2; margin:.12em 0 .2em; }
+  .lp-hero h1 .en{ display:block; font-size:.36em; letter-spacing:.14em;
+                   color:var(--cud-blue); font-weight:700; margin-bottom:.4em; }
+  .lp-hero p{ font-size:17.5px; color:var(--ink-2); margin:0; max-width:62ch; }
+
+  /* 3 部作カード */
+  .trio{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:10px; }
+  .part{
+    display:flex; flex-direction:column;
+    background:var(--surface); border:1px solid var(--line); border-radius:14px;
+    border-top:7px solid var(--pc); text-decoration:none; color:var(--ink);
+    padding:22px 24px 20px; transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .part:hover{ transform:translateY(-3px); box-shadow:var(--shadow); }
+  .part__step{ font-size:12px; font-weight:700; letter-spacing:.12em; color:var(--pc); }
+  .part__t{ font-size:25px; font-weight:700; line-height:1.3; margin:.15em 0 .1em; }
+  .part__en{ font-size:12.5px; letter-spacing:.06em; color:var(--ink-3); font-weight:700; margin-bottom:.7em; }
+  .part__d{ font-size:14.5px; line-height:1.75; color:var(--ink-2); }
+  .part__list{ margin:.7em 0 0; padding:0; list-style:none; font-size:13.5px; }
+  .part__list li{ position:relative; padding-left:1.3em; margin:.25em 0; }
+  .part__list li::before{ content:"▸"; position:absolute; left:0; color:var(--pc); font-weight:700; }
+  .part__go{ margin-top:auto; padding-top:14px; font-size:13.5px; font-weight:700; color:var(--pc); }
+  .part__go::after{ content:" →"; }
+
+  /* 流れの帯 */
+  .flow{
+    display:grid; grid-template-columns:1fr auto 1fr auto 1fr; align-items:center;
+    gap:10px; background:var(--surface); border:1px solid var(--line);
+    border-radius:12px; padding:18px 22px; margin-top:8px;
+  }
+  .flow__b{ text-align:center; }
+  .flow__b b{ display:block; font-size:16px; }
+  .flow__b span{ font-size:13px; color:var(--ink-2); }
+  .flow__a{ font-size:22px; color:var(--ink-3); font-weight:700; }
+
+  @media (max-width:860px){
+    .trio{ grid-template-columns:1fr; }
+    .flow{ grid-template-columns:1fr; }
+    .flow__a{ transform:rotate(90deg); }
+    .lp-hero h1{ font-size:34px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="sitehead">
+  <div class="sitehead__in">
+    <a class="sitehead__logo" href="index.html">Academic <span>Skills</span></a>
+    <nav>
+      <a href="reading/index.html">論文の読み方</a>
+      <a href="writing/index.html">卒業論文の書き方</a>
+      <a href="presentation/index.html">卒研発表の仕方</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="lp-hero">
+    <div class="hero__band"></div>
+    <h1><span class="en">ACADEMIC SKILLS</span>読む・書く・発表する</h1>
+    <p>情報系の学生が研究に取り組むための教材です。
+       先行研究を<b>読み</b>、自分の成果を論文に<b>書き</b>、それを人前で<b>発表する</b> —
+       この 3 つは、同じ「型」を別の角度から使う技能です。
+       どれも例示とサンプルを多く収録しているので、自分の原稿や発表と見比べながら使ってください。</p>
+  </section>
+
+  <section class="sec">
+    <h2>3 つの教材</h2>
+    <p class="sec__lead">それぞれ独立して使えます。必要なものから読んでください。</p>
+    <div class="trio">
+
+      <a class="part" href="reading/index.html" style="--pc:#0072B2">
+        <span class="part__step">STEP 1 ／ INPUT</span>
+        <span class="part__t">論文の読み方</span>
+        <span class="part__en">HOW TO READ PAPERS</span>
+        <span class="part__d">推理せず、書いてあることを書いてあるとおりに読む。
+          IMRAD の構造と定型表現を手がかりに、限られた時間で必要な情報を取り出します。
+          情報セキュリティ分野に特有の読み方も扱います。</span>
+        <ul class="part__list">
+          <li>大原則・IMRAD・どこから読むか</li>
+          <li>セクションごとの読み方（概要〜結論）</li>
+          <li>定型表現・英語論文・脅威モデル</li>
+          <li>批判的に読む・文献を辿る・AI ツール</li>
+        </ul>
+        <span class="part__go">全 16 トピック ＋ 定型表現の一覧 ＋ 精読ワークシート</span>
+      </a>
+
+      <a class="part" href="writing/index.html" style="--pc:#009E73">
+        <span class="part__step">STEP 2 ／ OUTPUT</span>
+        <span class="part__t">卒業論文の書き方</span>
+        <span class="part__en">HOW TO WRITE A THESIS</span>
+        <span class="part__d">「作文」でも「レポート」でもない文章を書く。
+          IMRAD の型、章ごとの書き方、日本語表記の作法、図表と引用のルールまで。
+          配布テンプレートを使った Overleaf / LaTeX の使い方も収録しています。</span>
+        <ul class="part__list">
+          <li>大原則・構成・章ごとの書き方</li>
+          <li>日本語表記・図表・引用と参考文献</li>
+          <li>研究倫理と生成 AI・謝辞</li>
+          <li>Overleaf と LaTeX・執筆の進め方</li>
+        </ul>
+        <span class="part__go">全 16 トピック ＋ 執筆ガイドライン ＋ 提出前チェックリスト</span>
+      </a>
+
+      <a class="part" href="presentation/index.html" style="--pc:#D55E00">
+        <span class="part__step">STEP 3 ／ DELIVER</span>
+        <span class="part__t">卒研発表の仕方</span>
+        <span class="part__en">HOW TO PRESENT</span>
+        <span class="part__d">短い時間で、専門外の聴衆に成果を伝えきる。
+          聴衆が「？」と思わないように進めること、時間の無駄をなくすことに力点を置いています。
+          スライドの作り方から当日の振る舞いまで。</span>
+        <ul class="part__list">
+          <li>聴衆とともに進める・構成と時間配分</li>
+          <li>スライドの作り方（文字・配色・図表）</li>
+          <li>時間の無駄をなくす・話し方・姿勢</li>
+          <li>リハーサル・質疑応答・当日の進行</li>
+        </ul>
+        <span class="part__go">全 16 トピック ＋ 発表設計シート ＋ 発表前チェックリスト</span>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>3 つはつながっている</h2>
+    <p class="sec__lead">同じ IMRAD という型を、読む側・書く側・話す側から使います。片方を学ぶと、もう片方が楽になります。</p>
+    <div class="flow">
+      <div class="flow__b"><b>読む</b><span>先行研究から Gap を見つける</span></div>
+      <div class="flow__a">→</div>
+      <div class="flow__b"><b>書く</b><span>その Gap を埋めた成果をまとめる</span></div>
+      <div class="flow__a">→</div>
+      <div class="flow__b"><b>発表する</b><span>8 分で聴衆に伝える</span></div>
+    </div>
+    <div class="cols cols-3" style="margin-top:18px">
+      <div class="card" style="border-left:5px solid var(--cud-blue)">
+        <div class="card__h">読む ↔ 書く</div>
+        <p style="font-size:14.5px;margin:0">論文を読むときに探す
+          <b>「しかし〜は明らかになっていない」</b>の一文は、
+          自分が書くときに最も重要な一文でもあります。
+          定型表現は、読むための手がかりであり、書くための道具でもあります。</p>
+      </div>
+      <div class="card" style="border-left:5px solid var(--cud-green)">
+        <div class="card__h">書く ↔ 発表する</div>
+        <p style="font-size:14.5px;margin:0">発表の構成は、論文の構成（IMRAD）をそのまま圧縮したものです。
+          論文が書けていれば発表は作れますし、
+          <b>発表で答えられない質問は、論文にも書けていない</b>ということです。</p>
+      </div>
+      <div class="card" style="border-left:5px solid var(--cud-vermilion)">
+        <div class="card__h">発表する ↔ 読む</div>
+        <p style="font-size:14.5px;margin:0">聴衆が「？」と思ったら話が届かないのと同じで、
+          読者が「？」と思ったら論文も読まれません。
+          <b>相手に負担をかけない</b>という一点で、3 つは共通しています。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>どこから始めるか</h2>
+    <p class="sec__lead">今いる段階から読んでください。最初から順に全部読む必要はありません。</p>
+    <table class="t">
+      <thead><tr><th style="width:16em">あなたの状況</th><th>読むもの</th></tr></thead>
+      <tbody>
+        <tr><th>研究室に配属されたばかり</th><td><a href="reading/slides/01-principles.html">読み方 01 論文を読むということ</a>　→　<a href="reading/slides/02-imrad.html">読み方 02 IMRAD</a></td></tr>
+        <tr><th>テーマを探している</th><td><a href="reading/slides/03-strategy.html">読み方 03 どこから読むか</a>　→　<a href="reading/slides/10-conclusion.html">読み方 10 結論と限界</a>（今後の課題が研究の種）</td></tr>
+        <tr><th>英語論文が読めない</th><td><a href="reading/slides/12-english.html">読み方 12 英語論文の読み方</a>　→　<a href="reading/phrases.html">定型表現の一覧</a></td></tr>
+        <tr><th>セキュリティ分野の論文を読む</th><td><a href="reading/slides/13-security.html">読み方 13 セキュリティ分野の論文</a>（脅威モデルの読み方）</td></tr>
+        <tr><th>論文を書き始める</th><td><a href="writing/slides/01-basics.html">書き方 01 大原則</a>　→　<a href="writing/slides/02-structure.html">書き方 02 構成と章立て</a>　→　<a href="writing/slides/16-latex.html">書き方 16 Overleaf と LaTeX</a></td></tr>
+        <tr><th>本文が書き上がった</th><td><a href="writing/slides/09-conclusion.html">書き方 09 結論</a>　→　<a href="writing/slides/03-abstract.html">書き方 03 概要</a>　→　<a href="writing/checklist.html">提出前チェックリスト</a></td></tr>
+        <tr><th>発表スライドを作る</th><td><a href="presentation/slides/03-structure.html">発表 03 構成と時間配分</a>　→　<a href="presentation/plan.html">発表設計シート</a></td></tr>
+        <tr><th>発表が近い</th><td><a href="presentation/slides/10-timewaste.html">発表 10 時間の無駄をなくす</a>　→　<a href="presentation/slides/14-rehearsal.html">発表 14 リハーサル</a>　→　<a href="presentation/checklist.html">発表前チェックリスト</a></td></tr>
+        <tr><th>生成 AI を使いたい</th><td><a href="reading/slides/16-ai-tools.html">読み方 16 AI と読解支援ツール</a>　／　<a href="writing/slides/13-ai-ethics.html">書き方 13 研究倫理と生成 AI</a></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="sec">
+    <h2>ツール</h2>
+    <p class="sec__lead">説明資料を読むだけでなく、手を動かすための道具です。入力内容はブラウザに保存されます。</p>
+    <div class="topics">
+      <a class="topic" href="reading/phrases.html" style="--tc:#0072B2">
+        <span class="topic__n">読み方</span><span class="topic__t">定型表現の一覧</span>
+        <span class="topic__d">論文でよく使われる表現を、和文・英文で役割ごとに一覧化。印刷して手元に置く用。</span>
+      </a>
+      <a class="topic" href="reading/worksheet.html" style="--tc:#0072B2">
+        <span class="topic__n">読み方</span><span class="topic__t">論文精読ワークシート</span>
+        <span class="topic__d">論文 1 本につき 1 枚。Markdown で書き出して文献管理ツールに貼れます。</span>
+      </a>
+      <a class="topic" href="writing/guideline.html" style="--tc:#009E73">
+        <span class="topic__n">書き方</span><span class="topic__t">執筆ガイドライン</span>
+        <span class="topic__d">執筆規則 119 項目を A〜H に分類。迷ったときに引く辞書型の資料。</span>
+      </a>
+      <a class="topic" href="writing/checklist.html" style="--tc:#009E73">
+        <span class="topic__n">書き方</span><span class="topic__t">提出前チェックリスト</span>
+        <span class="topic__d">123 項目。達成率を表示。提出直前の事務確認まで。</span>
+      </a>
+      <a class="topic" href="presentation/plan.html" style="--tc:#D55E00">
+        <span class="topic__n">発表</span><span class="topic__t">発表設計シート</span>
+        <span class="topic__d">秒数を入れると合計と残り時間が自動計算。超過が一目で分かります。</span>
+      </a>
+      <a class="topic" href="presentation/checklist.html" style="--tc:#D55E00">
+        <span class="topic__n">発表</span><span class="topic__t">発表前チェックリスト</span>
+        <span class="topic__d">69 項目。スライド・話し方・当日の準備を点検。</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>この教材について</h2>
+    <div class="cols cols-2" style="margin-top:14px">
+      <div class="card">
+        <div class="card__h">読みやすさへの配慮</div>
+        <ul class="ticks">
+          <li><b>ユニバーサルデザインフォント</b>（BIZ UD ゴシック／BIZ UD 明朝）を使用しています。
+            端末に無い場合は、OS 同梱の UD フォントや游書体で代替されます。</li>
+          <li><b>カラーユニバーサルデザイン</b>に配慮し、配色は Okabe–Ito の推奨 8 色を基準にしています。</li>
+          <li>色だけで意味を区別せず、<b>記号・ラベル・線種</b>を必ず併用しています。
+            グレースケールで印刷しても内容が判別できます。</li>
+          <li>ライトテーマ固定。文字と背景のコントラストを確保しています。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card__h">操作方法</div>
+        <dl class="terms">
+          <dt>説明資料</dt><dd>HTML スライドです。ブラウザで開くだけで動作します</dd>
+          <dt>ページ送り</dt><dd>← → キー、Space、PageUp / PageDown、画面左右のボタン</dd>
+          <dt>スライド一覧</dt><dd>O キー、または右上の「スライド一覧」ボタン</dd>
+          <dt>特定のスライドを共有</dt><dd>URL 末尾の <code>#5</code> がスライド番号です</dd>
+          <dt>印刷・PDF 化</dt><dd>右上の「印刷」ボタン。全スライドが 1 枚 1 ページで出力されます</dd>
+        </dl>
+        <p style="margin:.8em 0 0;font-size:14px;color:var(--ink-2)">
+          インターネット接続は不要です（Web フォントの取得にのみ使用します）。</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="sitefoot">
+    Academic Skills — 読む・書く・発表する<br>
+    学科・研究室が定める要領がある場合は、そちらを優先してください。
+  </footer>
+
+</div>
+</body>
+</html>

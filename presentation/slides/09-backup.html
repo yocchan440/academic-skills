@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>09 予備スライドを用意する | 卒研発表の仕方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+<style>
+  .deckmap{ display:grid; grid-template-columns:repeat(8,1fr); gap:6px; }
+  .deckmap div{ border-radius:5px; padding:.5em .2em; text-align:center;
+                font-size:11.5px; font-weight:700; border:2px solid; }
+  .dk-main{ background:var(--tint-blue); border-color:var(--cud-blue); color:#00537F; }
+  .dk-sum{ background:var(--tint-green); border-color:var(--cud-green); color:#00674D; }
+  .dk-hide{ background:var(--surface-2); border-color:#9AA0A6; border-style:dashed; color:#5A6066; }
+</style>
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">09 予備スライドを用意する</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 09</div>
+  <h1>予備スライドを用意する</h1>
+  <p class="sub">備えあれば憂いなし。慢心が事故を生む</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>本編に入れなかった情報を予備スライドに回せる</li>
+      <li>非表示スライドの作り方を知る</li>
+      <li>質疑で予備スライドを素早く呼び出せる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>発表スライドだけで戦いに挑まない<span class="en">Don't fight with 10 slides</span></h2>
+  <p class="slide__lead">発表時間 8 分だから 10 枚程度で発表する。<b>準備すべきスライドは、本当に 10 枚で十分か。</b></p>
+  <div class="slide__body">
+    <div class="note note--rule" style="margin-top:0">
+      <b class="note__t" data-icon="◆">考え方</b>
+      発表時間の都合上、<b>説明することはできないが、質問があったら見せるスライド</b>は準備しておくべきである。
+      まとめスライドの後ろに<b>「非表示スライド」</b>として置いておけばよい。
+    </div>
+    <div class="deckmap" style="margin:14px 0 4px">
+      <div class="dk-main">1<br>表紙</div>
+      <div class="dk-main">2<br>背景</div>
+      <div class="dk-main">3<br>課題</div>
+      <div class="dk-main">4<br>提案</div>
+      <div class="dk-main">5<br>手法</div>
+      <div class="dk-main">6<br>実験</div>
+      <div class="dk-main">7<br>結果</div>
+      <div class="dk-sum">8<br><b>まとめ</b></div>
+    </div>
+    <div class="deckmap">
+      <div class="dk-hide">9<br>実験環境</div>
+      <div class="dk-hide">10<br>特徴量一覧</div>
+      <div class="dk-hide">11<br>詳細結果</div>
+      <div class="dk-hide">12<br>比較表</div>
+      <div class="dk-hide">13<br>失敗例</div>
+      <div class="dk-hide">14<br>関連研究</div>
+      <div class="dk-hide">15<br>今後の課題</div>
+      <div class="dk-hide">16<br>参考文献</div>
+    </div>
+    <p class="tighter" style="margin:6px 0 0">
+      <span style="color:#00537F;font-weight:700">■ 本編（発表する）</span>
+      <span style="color:#00674D;font-weight:700">■ まとめ（質疑中も表示）</span>
+      <span style="color:#5A6066;font-weight:700">□ 非表示（質問されたら出す）</span></p>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">慢心が事故を生む</b>
+      「たぶん質問されないだろう」と思った箇所ほど質問される。
+      <b>答えられないより、スライドを出して説明できるほうが、はるかに良い。</b>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>何を予備スライドにするか<span class="en">What goes in the back</span></h2>
+  <p class="slide__lead">2 つの基準で選ぶ。<b>「本編で削ったもの」</b>と<b>「聞かれそうなもの」</b>。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="card" style="border-top:5px solid var(--cud-blue)">
+        <div class="card__h">本編で削ったもの</div>
+        <ul class="ticks tight">
+          <li>実験環境（CPU・OS・ライブラリのバージョン）</li>
+          <li>データセットの詳細な内訳</li>
+          <li>評価指標の定義式</li>
+          <li>特徴量・パラメータの一覧</li>
+          <li>すべての実験結果の表</li>
+          <li>関連研究の比較表</li>
+          <li>アルゴリズムの擬似コード</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-orange)">
+        <div class="card__h">聞かれそうなもの</div>
+        <ul class="ticks tight">
+          <li><b>なぜその手法を選んだのか</b>（他の選択肢との比較）</li>
+          <li><b>うまくいかなかったケース</b>（誤検知の例）</li>
+          <li><b>従来手法との詳細な比較</b></li>
+          <li>計算時間・処理コスト</li>
+          <li>実運用に向けた課題</li>
+          <li>今後の展開</li>
+          <li>先行研究との違いを図にしたもの</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">聞かれそうな質問の見つけ方</b>
+      <b>リハーサルを見てくれた人に「疑問に思ったこと」をすべて挙げてもらう。</b>
+      それがそのまま、本番で出る質問である（<a href="14-rehearsal.html">トピック 14</a>）。
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>非表示スライドの作り方<span class="en">How to hide slides</span></h2>
+  <p class="slide__lead">スライドショーでは飛ばされ、<b>番号を指定すれば呼び出せる</b>状態にする。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:10em">ソフト</th><th>操作</th></tr></thead>
+      <tbody>
+        <tr><th>PowerPoint</th><td>スライド一覧でスライドを右クリック →「<b>非表示スライドに設定</b>」。<br>
+          スライドショー中は飛ばされるが、<b>番号を入力して Enter</b> で直接ジャンプできる</td></tr>
+        <tr><th>Keynote</th><td>スライドを右クリック →「<b>スライドをスキップ</b>」</td></tr>
+        <tr><th>Google スライド</th><td>スライドを右クリック →「<b>スライドをスキップ</b>」</td></tr>
+        <tr><th>PDF で発表する場合</th><td>非表示にできないので、<b>まとめスライドの次に「予備スライド」という区切りを 1 枚入れる</b>。<br>
+          発表はまとめで止め、質疑で必要になったらページ送りで進む</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">PowerPoint での呼び出し方（覚えておく）</b>
+      スライドショー中に <b>数字を入力して Enter</b> を押すと、そのスライドへジャンプする。<br>
+      例：<code>1</code> <code>2</code> <code>Enter</code> → 12 枚目へ。<b>非表示スライドにもジャンプできる。</b>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">練習しておく</b>
+      この操作は、本番でいきなりやると必ず失敗する。
+      <b>リハーサルで 2〜3 回試しておく。</b>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>呼び出せなければ意味がない<span class="en">You must be able to find it</span></h2>
+  <p class="slide__lead">予備スライドは、<b>10 秒以内に出せて</b>はじめて役に立つ。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">準備しておくこと</b>
+          <ol class="tight" style="margin:.2em 0 0;padding-left:1.3em">
+            <li><b>予備スライドの一覧を手元に印刷して持つ</b><br>
+              「9 環境／10 特徴量／11 詳細結果…」の対応表</li>
+            <li>予備スライドにも<b>通し番号</b>を入れる</li>
+            <li>見出しを<b>質問の形</b>にしておく<br>
+              「なぜ勾配ブースティングを選んだか」</li>
+            <li>探しやすい<b>順番</b>に並べる（聞かれそうな順）</li>
+          </ol>
+        </div>
+      </div>
+      <div>
+        <div class="note note--tip" style="margin-top:0">
+          <b class="note__t" data-icon="★">発表者ツールを使う</b>
+          PowerPoint の<b>発表者ツール</b>なら、手元の画面にスライド一覧を出せる。
+          ただし、<b>本番の接続でそれが使えるかは事前に確認</b>しておく
+          （<a href="16-onsite.html">トピック 16</a>）。
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">探している時間も質疑の時間</b>
+          「えーっと、どこだったかな」と探す 30 秒は、質疑応答の時間から引かれる。
+          <b>探せないなら、口頭で答えたほうが速い。</b>
+          「その詳細は予備スライドにありますが、口頭でお答えします」でもよい。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">本編は削る。削ったものは、後ろに置く。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>発表スライドだけで戦いに挑まない</li>
+        <li>説明できないが<b>質問されたら見せる</b>スライドを作る</li>
+        <li>まとめスライドの<b>後ろに非表示スライド</b>として置く</li>
+        <li>本編 10 枚に対し、予備 <b>5〜10 枚</b>が目安</li>
+      </ul>
+      <ul class="ticks">
+        <li>入れるのは<b>削ったもの</b>と<b>聞かれそうなもの</b></li>
+        <li>聞かれそうな質問は<b>リハーサルで集める</b></li>
+        <li>予備スライドにも<b>通し番号</b>を入れる</li>
+        <li><b>呼び出す操作を練習</b>しておく</li>
+      </ul>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">備えあれば憂いなし</b>
+      予備スライドを用意しておくと、<b>質疑が怖くなくなる</b>。
+      「聞かれたらこれを出せばいい」という状態は、本番の落ち着きにつながる。
+    </div>
+    <div class="deck-end">
+      <a href="08-antipatterns.html"><b>◀ 前のトピック</b>08 作ってはいけないスライド</a>
+      <a href="10-timewaste.html"><b>次のトピック ▶</b>10 時間の無駄をなくす</a>
+      <a href="15-qa.html"><b>関連</b>15 質疑応答</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

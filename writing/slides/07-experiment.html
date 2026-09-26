@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>07 実験・調査 | 卒業論文の書き方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">07 実験・調査</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 07</div>
+  <h1>実験・調査</h1>
+  <p class="sub">目的のない実験は、ただ「やりたいことをやった」だけ</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>研究目的から実験設計を導ける</li>
+      <li>再現に必要な条件・環境・対象を漏れなく書ける</li>
+      <li>アンケート調査のバイアスを避けられる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>実験の目的を先に書く<span class="en">Purpose first</span></h2>
+  <p class="slide__lead">何のために実験を行うのか。<b>目的がない実験は、やりたいことをやっているだけ（非科学）である。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">確認すべき 4 点</b>
+          <ol class="tight" style="margin:.2em 0 0;padding-left:1.3em">
+            <li>何のために実験を行うのか</li>
+            <li><b>必要なことを測る</b>実験になっているか</li>
+            <li>従来研究と<b>比較可能</b>か</li>
+            <li>その測り方は<b>妥当</b>か</li>
+          </ol>
+        </div>
+        <div class="note note--why">
+          <b class="note__t" data-icon="？">序論の目的から逆算する</b>
+          序論で「短縮 URL でも性能が維持されるかを明らかにする」と書いたなら、
+          <b>短縮 URL のみの部分集合での評価</b>が必ず必要になる。
+          全体精度だけを測っても、目的には答えられない。
+        </div>
+      </div>
+      <div>
+        <div class="paper tighter" style="line-height:1.8">
+          <h4>4.1　実験の目的</h4>
+          <p>　本実験の目的は、3 章で述べた提案手法が、1.3 節で掲げた要件 1（URL 非依存性）および要件 2（軽量性）を満たすかを検証することである。具体的には、次の 3 つの問いに答える。</p>
+          <p class="noindent">　RQ1　全検体に対する検知性能は、従来手法と同等以上か。<br>
+          　RQ2　短縮 URL を含む検体に限定した場合、従来手法との性能差はどの程度か。<br>
+          　RQ3　1 件あたりの判定時間は 1 秒以内に収まるか。</p>
+        </div>
+        <p class="tighter" style="margin-top:6px">※ <b>RQ（Research Question）</b>に番号を付けると、5 章で「RQ2 について」と対応づけて書ける。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>書くべき条件のチェックリスト<span class="en">Reproducibility</span></h2>
+  <p class="slide__lead">第三者が同じ実験をやり直せるか。書き漏らしやすい項目を機械的に潰す。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="card" style="border-left:5px solid var(--cud-blue)">
+        <div class="card__h">システム系の実験</div>
+        <ul class="ticks tighter">
+          <li><b>ハードウェア</b>：CPU 型番、メモリ量、GPU、ストレージ</li>
+          <li><b>ソフトウェア</b>：OS とバージョン、言語処理系、主要ライブラリのバージョン</li>
+          <li><b>データセット</b>：出典、取得日、件数、ラベルの内訳、前処理</li>
+          <li><b>パラメータ</b>：学習率、エポック数、乱数シード</li>
+          <li><b>試行回数</b>：何回実行し、どう集計したか（平均／中央値）</li>
+          <li><b>比較対象</b>：何と比べたか、その実装は誰のものか</li>
+          <li><b>評価指標</b>：定義式つきで</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:5px solid var(--cud-green)">
+        <div class="card__h">人を対象とする調査</div>
+        <ul class="ticks tighter">
+          <li><b>対象者</b>：人数、属性（年齢・所属・経験年数）、募集方法</li>
+          <li><b>期間</b>：実施した年月日</li>
+          <li><b>手続き</b>：何をどの順で依頼したか</li>
+          <li><b>質問項目</b>：全文を付録に載せる</li>
+          <li><b>尺度</b>：5 件法か 7 件法か、選択肢の文言</li>
+          <li><b>倫理的配慮</b>：同意の取得、匿名化、データの取扱い</li>
+          <li><b>回収率</b>：配布数と有効回答数</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">表にまとめる</b>
+      実験環境は<b>表 1 つ</b>にまとめると読みやすく、書き漏らしにも気づきやすい。
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>実験環境の記述例<span class="en">Setup</span></h2>
+  <p class="slide__lead">この程度まで書いて、ようやく「再現できる」水準になる。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <table class="t tighter">
+          <caption>表 2　実験環境</caption>
+          <tbody>
+            <tr><th style="width:9em">CPU</th><td>Intel Core i7-13700 (2.1 GHz, 16 コア)</td></tr>
+            <tr><th>メモリ</th><td>32 GB</td></tr>
+            <tr><th>OS</th><td>Ubuntu 24.04 LTS</td></tr>
+            <tr><th>言語処理系</th><td>Python 3.12.3</td></tr>
+            <tr><th>主要ライブラリ</th><td>scikit-learn 1.5.0、LightGBM 4.3.0、Playwright 1.44</td></tr>
+            <tr><th>乱数シード</th><td>42（固定）</td></tr>
+          </tbody>
+        </table>
+        <table class="t tighter" style="margin-top:10px">
+          <caption>表 3　データセットの内訳</caption>
+          <thead><tr><th>区分</th><th>出典</th><th>件数</th></tr></thead>
+          <tbody>
+            <tr><td>フィッシング</td><td>PhishTank（2025-04-01 取得）</td><td class="num">6,200</td></tr>
+            <tr><td>正規</td><td>Tranco 上位 10 万件から無作為抽出</td><td class="num">6,200</td></tr>
+            <tr><td>うち短縮 URL</td><td>上記の部分集合</td><td class="num">1,830</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">評価指標は定義式つきで</b>
+          <p class="tighter" style="margin:.3em 0">
+          適合率 <i>P</i> = TP/(TP+FP)、再現率 <i>R</i> = TP/(TP+FN)、F 値 = 2<i>PR</i>/(<i>P</i>+<i>R</i>) とする。
+          ここで TP はフィッシングサイトを正しく検知した件数、FP は正規サイトを誤って検知した件数を表す。</p>
+          <p class="tighter" style="margin:.3em 0 0">※ 「精度」という語は曖昧。<b>Accuracy なのか Precision なのか</b>を明示する。</p>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">データの偏りに注意</b>
+          正例と負例の比率を書く。<b>不均衡データで Accuracy だけを報告するのは誤り</b>である
+          （99% が正規サイトなら、全部「正規」と答えるだけで Accuracy 99%）。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>公正な実験になっているか<span class="en">Fairness</span></h2>
+  <p class="slide__lead">自分に有利な条件を無意識に選んでしまうことは、誰にでも起きる。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:13em">ありがちな不公正</th><th>何が問題か</th><th>どうするか</th></tr></thead>
+      <tbody>
+        <tr><th>提案手法だけチューニングした</th><td>比較対象の性能を不当に低く見せている</td><td>比較手法も同じ手間でチューニングする。条件を明記する</td></tr>
+        <tr><th>テストデータで学習した</th><td>結果が無意味になる（リーク）</td><td>学習／検証／テストの分割方法を明記する</td></tr>
+        <tr><th>都合の良い 1 回だけ載せた</th><td>再現性がない</td><td>複数回の平均と標準偏差を報告する</td></tr>
+        <tr><th>比較手法を自分で実装した</th><td>実装ミスで性能が落ちている可能性</td><td>著者公開の実装を使う。無理なら再実装した旨と検証方法を書く</td></tr>
+        <tr><th>データセットが提案手法に有利</th><td>一般性がない</td><td>複数のデータセットで評価する</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">アンケート調査で特に注意すること</b>
+      <span class="tight">
+      ・<b>意図的に集団を選んでいないか</b>（同じ研究室の友人だけに配る、など）<br>
+      ・<b>結果を誘導していないか</b>（「便利だと思いませんか？」は誘導質問）<br>
+      ・回答者が実験者に忖度しない状況をつくれているか</span>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>アンケートの質問文<span class="en">Survey design</span></h2>
+  <p class="slide__lead">質問文の作り方ひとつで、結果は簡単に歪む。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:8em">問題</th><th>✗ 悪い質問</th><th>✓ 良い質問</th></tr></thead>
+      <tbody>
+        <tr><th>誘導</th><td class="q">この機能は便利だと思いませんか？</td><td class="q">この機能の使いやすさを 5 段階で評価してください。</td></tr>
+        <tr><th>ダブルバーレル</th><td class="q">操作は簡単で分かりやすかったですか？</td><td class="q">（別々に聞く）操作は簡単でしたか／表示は分かりやすかったですか</td></tr>
+        <tr><th>曖昧な語</th><td class="q">よく利用しますか？</td><td class="q">過去 1 か月で何回利用しましたか？</td></tr>
+        <tr><th>専門用語</th><td class="q">多要素認証を利用していますか？</td><td class="q">ログイン時にパスワードに加えて、SMS の確認コードやアプリの承認を使っていますか？</td></tr>
+        <tr><th>選択肢の偏り</th><td class="q">とても良い／良い／普通／悪い</td><td class="q">とても良い／良い／普通／悪い／とても悪い（左右対称にする）</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">実施前に必ず</b>
+      <span class="tight">
+      ① <b>質問文を指導教員に見せる</b>（配布後は修正できない）<br>
+      ② 数名に<b>予備調査（プレテスト）</b>をして、解釈のぶれを確認する<br>
+      ③ 人を対象とする調査は、<b>所属機関の倫理審査の要否</b>を確認する</span>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>統計処理の注意<span class="en">Statistics</span></h2>
+  <p class="slide__lead">数値に差があることと、<b>意味のある差があること</b>は違う。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">書くべきこと</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li>用いた<b>検定の名前</b>（t 検定、Mann-Whitney の U 検定 など）</li>
+            <li>なぜその検定を選んだか（対応の有無、正規性）</li>
+            <li><b>有意水準</b>（α = 0.05 など）</li>
+            <li><b>p 値</b>と、可能なら<b>効果量</b></li>
+            <li>標本サイズ <i>n</i></li>
+          </ul>
+        </div>
+        <p class="q tighter" style="margin-top:8px">記述例：<br>
+        　両群の開封率の差についてウェルチの t 検定を行った結果、有意水準 5% で有意な差が認められた（<i>t</i>(58) = 3.42, <i>p</i> &lt; 0.01, Cohen's <i>d</i> = 0.89）。</p>
+      </div>
+      <div>
+        <div class="note note--warn" style="margin-top:0">
+          <b class="note__t" data-icon="▲">やってはいけないこと</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li><b>p 値が 0.05 を下回るまで検定を繰り返す</b>（p ハッキング）</li>
+            <li>有意でなかった結果を報告しない</li>
+            <li>「有意差がない」を「差がない」と書く<br>
+              <span style="color:var(--ink-2)">→ 正しくは「有意な差は認められなかった」</span></li>
+            <li><i>n</i> = 5 で統計的主張をする</li>
+            <li>グラフの縦軸を途中から始めて差を強調する</li>
+          </ul>
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">卒論での現実的な方針</b>
+          統計に自信がないなら、<b>無理に検定を使わない</b>。
+          記述統計（平均・標準偏差・分布の図示）を丁寧に示すほうが誠実である。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">実験の章は「やったことの記録」ではなく、<b>「目的に答えるための設計」</b>である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>実験の<b>目的</b>を最初に書く。RQ に番号を付ける</li>
+        <li>序論の目的から<b>逆算</b>して実験を設計する</li>
+        <li>環境・条件・データを<b>表</b>にまとめる</li>
+        <li>評価指標は<b>定義式つき</b>で書く</li>
+      </ul>
+      <ul class="ticks">
+        <li>比較の<b>公正さ</b>を自己点検する</li>
+        <li>アンケートは<b>誘導・偏り</b>を避ける</li>
+        <li>検定名・有意水準・p 値・<i>n</i> を明記する</li>
+        <li>不都合な結果も<b>そのまま報告する</b></li>
+      </ul>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">最も重要なこと</b>
+      実験をやってから目的を考えてはいけない。<b>目的 → 実験設計 → 実施</b>の順である。
+      もし実験の途中で目的が変わったなら、<b>序論を書き直す</b>。
+    </div>
+    <div class="deck-end">
+      <a href="06-method.html"><b>◀ 前のトピック</b>06 提案方式・提案手法</a>
+      <a href="08-discussion.html"><b>次のトピック ▶</b>08 評価・考察</a>
+      <a href="13-ai-ethics.html"><b>関連</b>13 研究倫理と生成 AI</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

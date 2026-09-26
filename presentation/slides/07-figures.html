@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>07 図表の見せ方 | 卒研発表の仕方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">07 図表の見せ方</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 07</div>
+  <h1>図表の見せ方</h1>
+  <p class="sub">論文の図をそのまま貼ってはいけない</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>発表用の図と論文用の図の違いを説明できる</li>
+      <li>聴衆の視線を図の中で誘導できる</li>
+      <li>アニメーションを使ってよい場面を判断できる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>論文の図と発表の図は違う<span class="en">Not the same figure</span></h2>
+  <p class="slide__lead">同じデータでも、見る条件がまったく違う。<b>作り直すのが前提である。</b></p>
+  <div class="slide__body">
+    <table class="t">
+      <thead><tr><th style="width:9em"></th><th>論文の図</th><th>発表の図</th></tr></thead>
+      <tbody>
+        <tr><th>見る距離</th><td>30 cm（手元の紙）</td><td><b>3〜10 m（スクリーン）</b></td></tr>
+        <tr><th>見る時間</th><td>何度でも、好きなだけ</td><td><b>20〜40 秒、1 回だけ</b></td></tr>
+        <tr><th>情報量</th><td>多くてよい。あとで読み返せる</td><td><b>少なくする。読み返せない</b></td></tr>
+        <tr><th>系列の数</th><td>5〜10 本あってもよい</td><td><b>2〜3 本まで</b></td></tr>
+        <tr><th>キャプション</th><td>図の下に付ける</td><td><b>スライドの見出しが説明になる</b></td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">論文の図をそのまま貼るとどうなるか</b>
+      軸ラベルが読めない。凡例が読めない。系列が多すぎてどれが提案手法か分からない。
+      聴衆は 5 秒で理解を諦める。<b>そして、そこで「？」が生まれる</b>（<a href="02-with-audience.html">トピック 02</a>）。
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">作り直すときにやること</b>
+      <span class="tight">
+      ① 見せたい系列だけ残す　② 文字を 18 pt 以上に　③ 色を発表全体の配色に合わせる
+      ④ <b>見てほしい箇所を目立たせる</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>グラフは「結論」を見せる<span class="en">Show the conclusion</span></h2>
+  <p class="slide__lead">グラフはデータの置き場ではない。<b>言いたいことが一目で分かる形にする。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="card" style="border-top:5px solid var(--cud-vermilion)">
+        <div class="card__h">✗ データを並べただけ</div>
+        <ul class="ticks tight">
+          <li>見出しが「実験結果」</li>
+          <li>6 本の折れ線が同じ太さ・同じ色調</li>
+          <li>凡例が右下に小さく</li>
+          <li>軸ラベルが論文のまま（8 pt）</li>
+          <li>グリッド線が濃い</li>
+        </ul>
+        <p class="tighter" style="margin:.4em 0 0">→ 聴衆は「どれを見ればいいのか」で止まる。</p>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-blue)">
+        <div class="card__h">✓ 結論が見える</div>
+        <ul class="ticks tight">
+          <li>見出しが「<b>短縮 URL でも F 値 0.93 を維持</b>」</li>
+          <li>提案手法だけ<b>太い青</b>、他は細い灰</li>
+          <li>凡例を線のそばに直接置く</li>
+          <li>軸ラベルは 18 pt 以上、単位つき</li>
+          <li>見てほしい点に<b>丸と矢印</b></li>
+        </ul>
+        <p class="tighter" style="margin:.4em 0 0">→ 見た瞬間に結論が入る。話はその補足になる。</p>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">グラフの基本は論文と同じ</b>
+      <span class="tight">
+      ・棒グラフの縦軸は <b>0 から</b>始める（途中から始めると差が誇張される）<br>
+      ・軸ラベル・単位・凡例を必ず入れる　・色だけで系列を区別しない（線種も変える）</span>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>表は最小限にする<span class="en">Tables are hard to read</span></h2>
+  <p class="slide__lead">表は、スクリーンでは<b>最も読みにくい</b>要素である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--warn" style="margin-top:0">
+          <b class="note__t" data-icon="▲">大きな表を出さない</b>
+          10 行 6 列の表を 30 秒見せても、聴衆は何も読み取れない。
+          <b>論文に載せた表を、そのまま持ってこない。</b>
+        </div>
+        <div class="note note--rule">
+          <b class="note__t" data-icon="◆">表を使うときのルール</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li><b>4 行 × 4 列まで</b></li>
+            <li>罫線は<b>三本線</b>（上端・見出し下・下端）</li>
+            <li>数値は右揃え、桁を揃える</li>
+            <li><b>見てほしいセルだけ色や太字で示す</b></li>
+            <li>単位は見出しに 1 回だけ</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <table class="t tight">
+          <caption>この程度なら読める</caption>
+          <thead><tr><th>手法</th><th>全体 F 値</th><th>短縮 URL F 値</th></tr></thead>
+          <tbody>
+            <tr><td>従来手法 A</td><td class="num">0.95</td><td class="num">0.68</td></tr>
+            <tr><td>従来手法 B</td><td class="num">0.91</td><td class="num">0.71</td></tr>
+            <tr><td><b>提案手法</b></td><td class="num">0.94</td><td class="num" style="color:#A34600"><b>0.93</b></td></tr>
+          </tbody>
+        </table>
+        <p class="tighter" style="margin-top:8px">
+          <b>見てほしい 1 つの数値だけ</b>を朱色にしている。
+          聴衆の目は、まずそこへ行く。</p>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">表を減らす方法</b>
+          比較なら<b>グラフのほうが速い</b>。数値が 2〜3 個なら<b>大きな文字で書く</b>だけでよい。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>視線を誘導する<span class="en">Guide their eyes</span></h2>
+  <p class="slide__lead">図を出しただけでは、聴衆はどこを見ればよいか分からない。<b>指して、言葉で導く。</b></p>
+  <div class="slide__body">
+    <ol class="steps tight" style="margin:0">
+      <li><b>まず図全体の説明をする</b><br>
+        <span style="color:var(--ink-2)">「横軸が学習データ量、縦軸が F 値です」— <b>軸の説明を飛ばさない</b></span></li>
+      <li><b>系列が何かを言う</b><br>
+        <span style="color:var(--ink-2)">「青い太い線が提案手法、灰色の線が従来手法です」</span></li>
+      <li><b>見てほしい箇所を指す</b><br>
+        <span style="color:var(--ink-2)">「<b>ここ</b>、右端の部分を見てください」— 指し棒やポインタで示す（<a href="12-posture.html">トピック 12</a>）</span></li>
+      <li><b>読み取れることを言う</b><br>
+        <span style="color:var(--ink-2)">「提案手法だけが 0.93 を保っています」</span></li>
+      <li><b>意味を言う</b><br>
+        <span style="color:var(--ink-2)">「つまり、URL を短縮されても性能が落ちないということです」</span></li>
+    </ol>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">この 5 段が省略されがち</b>
+      多くの発表が ④ からいきなり始める。聴衆はまだ軸も系列も分かっていない。
+      <b>①②に 10 秒かけると、④⑤が確実に伝わる。</b>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">「図をご覧ください」だけで済ませない</b>
+      これは論文で「〜を図 1 に示す」だけ書いて説明しないのと同じ失敗である。
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>アニメーションの使いどころ<span class="en">Animation</span></h2>
+  <p class="slide__lead">使ってよい場面は限られている。<b>迷ったら使わない。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="card" style="border-top:5px solid var(--cud-green)">
+        <div class="card__h">使ってよい場面</div>
+        <ul class="ticks tight">
+          <li><b>要素を順に出す</b><br>
+            <span style="color:var(--ink-2)">複雑な構成図を、説明する順に 1 つずつ出す</span></li>
+          <li><b>処理の流れを追う</b><br>
+            <span style="color:var(--ink-2)">データが図の中をどう流れるかを示す</span></li>
+          <li><b>比較を重ねる</b><br>
+            <span style="color:var(--ink-2)">従来手法の結果に、提案手法の結果を重ねる</span></li>
+        </ul>
+        <p class="tighter" style="margin:.4em 0 0">
+          共通点は、<b>聴衆の理解の順番に合わせている</b>こと。</p>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-vermilion)">
+        <div class="card__h">使ってはいけない場面</div>
+        <ul class="ticks tight">
+          <li>文字が回転する・跳ねる・飛んでくる</li>
+          <li>スライド切り替えの派手な効果</li>
+          <li>箇条書きを 1 行ずつ出すだけの演出<br>
+            <span style="color:var(--ink-2)">クリック回数が増え、時間を食う</span></li>
+          <li>意味のない動き全般</li>
+        </ul>
+        <p class="tighter" style="margin:.4em 0 0">
+          動きは<b>注意を奪う</b>。内容から注意をそらす動きは、すべて害である。</p>
+      </div>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">アニメーションのリスク</b>
+      クリック回数が増えるほど、<b>操作ミスと時間ロスの危険が増える</b>。
+      発表用 PC が変わると<b>動作しない</b>こともある。PDF で持参する場合は、アニメーションは消える。
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">図は「見せるもの」ではなく「読み取らせるもの」である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>論文の図を<b>そのまま貼らない</b>。作り直す</li>
+        <li>系列は<b>2〜3 本まで</b></li>
+        <li>グラフの見出しを<b>結論</b>にする</li>
+        <li>見てほしい箇所を<b>目立たせる</b></li>
+      </ul>
+      <ul class="ticks">
+        <li>表は <b>4 行 × 4 列まで</b>。三本線で</li>
+        <li><b>軸 → 系列 → 注目箇所 → 読み取れること → 意味</b>の順に説明する</li>
+        <li>アニメーションは<b>理解の順番に合わせるときだけ</b></li>
+        <li>迷ったら使わない</li>
+      </ul>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">確認方法</b>
+      作った図をスライドに貼り、<b>全画面表示にして 3〜4 m 離れて見る</b>。
+      軸ラベルが読めるか、どの線が提案手法か分かるか。読めなければ作り直す。
+    </div>
+    <div class="deck-end">
+      <a href="06-color.html"><b>◀ 前のトピック</b>06 配色</a>
+      <a href="08-antipatterns.html"><b>次のトピック ▶</b>08 作ってはいけないスライド</a>
+      <a href="../checklist.html"><b>ツール</b>発表前チェックリスト</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

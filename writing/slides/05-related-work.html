@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>05 関連研究・従来方式 | 卒業論文の書き方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">05 関連研究・従来方式</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 05</div>
+  <h1>関連研究・従来方式</h1>
+  <p class="sub">研究紹介の羅列から、研究の「位置づけ」へ</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>関連研究を分類・整理して提示できる</li>
+      <li>自分の研究との差分を明示できる</li>
+      <li>客観的な視点で先行研究を記述できる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>この章の目的<span class="en">Related Works</span></h2>
+  <p class="slide__lead">関連研究の章は、<b>自分の研究の位置づけを明確にする</b>ために書く。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">各研究について書くこと</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li>何をしているか？ 何ができるか？ 成果は？</li>
+            <li>方式は？ 適用範囲は？ <b>前提条件は？</b></li>
+            <li><b>できていないことは何か？</b></li>
+          </ul>
+        </div>
+        <div class="note note--rule">
+          <b class="note__t" data-icon="◆">章全体で書くこと</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li>この分野における自分の研究の位置づけ</li>
+            <li>関連研究と自分の研究の<b>違い（差分）</b></li>
+            <li>自分の研究では何をやって、<b>何はやらないか</b></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="note note--warn" style="margin-top:0">
+          <b class="note__t" data-icon="▲">最大の失敗：研究紹介の羅列</b>
+          <p class="q tighter" style="margin:.3em 0">　田中らは〜を提案している [1]。佐藤らは〜を提案している [2]。鈴木らは〜を提案している [3]。…</p>
+          <p class="tight" style="margin:.3em 0 0">これは<b>目録</b>であって関連研究ではない。読者は「それで、あなたの研究はどこにあるの？」と思う。</p>
+        </div>
+        <div class="note note--why">
+          <b class="note__t" data-icon="？">問うべきこと</b>
+          その研究と自分の研究は<b>どういう関係</b>なのか。<b>何が同じで、何が違うのか。</b>差分はどこか。
+          自分の研究の価値はどこにあるのか。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>客観的に書く<span class="en">Be objective</span></h2>
+  <p class="slide__lead">主観的な視点から従来研究を判断しない。<b>論文から読み取れる客観的な事実</b>だけを書く。</p>
+  <div class="slide__body">
+    <div class="ng-ok">
+      <div class="ex-box ex-ng">
+        <span class="ex-box__t">主観的な断定</span>
+        <p class="q tight">田中らの手法は精度が低く、実用的ではない [1]。</p>
+        <p class="q tight">この研究は古いため、現在では意味がない [2]。</p>
+        <p class="q tight">佐藤らの評価は不十分である [3]。</p>
+      </div>
+      <div class="ex-box ex-ok">
+        <span class="ex-box__t">客観的な記述</span>
+        <p class="q tight">田中らの手法は、実験に用いた 3,000 件のデータセットに対して F 値 0.78 を達成している [1]。ただし評価は英語サイトに限定されており、日本語サイトに対する性能は報告されていない。</p>
+        <p class="q tight">佐藤らは単一のデータセットで評価しており [3]、他のデータセットへの汎化性能は検証されていない。</p>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">言い換えの型</b>
+      <span class="tight">
+      ✗「不十分である」→ ✓「〜については報告されていない」／「〜は検証されていない」<br>
+      ✗「精度が低い」→ ✓「〜のデータセットにおいて F 値 0.78 であった」（数値で示し、判断は読者に委ねる）<br>
+      ✗「問題がある」→ ✓「〜を前提としているため、〜の場合には適用できない」</span>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">読んでいない論文を引用しない</b>
+      他の論文の引用文献リストからコピーしただけの引用は、内容が違っていることが多い。<b>必ず原典に当たる。</b>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>関連研究の整理の仕方<span class="en">Organize, don't list</span></h2>
+  <p class="slide__lead">研究を<b>分類の軸</b>で整理する。軸が決まれば、自分の研究の置き場所も決まる。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">よく使われる分類の軸</div>
+          <ul class="ticks tighter">
+            <li><b>アプローチ別</b>：ルールベース／機械学習／深層学習</li>
+            <li><b>入力データ別</b>：URL のみ／HTML／画像／通信ログ</li>
+            <li><b>適用場面別</b>：クライアント側／サーバ側／ネットワーク境界</li>
+            <li><b>時系列</b>：初期の研究 → 発展 → 現在の主流</li>
+            <li><b>前提条件別</b>：教師あり／半教師あり／ゼロデイ対応</li>
+          </ul>
+          <p class="tighter" style="margin:.5em 0 0">軸は <b>2 つまで</b>。3 つ以上の軸で切ると読者が迷子になる。</p>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-green)">
+          <div class="card__h">節の構成例</div>
+          <p class="q tighter" style="margin:.2em 0">
+            <b>2.1　フィッシングサイト検知手法の分類</b><br>
+            <span style="color:#4A4F55">　→ 分類の軸をここで提示する</span><br>
+            <b>2.2　URL 特徴量に基づく手法</b><br>
+            <b>2.3　コンテンツに基づく手法</b><br>
+            <b>2.4　視覚的類似性に基づく手法</b><br>
+            <b>2.5　本研究の位置づけ</b><br>
+            <span style="color:#4A4F55">　→ 比較表＋差分の明示。<b>この節が最重要</b></span>
+          </p>
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">2.1 に必ず 1 段落</b>
+          いきなり個別の研究を並べず、<b>まず全体像</b>（この分野にはこういう種類の研究がある）を示す。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>比較表で位置づけを示す<span class="en">Comparison table</span></h2>
+  <p class="slide__lead">言葉で説明するより、1 つの表のほうが速い。<b>最終行が自分の研究</b>になる。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <caption>表 1　フィッシングサイト検知手法の比較</caption>
+      <thead>
+        <tr><th>手法</th><th>入力</th><th>短縮 URL 対応</th><th>多言語対応</th><th>報告 F 値</th><th>評価データ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Ma ら [3]</td><td>URL</td><td>×</td><td>△</td><td class="num">0.95</td><td>英語 9,000 件</td></tr>
+        <tr><td>Sahingoz ら [4]</td><td>URL</td><td>×</td><td>×</td><td class="num">0.97</td><td>英語 73,000 件</td></tr>
+        <tr><td>田中ら [6]</td><td>URL + WHOIS</td><td>△</td><td>○</td><td class="num">0.91</td><td>日英 12,000 件</td></tr>
+        <tr><td>Chen ら [7]</td><td>スクリーンショット</td><td>○</td><td>○</td><td class="num">0.89</td><td>英語 5,000 件</td></tr>
+        <tr><td><b>提案手法</b></td><td><b>URL + HTML 構造</b></td><td><b>○</b></td><td><b>○</b></td><td class="num"><b>0.94</b></td><td><b>日英 12,400 件</b></td></tr>
+      </tbody>
+    </table>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">比較表の作り方</b>
+      <span class="tight">
+      ・<b>列＝評価の軸</b>。自分の研究が優位に立つ軸を必ず 1 つ含める（ここでは「短縮 URL 対応」）<br>
+      ・自分が劣る軸も隠さない（提案手法の F 値は [4] より低い）。<b>隠すと信頼を失う</b><br>
+      ・○△× を使う場合は、<b>その基準を本文で定義する</b>（「○は〜を満たすことを示す」）<br>
+      ・表は本文で必ず説明する。「表 1 に示す」だけで終わらせない</span>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>「本研究の位置づけ」節の書き方<span class="en">Positioning</span></h2>
+  <p class="slide__lead">関連研究の章は、この節に向かって書く。<b>ここで差分を言い切る。</b></p>
+  <div class="slide__body">
+    <div class="paper tighter" style="line-height:1.8">
+      <h4>2.5　本研究の位置づけ</h4>
+      <p>　表 1 に示したとおり、フィッシングサイト検知の研究は、入力として用いる情報の種類によって大きく 3 つに分けられる。URL 文字列のみを用いる手法 [3][4] は、ページを取得する必要がないため高速に判定できる一方、攻撃者が URL を短縮した場合に判別性能が低下する。視覚的類似性を用いる手法 [7] は URL に依存しないが、スクリーンショットの撮影と画像処理に要する時間が大きく、大量の URL を逐次判定する用途には適さない。</p>
+      <p>　<b>本研究は、この両者の中間に位置づけられる。</b>すなわち、ページの HTML を取得する点では [7] と同様に URL 文字列への依存を断ち切りつつ、画像処理を伴わない軽量な構造特徴量を用いることで、[3][4] に近い処理速度を維持することを狙う。</p>
+      <p>　また、短縮 URL を含む検体に限定した性能評価は、著者の知る限り報告されていない。本研究では、この条件下での評価を行う点においても既存研究と異なる。</p>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">使える言い回し</b>
+      <span class="tight"><span class="q">本研究は〜の点で [n] と共通するが、〜の点で異なる。</span>／
+      <span class="q">著者の知る限り、〜を対象とした研究は報告されていない。</span>／
+      <span class="q">本研究では〜は扱わない。これは〜のためである。</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>文献の集め方<span class="en">How to find papers</span></h2>
+  <p class="slide__lead">Web 検索だけで済ませない。<b>査読のある論文</b>を中心に集める。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">情報系でよく使うデータベース</div>
+          <dl class="terms tighter">
+            <dt>CiNii Research</dt><dd>日本語の論文全般</dd>
+            <dt>情報処理学会 電子図書館</dt><dd>IPSJ の論文誌・研究報告</dd>
+            <dt>電子情報通信学会 I-Scover</dt><dd>IEICE の論文誌</dd>
+            <dt>IEEE Xplore / ACM DL</dt><dd>国際会議・論文誌（学内から要アクセス）</dd>
+            <dt>Google Scholar</dt><dd>横断検索・被引用数の確認</dd>
+            <dt>DBLP</dt><dd>著者名から業績を辿る</dd>
+          </dl>
+        </div>
+      </div>
+      <div>
+        <ol class="steps tight" style="margin:0">
+          <li><b>サーベイ論文を 1 本探す</b><br>その分野の全体像と主要文献が一度に手に入る</li>
+          <li><b>引用をさかのぼる</b><br>サーベイの参考文献から重要文献へ</li>
+          <li><b>引用をたどる</b><br>Google Scholar の「引用元」から新しい研究へ</li>
+          <li><b>キーワードを増やす</b><br>論文中の用語で再検索する</li>
+        </ol>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">卒論での目安</b>
+          <b>参考文献 15 件以上</b>、うち<b>査読付き論文を半数以上</b>。
+          Web ページばかりの文献リストは、調査不足とみなされる。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">関連研究の章は、自分の研究に<b>居場所を与える</b>ための章である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>研究紹介の<b>羅列にしない</b></li>
+        <li><b>分類の軸</b>で整理する（軸は 2 つまで）</li>
+        <li>各研究の<b>前提条件</b>と<b>できていないこと</b>を書く</li>
+        <li>主観で貶さず、<b>客観的事実</b>で書く</li>
+      </ul>
+      <ul class="ticks">
+        <li><b>比較表</b>を作り、最終行に自分の研究を置く</li>
+        <li>自分が劣る軸も隠さない</li>
+        <li>最後に<b>「本研究の位置づけ」</b>節で差分を言い切る</li>
+        <li>引用は<b>必ず原典</b>を読んでから</li>
+      </ul>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">この章が書けないとき</b>
+      関連研究が書けないのは、文章力の問題ではなく<b>文献を十分に読んでいない</b>ことがほとんどである。
+      まず 10 本、要点をメモしながら読む。書けるようになる。
+    </div>
+    <div class="deck-end">
+      <a href="04-introduction.html"><b>◀ 前のトピック</b>04 序論（はじめに）</a>
+      <a href="06-method.html"><b>次のトピック ▶</b>06 提案方式・提案手法</a>
+      <a href="12-references.html"><b>関連</b>12 引用と参考文献</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

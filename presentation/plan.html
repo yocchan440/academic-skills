@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>発表設計シート | 卒研発表の仕方</title>
+<meta name="description" content="卒研発表の構成と時間配分を設計するシート。秒数を入れると合計と残り時間が自動計算されます。">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/doc.css">
+</head>
+<body data-store="presentation-plan-v1">
+
+<header class="sitehead">
+  <div class="sitehead__in">
+    <a class="sitehead__logo" href="index.html">卒研発表の<span>仕方</span></a>
+    <nav>
+      <a href="index.html">資料一覧</a>
+      <a href="plan.html" aria-current="page">発表設計シート</a>
+      <a href="checklist.html">発表前チェックリスト</a>
+    
+      <a href="../index.html" class="nav-up">Academic Skills ▲</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap wrap--narrow">
+
+  <section class="hero">
+    <div class="hero__band"></div>
+    <div class="kicker">PRESENTATION PLANNER</div>
+    <h1>発表設計シート</h1>
+    <p>スライドを作り始める前に、このシートを埋めてください。
+       <b>秒数を入れると合計と残り時間が自動で計算されます。</b>
+       この段階で合計が発表時間を超えているなら、<b>そこで削ります</b>。本番で削ってはいけません。
+       入力内容はこのブラウザに保存され、［Markdown でコピー］で書き出せます。</p>
+  </section>
+
+  <div class="ck-toolbar">
+    <span class="ck-count">0 / 0</span>
+    <span class="ck-meter"><i></i></span>
+    <button type="button" data-act="copy">Markdown でコピー</button>
+    <button type="button" data-act="print">印刷</button>
+    <button type="button" data-act="reset">リセット</button>
+  </div>
+
+  <div class="sec" style="padding-top:6px">
+
+  <!-- ============ 1 ============ -->
+  <section class="ck-group">
+    <h3>1　発表の条件と芯<span class="ck-gcount"></span></h3>
+    <p class="ws-hint">最初に、<b>この発表で絶対に伝えたいこと 1 つ</b>を決めます。迷ったときは、ここに戻ります。</p>
+    <div class="ws-box">
+      <div class="ws-row"><span class="ws-label">題目</span>
+        <input type="text" data-k="title" placeholder="発表する研究の題目"></div>
+      <div class="ws-row"><span class="ws-label">発表時間<small>分。下の合計と比較されます</small></span>
+        <input type="text" data-k="limit" placeholder="8" style="max-width:8em"></div>
+      <div class="ws-row"><span class="ws-label">質疑時間<small>分</small></span>
+        <input type="text" data-k="qa" placeholder="2" style="max-width:8em"></div>
+      <div class="ws-row"><span class="ws-label">絶対に伝えたいこと<small>1 つだけ。1 文で</small></span>
+        <textarea data-k="core" rows="2" placeholder="例：URL 文字列を使わない特徴量にすれば、短縮 URL でも検知性能が落ちない"></textarea></div>
+      <div class="ws-row"><span class="ws-label">冒頭 20 秒で言う結論<small>そのまま声に出せる形で</small></span>
+        <textarea data-k="opening" rows="3" placeholder="○○研究室の△△です。『□□』について発表します。本研究では、〜であることを示しました。以下、その方法と結果を説明します。"></textarea></div>
+    </div>
+  </section>
+
+  <!-- ============ 2 ============ -->
+  <section class="ck-group">
+    <h3>2　時間配分<span class="ck-gcount"></span></h3>
+    <p class="ws-hint">各パートで話す内容と、そこにかける<b>秒数</b>を入れます。
+      標準的な配分は 8 分で <b>10〜60 秒 × 10 枚前後</b>です（<a href="slides/03-structure.html">トピック 03</a>）。</p>
+    <div class="plan">
+      <table>
+        <thead>
+          <tr><th style="width:3em">#</th><th style="width:7em">パート</th><th>話す内容（1 枚 1 メッセージ）</th><th style="width:6.5em">秒数</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="nocell">1</td><th>題目・氏名</th>
+            <td><input type="text" data-k="r1" placeholder="題目と所属・氏名＋結論"></td>
+            <td><input data-sec data-k="s1" placeholder="20"></td></tr>
+          <tr><td class="nocell">2</td><th>背景</th>
+            <td><input type="text" data-k="r2" placeholder="この分野で何が起きているか（数値で）"></td>
+            <td><input data-sec data-k="s2" placeholder="60"></td></tr>
+          <tr><td class="nocell">3</td><th>課題</th>
+            <td><input type="text" data-k="r3" placeholder="何ができていないのか"></td>
+            <td><input data-sec data-k="s3" placeholder="60"></td></tr>
+          <tr><td class="nocell">4</td><th>目的・提案</th>
+            <td><input type="text" data-k="r4" placeholder="何を明らかにするのか／どうやるのか"></td>
+            <td><input data-sec data-k="s4" placeholder="60"></td></tr>
+          <tr><td class="nocell">5</td><th>提案手法</th>
+            <td><input type="text" data-k="r5" placeholder="仕組み（入力・処理・出力）"></td>
+            <td><input data-sec data-k="s5" placeholder="60"></td></tr>
+          <tr><td class="nocell">6</td><th>提案手法</th>
+            <td><input type="text" data-k="r6" placeholder="なぜそれで解決するのか"></td>
+            <td><input data-sec data-k="s6" placeholder="60"></td></tr>
+          <tr><td class="nocell">7</td><th>実験</th>
+            <td><input type="text" data-k="r7" placeholder="データ・条件・比較対象・評価指標"></td>
+            <td><input data-sec data-k="s7" placeholder="50"></td></tr>
+          <tr><td class="nocell">8</td><th>結果</th>
+            <td><input type="text" data-k="r8" placeholder="核心の数値（1〜2 個に絞る）"></td>
+            <td><input data-sec data-k="s8" placeholder="50"></td></tr>
+          <tr><td class="nocell">9</td><th>考察</th>
+            <td><input type="text" data-k="r9" placeholder="その結果が何を意味するか"></td>
+            <td><input data-sec data-k="s9" placeholder="30"></td></tr>
+          <tr><td class="nocell">10</td><th>まとめ</th>
+            <td><input type="text" data-k="r10" placeholder="総括（質疑中も表示しておくスライド）"></td>
+            <td><input data-sec data-k="s10" placeholder="30"></td></tr>
+          <tr class="is-part"><td colspan="4">必要なら追加</td></tr>
+          <tr><td class="nocell">11</td>
+            <th><input type="text" data-k="p11" placeholder="パート" style="border:1px solid var(--line);border-radius:6px;padding:.25em .4em;font-size:13.5px;width:100%"></th>
+            <td><input type="text" data-k="r11" placeholder="話す内容"></td>
+            <td><input data-sec data-k="s11" placeholder="秒"></td></tr>
+          <tr><td class="nocell">12</td>
+            <th><input type="text" data-k="p12" placeholder="パート" style="border:1px solid var(--line);border-radius:6px;padding:.25em .4em;font-size:13.5px;width:100%"></th>
+            <td><input type="text" data-k="r12" placeholder="話す内容"></td>
+            <td><input data-sec data-k="s12" placeholder="秒"></td></tr>
+        </tbody>
+      </table>
+      <div class="plan-sum">
+        <span>合計 <b data-plan="total">0:00</b></span>
+        <span class="plan-bar"><i></i></span>
+        <span class="plan-limit"><b data-plan="rest">—</b></span>
+      </div>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">超過していたら、ここで削る</b>
+      本番で「ここは飛ばします」と言うのは最悪の対処です。
+      <b>削ってよいもの・いけないものは <a href="slides/03-structure.html#5">トピック 03</a> を参照。</b>
+      削ったものは捨てずに、下の予備スライドへ回します。
+    </div>
+  </section>
+
+  <!-- ============ 3 ============ -->
+  <section class="ck-group">
+    <h3>3　削ったもの・予備スライド<span class="ck-gcount"></span></h3>
+    <p class="ws-hint">本編に入れなかった内容は、<b>非表示スライド</b>として後ろに置いておきます（<a href="slides/09-backup.html">トピック 09</a>）。</p>
+    <div class="ws-box">
+      <div class="ws-row"><span class="ws-label">本編から削ったもの</span>
+        <textarea data-k="cut" rows="2" placeholder="例：実験環境の詳細／評価指標の定義式／関連研究の比較表"></textarea></div>
+      <div class="ws-row"><span class="ws-label">聞かれそうな質問<small>リハーサルで集める</small></span>
+        <textarea data-k="questions" rows="3" placeholder="例：なぜ勾配ブースティングを選んだのか／誤検知の例は／処理速度は"></textarea></div>
+      <div class="ws-row"><span class="ws-label">予備スライドの一覧<small>番号と内容。本番は手元に印刷して持つ</small></span>
+        <textarea data-k="backup" rows="4" placeholder="11 実験環境&#10;12 特徴量の一覧&#10;13 詳細な結果&#10;14 誤検知の例&#10;15 関連研究の比較"></textarea></div>
+    </div>
+  </section>
+
+  <!-- ============ 4 ============ -->
+  <section class="ck-group">
+    <h3>4　「？」を潰す<span class="ck-gcount"></span></h3>
+    <p class="ws-hint">聴衆が「？」と思ったら、そこから先は届きません（<a href="slides/02-with-audience.html">トピック 02</a>）。
+      <b>専門外の人にリハーサルを見てもらい、ここを埋めてください。</b></p>
+    <div class="ws-box">
+      <div class="ws-row"><span class="ws-label">説明が必要な用語<small>かみ砕いた言い方 → 正式名称</small></span>
+        <textarea data-k="terms" rows="3" placeholder="例：DOM →「HTML の入れ子構造、いわゆる DOM」&#10;　　GBDT →「決定木を組み合わせた分類器」"></textarea></div>
+      <div class="ws-row"><span class="ws-label">リハーサルで「？」と言われた箇所</span>
+        <textarea data-k="confusion" rows="3" placeholder="見てもらった人に「どこで『？』と思いましたか」と聞いて、そのまま書く"></textarea></div>
+      <div class="ws-row"><span class="ws-label">つなぎの言葉<small>パートの変わり目で言うこと</small></span>
+        <textarea data-k="signpost" rows="3" placeholder="例：ここまでが課題です。ここからは、どう解決したかを説明します。"></textarea></div>
+    </div>
+  </section>
+
+  <!-- ============ 5 ============ -->
+  <section class="ck-group">
+    <h3>5　リハーサルの記録<span class="ck-gcount"></span></h3>
+    <p class="ws-hint">回ごとに目的を変えて、最低 5 回（<a href="slides/14-rehearsal.html">トピック 14</a>）。</p>
+    <div class="ws-box">
+      <div class="ws-row"><span class="ws-label">1 回目<small>通して話せるか</small></span>
+        <input type="text" data-k="rh1" placeholder="日付／かかった時間／気づいたこと"></div>
+      <div class="ws-row"><span class="ws-label">2 回目<small>時間を計る。超過していたら削る</small></span>
+        <input type="text" data-k="rh2" placeholder="日付／かかった時間／削ったもの"></div>
+      <div class="ws-row"><span class="ws-label">3 回目<small>録画して見る</small></span>
+        <input type="text" data-k="rh3" placeholder="フィラーの回数／視線／姿勢／速度"></div>
+      <div class="ws-row"><span class="ws-label">4 回目<small>他人に見てもらう</small></span>
+        <input type="text" data-k="rh4" placeholder="見てもらった人／指摘"></div>
+      <div class="ws-row"><span class="ws-label">5 回目<small>仕上げ</small></span>
+        <input type="text" data-k="rh5" placeholder="日付／かかった時間"></div>
+      <div class="ws-row"><span class="ws-label">4 分地点でいるべき場所<small>途中の通過時間</small></span>
+        <input type="text" data-k="checkpoint" placeholder="例：7 枚目（実験の説明）に入っている"></div>
+    </div>
+  </section>
+
+  </div>
+
+  <div class="note note--tip" style="margin-top:28px">
+    <b class="note__t" data-icon="★">使い終わったら</b>
+    ［Markdown でコピー］で書き出して、自分のノートや指導教員への相談メモに貼り付けてください。<br>
+    発表の直前には <a href="checklist.html">発表前チェックリスト</a>を通してください。<br>
+    なお、入力内容はこのブラウザ（この端末）にのみ保存されます。
+  </div>
+
+  <footer class="sitefoot">
+    卒研発表の仕方 — 発表設計シート
+  </footer>
+
+</div>
+
+<script src="assets/doc.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>15 文献を辿る・整理する | 論文の読み方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+<style>
+  .ref-anat{ font-family:var(--ff-mincho); font-size:16px; line-height:2.5;
+             background:var(--surface); border:1px solid var(--line);
+             border-radius:8px; padding:14px 18px; }
+  .ref-anat .p{ padding:.1em .25em; border-radius:4px; background:var(--et);
+                box-shadow:inset 0 -.18em 0 var(--ec); }
+  .ref-anat .p b{ font-family:var(--ff-ud); font-size:.6em; font-weight:700;
+                  color:#fff; background:var(--ec); border-radius:4px;
+                  padding:.05em .4em; margin-right:.3em; vertical-align:.15em; }
+</style>
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">15 文献を辿る・整理する</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 15</div>
+  <h1>文献を辿る・整理する</h1>
+  <p class="sub">1 本の論文から、芋づる式に分野が引ける</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>参考文献の記述を分解して読める</li>
+      <li>引用・被引用を辿って分野を網羅できる</li>
+      <li>読んだ論文を後から引ける形で整理できる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>参考文献から文献を引く<span class="en">Following references</span></h2>
+  <p class="slide__lead">良い論文を 1 本見つけたら、<b>その参考文献リストが次の読書計画になる。</b></p>
+  <div class="slide__body">
+    <ol class="steps big" style="margin:0 0 10px">
+      <li><b>参考文献を辿る（後ろ向き）</b><br>
+        <span class="tight" style="color:var(--ink-2)">該当分野の論文が芋づる式に引ける。<b>サーベイ論文なら、該当研究分野が網羅できる</b></span></li>
+      <li><b>多くの論文から引用されている文献に注目する</b><br>
+        <span class="tight" style="color:var(--ink-2)">該当研究分野の<b>基礎・原点</b>である。<b>絶対に目を通しておくべき論文</b></span></li>
+      <li><b>被引用を辿る（前向き）</b><br>
+        <span class="tight" style="color:var(--ink-2)">Google Scholar の「引用元」から、<b>その論文の後に出た研究</b>へ進める</span></li>
+      <li><b>国内シンポジウム・研究会から英論文を引く</b><br>
+        <span class="tight" style="color:var(--ink-2)">日本語論文の参考文献にある英語論文を読む。<b>英語が苦手でもとっかかりが得られる</b></span></li>
+    </ol>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">複数の論文の参考文献に共通して出てくる文献</b>
+      3 本の論文を読んで、<b>3 本とも引用している文献</b>があったら、それは必読である。
+      その分野の共通の土台になっている。
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>参考文献の読み方 ①　会議録<span class="en">Conference paper</span></h2>
+  <p class="slide__lead">見慣れない略語の羅列に見えるが、<b>構造は決まっている。</b></p>
+  <div class="slide__body">
+    <div class="ref-anat">
+      <span class="p e1"><b>著者名</b>R. Canetti, S. Halevi, and J. Katz,</span>
+      <span class="p e3"><b>タイトル</b>“Chosen-ciphertext security from identity-based encryption,”</span>
+      <span class="p e4"><b>発表会議名</b>Proc. Eurocrypt 2004,</span>
+      <span class="p e5"><b>収録シリーズ</b>LNCS 3027,</span>
+      <span class="p e6"><b>収録ページ</b>pp.207–222,</span>
+      <span class="p e2"><b>出版社名</b>Springer,</span>
+      <span class="p e1"><b>発行年</b>2004.</span>
+    </div>
+    <div class="cols cols-2" style="margin-top:12px">
+      <div class="note note--rule" style="margin-top:0">
+        <b class="note__t" data-icon="◆">読み取れること</b>
+        <ul class="tighter" style="margin:.2em 0 0;padding-left:1.2em">
+          <li><b>Proc.</b> は Proceeding（会議録）の略。<b>国際会議で発表された論文</b>である</li>
+          <li><b>Eurocrypt</b> は暗号分野の主要国際会議の一つ</li>
+          <li><b>LNCS</b> は Lecture Notes in Computer Science。Springer のシリーズで、Vol. 3027 に収録</li>
+          <li>2004 年の論文。<b>20 年以上引用され続けているなら、基礎文献</b>である</li>
+        </ul>
+      </div>
+      <div class="note note--tip" style="margin-top:0">
+        <b class="note__t" data-icon="★">会議名から「格」が分かる</b>
+        <span class="tighter">
+        会議名・論文誌名が分かれば、その論文がどの程度の審査を経ているかが推測できる。
+        知らない会議名が出てきたら、<b>検索して採択率や分野を確認する</b>
+        （<a href="04-bibliography.html">トピック 04</a>）。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>参考文献の読み方 ②　論文誌<span class="en">Journal paper</span></h2>
+  <p class="slide__lead">和文論文誌も構造は同じ。<b>略語だけ覚えれば読める。</b></p>
+  <div class="slide__body">
+    <div class="ref-anat tight">
+      <span class="p e1"><b>著者名</b>佐々木良一，日高悠，守谷隆史，谷山充洋，矢島敬士，八重樫清美，川島泰正，吉浦裕：</span>
+      <span class="p e3"><b>タイトル</b>多重リスクコミュニケータの開発と適用，</span>
+      <span class="p e5"><b>収録雑誌名</b>情報処理学会論文誌，</span>
+      <span class="p e4"><b>巻・号</b>Vol.49, No.9,</span>
+      <span class="p e6"><b>収録ページ</b>pp.3180–3190</span>
+      <span class="p e2"><b>発行年</b>(2008).</span>
+    </div>
+    <table class="t tighter" style="margin-top:12px">
+      <caption>参考文献でよく使われる英略語</caption>
+      <thead><tr><th>略語</th><th>正式</th><th>意味</th><th>略語</th><th>正式</th><th>意味</th></tr></thead>
+      <tbody>
+        <tr><td>Annu.</td><td>Annual</td><td>年報</td><td>Trans.</td><td>Transaction</td><td>会報、紀要</td></tr>
+        <tr><td>Conf.</td><td>Conference</td><td>会議</td><td>Proc.</td><td>Proceeding</td><td>会議録</td></tr>
+        <tr><td>J.</td><td>Journal</td><td>論文誌</td><td>Vol.</td><td>Volume</td><td>巻</td></tr>
+        <tr><td>Inf.</td><td>Information</td><td>情報</td><td>No.</td><td>Number</td><td>号</td></tr>
+        <tr><td>Int'l</td><td>International</td><td>国際</td><td>p. / pp.</td><td>Page / Pages</td><td>単ページ／複数ページ</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>文献の探し方<span class="en">Where to search</span></h2>
+  <p class="slide__lead">Web 検索だけで済ませない。<b>論文のデータベースを使う。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">情報系でよく使うデータベース</div>
+          <dl class="terms tighter">
+            <dt>CiNii Research</dt><dd>日本語の論文全般</dd>
+            <dt>情報処理学会 電子図書館</dt><dd>IPSJ の論文誌・研究報告</dd>
+            <dt>IEEE Xplore / ACM DL</dt><dd>国際会議・論文誌（学内からアクセス）</dd>
+            <dt>Google Scholar</dt><dd>横断検索と<b>被引用数・引用元</b>の確認</dd>
+            <dt>DBLP</dt><dd>著者名から業績を辿る。書誌情報が正確</dd>
+            <dt>IACR ePrint</dt><dd>暗号分野のプレプリント（<b>査読なし</b>）</dd>
+          </dl>
+        </div>
+      </div>
+      <div>
+        <ol class="steps tight" style="margin:0">
+          <li><b>サーベイ論文を 1 本探す</b><br>
+            <span style="color:var(--ink-2)">全体像と主要文献が一度に手に入る</span></li>
+          <li><b>引用をさかのぼる</b><br>
+            <span style="color:var(--ink-2)">サーベイの参考文献から重要文献へ</span></li>
+          <li><b>被引用をたどる</b><br>
+            <span style="color:var(--ink-2)">Google Scholar の「引用元」から新しい研究へ</span></li>
+          <li><b>キーワードを増やす</b><br>
+            <span style="color:var(--ink-2)">論文中の用語・キーワード欄の語で再検索する</span></li>
+          <li><b>著者で辿る</b><br>
+            <span style="color:var(--ink-2)">DBLP で著者の他の論文を見る。続編があることが多い</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>読んだら整理する<span class="en">Organizing</span></h2>
+  <p class="slide__lead">「全部は読まないが、全部チェックする」を成立させるには、<b>上手な整理法が要る。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-green)">
+          <div class="card__h">文献管理ツールを使う</div>
+          <dl class="terms tighter">
+            <dt>Zotero / Mendeley</dt><dd>PDF を放り込むと書誌情報を自動取得。タグ・メモが付けられ、BibTeX で書き出せる</dd>
+            <dt>Google Scholar のライブラリ</dt><dd>手軽。引用形式のコピーも可能</dd>
+            <dt>表計算ソフト</dt><dd>ツールを使わないなら最低限これ。<b>何もしないよりはるかによい</b></dd>
+          </dl>
+          <p class="tighter" style="margin:.5em 0 0">
+            卒論の参考文献は BibTeX で管理すると、書式が自動で統一される。</p>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">1 本につき記録すること</div>
+          <ul class="ticks tighter">
+            <li><b>書誌情報</b>（自動取得したら原典と照合）</li>
+            <li><b>読んだ段階</b>（選別のみ／通読／精読）</li>
+            <li><b>5 行メモ</b>（<a href="03-strategy.html">トピック 03</a>）</li>
+            <li><b>タグ</b>（テーマ・手法・データセット）</li>
+            <li><b>自分の研究との関係</b></li>
+            <li>PDF のファイル名は <code>2022_Tanaka_Phishing.pdf</code> のように規則を決める</li>
+          </ul>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">後でまとめてやろうとしない</b>
+          読んだその場で登録する。<b>「あとで」は来ない。</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">文献は「集める」ものではなく「辿る」ものである。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>参考文献を辿れば<b>芋づる式</b>に引ける</li>
+        <li><b>サーベイ論文</b>なら分野を網羅できる</li>
+        <li><b>多く引用されている文献</b>は分野の原点</li>
+        <li>Google Scholar の<b>被引用</b>で新しい研究へ</li>
+      </ul>
+      <ul class="ticks">
+        <li>日本語論文の参考文献から<b>英語論文へ</b></li>
+        <li>参考文献の記述は<b>構造が決まっている</b></li>
+        <li><b>文献管理ツール</b>を使う</li>
+        <li>読んだ<b>その場で</b>登録する</li>
+      </ul>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">引用するときの注意</b>
+      他の論文の参考文献リストからコピーしただけの<b>孫引きはしない</b>。
+      内容が違っていることが多い。<b>必ず原典に当たる。</b>
+    </div>
+    <div class="deck-end">
+      <a href="14-critical.html"><b>◀ 前のトピック</b>14 批判的に読む</a>
+      <a href="16-ai-tools.html"><b>次のトピック ▶</b>16 AI と読解支援ツール</a>
+      <a href="../worksheet.html"><b>ツール</b>論文精読ワークシート</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

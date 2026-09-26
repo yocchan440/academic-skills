@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>08 作ってはいけないスライド | 卒研発表の仕方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+<style>
+  .mini{ background:var(--surface); border:2px solid var(--line); border-radius:8px;
+         padding:12px 16px; font-size:.82em; }
+  .mini h4{ font-size:1.1em; margin:0 0 .4em; padding-bottom:.2em;
+            border-bottom:3px solid var(--line); }
+  .mini ul{ margin:.2em 0 0; padding-left:1.3em; }
+  .pno{ display:inline-block; background:#16181A; color:#fff; border-radius:4px;
+        padding:.05em .55em; font-size:.9em; font-weight:700; }
+</style>
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">08 作ってはいけないスライド</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 08</div>
+  <h1>作ってはいけないスライド</h1>
+  <p class="sub">入れないほうが、伝わる</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>目次スライドが不要な理由を説明できる</li>
+      <li>「ご清聴ありがとうございました」を作らない</li>
+      <li>スライド番号を必ず入れ、行き来しない構成にできる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>目次スライドは原則不要<span class="en">No agenda slide</span></h2>
+  <p class="slide__lead">8 分程度の発表で、目次に時間を使う余裕はない。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="mini" style="border-style:dashed;border-color:var(--bad)">
+          <h4 style="border-bottom-color:var(--bad)">本日の発表の流れ</h4>
+          <ul>
+            <li>はじめに</li>
+            <li>関連研究</li>
+            <li>提案手法</li>
+            <li>実験</li>
+            <li>結果・考察</li>
+            <li>まとめ</li>
+          </ul>
+        </div>
+        <p class="tighter" style="margin-top:8px">
+          <b>この順番に進むに決まっている。</b>卒研発表で別の順番にする人はいない。
+          聴衆は、この 6 項目をすでに予期している。</p>
+      </div>
+      <div>
+        <div class="note note--warn" style="margin-top:0">
+          <b class="note__t" data-icon="▲">最悪なのは「2 秒で送る目次」</b>
+          説明する気もないのに「今日の発表はこの順番で発表します」と言って 2 秒でスライドを送る。
+          <b>聴衆はそのわずかな時間でスライドの内容を理解しようとして、できなくて、すべてを諦める。</b>
+          <p class="tight" style="margin:.4em 0 0"><b>伝わらないことはしない。</b></p>
+        </div>
+        <div class="note note--rule">
+          <b class="note__t" data-icon="◆">目次の代わりにやること</b>
+          <b>つなぎの言葉</b>で現在地を示す。<br>
+          <span class="q tight">「ここまでが課題です。ここからは、どう解決したかを説明します」</span><br>
+          これで十分に「今どこにいるか」が伝わる（<a href="02-with-audience.html">トピック 02</a>）。
+        </div>
+      </div>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">目次を入れてよい場合</b>
+      発表が 20 分以上あり、<b>構成が標準的でない</b>場合。その場合も、目次には 10 秒以上かけて説明する。
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>「ご清聴ありがとうございました」は不要<span class="en">No thank-you slide</span></h2>
+  <p class="slide__lead">最後のスライドに大きく書かれた「ご清聴ありがとうございました」。<b>これは害である。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="mini" style="border-style:dashed;border-color:var(--bad);text-align:center;padding:26px 16px">
+          <p style="font-size:1.6em;font-weight:700;margin:.4em 0">ご清聴<br>ありがとうございました</p>
+        </div>
+        <p class="tighter" style="margin-top:8px">
+          <b>情報量がゼロ。</b>そして、このあと質疑応答が始まる。
+          <b>聴衆は 5 分間、この文字を見せられることになる。</b></p>
+      </div>
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">何を表示しておくべきか</b>
+          <b>「まとめ」のスライド。</b>
+          発表が終わったあと、質疑応答の間じゅうスクリーンに出ているのは、この画面である。
+          <p class="tight" style="margin:.4em 0 0">
+            聴衆はまとめを見ながら質問を考える。
+            <b>あなたの成果が、質疑の間ずっと聴衆の目の前にある</b>状態を作る。</p>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">もっと悪い例</b>
+          発表が終わってスライドショーを終了し、
+          <b>デスクトップの壁紙</b>やファイル一覧を映したまま質疑に入る。<br>
+          <b>あなたのデスクトップの壁紙を見ても、議論も理解も進まない。</b>
+        </div>
+      </div>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">感謝は口で言う</b>
+      「ご清聴ありがとうございました」は<b>言葉で言えばよい</b>。スライドにする必要はない。
+      詳しくは <a href="16-onsite.html">トピック 16</a>。
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>スライド番号は必ず入れる<span class="en">Always number your slides</span></h2>
+  <p class="slide__lead">質疑応答のために、これは<b>必須</b>である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--why" style="margin-top:0">
+          <b class="note__t" data-icon="？">なぜ必要か</b>
+          質問者はこう言う。<br>
+          <span class="q">「<b>何ページのスライド</b>のところで〜と説明していたと思うのですが」</span><br>
+          番号がなければ、質問者は場所を指定できない。
+          あなたも、どのスライドの話か分からない。<b>質疑の時間が無駄に消える。</b>
+        </div>
+        <div class="note note--rule">
+          <b class="note__t" data-icon="◆">入れ方</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li>すべてのスライドに入れる（表紙は任意）</li>
+            <li><b>見やすい色と大きさで</b>。14 pt 以上、黒</li>
+            <li>右下または右上。毎回<b>同じ位置</b>に</li>
+            <li><b>予備スライドにも通し番号</b>を入れる</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="mini" style="position:relative;min-height:150px">
+          <h4>短縮 URL でも F 値 0.93 を維持</h4>
+          <ul>
+            <li>全検体　0.94（従来 0.91）</li>
+            <li><b>短縮 URL 検体　0.93（従来 0.71）</b></li>
+          </ul>
+          <span class="pno" style="position:absolute;right:12px;bottom:10px">6 / 11</span>
+        </div>
+        <p class="tighter" style="margin-top:8px">
+          <b>「6 / 11」</b>のように総数も入れると、聴衆は残り時間を把握できる。
+          「あと 5 枚か」と分かると、<b>聴衆は安心して聞ける</b>。</p>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">薄いグレーにしない</b>
+          「目立たないように」と薄くすると、投影で消える。<b>読めなければ入れた意味がない。</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>スライドを行ったり来たりしない<span class="en">Never go back</span></h2>
+  <p class="slide__lead">授業では戻ることもあるが、<b>発表で巻き戻すことはない。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--warn" style="margin-top:0">
+          <b class="note__t" data-icon="▲">巻き戻すと何が起きるか</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li>聴衆が「話が戻った？」と混乱する</li>
+            <li>操作に時間がかかる（連打・行き過ぎ）</li>
+            <li>戻ったあと、また進める時間が要る</li>
+            <li><b>「準備していません」と宣言しているのと同じ</b></li>
+          </ul>
+        </div>
+        <div class="note note--rule">
+          <b class="note__t" data-icon="◆">戻る必要があるなら</b>
+          <b>同じスライドを再掲する。</b>
+          プレゼンは決められた時間にきっちり作り込むものなので、
+          <b>戻ることが分かっているなら、あらかじめ準備しておく。</b>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">再掲のしかた</div>
+          <p class="tight" style="margin:.2em 0">
+            3 枚目で示したシステム構成図を、7 枚目の考察でもう一度使いたい。</p>
+          <p class="tight" style="margin:.2em 0">
+            → <b>7 枚目に、同じ図を貼った新しいスライドを作る。</b>
+            ただし、今回注目させたい部分だけを強調しておく。</p>
+          <p class="tighter" style="margin:.4em 0 0">
+            同じ図でも「今どこを見るか」が変わるので、<b>強調を変えた版を作るほうがむしろ良い</b>。</p>
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">質疑応答では戻ってよい</b>
+          質問に答えるために該当スライドへ移動するのは<b>正しい行動</b>である
+          （<a href="15-qa.html">トピック 15</a>）。禁止なのは<b>発表中</b>の巻き戻しである。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>そのほか、要らないもの<span class="en">Other things to cut</span></h2>
+  <p class="slide__lead">どれも「入れたくなる」ものばかり。<b>8 分にその余裕はない。</b></p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:13em">要らないもの</th><th>理由</th><th style="width:12em">代わりに</th></tr></thead>
+      <tbody>
+        <tr><th>目次スライド</th><td>順番は決まっている。2 秒で送るなら害になる</td><td>つなぎの言葉</td></tr>
+        <tr><th>「ご清聴ありがとうございました」</th><td>情報量ゼロ。質疑中ずっと映る</td><td><b>まとめスライド</b></td></tr>
+        <tr><th>長い自己紹介</th><td>聴衆は研究内容を聞きに来ている</td><td>所属と氏名のみ（5 秒）</td></tr>
+        <tr><th>研究の動機（個人的な）</th><td>「興味を持ったので」は研究の必要性ではない</td><td>社会的・技術的な背景</td></tr>
+        <tr><th>環境・使用ツールの一覧</th><td>本編では問われない</td><td><b>予備スライドへ</b></td></tr>
+        <tr><th>参考文献リストのスライド</th><td>読めないし、読まれない</td><td>各スライドに [n] を小さく</td></tr>
+        <tr><th>謝辞スライド</th><td>卒研発表では通常不要</td><td>（必要なら口頭で一言）</td></tr>
+        <tr><th>「以上です」だけのスライド</th><td>情報量ゼロ</td><td>まとめを表示したまま口頭で</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">削ったものは捨てない</b>
+      環境・ツール・文献・詳細な結果は、<b>予備スライド</b>として後ろに置いておく
+      （<a href="09-backup.html">トピック 09</a>）。質問されたら出せばよい。
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">入れないという判断も、立派な設計である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li><b>目次スライドは原則不要。</b>2 秒で送るなら害</li>
+        <li>代わりに<b>つなぎの言葉</b>で現在地を示す</li>
+        <li><b>「ご清聴ありがとうございました」は作らない</b></li>
+        <li>質疑中は<b>まとめスライド</b>を表示しておく</li>
+      </ul>
+      <ul class="ticks">
+        <li><b>スライド番号は必ず入れる。</b>見やすい色と大きさで</li>
+        <li>予備スライドにも通し番号を入れる</li>
+        <li><b>発表中に巻き戻さない。</b>必要なら再掲する</li>
+        <li>削ったものは<b>予備スライド</b>へ</li>
+      </ul>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">作り終えたら数えてみる</b>
+      本編のスライドのうち、<b>研究内容が書かれていない枚</b>が何枚あるか数える。
+      表紙を除いて 1 枚でもあれば、それは削れる可能性が高い。
+    </div>
+    <div class="deck-end">
+      <a href="07-figures.html"><b>◀ 前のトピック</b>07 図表の見せ方</a>
+      <a href="09-backup.html"><b>次のトピック ▶</b>09 予備スライドを用意する</a>
+      <a href="../checklist.html"><b>ツール</b>発表前チェックリスト</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

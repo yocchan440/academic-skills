@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>13 セキュリティ分野の論文を読む | 論文の読み方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+<style>.en-ph{ font-family:var(--ff-mono); font-size:.93em; }</style>
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">13 セキュリティ分野の論文を読む</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 13</div>
+  <h1>セキュリティ分野の論文を読む</h1>
+  <p class="sub">「安全である」は、必ず条件つきの主張である</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>脅威モデルを読み取り、主張の範囲を確定できる</li>
+      <li>安全性の根拠の種類を見分けられる</li>
+      <li>攻撃論文・防御論文・測定研究を読み分けられる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>この分野に特有の読み方<span class="en">What makes security different</span></h2>
+  <p class="slide__lead">情報セキュリティの論文には、他分野にない前提がある。<b>そこを外すと読めない。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="elem e1"><div class="elem__h"><span class="elem__n">1</span>「安全」は絶対ではない</div>
+          <div class="tight"><b>どんな攻撃者に対して安全なのか</b>が必ず条件として付く。無条件に安全な方式は存在しない。</div></div>
+        <div class="elem e2"><div class="elem__h"><span class="elem__n">2</span>相手がいる</div>
+          <div class="tight">攻撃者は<b>論文を読んで対策を回避してくる</b>。「現在検知できる」は「将来も検知できる」を意味しない。</div></div>
+        <div class="elem e3"><div class="elem__h"><span class="elem__n">3</span>時間で陳腐化する</div>
+          <div class="tight">攻撃も環境も変わる。<b>数年前の測定結果は、現在の姿ではない</b>。</div></div>
+      </div>
+      <div>
+        <div class="elem e6"><div class="elem__h"><span class="elem__n">4</span>運用の制約がある</div>
+          <div class="tight">検知率が高くても、<b>誤検知が多ければ実運用では使えない</b>。率ではなく件数で考える。</div></div>
+        <div class="elem e5"><div class="elem__h"><span class="elem__n">5</span>倫理的な配慮が要る</div>
+          <div class="tight">実環境での攻撃実験、人を対象とする調査、脆弱性の公表。<b>どう配慮したかが論文に書かれる</b>。</div></div>
+        <div class="note note--rule">
+          <b class="note__t" data-icon="◆">読むときの第一問</b>
+          <b>「この論文は、どんな攻撃者を想定しているのか」</b>
+          — これに答えられなければ、まだ論文を読めていない。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>脅威モデルを読む<span class="en">Threat model</span></h2>
+  <p class="slide__lead">この分野でいちばん重要な節。<b>ここを読まずに結果だけ読んではいけない。</b></p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:10em">読み取る項目</th><th>問い</th><th style="width:13em">書かれていないと</th></tr></thead>
+      <tbody>
+        <tr><th>攻撃者の目的</th><td>何を達成しようとしているのか（窃取・改ざん・妨害・なりすまし）</td><td>何を守れているのか不明</td></tr>
+        <tr><th>攻撃者の能力</th><td>何ができるのか（通信の盗聴・改ざん・端末の制御・計算資源）</td><td><b>安全性の主張範囲が不明</b></td></tr>
+        <tr><th>攻撃者の知識</th><td>何を知っているのか（手法の詳細・鍵・学習データ）</td><td>適応的攻撃への耐性が不明</td></tr>
+        <tr><th>信頼できる主体</th><td>誰を信頼するのか（OS・サーバ・認証局・利用者）</td><td>前提が崩れる条件が不明</td></tr>
+        <tr><th>対象外の攻撃</th><td>何を扱わないと明言しているか</td><td>読者が過大に評価してしまう</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">脅威モデルが書かれていない論文</b>
+      <b>「あらゆる攻撃に強い」という意味ではない。</b>
+      「どんな攻撃を想定しているか、読者には分からない」という意味である。
+      その論文の安全性の主張は、<b>評価できない</b>と記録する（<a href="01-principles.html">トピック 01</a>）。
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>脅威モデルの実例<span class="en">Example</span></h2>
+  <p class="slide__lead">論文からこの 5 項目を抜き出して、自分の言葉で書き直す。</p>
+  <div class="slide__body">
+    <div class="paper tight" style="line-height:1.85">
+      <h4>3.2　脅威モデル</h4>
+      <p>　<span class="mk e1"><sup>目的</sup>本研究では、利用者の認証情報を窃取することを目的とする攻撃者を想定する。</span><span class="mk e2"><sup>能力</sup>攻撃者は任意のドメインを取得し、正規サイトを模倣した Web ページを公開できる。また、URL 短縮サービスを自由に利用できるものとする。</span><span class="mk e3"><sup>知識</sup>攻撃者は、提案手法が用いる特徴量の詳細を把握していないものとする。</span><span class="mk e6"><sup>信頼</sup>利用者の端末および提案システムの実行環境は信頼できるものとする。</span><span class="mk e5"><sup>対象外</sup>端末へのマルウェア感染、および DNS の改ざんを伴う攻撃は本研究の対象外である。</span></p>
+    </div>
+    <div class="cols cols-2" style="margin-top:12px">
+      <div class="note note--rule" style="margin-top:0">
+        <b class="note__t" data-icon="◆">ここから分かること</b>
+        <span class="tight">
+        ・守れるのは<b>フィッシングによる認証情報窃取</b>だけ<br>
+        ・<b>端末がマルウェアに感染していたら無力</b>（対象外と明言）<br>
+        ・<b>攻撃者が特徴量を知ったら破られる可能性</b>がある</span>
+      </div>
+      <div class="note note--tip" style="margin-top:0">
+        <b class="note__t" data-icon="★">研究の種はここにある</b>
+        <span class="tight">
+        「攻撃者が特徴量を知っている場合はどうなるか」＝<b>適応的攻撃</b>の研究。<br>
+        脅威モデルの<b>仮定を 1 つ外す</b>と、それだけで新しい研究テーマになる。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>安全性の根拠は何か<span class="en">Evidence of security</span></h2>
+  <p class="slide__lead">「安全である」と書いてあったら、<b>何をもってそう言っているか</b>を確認する。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:11em">根拠の種類</th><th>どう主張するか</th><th style="width:15em">読者が注意すること</th></tr></thead>
+      <tbody>
+        <tr><th>形式的な安全性証明</th><td>仮定（計算量的仮定など）のもとで、攻撃の成功確率が無視できるほど小さいことを証明する</td><td><b>仮定が現実に成り立つか。</b>証明はモデル内の話である</td></tr>
+        <tr><th>形式手法による検証</th><td>プロトコルをモデル化し、ツールで性質を検証する</td><td>モデル化の際に<b>何を捨象したか</b></td></tr>
+        <tr><th>経験的評価</th><td>実データ・実環境で検知率などを測る</td><td><b>データセットの偏り</b>、未知の攻撃への一般化</td></tr>
+        <tr><th>既知攻撃への耐性</th><td>知られている攻撃を試して防げることを示す</td><td><b>未知の攻撃は対象外。</b>「破られていない」だけ</td></tr>
+        <tr><th>ヒューリスティック</th><td>「〜だから安全と考えられる」と論じる</td><td><b>根拠が弱い。</b>語尾を確認する</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">「攻撃されなかった」は「安全」ではない</b>
+      既知の攻撃を防げたことは、<b>その攻撃に対して有効だった</b>という意味しかない。
+      <b>「安全であることが証明された」と読み替えてはいけない</b>（推理の禁止）。
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>論文の種類で読み方を変える<span class="en">Attack / Defense / Measurement</span></h2>
+  <p class="slide__lead">セキュリティ分野の論文は、大きく 3 種類に分けられる。</p>
+  <div class="slide__body">
+    <div class="cols cols-3">
+      <div class="card" style="border-top:5px solid var(--cud-vermilion)">
+        <div class="card__h">攻撃論文</div>
+        <p class="tight" style="margin:.2em 0"><b>主張：</b>「この条件下で、この攻撃が成立する」</p>
+        <p class="tight" style="margin:.2em 0"><b>読むところ：</b></p>
+        <ul class="ticks tighter" style="margin:.1em 0 0">
+          <li>攻撃の<b>前提条件</b>（どこまで現実的か）</li>
+          <li>成功率と、その測り方</li>
+          <li>対象とした実装・バージョン</li>
+          <li>開示と対策の状況</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-blue)">
+        <div class="card__h">防御論文</div>
+        <p class="tight" style="margin:.2em 0"><b>主張：</b>「この脅威モデルの攻撃を防げる」</p>
+        <p class="tight" style="margin:.2em 0"><b>読むところ：</b></p>
+        <ul class="ticks tighter" style="margin:.1em 0 0">
+          <li><b>脅威モデル</b></li>
+          <li>検知率と<b>誤検知率</b>の両方</li>
+          <li>オーバーヘッド（速度・資源）</li>
+          <li><b>回避可能性</b>の議論があるか</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-green)">
+        <div class="card__h">測定・調査研究</div>
+        <p class="tight" style="margin:.2em 0"><b>主張：</b>「実世界はこうなっている」</p>
+        <p class="tight" style="margin:.2em 0"><b>読むところ：</b></p>
+        <ul class="ticks tighter" style="margin:.1em 0 0">
+          <li><b>いつ</b>測ったか</li>
+          <li><b>どこを</b>測ったか（母集団）</li>
+          <li>測定手法の妥当性</li>
+          <li>母集団の<b>代表性</b></li>
+        </ul>
+      </div>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">攻撃論文と防御論文は対になっている</b>
+      ある防御手法の論文を読んだら、<b>それを破った攻撃論文</b>が後から出ていないかを確認する。
+      被引用をたどれば見つかる（<a href="15-tracking.html">トピック 15</a>）。
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>倫理と開示の記述を読む<span class="en">Ethics and disclosure</span></h2>
+  <p class="slide__lead">この分野の論文には、<b>研究倫理への配慮</b>が書かれる。ここも読む。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-purple)">
+          <div class="card__h">論文に書かれる配慮</div>
+          <ul class="ticks tight">
+            <li><b>責任ある開示</b>（Responsible / Coordinated Disclosure）<br>
+              <span style="color:var(--ink-2)">発見した脆弱性を、公表前に開発者へ連絡したか</span></li>
+            <li><b>倫理審査</b>（IRB / Ethics Review）<br>
+              <span style="color:var(--ink-2)">人を対象とする調査の承認を得たか</span></li>
+            <li><b>実験の封じ込め</b><br>
+              <span style="color:var(--ink-2)">実環境に影響を与えない形で実験したか</span></li>
+            <li><b>データの匿名化</b><br>
+              <span style="color:var(--ink-2)">収集した通信・ログから個人情報を除いたか</span></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">読者が学ぶこと</b>
+          自分が研究する側になったとき、<b>同じ配慮が求められる</b>。
+          他人のシステムへの無断アクセスは、研究目的でも
+          <b>不正アクセス禁止法違反</b>になる。
+          論文の倫理の節は、<b>その分野で何が許され、何が許されないかの実例集</b>である。
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">再現しようとする前に</b>
+          攻撃論文を読んで手法を試したくなったら、<b>必ず自分の管理下の環境で</b>行う。
+          実施前に指導教員に相談する。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>この分野特有の用語<span class="en">Jargon</span></h2>
+  <p class="slide__lead">頻出する用語。知っていれば、読む速度が上がる。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <table class="t tighter">
+        <tbody>
+          <tr><td class="en-ph">threat model</td><td>脅威モデル。想定する攻撃者の定義</td></tr>
+          <tr><td class="en-ph">adversary</td><td>攻撃者</td></tr>
+          <tr><td class="en-ph">attack surface</td><td>攻撃対象面。攻撃されうる箇所の総体</td></tr>
+          <tr><td class="en-ph">adaptive attack</td><td>適応的攻撃。防御手法を知ったうえでの攻撃</td></tr>
+          <tr><td class="en-ph">evasion</td><td>回避。検知をすり抜けること</td></tr>
+          <tr><td class="en-ph">false positive / negative</td><td>偽陽性（誤検知）／偽陰性（見逃し）</td></tr>
+          <tr><td class="en-ph">ground truth</td><td>正解データ</td></tr>
+        </tbody>
+      </table>
+      <table class="t tighter">
+        <tbody>
+          <tr><td class="en-ph">baseline</td><td>比較対象とする既存手法</td></tr>
+          <tr><td class="en-ph">ablation study</td><td>構成要素を外して寄与を測る実験</td></tr>
+          <tr><td class="en-ph">in the wild</td><td>実世界で。実際に観測された</td></tr>
+          <tr><td class="en-ph">zero-day</td><td>未知・未対策の脆弱性</td></tr>
+          <tr><td class="en-ph">PoC</td><td>Proof of Concept。実証コード</td></tr>
+          <tr><td class="en-ph">responsible disclosure</td><td>責任ある開示</td></tr>
+          <tr><td class="en-ph">artifact</td><td>論文に付随する実装・データ。<b>公開されていれば必ず見る</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">用語の日本語訳は 1 つに決めておく</b>
+      <code>adversary</code> を「敵」「攻撃者」「攻撃主体」と訳し分けると、自分の論文で表記ゆれになる。
+      読みながら<b>対訳表</b>を作る。
+    </div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">セキュリティ論文の主張は、すべて<b>条件つき</b>である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li><b>脅威モデル</b>を最初に読む。書かれていなければ「評価できない」</li>
+        <li>攻撃者の<b>目的・能力・知識・信頼・対象外</b>の 5 項目を抜き出す</li>
+        <li>「安全」の<b>根拠の種類</b>を見分ける</li>
+        <li><b>既知攻撃を防げた ≠ 安全</b></li>
+      </ul>
+      <ul class="ticks">
+        <li><b>攻撃／防御／測定</b>で読むところが違う</li>
+        <li>防御論文は<b>誤検知率</b>と<b>回避可能性</b>を見る</li>
+        <li>測定研究は<b>いつ・どこを</b>測ったか</li>
+        <li><b>倫理と開示</b>の記述も読む</li>
+      </ul>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">この章を読み終えたときに言えること</b>
+      <b>「この論文は、〔どんな攻撃者〕に対して、〔どんな条件〕のもとで、〔何〕を達成したと主張している」</b>
+      — これが言えれば、セキュリティ論文は読めている。
+    </div>
+    <div class="deck-end">
+      <a href="12-english.html"><b>◀ 前のトピック</b>12 英語論文の読み方</a>
+      <a href="14-critical.html"><b>次のトピック ▶</b>14 批判的に読む</a>
+      <a href="09-evaluation.html"><b>関連</b>09 実験・評価の読み方</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

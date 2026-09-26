@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>02 論文の構造（IMRAD） | 論文の読み方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">02 論文の構造（IMRAD）</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 02</div>
+  <h1>論文の構造（IMRAD）</h1>
+  <p class="sub">どこに何が書いてあるかを、読む前から知っておく</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>IMRAD の 4 要素と、実際の章立ての対応を説明できる</li>
+      <li>各セクションに何が書かれているかを言える</li>
+      <li>探している情報がどの章にあるかを即座に判断できる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>IMRAD とは<span class="en">Introduction / Method / Results and Discussion</span></h2>
+  <p class="slide__lead">科学論文の標準的な文章構成形式。<b>ほとんどすべての論文がこの構成になっている。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="elem e1"><div class="elem__h"><span class="elem__n">I</span>Introduction ／ 序論</div>
+          <div class="tight">なぜこの研究が必要なのか。何が分かっていないのか。この研究は何を明らかにするのか。</div></div>
+        <div class="elem e3"><div class="elem__h"><span class="elem__n">M</span>Method ／ 手法・材料</div>
+          <div class="tight">何を、どのような手順・条件・環境で行ったのか。</div></div>
+        <div class="elem e6"><div class="elem__h"><span class="elem__n">R</span>Results ／ 結果</div>
+          <div class="tight">何が得られたのか。事実としての観測値・測定値。</div></div>
+        <div class="elem e5"><div class="elem__h"><span class="elem__n">D</span>Discussion ／ 考察</div>
+          <div class="tight">その結果は何を意味するのか。何が言えて、何は言えないのか。</div></div>
+      </div>
+      <div>
+        <div class="note note--why" style="margin-top:0">
+          <b class="note__t" data-icon="？">読者にとっての意味</b>
+          型が決まっているということは、<b>探している情報の在り処が最初から分かっている</b>ということである。
+          「実験条件を知りたい」なら Method を、「何が新しいのか知りたい」なら Introduction を開けばよい。
+          <b>頭から順に読む必要がない。</b>
+        </div>
+        <div class="note note--rule">
+          <b class="note__t" data-icon="◆">情報系はほぼこの形式</b>
+          分野によって細部は異なるが、情報系・情報セキュリティ分野の論文はほぼ IMRAD である。
+          読者もこの構成を前提に読む。<b>IMRAD でない論文は読みにくく、読まれない。</b>
+        </div>
+        <p class="tighter">※ A を <b>Analysis（分析）</b>と捉える考え方もある。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>実際の章立て<span class="en">Typical sections</span></h2>
+  <p class="slide__lead">和文誌・英文誌のどちらを読むときも、この対応を覚えておけば迷わない。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <table class="t tight">
+        <thead><tr><th style="width:4em">IMRAD</th><th>和文</th><th>英語</th></tr></thead>
+        <tbody>
+          <tr><td>—</td><td>論文題目</td><td>Title</td></tr>
+          <tr><td>全体</td><td>概要、あらまし、内容梗概</td><td>Abstract</td></tr>
+          <tr><td><b>I</b></td><td>はじめに、序論</td><td>Introduction</td></tr>
+          <tr><td><b>I</b></td><td>従来研究、関連研究</td><td>Related Works</td></tr>
+          <tr><td><b>M</b></td><td>準備、関連技術</td><td>Preliminaries / Background</td></tr>
+          <tr><td><b>M</b></td><td>提案方式、提案手法</td><td>Method / Proposal</td></tr>
+          <tr><td><b>M</b></td><td>実験、調査、実装</td><td>Experiment / Implementation</td></tr>
+          <tr><td><b>R</b></td><td>結果</td><td>Results</td></tr>
+          <tr><td><b>D</b></td><td>評価、考察、検討</td><td>Discussion / Evaluation</td></tr>
+          <tr><td><b>D</b></td><td>結論、まとめ、おわりに</td><td>Conclusion</td></tr>
+          <tr><td>—</td><td>（謝辞）</td><td>(Acknowledgement)</td></tr>
+          <tr><td>—</td><td>参考文献</td><td>References</td></tr>
+          <tr><td>—</td><td>（付録）</td><td>(Appendix)</td></tr>
+        </tbody>
+      </table>
+      <div>
+        <div class="note note--tip" style="margin-top:0">
+          <b class="note__t" data-icon="★">章立てには揺れがある</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li><b>関連研究が最後にある</b>（国際会議に多い）</li>
+            <li><b>「準備」の章</b>で前提知識・記法をまとめる</li>
+            <li>結果と考察が<b>1 章にまとまっている</b></li>
+            <li><b>Threat Model</b> が独立した節になる（<a href="13-security.html">トピック 13</a>）</li>
+            <li>Limitations / Ethics が独立した節になる</li>
+          </ul>
+        </div>
+        <div class="note note--rule">
+          <b class="note__t" data-icon="◆">章の名前ではなく役割で見る</b>
+          名前が違っても、<b>果たしている役割は IMRAD のどれか</b>に必ず当てはまる。
+          目次を見たら、まず各章を I / M / R / D に割り振ってみる。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>各セクションに何が書かれているか<span class="en">What each section contains</span></h2>
+  <p class="slide__lead">この表が、この資料の中心である。<b>読む前に、探すものを決める。</b></p>
+  <div class="slide__body">
+    <table class="t tighter">
+      <thead><tr><th style="width:8em">セクション</th><th>書かれていること</th><th style="width:16em">読むと分かること</th></tr></thead>
+      <tbody>
+        <tr><th>題目</th><td>研究対象・手法・貢献を凝縮した一文</td><td>読むべき論文かどうかの一次判断</td></tr>
+        <tr><th>概要</th><td>背景・目的・手法・結果・示唆（各 1〜2 文）</td><td><b>論文全体のエッセンス</b></td></tr>
+        <tr><th>序論</th><td>現状 → 課題（Gap）→ 目的 → 貢献 → 論文構成</td><td><b>論文の全体像とストーリー</b>、何が新しいか</td></tr>
+        <tr><th>関連研究</th><td>先行研究の分類・各研究の限界・本研究の位置づけ</td><td>分野の見取り図、この研究の立ち位置</td></tr>
+        <tr><th>提案手法</th><td>設計方針・全体構成・各要素・動作例・前提</td><td><b>再現するための情報</b>、仮定していること</td></tr>
+        <tr><th>実験</th><td>目的・対象・データ・環境・条件・比較対象・指標</td><td><b>結果をどこまで信じてよいか</b>の根拠</td></tr>
+        <tr><th>結果</th><td>観測された数値・図表（事実のみ）</td><td>実際に何が起きたか</td></tr>
+        <tr><th>考察</th><td>結果の解釈・なぜそうなったか・限界</td><td><b>著者の主張</b>と、その根拠の強さ</td></tr>
+        <tr><th>結論</th><td>問題・発見・示唆・限界・今後の課題の総括</td><td>研究の成果、<b>残されている課題</b></td></tr>
+        <tr><th>参考文献</th><td>引用した文献の一覧</td><td><b>次に読むべき論文</b>、分野の基礎文献</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>セクションごとに「何を探すか」<span class="en">What to look for</span></h2>
+  <p class="slide__lead">漫然と読まない。<b>各章で拾うべきものを決めてから開く。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="elem e1"><div class="elem__h"><span class="elem__n">I</span>序論・関連研究で探すもの</div>
+          <ul class="ticks tighter" style="margin:.2em 0 0">
+            <li>「しかし〜は明らかになっていない」の<b>1 文</b></li>
+            <li>「本研究の目的は〜である」の<b>1 文</b></li>
+            <li>貢献の箇条書き</li>
+            <li>自分の研究と重なる先行研究の番号</li>
+          </ul></div>
+        <div class="elem e3"><div class="elem__h"><span class="elem__n">M</span>提案手法・実験で探すもの</div>
+          <ul class="ticks tighter" style="margin:.2em 0 0">
+            <li><b>前提・仮定</b>（何を信頼し、何を攻撃者に許すか）</li>
+            <li>入力と出力は何か</li>
+            <li>データセットの<b>出典・件数・取得時期</b></li>
+            <li>比較対象と、その実装の出所</li>
+            <li>評価指標の<b>定義</b></li>
+          </ul></div>
+      </div>
+      <div>
+        <div class="elem e6"><div class="elem__h"><span class="elem__n">R</span>結果で探すもの</div>
+          <ul class="ticks tighter" style="margin:.2em 0 0">
+            <li>主張を支えている<b>核心の数値</b>（たいてい 1〜2 個）</li>
+            <li>その数値が<b>どの条件</b>で得られたか</li>
+            <li>不利な結果が載っているか</li>
+          </ul></div>
+        <div class="elem e5"><div class="elem__h"><span class="elem__n">D</span>考察・結論で探すもの</div>
+          <ul class="ticks tighter" style="margin:.2em 0 0">
+            <li>結果 → 解釈の<b>つながりの根拠</b></li>
+            <li><b>Limitations（限界）</b>の節</li>
+            <li>今後の課題（＝著者が認めた未解決点）</li>
+            <li>序論の目的と結論が<b>一致しているか</b></li>
+          </ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>同じことが 3 回書かれている<span class="en">Three levels of detail</span></h2>
+  <p class="slide__lead">論文は、同じ主張を<b>詳しさを変えて 3 回</b>書く。この性質が、速く読むための鍵になる。</p>
+  <div class="slide__body">
+    <div class="cols cols-3">
+      <div class="card" style="border-top:5px solid var(--cud-blue)">
+        <div class="card__h">① 概要（数百字）</div>
+        <p class="tight">背景・目的・手法・結果・示唆を<b>各 1〜2 文</b>で。</p>
+        <p class="tight" style="color:var(--ink-2);margin-bottom:0">→ <b>読むかどうかを決める</b>ための情報</p>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-green)">
+        <div class="card__h">② 序論＋結論（数ページ）</div>
+        <p class="tight">ストーリーと全体像。何が問題で、何をして、何が分かったか。</p>
+        <p class="tight" style="color:var(--ink-2);margin-bottom:0">→ <b>研究の要旨を理解する</b>ための情報</p>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-orange)">
+        <div class="card__h">③ 本文（十数ページ）</div>
+        <p class="tight">手法の詳細、実験条件、すべての結果、考察の根拠。</p>
+        <p class="tight" style="color:var(--ink-2);margin-bottom:0">→ <b>検証・再現する</b>ための情報</p>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">だから、こう読む</b>
+      <b>「概要」と「はじめに」を読めば、論文の要旨は分かる。</b>
+      概要には論文のエッセンスが、はじめにには論文の全体像が書かれている。
+      ①②で「自分に必要ない」と判断できたら、③には進まない。
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">ただし</b>
+      <b>①②だけで引用してはいけない。</b>引用するなら、その主張を支えている本文と数値まで確認する。
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>セクションどうしの対応を見る<span class="en">Consistency across sections</span></h2>
+  <p class="slide__lead">良い論文では、この 4 つが一直線に繋がっている。<b>ずれていたら、そこが弱点である。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <ol class="steps tight" style="margin:0">
+          <li><b>序論の目的</b><br><span class="q" style="color:var(--ink-2)">本研究の目的は、短縮 URL を含む検体でも検知性能が維持できるかを明らかにすることである</span></li>
+          <li><b>実験の設計</b><br><span class="q" style="color:var(--ink-2)">短縮 URL を含む 1,830 件を部分集合として評価した</span></li>
+          <li><b>結果・考察</b><br><span class="q" style="color:var(--ink-2)">その部分集合で F 値は 0.71 から 0.93 へ向上した</span></li>
+          <li><b>結論</b><br><span class="q" style="color:var(--ink-2)">URL に依存しない特徴量の併用が有効であることを示した</span></li>
+        </ol>
+      </div>
+      <div>
+        <div class="note note--warn" style="margin-top:0">
+          <b class="note__t" data-icon="▲">よくあるずれ</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li>序論で掲げた目的が、<b>実験で検証されていない</b></li>
+            <li>結論が、<b>序論の目的と別のこと</b>を言っている</li>
+            <li>概要の数値と、本文の数値が<b>一致しない</b></li>
+            <li>考察で、<b>実験していない条件</b>まで一般化している</li>
+          </ul>
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">5 分でできる検査</b>
+          <b>序論の目的文</b>と<b>結論の 1 文目</b>だけを抜き出して並べて読む。
+          同じことを言っていなければ、その論文の主張は揺れている。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">構造を知っていることが、そのまま読む速さになる。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>情報系の論文はほぼ <b>IMRAD</b> である</li>
+        <li>章の名前ではなく、<b>果たしている役割</b>で I/M/R/D に割り振る</li>
+        <li>各セクションに<b>何が書かれているか</b>を覚えておく</li>
+        <li>開く前に<b>何を探すか</b>を決める</li>
+      </ul>
+      <ul class="ticks">
+        <li>同じ主張が<b>概要・序論／結論・本文</b>の 3 段階で書かれている</li>
+        <li>概要と序論で要旨は掴める。<b>引用するなら本文まで</b></li>
+        <li><b>目的 → 実験 → 結果 → 結論</b>の一貫性を確認する</li>
+        <li>ずれているところが、その論文の弱点である</li>
+      </ul>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">練習</b>
+      手元にある論文を 1 本開いて、<b>目次だけを見て各章を I / M / R / D に分類</b>してみる。
+      3 分でできる。これができれば、どこを読めばよいかが分かる。
+    </div>
+    <div class="deck-end">
+      <a href="01-principles.html"><b>◀ 前のトピック</b>01 論文を読むということ</a>
+      <a href="03-strategy.html"><b>次のトピック ▶</b>03 どこから読むか</a>
+      <a href="../worksheet.html"><b>ツール</b>論文精読ワークシート</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+@charset "utf-8";
+/* =====================================================================
+   卒業論文の書き方 — 共通デザイントークン & コンポーネント
+   ・ライトテーマ
+   ・カラーユニバーサルデザイン（CUD / Okabe-Ito 推奨配色）
+   ・ユニバーサルデザインフォント（BIZ UD ゴシック / BIZ UD 明朝）
+   色は必ず「記号・ラベル・線種」と併用し、色だけに意味を持たせない。
+   ===================================================================== */
+
+/* ---- Web フォント（オフライン時は OS 同梱の BIZ UD / UD デジタル教科書体へ） -- */
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=BIZ+UDPMincho&display=swap");
+
+:root{
+  /* --- CUD 基本 8 色（Okabe & Ito） --- */
+  --cud-black:      #000000;
+  --cud-orange:     #E69F00;
+  --cud-sky:        #56B4E9;
+  --cud-green:      #009E73;
+  --cud-yellow:     #F0E442;
+  --cud-blue:       #0072B2;
+  --cud-vermilion:  #D55E00;
+  --cud-purple:     #CC79A7;
+
+  /* --- 上記の淡色（背景用ティント） --- */
+  --tint-orange:    #FDF0DB;
+  --tint-sky:       #E6F4FD;
+  --tint-green:     #DCF0EA;
+  --tint-yellow:    #FBF8D2;
+  --tint-blue:      #E3EEF7;
+  --tint-vermilion: #FBE7DA;
+  --tint-purple:    #F8E9F1;
+
+  /* --- 地色・文字色 --- */
+  --bg:        #FAF9F7;
+  --surface:   #FFFFFF;
+  --surface-2: #F2F0EC;
+  --ink:       #16181A;
+  --ink-2:     #4A4F55;
+  --ink-3:     #767C83;
+  --line:      #DAD6CF;
+  --line-2:    #EAE7E1;
+
+  --accent:    var(--cud-blue);
+  --good:      var(--cud-blue);
+  --bad:       var(--cud-vermilion);
+
+  /* --- フォント --- */
+  --ff-ud: "BIZ UDPGothic", "BIZ UDPゴシック", "BIZ UDGothic", "BIZ UDゴシック",
+           "UD デジタル教科書体 NP-R", "UDデジタル教科書体 NP-R",
+           "Noto Sans JP", "Yu Gothic UI", "Meiryo", system-ui, sans-serif;
+  --ff-mincho: "BIZ UDPMincho", "BIZ UDP明朝", "BIZ UDMincho", "BIZ UD明朝",
+           "Yu Mincho", "游明朝", "Hiragino Mincho ProN", "MS PMincho", serif;
+  /* LaTeX を扱うため、バックスラッシュが円記号にならない欧文フォントを先に置く。
+     日本語はフォールバックで BIZ UD ゴシックが使われる。 */
+  --ff-mono: Consolas, "Cascadia Mono", "DejaVu Sans Mono", "Liberation Mono",
+             "Courier New", "BIZ UDGothic", "BIZ UDゴシック", monospace;
+
+  --radius: 10px;
+  --shadow: 0 1px 2px rgba(22,24,26,.06), 0 8px 24px rgba(22,24,26,.06);
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{ -webkit-text-size-adjust:100%; }
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--ff-ud);
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+
+a{ color:var(--accent); text-underline-offset:.2em; }
+a:focus-visible,button:focus-visible,summary:focus-visible{
+  outline:3px solid var(--cud-orange); outline-offset:2px; border-radius:4px;
+}
+
+h1,h2,h3,h4{ line-height:1.4; letter-spacing:.005em; margin:0; font-weight:700; }
+
+/* =====================================================================
+   汎用コンポーネント
+   ===================================================================== */
+
+/* --- ラベルチップ --- */
+.chip{
+  display:inline-flex; align-items:center; gap:.4em;
+  padding:.12em .7em; border-radius:999px;
+  font-size:.74em; font-weight:700; line-height:1.7;
+  border:2px solid currentColor; white-space:nowrap;
+}
+.chip--solid{ color:#fff; border-color:transparent; }
+
+/* --- カラム --- */
+.cols{ display:grid; gap:18px; }
+.cols-2{ grid-template-columns:1fr 1fr; }
+.cols-3{ grid-template-columns:repeat(3,1fr); }
+.cols-25{ grid-template-columns:2fr 3fr; }
+.cols-52{ grid-template-columns:3fr 2fr; }
+
+/* --- カード --- */
+.card{
+  background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--radius); padding:16px 18px;
+}
+.card__h{ font-size:1.02em; font-weight:700; margin:0 0 .5em; }
+
+/* --- コールアウト（色 + 記号 + ラベルの三重符号化） --- */
+.note{
+  position:relative; border-radius:var(--radius);
+  border:1px solid var(--line); border-left:6px solid var(--ink-3);
+  background:var(--surface); padding:14px 18px; margin:14px 0;
+}
+.note__t{ display:block; font-weight:700; margin-bottom:.25em; }
+.note__t::before{ content:attr(data-icon) "　"; }
+.note > :last-child{ margin-bottom:0; }
+
+.note--rule{ border-left-color:var(--cud-blue);      background:var(--tint-blue); }
+.note--warn{ border-left-color:var(--cud-vermilion); background:var(--tint-vermilion); }
+.note--tip { border-left-color:var(--cud-green);     background:var(--tint-green); }
+.note--why { border-left-color:var(--cud-purple);    background:var(--tint-purple); }
+.note--ex  { border-left-color:var(--cud-orange);    background:var(--tint-orange); }
+
+/* --- NG / OK 比較（線種でも区別） --- */
+.ng-ok{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:12px 0; }
+.ex-box{ border-radius:var(--radius); padding:12px 16px; background:var(--surface); }
+.ex-box__t{ font-weight:700; font-size:.85em; display:block; margin-bottom:.35em; }
+.ex-box p{ margin:.3em 0; }
+.ex-ng{ border:2px dashed var(--bad);  background:var(--tint-vermilion); }
+.ex-ng .ex-box__t{ color:#A34600; }
+.ex-ng .ex-box__t::before{ content:"✗　NG　"; }
+.ex-ok{ border:2px solid var(--good);  background:var(--tint-blue); }
+.ex-ok .ex-box__t{ color:#00537F; }
+.ex-ok .ex-box__t::before{ content:"✓　OK　"; }
+
+/* --- 論文の紙面サンプル（明朝体で表示） --- */
+.paper{
+  font-family:var(--ff-mincho);
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:16px 20px;
+  line-height:1.9;
+  text-align:justify;
+}
+.paper p{ margin:0 0 .6em; text-indent:1em; }
+.paper p:last-child{ margin-bottom:0; }
+.paper .noindent{ text-indent:0; }
+.paper h4{ font-family:var(--ff-ud); font-size:1em; margin:0 0 .5em; }
+
+/* --- テーブル（罫線は最小限：上・見出し下・下の三本） --- */
+table.t{
+  width:100%; border-collapse:collapse; font-size:.92em;
+  border-top:2px solid var(--ink); border-bottom:2px solid var(--ink);
+  background:var(--surface);
+}
+table.t caption{
+  caption-side:top; text-align:left; font-weight:700;
+  padding:0 0 .4em; font-size:.95em;
+}
+table.t th,table.t td{ padding:.45em .7em; text-align:left; vertical-align:top; }
+table.t thead th{ border-bottom:1px solid var(--ink); white-space:nowrap; }
+table.t tbody tr + tr td,table.t tbody tr + tr th{ border-top:1px solid var(--line-2); }
+table.t td.num{ text-align:right; font-variant-numeric:tabular-nums; }
+
+/* --- 定義リスト --- */
+dl.terms{ margin:0; }
+dl.terms dt{ font-weight:700; color:var(--accent); margin-top:.6em; }
+dl.terms dd{ margin:0 0 .2em 1.2em; }
+
+/* --- 手順 --- */
+ol.steps{ list-style:none; counter-reset:s; padding:0; margin:0; }
+ol.steps > li{ counter-increment:s; position:relative; padding-left:2.4em; margin:.55em 0; }
+ol.steps > li::before{
+  content:counter(s); position:absolute; left:0; top:.15em;
+  width:1.7em; height:1.7em; border-radius:50%;
+  background:var(--accent); color:#fff;
+  font-size:.8em; font-weight:700; line-height:1.7em; text-align:center;
+}
+
+/* --- 記号つきリスト --- */
+ul.ticks{ list-style:none; padding:0; margin:0; }
+ul.ticks > li{ position:relative; padding-left:1.5em; margin:.4em 0; }
+ul.ticks > li::before{ content:"▸"; position:absolute; left:.1em; color:var(--accent); font-weight:700; }
+
+/* --- 強調・コード --- */
+.kw{ font-weight:700; background:linear-gradient(transparent 62%, #F0E442 62%); }
+.q{ font-family:var(--ff-mincho); }
+code{ font-family:var(--ff-mono); background:var(--surface-2); padding:.05em .35em; border-radius:4px; font-size:.92em; }
+pre.code{
+  font-family:var(--ff-mono); background:#1F2327; color:#EDEFF2;
+  padding:12px 16px; border-radius:8px; overflow:auto; font-size:.85em; line-height:1.6;
+}
+pre.code .cm{ color:#9AA7B2; }
+
+/* =====================================================================
+   構成要素カラー（IMRAD 4 要素 / アブストラクト 6 要素 / 結論 6 要素）
+   背景ティント + 左罫 + ラベル番号 の三重符号化
+   ===================================================================== */
+/* --et: 淡いティント（ブロック用）　--ets: やや濃いティント（本文の蛍光ペン用） */
+.e1{ --ec:#0072B2; --et:#E3EEF7; --ets:#CFE3F2; }   /* 青   */
+.e2{ --ec:#D55E00; --et:#FBE7DA; --ets:#F8D6C2; }   /* 朱   */
+.e3{ --ec:#009E73; --et:#DCF0EA; --ets:#C6EBDE; }   /* 緑   */
+.e4{ --ec:#56B4E9; --et:#E6F4FD; --ets:#D2ECFB; }   /* 空   */
+.e5{ --ec:#CC79A7; --et:#F8E9F1; --ets:#F2D6E5; }   /* 赤紫 */
+.e6{ --ec:#E69F00; --et:#FDF0DB; --ets:#FAE3BE; }   /* 橙   */
+
+/* 要素ブロック（縦積みの解説表示） */
+.elem{
+  background:var(--et); border-left:6px solid var(--ec);
+  border-radius:0 8px 8px 0; padding:10px 14px; margin:8px 0;
+}
+.elem__h{
+  display:flex; align-items:baseline; gap:.5em;
+  font-weight:700; font-size:.82em; color:#000; margin-bottom:.2em;
+}
+.elem__n{
+  display:inline-block; min-width:1.8em; text-align:center;
+  background:var(--ec); color:#fff; border-radius:999px;
+  font-size:.95em; padding:0 .4em;
+}
+.elem__body{ font-family:var(--ff-mincho); }
+
+/* 本文中のインライン着色（連続した文章を蛍光ペンのように塗り分ける）
+   色だけに頼らないよう、各区間の先頭に番号・記号のラベルを置く。 */
+.mk{ background:var(--ets); padding:.12em .08em; border-radius:2px;
+     -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+.mk sup{ font-family:var(--ff-ud); font-weight:700; color:#16181A;
+         font-size:.66em; vertical-align:.42em; line-height:1;
+         background:#fff; border-radius:3px; padding:.1em .3em; margin-right:.15em;
+         box-shadow:0 0 0 1px rgba(0,0,0,.3); }
+
+/* 二重色分け用：背景 = IMRAD、下線 = 6 構成要素 */
+.bgI{ background:#E3EEF7; }   /* Introduction */
+.bgM{ background:#DCF0EA; }   /* Method       */
+.bgR{ background:#FDF0DB; }   /* Results      */
+.bgD{ background:#F8E9F1; }   /* Discussion   */
+.ul{ box-shadow:inset 0 -.2em 0 0 var(--ec); padding:.05em .1em; }
+.ul sup{ font-family:var(--ff-ud); font-weight:700; color:#000;
+         font-size:.62em; vertical-align:.5em; }
+
+/* 凡例 */
+.legend{ display:flex; flex-wrap:wrap; gap:6px 14px; margin:.4em 0 .8em; font-size:.76em; }
+.legend > span{ display:inline-flex; align-items:center; gap:.4em; }
+.legend i{
+  width:1.1em; height:1.1em; border-radius:3px; display:inline-block; flex:none;
+  border:2px solid var(--ec); background:var(--et);
+}
+
+/* 印刷 */
+@media print{
+  :root{ --shadow:none; }
+  body{ background:#fff; }
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>01 卒研発表とは何か | 卒研発表の仕方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">01 卒研発表とは何か</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 01</div>
+  <h1>卒研発表とは何か</h1>
+  <p class="sub">短い時間で、多様な聴衆に、自分の成果を伝えきる</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>卒研発表の 3 つの特徴を理解する</li>
+      <li>8 分という時間の現実を、数字で把握する</li>
+      <li>発表の目的が「理解してもらうこと」だと分かる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>卒研発表の 3 つの特徴<span class="en">What makes it different</span></h2>
+  <p class="slide__lead">学会発表とも、授業の発表とも違う。<b>この 3 点が、すべての制約を決める。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-3">
+      <div class="card" style="border-top:5px solid var(--cud-blue)">
+        <div class="card__h">① 全員が発表する</div>
+        <p class="tight">研究室の卒研生が全員、順番に発表する。<b>プログラムは分刻みで組まれている。</b></p>
+        <p class="tight" style="margin-bottom:0">→ <b>1 人が押せば、全員が押す。</b>自分の都合で時間を延ばせない。</p>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-green)">
+        <div class="card__h">② 分野が多様</div>
+        <p class="tight">聴衆は、隣の研究室の教員と学生である。<b>あなたのテーマの専門家ではない。</b></p>
+        <p class="tight" style="margin-bottom:0">→ <b>前提知識を共有していない相手</b>に説明する必要がある。</p>
+      </div>
+      <div class="card" style="border-top:5px solid var(--cud-orange)">
+        <div class="card__h">③ 発表時間が短い</div>
+        <p class="tight">発表 8 分、質疑 2 分といった構成が一般的である。</p>
+        <p class="tight" style="margin-bottom:0">→ <b>無駄な 10 秒が、説明できない 1 枚分になる。</b></p>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">この 3 つから導かれる結論</b>
+      <b>限られた時間のなかで、専門外の聴衆に、自分の成果を十分に説明しなければならない。</b>
+      この資料は、そのための技術を扱う。
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>8 分とは、どれくらいか<span class="en">The reality of 8 minutes</span></h2>
+  <p class="slide__lead">感覚ではなく、数字で把握する。<b>8 分＝480 秒である。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <table class="t tight">
+          <caption>発表 8 分・スライド 10 枚のとき</caption>
+          <tbody>
+            <tr><th>1 枚あたりの持ち時間</th><td class="num"><b>48 秒</b></td></tr>
+            <tr><th>話せる文字数（1 分 300 字）</th><td class="num">約 2,400 字</td></tr>
+            <tr><th>原稿用紙に換算すると</th><td class="num">6 枚分</td></tr>
+            <tr><th>目次スライドに 5 秒使うと</th><td class="num">全体の 1%</td></tr>
+            <tr><th>「えー」を 1 回 0.5 秒 × 60 回</th><td class="num"><b>30 秒＝スライド 0.6 枚分</b></td></tr>
+            <tr><th>同じ説明を 2 回すると</th><td class="num"><b>1 枚分が消える</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="note note--warn" style="margin-top:0">
+          <b class="note__t" data-icon="▲">時間は「余る」ものではない</b>
+          卒研発表で「時間が余った」という人はまずいない。
+          <b>全員が足りなくなる。</b>足りなくなるのが分かっているなら、
+          <b>最初から無駄を削って設計する</b>しかない。
+        </div>
+        <div class="note note--rule">
+          <b class="note__t" data-icon="◆">削れる無駄の例</b>
+          <span class="tight">
+          目次スライド（<a href="08-antipatterns.html">トピック 08</a>）／
+          フィラー（<a href="10-timewaste.html">トピック 10</a>）／
+          重複説明／「ご清聴ありがとうございました」／
+          読み上げても伝わらない長文スライド（<a href="04-what-to-write.html">トピック 04</a>）</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>聴衆は誰か<span class="en">Who is in the room</span></h2>
+  <p class="slide__lead">あなたの指導教員は、すでにあなたの研究を知っている。<b>知らない人に向けて話す。</b></p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:11em">聴衆</th><th>あなたの研究について</th><th>その人が知りたいこと</th></tr></thead>
+      <tbody>
+        <tr><th>指導教員</th><td>全部知っている</td><td>正しく説明できているか</td></tr>
+        <tr><th>他研究室の教員</th><td><b>何も知らない</b>。分野も違う</td><td>何が問題で、何をして、何が分かったか</td></tr>
+        <tr><th>他研究室の学生</th><td><b>何も知らない</b>。基礎知識も違う</td><td>そもそも何の話か</td></tr>
+        <tr><th>同じ研究室の後輩</th><td>断片的に知っている</td><td>自分も来年やるのか、という関心</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">想定すべき聴衆</b>
+      <b>「情報系ではあるが、あなたのテーマの専門家ではない人」</b>に照準を合わせる。
+      これは論文を書くときの読者像と同じである。
+      <b>研究室の内輪の言葉、去年から使っている略語は通じない。</b>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">「このくらいは知っているだろう」は禁物</b>
+      専門用語をいきなり出した瞬間に、聴衆の半分は置いていかれる。
+      置いていかれた聴衆は、そこから先を聞いてくれない（<a href="02-with-audience.html">トピック 02</a>）。
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>発表の目的は何か<span class="en">The goal</span></h2>
+  <p class="slide__lead">「時間内に話し終えること」ではない。<b>「理解してもらうこと」である。</b></p>
+  <div class="slide__body">
+    <div class="ng-ok">
+      <div class="ex-box ex-ng">
+        <span class="ex-box__t">目的を取り違えた発表</span>
+        <ul class="tight" style="margin:.2em 0;padding-left:1.2em">
+          <li>やったことを全部詰め込む</li>
+          <li>時間内に収めるために早口になる</li>
+          <li>スライドを読み上げて先に進む</li>
+          <li>聴衆の顔を見ない</li>
+        </ul>
+        <p class="tighter" style="margin:.3em 0 0">
+          → 話し終えたが、<b>誰も何も分かっていない。</b>発表としては失敗である。</p>
+      </div>
+      <div class="ex-box ex-ok">
+        <span class="ex-box__t">目的を理解した発表</span>
+        <ul class="tight" style="margin:.2em 0;padding-left:1.2em">
+          <li>伝えることを<b>絞る</b></li>
+          <li>絞った分、<b>丁寧に説明する</b></li>
+          <li>聴衆が納得しているかを見ながら進める</li>
+          <li>細かい話は<b>予備スライド</b>に回す（<a href="09-backup.html">トピック 09</a>）</li>
+        </ul>
+        <p class="tighter" style="margin:.3em 0 0">
+          → <b>聴衆が「なるほど」と思って終わる。</b>これが成功である。</p>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">覚えておくこと</b>
+      <span class="big">8 分で<b>全部</b>を説明することはできない。
+      だから、<b>何を説明しないか</b>を決めることが、発表準備の半分である。</span>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>発表時間は厳守<span class="en">Keep to your time</span></h2>
+  <p class="slide__lead">これは技術の問題ではない。<b>時間を守るのは人間として当然である。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--warn" style="margin-top:0">
+          <b class="note__t" data-icon="▲">超過すると何が起きるか</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li><b>次の発表者の時間を奪う</b></li>
+            <li>プログラム全体が後ろにずれる</li>
+            <li>質疑の時間が削られる</li>
+            <li>座長に止められて、途中で終わる</li>
+            <li><b>「時間管理ができない人」という評価がつく</b></li>
+          </ul>
+        </div>
+        <p class="tight">発表時間の超過は、内容の評価以前の問題として扱われる。</p>
+      </div>
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">ベルが鳴ったら</b>
+          <b>速やかに発表を終える方向で進める。</b><br>
+          ベルが鳴っているのに、最後の「まとめ」スライドを読み上げるということは<b>ありえない</b>。
+          「まとめ」はそれまでの総括であり、<b>すでに説明した内容</b>である。
+          時間がないのであれば、しゃべらない。
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">超過しないための唯一の方法</b>
+          <b>時間を計ってリハーサルする。</b>
+          頭の中で「たぶん収まる」は必ず外れる。本番は緊張で速くなる人と遅くなる人がいる。
+          自分がどちらかを知っておく（<a href="14-rehearsal.html">トピック 14</a>）。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>準備にかける時間<span class="en">How long to prepare</span></h2>
+  <p class="slide__lead">8 分の発表に、どれくらい準備するか。<b>想像より多い。</b></p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:12em">作業</th><th style="width:7em">目安</th><th>やること</th></tr></thead>
+      <tbody>
+        <tr><th>構成を決める</th><td>1〜2 時間</td><td>何を話し、何を話さないかを決める（<a href="03-structure.html">トピック 03</a>）</td></tr>
+        <tr><th>スライドを作る</th><td>4〜8 時間</td><td>1 枚 30 分が目安。作り直しが必ず発生する</td></tr>
+        <tr><th>予備スライドを作る</th><td>1〜2 時間</td><td>質疑に備える（<a href="09-backup.html">トピック 09</a>）</td></tr>
+        <tr><th>リハーサル</th><td><b>最低 5 回</b></td><td>時間を計る。録画して見る（<a href="14-rehearsal.html">トピック 14</a>）</td></tr>
+        <tr><th>指導教員に見せる</th><td>1〜2 回</td><td><b>前日ではなく、1 週間前に</b></td></tr>
+        <tr><th>修正</th><td>2〜4 時間</td><td>指摘は必ず出る。直す時間を見込んでおく</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">前日に作り始めない</b>
+      前日に作ったスライドは、リハーサルができない。リハーサルをしていない発表は、<b>必ず時間を超過する</b>。
+      そして本番で初めて「このスライド、説明できない」と気づく。
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">制約を正しく認識することが、準備の出発点である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>卒研発表は<b>全員発表・分野多様・時間が短い</b></li>
+        <li>8 分＝480 秒。<b>1 枚 48 秒</b></li>
+        <li>聴衆は<b>あなたのテーマの専門家ではない</b></li>
+        <li>目的は「話し終えること」ではなく<b>「理解してもらうこと」</b></li>
+      </ul>
+      <ul class="ticks">
+        <li>全部は説明できない。<b>何を説明しないかを決める</b></li>
+        <li><b>発表時間は厳守。</b>超過は内容以前の問題</li>
+        <li>ベルが鳴ったら<b>まとめを読まずに終える</b></li>
+        <li>準備は<b>10 時間以上</b>。リハーサルは最低 5 回</li>
+      </ul>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">次のトピックが、この資料の核心</b>
+      短い発表で最も重要なのは、<b>聴衆が理解したまま話が進むこと</b>である。
+      聴衆が「？」と思った瞬間に、そこから先は届かなくなる。
+    </div>
+    <div class="deck-end">
+      <a href="../index.html"><b>戻る</b>資料一覧</a>
+      <a href="02-with-audience.html"><b>次のトピック ▶</b>02 聴衆とともに進める</a>
+      <a href="../plan.html"><b>ツール</b>発表設計シート</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>06 提案方式・提案手法 | 卒業論文の書き方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">06 提案方式・提案手法</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 06</div>
+  <h1>提案方式・提案手法</h1>
+  <p class="sub">第三者が再現できるように書く</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>提案手法の章が答えるべき 6 つの問いを説明できる</li>
+      <li>設計方針 → 全体構成 → 各要素 の順で記述できる</li>
+      <li>図と本文の役割分担を理解する</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>提案方式が答えるべき 6 つの問い<span class="en">Six questions</span></h2>
+  <p class="slide__lead">この 6 つに答えていれば、提案手法の章は成立する。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="elem e1"><div class="elem__h"><span class="elem__n">1</span>何をするのか？ 何の問題を解決するのか？</div></div>
+        <div class="elem e2"><div class="elem__h"><span class="elem__n">2</span>なぜそれが必要か？ 適用範囲は？ 有用性は？</div></div>
+        <div class="elem e3"><div class="elem__h"><span class="elem__n">3</span>どうやるのか？ 手法は？ 道具は？</div></div>
+        <div class="elem e4"><div class="elem__h"><span class="elem__n">4</span>なぜそれで問題が解決するのか？ 根拠は？</div></div>
+        <div class="elem e5"><div class="elem__h"><span class="elem__n">5</span>問題が解決するとどうなるか？ 効果は？</div></div>
+        <div class="elem e6"><div class="elem__h"><span class="elem__n">6</span>それによってどうなるか？ 影響は？</div></div>
+      </div>
+      <div>
+        <div class="note note--warn" style="margin-top:0">
+          <b class="note__t" data-icon="▲">抜けやすいのは 4 番</b>
+          「こうやりました」は書けても、<b>「なぜそれで解決するのか」</b>が書かれていない卒論が非常に多い。
+          <p class="tight" style="margin:.4em 0 0">
+          ✗「HTML 構造特徴量を用いる。」<br>
+          ✓「HTML 構造特徴量は攻撃者が<b>使い回すテンプレートに由来する</b>ため、URL を変更しても変化しにくい。この性質により、短縮 URL でも判別性能を維持できる。」</p>
+        </div>
+        <div class="note note--rule">
+          <b class="note__t" data-icon="◆">再現性の基準</b>
+          <b>この章だけを読んだ第三者が、同じものを実装できるか。</b>
+          これが提案手法の章の唯一の合格基準である。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>記述の順序<span class="en">Top-down</span></h2>
+  <p class="slide__lead">大きいところから小さいところへ。<b>いきなり細部から書かない。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-25">
+      <div>
+        <ol class="steps tight" style="margin:0">
+          <li><b>設計方針</b><br>どんな性質を満たす手法にしたいのか。要件を箇条書きで</li>
+          <li><b>全体構成</b><br>システム全体の図。入力から出力までの流れ</li>
+          <li><b>各構成要素</b><br>要素ごとに節を分けて詳細を記述</li>
+          <li><b>動作例</b><br>具体的な入力で一連の処理を追う</li>
+          <li><b>適用範囲と前提</b><br>何を仮定しているか、何は扱わないか</li>
+        </ol>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">設計方針の書き方（例）</div>
+          <p class="q tighter" style="margin:.2em 0">　提案手法は、以下の 3 つの要件を満たすように設計する。</p>
+          <ul class="q tighter" style="margin:.2em 0;padding-left:1.4em">
+            <li><b>要件 1（URL 非依存性）</b>　URL 文字列が短縮されている場合にも、判別に用いる特徴量が失われないこと。</li>
+            <li><b>要件 2（軽量性）</b>　1 件あたりの判定時間が 1 秒以内であり、画像処理を伴わないこと。</li>
+            <li><b>要件 3（言語非依存性）</b>　ページの自然言語に依存する特徴量を用いないこと。</li>
+          </ul>
+          <p class="q tighter" style="margin:.2em 0 0">　これらの要件は、2.5 節で述べた既存手法の限界に対応している。</p>
+        </div>
+        <p class="tighter" style="margin-top:6px">※ 要件に<b>番号を付ける</b>と、5 章の評価で「要件 1 は満たされた」と対応づけられる。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>図と本文の役割分担<span class="en">Figures are supplements</span></h2>
+  <p class="slide__lead"><b>図はあくまで補足資料である。</b>論文は文章で論じるものである。</p>
+  <div class="slide__body">
+    <div class="ng-ok">
+      <div class="ex-box ex-ng">
+        <span class="ex-box__t">図に丸投げしている</span>
+        <p class="q tight">提案手法のシステム構成を図 1 に示す。</p>
+        <p class="q tight">次に、手順通り処理を進めていく（図 2）。</p>
+        <p class="tighter" style="margin:.3em 0 0">「〜を図 1 に示す」で満足してしまう人が非常に多い。
+        <b>（図 2）のような括弧書きでの参照は許されない。</b></p>
+      </div>
+      <div class="ex-box ex-ok">
+        <span class="ex-box__t">図を本文で説明している</span>
+        <p class="q tight">　提案手法のシステム構成を図 1 に示す。提案手法は、ページ取得部、特徴量抽出部、および分類部の 3 つの構成要素からなる。ページ取得部は、入力された URL をヘッドレスブラウザで開き、JavaScript の実行後の DOM を取得する。取得した DOM は特徴量抽出部へ渡され、3.3 節で述べる 27 次元のベクトルに変換される。分類部はこのベクトルを入力とし、フィッシングサイトか否かの 2 値を出力する。</p>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">図表の 3 原則</b>
+      <span class="tight">
+      ① 本文中で<b>必ず引用</b>する（図 1、表 2 と番号で）　② 本文で<b>内容を説明</b>する　③ <b>図題は下、表題は上</b>に置く</span>
+    </div>
+    <p class="tighter" style="margin-top:6px">図表の作法の詳細は <a href="11-figures-tables.html">トピック 11「図表の作法」</a>を参照。</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>アルゴリズム・数式の書き方<span class="en">Algorithms and equations</span></h2>
+  <p class="slide__lead">記号は必ず定義してから使う。定義のない記号は読者を止める。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="paper tighter" style="line-height:1.8">
+          <h4>3.3　特徴量の定義</h4>
+          <p>　入力ページの DOM を <i>T</i> とし、<i>T</i> に含まれる要素ノードの集合を <i>V</i>(<i>T</i>) と表す。また、外部リソースを参照する要素（img、script、link）の集合を <i>E</i>(<i>T</i>) ⊆ <i>V</i>(<i>T</i>) とする。</p>
+          <p>　外部リソースのドメイン分散度 <i>d</i>(<i>T</i>) を、次式で定義する。</p>
+          <p class="noindent" style="text-align:center;margin:.5em 0">
+            <i>d</i>(<i>T</i>) = |{ dom(<i>e</i>) | <i>e</i> ∈ <i>E</i>(<i>T</i>) }| / |<i>E</i>(<i>T</i>)| 　　(1)</p>
+          <p>　ここで dom(<i>e</i>) は要素 <i>e</i> が参照する URL のホスト名を表す。<i>d</i>(<i>T</i>) は、参照先ドメインの種類数を参照総数で正規化した値であり、0 &lt; <i>d</i>(<i>T</i>) ≤ 1 の範囲をとる。</p>
+        </div>
+      </div>
+      <div>
+        <ul class="ticks tight">
+          <li>記号は<b>使う前に定義</b>する</li>
+          <li>数式には<b>式番号</b> (1) を付け、本文から「式 (1) より」と参照する</li>
+          <li>数式の直後に<b>「ここで〜は〜を表す」</b>で記号の意味を書く</li>
+          <li>数式は<b>文の一部</b>。前後を日本語でつなぐ</li>
+          <li>アルゴリズムは擬似コードで示し、<b>入力・出力・計算量</b>を明記する</li>
+        </ul>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">変数名の衝突</b>
+          論文全体で<b>同じ記号は同じ意味</b>で使う。
+          3 章の <i>n</i> と 5 章の <i>n</i> が違うものを指していると、読者は必ず混乱する。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>動作例を示す<span class="en">Walk-through</span></h2>
+  <p class="slide__lead">抽象的な説明のあとに<b>具体例を 1 つ</b>置くと、理解の速度がまったく変わる。</p>
+  <div class="slide__body">
+    <div class="paper tighter" style="line-height:1.8">
+      <h4>3.5　動作例</h4>
+      <p>　提案手法の動作を、具体的な入力を用いて説明する。入力 URL を <code style="font-family:inherit">https://example.tld/r/aB3x</code>（短縮 URL）とする。</p>
+      <p>　ページ取得部は、この URL をヘッドレスブラウザで開く。リダイレクトの結果、最終的に読み込まれたページには、img 要素が 12 個、script 要素が 5 個含まれていた。これらが参照する外部ドメインは 9 種類であったため、式 (1) より <i>d</i>(<i>T</i>) = 9/17 ≈ 0.53 となる。</p>
+      <p>　正規サイトでは外部リソースの参照先が自ドメインと CDN の少数に集中するため、<i>d</i>(<i>T</i>) は 0.2 以下となることが多い。一方、フィッシングサイトでは正規サイトからの画像の直接参照や、複数の外部サービスの流用により <i>d</i>(<i>T</i>) が高くなる。この例では <i>d</i>(<i>T</i>) が高い値を示しており、分類部はフィッシングサイトと判定した。</p>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">動作例が書けるかどうかのテスト</b>
+      動作例を書こうとして「具体的な値が入らない」と気づいたら、<b>その手法はまだ設計が詰まっていない</b>。
+      設計の穴を発見する最も有効な方法である。
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>前提と適用範囲を明記する<span class="en">Assumptions and scope</span></h2>
+  <p class="slide__lead"><b>何ができないかを書くことは、弱点の告白ではない。</b>研究の輪郭を定める行為である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">書くべき前提の例</div>
+          <ul class="ticks tighter">
+            <li><b>攻撃者モデル</b>：攻撃者は何ができて、何ができないと仮定するか</li>
+            <li><b>入力の前提</b>：ページが HTTP で取得可能であること</li>
+            <li><b>環境の前提</b>：JavaScript の実行が可能であること</li>
+            <li><b>対象外</b>：認証が必要なページは扱わない</li>
+            <li><b>データの前提</b>：ラベル付きデータが入手できること</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="paper tighter" style="line-height:1.8">
+          <h4>3.6　前提と適用範囲</h4>
+          <p>　提案手法は、以下を前提とする。第一に、対象ページが HTTP(S) により外部から取得可能であることを仮定する。認証を要するページは対象外である。第二に、攻撃者は提案手法が用いる特徴量を把握していないものとする。特徴量が既知である場合、攻撃者が外部リソースの参照先を意図的に集約することで検知を回避しうる。この適応的攻撃への耐性は本研究の範囲外であり、5.4 節で限界として議論する。</p>
+        </div>
+      </div>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">ここに書いたことは 5 章で回収する</b>
+      「範囲外」と書いたものは、<b>考察の「限界」で必ず再度触れる</b>。書きっぱなしにしない。
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">提案手法の章の合格基準は、ただ一つ。<b>第三者が再現できるか。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>6 つの問い（何を・なぜ・どう・なぜ効く・効果・影響）に答える</li>
+        <li><b>設計方針 → 全体構成 → 各要素 → 動作例 → 前提</b>の順で書く</li>
+        <li>要件に<b>番号</b>を付け、5 章で回収する</li>
+        <li>図に丸投げせず、<b>本文で説明</b>する</li>
+      </ul>
+      <ul class="ticks">
+        <li>記号は<b>使う前に定義</b>する</li>
+        <li>数式には<b>式番号</b>を付ける</li>
+        <li><b>具体的な動作例</b>を 1 つ置く</li>
+        <li><b>前提と適用範囲</b>を明記する</li>
+      </ul>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">書き終えたら</b>
+      同じ研究室の、<b>あなたの研究を知らない後輩</b>に読ませる。
+      「ここが分からない」と言われた箇所が、そのまま読者がつまずく箇所である。
+    </div>
+    <div class="deck-end">
+      <a href="05-related-work.html"><b>◀ 前のトピック</b>05 関連研究・従来方式</a>
+      <a href="07-experiment.html"><b>次のトピック ▶</b>07 実験・調査</a>
+      <a href="11-figures-tables.html"><b>関連</b>11 図表の作法</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

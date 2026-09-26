@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>提出前チェックリスト | 卒業論文の書き方</title>
+<meta name="description" content="卒業論文を提出する前に点検する項目の一覧。チェック状態はブラウザに保存されます。">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/doc.css">
+</head>
+<body>
+
+<header class="sitehead">
+  <div class="sitehead__in">
+    <a class="sitehead__logo" href="index.html">卒業論文の<span>書き方</span></a>
+    <nav>
+      <a href="index.html">資料一覧</a>
+      <a href="guideline.html">執筆ガイドライン</a>
+      <a href="checklist.html" aria-current="page">提出前チェックリスト</a>
+    
+      <a href="../index.html" class="nav-up">Academic Skills ▲</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap wrap--narrow">
+
+  <section class="hero">
+    <div class="hero__band"></div>
+    <div class="kicker">SUBMISSION CHECKLIST</div>
+    <h1>提出前チェックリスト</h1>
+    <p>原稿を開いて、上から順に点検してください。<b>「必須」</b>が付いた項目は、1 つでも欠けると内容以前の問題として指摘されます。
+       チェックの状態はこのブラウザに保存されるので、数日に分けて進められます。</p>
+  </section>
+
+  <div class="ck-toolbar">
+    <span class="ck-count">0 / 0</span>
+    <span class="ck-meter"><i></i></span>
+    <button type="button" data-act="only" aria-pressed="false">未チェックのみ表示</button>
+    <button type="button" data-act="print">印刷</button>
+    <button type="button" data-act="reset">リセット</button>
+  </div>
+
+  <div class="sec" style="padding-top:10px">
+
+  <!-- ============ 1 ============ -->
+  <section class="ck-group">
+    <h3>1　全体・構成<span class="ck-gcount"></span></h3>
+    <ul class="ck">
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">IMRAD の型に沿った章構成になっている</span>
+        <span class="ck-s">序論／関連研究／提案方式／実験／評価・考察／結論。関連研究は提案の後ろでもよい。</span>
+        <span class="ck-ref"><a href="guideline.html#b">B-01, B-02</a>　<a href="slides/02-structure.html">トピック 02</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">序論の目的・実験・考察・結論・概要が同じことを言っている</span>
+        <span class="ck-s">序論の「本研究の目的は〜」と結論の 1 文目を並べて音読する。ずれていたらどちらかが誤り。</span>
+        <span class="ck-ref"><a href="guideline.html#b">B-09</a>　<a href="slides/09-conclusion.html">トピック 09</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">概要・謝辞・参考文献・付録に章番号が付いていない</span>
+        <span class="ck-ref"><a href="guideline.html#b">B-03</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">本文が明朝体、章題・節題がゴシック体になっている</span>
+        <span class="ck-s">強調は太字ゴシック。日本語にイタリックは使わない。</span>
+        <span class="ck-ref"><a href="guideline.html#b">B-04</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">見出しの階層が 3 段までに収まっている</span>
+        <span class="ck-ref"><a href="guideline.html#b">B-05</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">節が 1 つしかない章がない</span>
+        <span class="ck-s">2.1 があるなら 2.2 も存在する。</span>
+        <span class="ck-ref"><a href="guideline.html#b">B-06</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">同じ階層の見出しの表現が揃っている</span>
+        <span class="ck-s">体言止めで統一されているか。</span>
+        <span class="ck-ref"><a href="guideline.html#b">B-07</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">学科・研究室指定の様式（余白・フォント・ページ数）を満たしている</span>
+        <span class="ck-ref"><a href="guideline.html#b">B-12</a></span></span></label></li>
+    </ul>
+  </section>
+
+  <!-- ============ 2 ============ -->
+  <section class="ck-group">
+    <h3>2　概要（アブストラクト）<span class="ck-gcount"></span></h3>
+    <ul class="ck">
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">概要が 1 ページ分をきっちり埋めている</span>
+        <span class="ck-s">余白は認められない。論じ尽くす。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-02</a>　<a href="slides/03-abstract.html">トピック 03</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">概要に結果が具体的な数値で書かれている</span>
+        <span class="ck-s">「良好な精度」ではなく「F 値 0.71 → 0.93」。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-03</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">「しかし〜は明らかになっていない」という Gap の一文がある</span>
+        <span class="ck-s">最も抜けやすい要素。これが無いと研究をやる理由が存在しないことになる。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-05</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">6 要素（重要性・Gap・目的・手法・発見・示唆）がすべて含まれている</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-05</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">序論の要約ではなく、論文全体の要約になっている</span>
+        <span class="ck-s">手法・実験・結果・考察まで入っているか。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-01</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">概要に図表番号・文献番号が使われていない</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-04</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">概要に「本論文の構成は以下の通りである」が書かれていない</span>
+        <span class="ck-s">構成の案内は序論の最後だけに書く。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-04</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">概要だけを読んで「何が分かったか」が伝わる</span>
+        <span class="ck-s">他人に読ませて確認する。「で、何が分かったの？」と聞かれたら書き直す。</span></span></label></li>
+    </ul>
+  </section>
+
+  <!-- ============ 3 ============ -->
+  <section class="ck-group">
+    <h3>3　序論<span class="ck-gcount"></span></h3>
+    <ul class="ck">
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">「本研究の目的は〜を明らかにすることである」という 1 文がある</span>
+        <span class="ck-s">システムの開発は手段であって、研究目的ではない。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-08</a>　<a href="slides/04-introduction.html">トピック 04</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">現状 → 課題 → 目的 → 貢献の 4 ブロックが揃っている</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-06</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">「しかし」から始まる課題の段落がある</span>
+        <span class="ck-s">背景から突然「本研究では〜を提案する」へ飛んでいないか。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-06</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">背景の数値・断定に出典 [n] が付いている</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-07</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">個人的な動機（興味を持った・学んだことを活かしたい）が書かれていない</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-09</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">技術の教科書的な解説が序論に入り込んでいない</span>
+        <span class="ck-s">関連技術は 2 章へ移す。</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">貢献が箇条書きで、動詞（設計した・示した・明らかにした）で終わっている</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-10</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">序論の最後にある「本論文の構成」が実際の章立てと一致している</span>
+        <span class="ck-s">章を入れ替えたあとの直し忘れが非常に多い。</span></span></label></li>
+    </ul>
+  </section>
+
+  <!-- ============ 4 ============ -->
+  <section class="ck-group">
+    <h3>4　関連研究<span class="ck-gcount"></span></h3>
+    <ul class="ck">
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">「本研究の位置づけ」にあたる節があり、差分が言い切られている</span>
+        <span class="ck-s">何が同じで何が違うか、何をやって何はやらないか。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-13</a>　<a href="slides/05-related-work.html">トピック 05</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">研究紹介の羅列ではなく、分類の軸で整理されている</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-11</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">各研究の前提条件と「できていないこと」が書かれている</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-12</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">主観的に貶す表現（不十分である・実用的でない）を使っていない</span>
+        <span class="ck-s">「〜については報告されていない」と客観的に書く。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-12</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">比較表があり、自分の研究が行として含まれている</span>
+        <span class="ck-s">自分が劣る軸も隠していないか。</span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">引用したすべての文献を自分で読んでいる</span>
+        <span class="ck-s">孫引きをしていないか。口頭試問で内容を聞かれる。</span>
+        <span class="ck-ref"><a href="guideline.html#f">F-04</a></span></span></label></li>
+    </ul>
+  </section>
+
+  <!-- ============ 5 ============ -->
+  <section class="ck-group">
+    <h3>5　提案方式・提案手法<span class="ck-gcount"></span></h3>
+    <ul class="ck">
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">この章だけを読んだ第三者が、同じものを実装できる</span>
+        <span class="ck-s">提案手法の章の唯一の合格基準。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-15</a>　<a href="slides/06-method.html">トピック 06</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">「なぜそれで問題が解決するのか」が根拠つきで書かれている</span>
+        <span class="ck-s">「こうやりました」だけで終わっていないか。最も抜けやすい。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-14</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">設計方針（満たすべき要件）が番号つきで示されている</span>
+        <span class="ck-s">要件番号は評価の章で回収する。</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">全体構成 → 各構成要素 の順に、大きいところから記述されている</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-15</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">すべての記号が使う前に定義されている</span>
+        <span class="ck-s">同じ記号を章によって別の意味で使っていないか。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-16</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">数式に式番号が付き、本文から参照されている</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-16</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">前提と適用範囲（何を仮定し、何は扱わないか）が明記されている</span>
+        <span class="ck-s">ここに書いた「範囲外」は、考察の限界で必ず回収する。</span></span></label></li>
+    </ul>
+  </section>
+
+  <!-- ============ 6 ============ -->
+  <section class="ck-group">
+    <h3>6　実験・調査<span class="ck-gcount"></span></h3>
+    <ul class="ck">
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">実験の目的が最初に書かれ、序論の目的に対応している</span>
+        <span class="ck-s">目的のない実験は、やりたいことをやっているだけである。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-17</a>　<a href="slides/07-experiment.html">トピック 07</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">実験環境（CPU・OS・言語処理系・ライブラリのバージョン）が書かれている</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-18</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">データセットの出典・取得日・件数・内訳が書かれている</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-18</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">評価指標が定義式つきで説明されている</span>
+        <span class="ck-s">「精度」が Accuracy なのか Precision なのか明示しているか。</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">比較対象と、その実装の出所が書かれている</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-19</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">試行回数と集計方法（平均・標準偏差）が書かれている</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-19</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">アンケートの対象者・人数・期間・質問項目が示されている</span>
+        <span class="ck-s">質問文は付録に全文を載せる。誘導質問になっていないか。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-20</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">統計処理をした場合、検定名・有意水準・p 値・標本サイズが書かれている</span>
+        <span class="ck-s">「有意差がない」を「差がない」と書いていないか。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-21</a></span></span></label></li>
+    </ul>
+  </section>
+
+  <!-- ============ 7 ============ -->
+  <section class="ck-group">
+    <h3>7　評価・考察<span class="ck-gcount"></span></h3>
+    <ul class="ck">
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">結果の羅列で終わらず、「なぜそうなったか」の考察がある</span>
+        <span class="ck-s">結果の要約 → 解釈 → 根拠 → 含意 の 4 段になっているか。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-22</a>　<a href="slides/08-discussion.html">トピック 08</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">本研究の限界が 2〜3 点、具体的に書かれている</span>
+        <span class="ck-s">「時間がなかった」は限界ではない。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-24</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">事実（〜であった）と解釈（〜と考えられる）が語尾で書き分けられている</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-22</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">提案方式の要件番号・実験の RQ 番号と対応づけられている</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">最も重要な数値が本文に書き出され、図表のどこを見ればよいか示されている</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-23</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">相関を因果として断定していない</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-25</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">主張の適用範囲が限定されている</span>
+        <span class="ck-s">「本実験の条件下では」「評価に用いたデータセットにおいて」。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-25</a></span></span></label></li>
+    </ul>
+  </section>
+
+  <!-- ============ 8 ============ -->
+  <section class="ck-group">
+    <h3>8　結論・謝辞<span class="ck-gcount"></span></h3>
+    <ul class="ck">
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">結論で新しい議論・データ・文献を持ち出していない</span>
+        <span class="ck-s">本文で議論していないことを結論で始めない。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-26</a>　<a href="slides/09-conclusion.html">トピック 09</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">「何の問題を・どう解決し・何が良くなったか」に答えている</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">6 要素（問題提起・発見・示唆・限界・今後・結び）が揃っている</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-27</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">今後の課題が限界から導かれ、次の人が着手できる形で書かれている</span>
+        <span class="ck-s">「さらなる向上を目指したい」で終わっていないか。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-28</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">謝辞に指導教員・協力者が含まれ、氏名が正確である</span>
+        <span class="ck-s">異体字（髙／高、﨑／崎）と職位（教授・准教授・講師・助教）を確認する。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-29, C-31</a>　<a href="slides/15-acknowledgment.html">トピック 15</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">謝辞に被験者の実名など個人情報が書かれていない</span>
+        <span class="ck-s">「ご協力いただいた皆様」とする。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-32</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">謝辞が貢献の大きい順に並んでいる</span>
+        <span class="ck-s">指導教員 → 審査員 → 研究室 → 技術支援・データ提供 → 調査協力者 → 研究費。</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-30</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">謝辞の文体が統一され、私的な感謝やユーモアが入っていない</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-30, C-32</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">外部機関・企業の名前を出す場合、相手の許可を得ている</span>
+        <span class="ck-ref"><a href="guideline.html#c">C-32</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">前年度の卒論を流用した箇所の氏名・題目を直し忘れていない</span></span></label></li>
+    </ul>
+  </section>
+
+  <!-- ============ 9 ============ -->
+  <section class="ck-group">
+    <h3>9　日本語の表記<span class="ck-gcount"></span></h3>
+    <ul class="ck">
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">段落の頭がすべて全角 1 文字下げになっている</span>
+        <span class="ck-ref"><a href="guideline.html#a">A-05</a>　<a href="slides/10-japanese.html">トピック 10</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">句読点が全角で、「、。」か「，．」のどちらかに統一されている</span>
+        <span class="ck-s">半角のカンマ・ピリオドが混ざっていないか、全文検索で確認する。</span>
+        <span class="ck-ref"><a href="guideline.html#d">D-01</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">和文中の括弧が全角、英文中の括弧が半角になっている</span>
+        <span class="ck-s">半角の ( ) を検索して 1 つずつ確認する。</span>
+        <span class="ck-ref"><a href="guideline.html#d">D-02</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">文体が「である調」で統一されている</span>
+        <span class="ck-s">「〜だ。」「です」「ます」を検索して確認する。</span>
+        <span class="ck-ref"><a href="guideline.html#a">A-03</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">文中の英数字が半角である</span>
+        <span class="ck-ref"><a href="guideline.html#d">D-03</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">和文と欧文・数字の間に半角のアキがある</span>
+        <span class="ck-ref"><a href="guideline.html#d">D-04</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">「事で」「為に」「出来る」などが、ひらがなに直されている</span>
+        <span class="ck-s">事で／為に／出来／無い／及び／又は／更に／即ち／但し を検索する。</span>
+        <span class="ck-ref"><a href="guideline.html#d">D-09</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">「〜することができる」などの冗長な表現が削られている</span>
+        <span class="ck-ref"><a href="guideline.html#d">D-07</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">主語が省略されている文がない</span>
+        <span class="ck-ref"><a href="guideline.html#a">A-06</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">曖昧な形容詞が数値に置き換えられている</span>
+        <span class="ck-s">かなり／非常に／ある程度／多くの／ほとんど を検索する。</span>
+        <span class="ck-ref"><a href="guideline.html#a">A-08</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">表記ゆれがない（ユーザ／ユーザー、手法／方式 など）</span>
+        <span class="ck-ref"><a href="guideline.html#d">D-14</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">略語がすべて初出時に定義されている</span>
+        <span class="ck-ref"><a href="guideline.html#a">A-11</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">固有名詞が公式の表記になっている</span>
+        <span class="ck-s">ChatGPT、JavaScript、GitHub、Wi-Fi、PyTorch など。</span>
+        <span class="ck-ref"><a href="guideline.html#a">A-14</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">各段落の 1 文目だけを読んで、論文の筋が通る</span>
+        <span class="ck-s">トピックセンテンスが先頭に来ているかの検査。</span>
+        <span class="ck-ref"><a href="guideline.html#a">A-04</a></span></span></label></li>
+    </ul>
+  </section>
+
+  <!-- ============ 10 ============ -->
+  <section class="ck-group">
+    <h3>10　図表<span class="ck-gcount"></span></h3>
+    <ul class="ck">
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">図題が図の下、表題が表の上に置かれている</span>
+        <span class="ck-ref"><a href="guideline.html#e">E-01</a>　<a href="slides/11-figures-tables.html">トピック 11</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">すべての図表が本文中で番号により引用されている</span>
+        <span class="ck-s">1 つずつ指さして、本文のどこで引用されているか答える。</span>
+        <span class="ck-ref"><a href="guideline.html#e">E-02</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">図表の内容が本文で説明されている</span>
+        <span class="ck-s">「〜を図 1 に示す」だけ、括弧書きの（図 2）で終わっていないか。</span>
+        <span class="ck-ref"><a href="guideline.html#e">E-03</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">キャプションだけで何の図表か分かる</span>
+        <span class="ck-ref"><a href="guideline.html#e">E-04</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">表の罫線が三本線（縦罫なし）になっている</span>
+        <span class="ck-ref"><a href="guideline.html#e">E-06</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">数値が右揃えで、有効数字が揃っている</span>
+        <span class="ck-ref"><a href="guideline.html#e">E-07</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">グラフに軸ラベル・単位・凡例が入っている</span>
+        <span class="ck-ref"><a href="guideline.html#e">E-10</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">棒グラフの縦軸が 0 から始まっている</span>
+        <span class="ck-ref"><a href="guideline.html#e">E-09</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">色だけに意味を持たせておらず、グレースケール印刷で判別できる</span>
+        <span class="ck-s">実際に白黒で印刷して確認する。</span>
+        <span class="ck-ref"><a href="guideline.html#e">E-11</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">図中の文字が、印刷して読める大きさである</span>
+        <span class="ck-ref"><a href="guideline.html#e">E-13</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">他人の図表を使った場合、キャプションに出典が書かれている</span>
+        <span class="ck-ref"><a href="guideline.html#e">E-14</a></span></span></label></li>
+    </ul>
+  </section>
+
+  <!-- ============ 11 ============ -->
+  <section class="ck-group">
+    <h3>11　引用と参考文献<span class="ck-gcount"></span></h3>
+    <ul class="ck">
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">文献番号が句点の前に置かれている</span>
+        <span class="ck-s">○「〜提案している [4]．」　×「〜提案している．[4]」</span>
+        <span class="ck-ref"><a href="guideline.html#f">F-01</a>　<a href="slides/12-references.html">トピック 12</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">他人の文章・図表を、出所を示さずに使っていない</span>
+        <span class="ck-s">要約・言い換えの場合も出所の明示は必須。</span>
+        <span class="ck-ref"><a href="guideline.html#f">F-03</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">参考文献リストのすべての文献が実在し、自分で確認している</span>
+        <span class="ck-s">生成 AI が出した文献・URL をそのまま載せていないか。</span>
+        <span class="ck-ref"><a href="guideline.html#g">G-04</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">参考文献の書式が全件で統一されている</span>
+        <span class="ck-ref"><a href="guideline.html#f">F-10</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">各文献に必要な情報（巻・号・ページ・発行年）が欠けていない</span>
+        <span class="ck-ref"><a href="guideline.html#f">F-11</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">Web ページに参照日が付いている</span>
+        <span class="ck-ref"><a href="guideline.html#f">F-09</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">本文で引用していない文献がリストに残っていない</span>
+        <span class="ck-ref"><a href="guideline.html#f">F-12</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">文献番号に欠番・重複がない</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">参考文献が 15 件以上あり、査読付き論文が中心になっている</span>
+        <span class="ck-ref"><a href="guideline.html#f">F-13</a></span></span></label></li>
+    </ul>
+  </section>
+
+  <!-- ============ 12 ============ -->
+  <section class="ck-group">
+    <h3>12　研究倫理と生成 AI<span class="ck-gcount"></span></h3>
+    <ul class="ck">
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">論文のどの一文を指さされても、自分の言葉で説明できる</span>
+        <span class="ck-s">これが口頭試問での最終的な判定基準になる。</span>
+        <span class="ck-ref"><a href="guideline.html#g">G-03</a>　<a href="slides/13-ai-ethics.html">トピック 13</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">存在しないデータ・文献・URL を書いていない（ねつ造）</span>
+        <span class="ck-ref"><a href="guideline.html#g">G-01</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">都合の悪い結果を隠したり、書き換えたりしていない（改ざん）</span>
+        <span class="ck-ref"><a href="guideline.html#g">G-01</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">他人の著作物を引用なく転載していない（剽窃）</span>
+        <span class="ck-s">先輩の卒論、Web の解説記事、ソースコードも対象である。</span>
+        <span class="ck-ref"><a href="guideline.html#g">G-01</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">人を対象とする調査で、同意取得と匿名化を行っている</span>
+        <span class="ck-ref"><a href="guideline.html#g">G-06</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">スクリーンショットやログに個人情報が残っていない</span>
+        <span class="ck-s">IP アドレス、実名、メールアドレス、社内情報など。</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">利用した OSS・データセットのライセンス条件を満たしている</span>
+        <span class="ck-ref"><a href="guideline.html#g">G-08</a></span></span></label></li>
+    </ul>
+  </section>
+
+  <!-- ============ 13 ============ -->
+  <section class="ck-group">
+    <h3>13　LaTeX・Overleaf<span class="ck-gcount"></span></h3>
+    <ul class="ck">
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">コンパイラが LuaLaTeX、メイン文書が 00_MAIN.tex に設定されている</span>
+        <span class="ck-ref"><a href="guideline.html#h">H-01</a>　<a href="slides/16-latex.html">トピック 16</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">エラーなくコンパイルが通り、全章が PDF に出力されている</span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">本文に ?? や [?] が残っていない</span>
+        <span class="ck-s">Recompile from scratch を実行して確認する。</span>
+        <span class="ck-ref"><a href="guideline.html#h">H-10</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">章・節・図表・式の番号を手で書いた箇所がない</span>
+        <span class="ck-s">すべて \label と \ref で参照しているか。</span>
+        <span class="ck-ref"><a href="guideline.html#h">H-04, H-06</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">各章のファイルで \chapter を書いていない</span>
+        <span class="ck-ref"><a href="guideline.html#h">H-03</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">段落が空行で区切られ、\\ や全角スペースで字下げしていない</span>
+        <span class="ck-ref"><a href="guideline.html#h">H-05</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">図表の配置指定が [tbp] などになっており、[h] を多用していない</span>
+        <span class="ck-ref"><a href="guideline.html#h">H-07</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">警告（Warning）を一通り確認した</span>
+        <span class="ck-s">Overfull \hbox は多くが無視可。未定義参照・未定義引用は必ず直す。</span>
+        <span class="ck-ref"><a href="guideline.html#h">H-09</a></span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">Overleaf の Source（zip）を手元にダウンロードして保存した</span></span></label></li>
+    </ul>
+  </section>
+
+  <!-- ============ 14 ============ -->
+  <section class="ck-group">
+    <h3>14　提出直前の事務確認<span class="ck-gcount"></span></h3>
+    <ul class="ck">
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">表紙に題目・氏名・学籍番号・指導教員名・提出年月日が入っている</span>
+        <span class="ck-ref"><a href="slides/14-process.html">トピック 14</a></span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">［TODO］などの書きかけのメモが残っていない</span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">本文・図・表・概要・結論で、同じ数値が一致している</span>
+        <span class="ck-s">数値を修正したあとの直し忘れは致命的である。</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">目次のページ番号が本文と一致している</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">すべてのページにページ番号が入っている</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">図表番号に欠番・重複がない</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">PDF にフォントが埋め込まれ、文字化けしていない</span>
+        <span class="ck-s">別の PC で開いて確認するのが確実である。</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">印刷して全ページを目視した</span>
+        <span class="ck-s">画面では見えない誤りが紙では見える。</span></span></label></li>
+      <li><label><input type="checkbox"><span>
+        <span class="ck-t">全文を声に出して読んだ</span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">提出の締切日時・方法・部数・ファイル名の規定を確認した</span>
+        <span class="ck-s">システム障害やプリンタ故障は、必ず締切直前に起きる。前倒しで提出する。</span></span></label></li>
+      <li class="crit"><label><input type="checkbox"><span>
+        <span class="ck-t">原稿のバックアップがクラウドと別媒体の両方にある</span></span></label></li>
+    </ul>
+  </section>
+
+  </div>
+
+  <div class="note note--tip" style="margin-top:28px">
+    <b class="note__t" data-icon="★">チェックが全部ついたら</b>
+    提出してよい状態です。お疲れさまでした。<br>
+    なお、チェックの状態はこのブラウザ（この端末）にのみ保存されます。別の PC では引き継がれません。
+  </div>
+
+  <footer class="sitefoot">
+    卒業論文の書き方 — 提出前チェックリスト<br>
+    学科・研究室が定める執筆要領がある場合は、そちらを優先してください。
+  </footer>
+
+</div>
+
+<script src="assets/doc.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>08 評価・考察 | 卒業論文の書き方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">08 評価・考察</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 08</div>
+  <h1>評価・考察</h1>
+  <p class="sub">結果を並べるだけでは、考察ではない</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>「結果」と「考察」を書き分けられる</li>
+      <li>数値から言えること・言えないことを区別できる</li>
+      <li>限界を正しく書ける</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>結果と考察の違い<span class="en">Results vs. Discussion</span></h2>
+  <p class="slide__lead">同じ章に書く場合でも、<b>頭の中では必ず分けて</b>書く。</p>
+  <div class="slide__body">
+    <table class="t">
+      <thead><tr><th style="width:8em"></th><th>結果（Results）</th><th>考察（Discussion）</th></tr></thead>
+      <tbody>
+        <tr><th>書くもの</th><td>観測された事実</td><td>その事実の解釈・意味</td></tr>
+        <tr><th>問い</th><td><b>何が得られたか</b></td><td><b>それはなぜか／何を意味するか</b></td></tr>
+        <tr><th>語尾</th><td class="q">〜であった／〜が得られた／〜を示した</td><td class="q">〜と考えられる／〜が要因であると推察される</td></tr>
+        <tr><th>新しい情報</th><td>データのみ</td><td>文献・既知の知見を持ち込んでよい</td></tr>
+        <tr><th>主観</th><td>入れない</td><td>根拠を示したうえで入れる</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">最も多い失敗：考察がない</b>
+      <p class="q tight" style="margin:.3em 0">提案手法の F 値は 0.94 であった。従来手法の F 値は 0.91 であった。短縮 URL では 0.93 であった。以上より提案手法は有効である。</p>
+      <p class="tight" style="margin:.3em 0 0">これは<b>結果の羅列</b>。「なぜそうなったのか」「それは何を意味するのか」がどこにもない。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>評価の観点を決める<span class="en">Evaluation criteria</span></h2>
+  <p class="slide__lead">何を評価すべきかは、<b>提案手法の要件</b>と<b>従来手法との比較軸</b>から決まる。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--rule" style="margin-top:0">
+          <b class="note__t" data-icon="◆">確認すること</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li>従来方式と<b>比較すべき項目</b>を念頭に置く</li>
+            <li>提案方式が<b>達成すべき要件</b>を再確認する</li>
+            <li>問題点は解決したか？ <b>その根拠は？</b></li>
+            <li><b>何ができて、何ができないか</b></li>
+          </ul>
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">要件と節を対応させる</b>
+          3 章で「要件 1・2・3」と番号を振ったなら、5 章でも
+          <b>「5.1 要件 1 の検証」「5.2 要件 2 の検証」</b>と対応させる。
+          これだけで論文の骨格が一本通る。
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">情報系でよく使う評価の観点</div>
+          <ul class="ticks tighter">
+            <li><b>正確さ</b>：適合率・再現率・F 値・AUC</li>
+            <li><b>速度</b>：処理時間・スループット・レイテンシ</li>
+            <li><b>資源</b>：メモリ使用量・モデルサイズ・通信量</li>
+            <li><b>頑健性</b>：入力の変化・攻撃に対する耐性</li>
+            <li><b>一般性</b>：別データセット・別環境での性能</li>
+            <li><b>使いやすさ</b>：作業時間・主観評価・誤操作率</li>
+            <li><b>安全性</b>：想定脅威に対する耐性の議論</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>考察の型<span class="en">How to discuss</span></h2>
+  <p class="slide__lead">「結果 → 解釈 → 根拠 → 含意」の 4 段で書く。</p>
+  <div class="slide__body">
+    <div class="elem e1"><div class="elem__h"><span class="elem__n">1</span>結果の要約</div>
+      <div class="tighter q">短縮 URL を含む検体に対する F 値は、従来手法の 0.71 から提案手法では 0.93 へ向上した。</div></div>
+    <div class="elem e3"><div class="elem__h"><span class="elem__n">2</span>解釈（なぜそうなったか）</div>
+      <div class="tighter q">この向上は、提案手法が URL 文字列を判別に用いていないことによると考えられる。</div></div>
+    <div class="elem e5"><div class="elem__h"><span class="elem__n">3</span>根拠（データ・文献で支える）</div>
+      <div class="tighter q">特徴量の寄与分析（図 5）では、外部リソースのドメイン分散度が最も高い寄与を示しており、この特徴量は URL の短縮によって変化しない。また、短縮 URL 検体における従来手法の誤判定 412 件のうち 389 件（94.4%）が偽陰性であり、URL から判別に足る情報が得られていなかったことと整合する。</div></div>
+    <div class="elem e6"><div class="elem__h"><span class="elem__n">4</span>含意（だから何が言えるか）</div>
+      <div class="tighter q">以上より、URL 文字列に依存しない特徴量を併用することは、短縮 URL による検知回避への実用的な対策となりうる。</div></div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">3 の根拠が書けるかどうかが勝負</b>
+      解釈を思いついたら、<b>「その証拠はどこにあるか」</b>と自問する。データの中に証拠がなければ、それは推測にすぎない。
+      推測なら<b>推測として書く</b>（〜の可能性がある）。
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>結果の説明の書き方<span class="en">Describing results</span></h2>
+  <p class="slide__lead">図表を貼って終わりにしない。<b>読者の視線を誘導する。</b></p>
+  <div class="slide__body">
+    <div class="ng-ok">
+      <div class="ex-box ex-ng">
+        <span class="ex-box__t"></span>
+        <p class="q tight">実験結果を表 4 に示す。また、検体種別ごとの F 値を図 4 に示す。</p>
+        <p class="tighter" style="margin:.3em 0 0">これだけ。読者は表と図を自分で解読しなければならない。</p>
+      </div>
+      <div class="ex-box ex-ok">
+        <span class="ex-box__t"></span>
+        <p class="q tight">　実験結果を表 4 に示す。全検体に対する F 値は、提案手法が 0.94、従来手法が 0.91 であり、両者に大きな差は見られなかった（RQ1）。一方、短縮 URL を含む 1,830 件に限定すると、従来手法の F 値は 0.71 まで低下したのに対し、提案手法は 0.93 を維持した（RQ2）。この差は図 4 の右端の 2 本の棒に表れている。</p>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">結果を説明するときの手順</b>
+      <span class="tight">
+      ① 図表を<b>番号で引用</b>する　② <b>最も重要な数値</b>を本文に書き出す　③ <b>どこを見ればよいか</b>を示す
+      （「図 4 の右端」「表 4 の最終行」）　④ <b>RQ との対応</b>を示す</span>
+    </div>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">本文と図表で数値が食い違わないように</b>
+      数値を書き換えたら、本文・図・表・概要・結論の<b>すべて</b>を直す。食い違いは致命的な信頼低下を招く。
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>限界を書く<span class="en">Limitations</span></h2>
+  <p class="slide__lead">限界を書くことは、研究の弱さではなく<b>著者の誠実さと理解の深さ</b>を示す。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">書くべき限界の種類</div>
+          <ul class="ticks tighter">
+            <li><b>データの限界</b>：対象が特定地域・特定期間に限られる</li>
+            <li><b>設定の限界</b>：制御できていない要因がある</li>
+            <li><b>手法の限界</b>：ある条件では適用できない</li>
+            <li><b>評価の限界</b>：実環境での検証はしていない</li>
+            <li><b>規模の限界</b>：被験者数・データ量が少ない</li>
+          </ul>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">限界と言い訳は違う</b>
+          <span class="q tight">✗「時間がなかったため十分な実験ができなかった。」</span><br>
+          → これは言い訳。<b>研究の制約として何が言えないか</b>を書く。
+        </div>
+      </div>
+      <div>
+        <div class="paper tighter" style="line-height:1.8">
+          <h4>5.4　本研究の限界</h4>
+          <p>　本研究の限界として、次の 3 点が挙げられる。第一に、評価に用いたフィッシングサイトは PhishTank に報告されたものに限られており、報告されていない攻撃に対する性能は検証できていない。第二に、提案手法は攻撃者が用いる特徴量を把握していないことを前提としている。攻撃者が外部リソースの参照先を意図的に集約した場合、提案手法の判別性能は低下すると考えられる。第三に、実験は単一の計算機環境で行っており、大規模な並列処理環境での性能は評価していない。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>言いすぎ・言わなすぎ<span class="en">Calibration</span></h2>
+  <p class="slide__lead">データが支える範囲を超えた主張は、それだけで論文の信頼を落とす。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:5em">判定</th><th>記述</th><th>理由</th></tr></thead>
+      <tbody>
+        <tr><td>✗ 言いすぎ</td><td class="q">提案手法はあらゆるフィッシングサイトを検知できる。</td><td>評価したのは特定データセットのみ</td></tr>
+        <tr><td>✗ 言いすぎ</td><td class="q">本手法により、フィッシング被害は根絶される。</td><td>被害の削減は測定していない</td></tr>
+        <tr><td>✗ 言いすぎ</td><td class="q">A が増えたため B が減少した。</td><td>相関を因果と断定している</td></tr>
+        <tr><td>✓ 適切</td><td class="q">評価に用いた 12,400 件のデータセットにおいて、提案手法は短縮 URL を含む検体に対しても F 値 0.93 を維持した。</td><td>範囲を限定している</td></tr>
+        <tr><td>✓ 適切</td><td class="q">A の増加と B の減少の間には負の相関が見られた（<i>r</i> = −0.62）。ただし因果関係については本研究からは判断できない。</td><td>言えないことを明示</td></tr>
+        <tr><td>✗ 言わなすぎ</td><td class="q">多少の改善が見られたように思われる。</td><td>数値があるのに主張を放棄している</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">主張の範囲を限定する言い回し</b>
+      <span class="tight"><span class="q">本実験の条件下では</span>／<span class="q">評価に用いたデータセットにおいて</span>／
+      <span class="q">〜の範囲では</span>　— これを付けるだけで、主張は正確になる。</span>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">考察は、卒論のなかで最も「研究者らしさ」が出る章である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li><b>結果</b>（事実）と<b>考察</b>（解釈）を書き分ける</li>
+        <li>3 章の<b>要件番号</b>・4 章の <b>RQ</b> と対応させる</li>
+        <li>考察は<b>結果 → 解釈 → 根拠 → 含意</b>の 4 段</li>
+        <li>図表は本文で<b>説明</b>し、見るべき場所を示す</li>
+      </ul>
+      <ul class="ticks">
+        <li><b>限界</b>を 2〜3 点、誠実に書く</li>
+        <li>相関を因果と言い換えない</li>
+        <li>主張の<b>適用範囲</b>を限定する</li>
+        <li>不都合な結果も書く。<b>隠すと不正になる</b></li>
+      </ul>
+    </div>
+    <div class="note note--why">
+      <b class="note__t" data-icon="？">考察が書けないとき</b>
+      たいていは<b>実験設計の段階で、問いが曖昧だった</b>ことが原因である。
+      「この数値が高い／低いと、何が言えるのか」を実験前に決めておけば、考察は自然に書ける。
+    </div>
+    <div class="deck-end">
+      <a href="07-experiment.html"><b>◀ 前のトピック</b>07 実験・調査</a>
+      <a href="09-conclusion.html"><b>次のトピック ▶</b>09 結論（まとめ）</a>
+      <a href="11-figures-tables.html"><b>関連</b>11 図表の作法</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

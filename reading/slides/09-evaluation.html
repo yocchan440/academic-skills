@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>09 実験・評価の読み方 | 論文の読み方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">09 実験・評価の読み方</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 09</div>
+  <h1>実験・評価の読み方</h1>
+  <p class="sub">数値は、条件とセットでしか意味を持たない</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>実験条件を表に書き出しながら読める</li>
+      <li>比較の公正さを自分で点検できる</li>
+      <li>数値を過大にも過小にも受け取らない</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>条件を書き出しながら読む<span class="en">Extract the setup</span></h2>
+  <p class="slide__lead">実験の章を読むときは、<b>この表を埋める</b>。埋まらない欄は「不明」と書く。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:11em">項目</th><th>この論文では</th><th style="width:16em">書かれていないと何が困るか</th></tr></thead>
+      <tbody>
+        <tr><th>実験の目的（RQ）</th><td>何を確かめようとしたのか</td><td>結果が目的に答えているか判断できない</td></tr>
+        <tr><th>データセット</th><td>出典・件数・取得時期・内訳</td><td>偏りの有無・古さが分からない</td></tr>
+        <tr><th>正例／負例の比率</th><td>何対何か</td><td><b>Accuracy が意味を持たない</b></td></tr>
+        <tr><th>データの分割</th><td>学習／検証／テストの分け方</td><td>リークの可能性を排除できない</td></tr>
+        <tr><th>実験環境</th><td>CPU・メモリ・OS・ライブラリ版</td><td>速度の比較ができない</td></tr>
+        <tr><th>比較対象</th><td>何と比べたか、実装は誰のものか</td><td>比較の公正さが判断できない</td></tr>
+        <tr><th>評価指標</th><td>定義式つきか</td><td><b>「精度」の意味が分からない</b></td></tr>
+        <tr><th>試行回数</th><td>何回実行して、どう集計したか</td><td>たまたまの結果かもしれない</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">「不明」が多い論文</b>
+      その論文の結果は、<b>参考値として扱う</b>。自分の論文で引用するときは、
+      条件が不明であることも含めて書く。
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>「精度」という言葉に注意する<span class="en">What does "accuracy" mean?</span></h2>
+  <p class="slide__lead">日本語の「精度」は多義的である。<b>必ず定義を確認する。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <table class="t tighter">
+          <thead><tr><th>指標</th><th>意味</th></tr></thead>
+          <tbody>
+            <tr><th>Accuracy（正解率）</th><td>全体のうち正しく判定できた割合</td></tr>
+            <tr><th>Precision（適合率）</th><td>陽性と判定したもののうち、本当に陽性だった割合</td></tr>
+            <tr><th>Recall（再現率）</th><td>本当に陽性のもののうち、検知できた割合</td></tr>
+            <tr><th>F 値</th><td>適合率と再現率の調和平均</td></tr>
+            <tr><th>FPR（偽陽性率）</th><td>陰性を誤って陽性と判定した割合</td></tr>
+            <tr><th>AUC</th><td>閾値によらない判別能力の指標</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="note note--warn" style="margin-top:0">
+          <b class="note__t" data-icon="▲">不均衡データの罠</b>
+          正常 99%・攻撃 1% のデータで、<b>すべて「正常」と答えるだけで Accuracy は 99%</b> になる。
+          不均衡データで Accuracy だけを報告している論文は、<b>その数値をそのまま受け取ってはいけない</b>。
+          <b>正例と負例の比率</b>を必ず確認する。
+        </div>
+        <div class="note--warn note">
+          <b class="note__t" data-icon="▲">ベースレートの罠（セキュリティ分野で重要）</b>
+          <span class="tight">
+          FPR 1% は小さく見えるが、1 日 100 万件の通信を検査すれば
+          <b>1 万件の誤検知</b>が出る。運用者はそれを処理できない。<br>
+          <b>「率」で示された値は、実運用の「件数」に直して考える。</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>データセットを疑う<span class="en">Question the dataset</span></h2>
+  <p class="slide__lead">結果はデータセットの性質をそのまま反映する。<b>データを見ずに結果は読めない。</b></p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:11em">確認すること</th><th>何が起きうるか</th></tr></thead>
+      <tbody>
+        <tr><th>出典</th><td>公開データか自作か。自作なら<b>他者が検証できない</b></td></tr>
+        <tr><th>取得時期</th><td>古いデータは現在の攻撃・環境を反映していない</td></tr>
+        <tr><th>件数</th><td>少なすぎれば偶然の結果。多ければよいとも限らない</td></tr>
+        <tr><th>収集方法</th><td>収集の仕方で偏りが入る（例：報告ベース＝報告されたものだけ）</td></tr>
+        <tr><th>ラベルの付け方</th><td>誰がどうラベル付けしたか。自動なら<b>その自動判定の精度</b>は？</td></tr>
+        <tr><th>正例と負例の出所</th><td><b>出所が違うと、内容以外の手がかりで分類できてしまう</b></td></tr>
+        <tr><th>重複</th><td>同一検体の重複で性能が水増しされることがある</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">セキュリティ分野でよくある偏り</b>
+      <span class="tight">
+      ・<b>報告ベースのデータ</b>（PhishTank など）＝ 報告されるほど目立った検体に偏る<br>
+      ・<b>正例は攻撃サイト、負例は人気サイト上位</b>＝ 規模や作りの差で簡単に分かれてしまう<br>
+      ・<b>短命な検体</b>＝ 収集時には生きていても、追試時には消えている<br>
+      ・<b>古い侵入検知データセット</b>＝ 現在の通信とかけ離れている</span>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>比較は公正か<span class="en">Is the comparison fair?</span></h2>
+  <p class="slide__lead">著者に悪意がなくても、比較は提案手法に有利に傾く。<b>読者が点検する。</b></p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:13em">確認すること</th><th>不公正だとどうなるか</th></tr></thead>
+      <tbody>
+        <tr><th>比較手法の実装は誰のものか</th><td>著者による再実装だと、本来の性能が出ていない可能性</td></tr>
+        <tr><th>チューニングの手間は同じか</th><td>提案手法だけ最適化されていれば、差は手間の差</td></tr>
+        <tr><th>同じデータで比較したか</th><td>各論文の報告値を並べただけなら<b>比較になっていない</b></td></tr>
+        <tr><th>比較手法は最新か</th><td>古い手法とだけ比べて「優れている」と言っていないか</td></tr>
+        <tr><th>テストデータで学習していないか</th><td>リークがあれば数値は無意味</td></tr>
+        <tr><th>不利な結果も載っているか</th><td>都合の良い条件だけを選んでいないか</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">ここでも推理しない</b>
+      <b>「同じ条件で比較したのだろう」と補完しない。</b>
+      書かれていなければ「比較条件は不明」が結論である。
+      不明だからといって<b>不正だと決めつけるのも推理</b>である。事実だけを記録する。
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>結果と考察を切り分ける<span class="en">Results vs. Discussion</span></h2>
+  <p class="slide__lead">同じ章に書かれていても、<b>事実の記述と著者の解釈は別物</b>である。</p>
+  <div class="slide__body">
+    <div class="paper tight" style="line-height:1.85">
+      <p>　<span class="mk e1"><sup>結果</sup>短縮 URL を含む検体に対する F 値は、従来手法の 0.71 から提案手法では 0.93 へ向上した。</span><span class="mk e3"><sup>解釈</sup>この向上は、提案手法が URL 文字列を判別に用いていないことによると考えられる。</span><span class="mk e5"><sup>根拠</sup>特徴量の寄与分析（図 5）では、外部リソースのドメイン分散度が最も高い寄与を示しており、この特徴量は URL の短縮によって変化しない。</span><span class="mk e6"><sup>含意</sup>以上より、URL 文字列に依存しない特徴量を併用することは、短縮 URL による検知回避への実用的な対策となりうる。</span></p>
+    </div>
+    <div class="cols cols-2" style="margin-top:10px">
+      <div class="note note--rule" style="margin-top:0">
+        <b class="note__t" data-icon="◆">読み分けの基準は語尾</b>
+        <span class="tight">
+        <b>向上した</b>＝観測事実　／　<b>と考えられる</b>＝著者の解釈　／
+        <b>示しており</b>＝データの提示　／　<b>となりうる</b>＝可能性の主張<br>
+        （<a href="01-principles.html">トピック 01</a>）</span>
+      </div>
+      <div class="note note--warn" style="margin-top:0">
+        <b class="note__t" data-icon="▲">根拠のない解釈に注意</b>
+        <span class="tight">
+        解釈の文を見つけたら、<b>「その根拠はどの数値か」</b>を探す。
+        根拠が示されていない解釈は、<b>著者の推測</b>である。
+        引用するときは「〜と推察している」と書く。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>統計の記述を読む<span class="en">Statistics</span></h2>
+  <p class="slide__lead">記号と用語が分かれば、書いてあることは単純である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">よく出る記述の読み方</div>
+          <p class="q tighter" style="margin:.2em 0">
+            有意水準 5% で有意な差が認められた（<i>t</i>(58) = 3.42, <i>p</i> &lt; 0.01, <i>d</i> = 0.89）</p>
+          <ul class="ticks tighter" style="margin:.3em 0 0">
+            <li><b><i>p</i> &lt; 0.01</b>：偶然でこの差が出る確率が 1% 未満</li>
+            <li><b><i>t</i>(58)</b>：自由度 58 の t 検定</li>
+            <li><b><i>d</i> = 0.89</b>：効果量。<b>差の大きさ</b>を表す</li>
+          </ul>
+        </div>
+        <p class="tighter" style="margin-top:8px">
+          <b><i>p</i> 値は「差の大きさ」を表さない。</b>サンプルが多ければ、ごく小さな差でも有意になる。
+          <b>効果量や実際の数値差</b>を見る。</p>
+      </div>
+      <div>
+        <div class="note note--warn" style="margin-top:0">
+          <b class="note__t" data-icon="▲">読み間違えやすい 3 つ</b>
+          <ul class="tight" style="margin:.2em 0 0;padding-left:1.2em">
+            <li><b>「有意差は認められなかった」≠「差はない」</b><br>
+              <span style="color:var(--ink-2)">検出できなかった、という意味</span></li>
+            <li><b>相関 ≠ 因果</b><br>
+              <span style="color:var(--ink-2)">「A が増えると B が減る」は因果ではない</span></li>
+            <li><b>有意 ≠ 重要</b><br>
+              <span style="color:var(--ink-2)">統計的に有意でも、実務上は無視できる差のことがある</span></li>
+          </ul>
+        </div>
+        <div class="note note--tip">
+          <b class="note__t" data-icon="★">統計に詳しくなくても読める</b>
+          <b>「何と何を、何人（何件）で比べて、どれだけ差があったか」</b>
+          — これが読み取れれば十分である。検定の種類が分からなくても、その 3 点は書いてある。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">実験の章は、結果を「どこまで信じてよいか」を決めるための章である。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>読みながら<b>条件を表に書き出す</b>。不明は「不明」</li>
+        <li><b>「精度」の定義</b>を必ず確認する</li>
+        <li>不均衡データの <b>Accuracy</b> は信用しない</li>
+        <li>「率」は<b>実運用の件数</b>に直して考える</li>
+      </ul>
+      <ul class="ticks">
+        <li><b>データセットの出所・時期・偏り</b>を確認する</li>
+        <li><b>比較の公正さ</b>を点検する。ただし決めつけない</li>
+        <li><b>結果（事実）と考察（解釈）</b>を語尾で切り分ける</li>
+        <li>解釈には<b>根拠の数値</b>が付いているか</li>
+      </ul>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">この章を読み終えたときに言えること</b>
+      <b>「この数値は、〔どのデータ〕を〔どの条件〕で〔どの指標〕で測った値である」</b>
+      — これが言えなければ、その数値を自分の論文で使ってはいけない。
+    </div>
+    <div class="deck-end">
+      <a href="08-method.html"><b>◀ 前のトピック</b>08 提案手法の読み方</a>
+      <a href="10-conclusion.html"><b>次のトピック ▶</b>10 結論と限界の読み方</a>
+      <a href="14-critical.html"><b>関連</b>14 批判的に読む</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

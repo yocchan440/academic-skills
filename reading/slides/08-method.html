@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>08 提案手法の読み方 | 論文の読み方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">08 提案手法の読み方</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 08</div>
+  <h1>提案手法の読み方</h1>
+  <p class="sub">仕組みより先に、前提を読む</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>手法を入力・処理・出力に分解して理解できる</li>
+      <li>著者が置いている前提・仮定を漏れなく拾える</li>
+      <li>記述から再現可能性を判断できる</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>読む順序<span class="en">Reading order</span></h2>
+  <p class="slide__lead">細部から読まない。<b>外側から内側へ</b>。</p>
+  <div class="slide__body">
+    <ol class="steps big" style="margin:0 0 10px">
+      <li><b>前提・仮定を先に読む</b><br>
+        <span class="tight" style="color:var(--ink-2)">何を所与とし、何を対象外としているか。これが分からないと、以降すべてが宙に浮く</span></li>
+      <li><b>入力と出力を確定させる</b><br>
+        <span class="tight" style="color:var(--ink-2)">何を受け取り、何を返すのか。1 行で書けるまで読む</span></li>
+      <li><b>全体構成の図を読む</b><br>
+        <span class="tight" style="color:var(--ink-2)">構成要素の数と、要素間のデータの流れ</span></li>
+      <li><b>各要素の中身を読む</b><br>
+        <span class="tight" style="color:var(--ink-2)">自分に必要な要素だけでよい</span></li>
+      <li><b>動作例があれば必ず読む</b><br>
+        <span class="tight" style="color:var(--ink-2)">具体値で一連の処理を追える。理解の確認になる</span></li>
+    </ol>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">理解できたかのテスト</b>
+      <b>その手法の図を、論文を見ずに自分で描けるか。</b>
+      描けなければ、まだ理解していない。描けたら、論文の図と見比べる。
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>前提と仮定を拾う<span class="en">Assumptions</span></h2>
+  <p class="slide__lead">手法の価値は、<b>どんな前提のもとで成り立つか</b>で決まる。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-vermilion)">
+          <div class="card__h">拾うべき前提</div>
+          <ul class="ticks tighter">
+            <li><b>入力の前提</b>：対象は取得可能か、形式は何か</li>
+            <li><b>環境の前提</b>：必要な計算資源、ネットワーク条件</li>
+            <li><b>データの前提</b>：ラベル付きデータが入手できるか</li>
+            <li><b>攻撃者の前提</b>：何を知っていて、何ができるか（<a href="13-security.html">トピック 13</a>）</li>
+            <li><b>信頼の前提</b>：誰を／何を信頼するか</li>
+            <li><b>対象外</b>：扱わないと明言されているもの</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">前提を示す定型表現</div>
+          <p class="q tighter" style="margin:.2em 0">
+            〜を前提とする／〜と仮定する<br>
+            〜は本研究の範囲外である<br>
+            〜については扱わない<br>
+            〜が利用可能であるものとする<br>
+            本手法は〜の場合に適用できる</p>
+          <p class="tighter" style="margin:.5em 0 0;font-family:var(--ff-mono);font-size:12.5px">
+            We assume that ...<br>
+            ... is out of scope of this work<br>
+            We consider an adversary who ...<br>
+            Without loss of generality, we ...</p>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">前提が書かれていない場合</b>
+          <b>「前提がない」のではなく「書かれていない」</b>と読む。
+          どんな手法にも必ず前提はある。書かれていなければ、
+          <b>その手法の適用範囲は判断できない</b>と記録する。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>記号と定義に躓かない<span class="en">Notation</span></h2>
+  <p class="slide__lead">数式が読めないのではなく、<b>記号の意味を見失っている</b>だけのことが多い。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="paper tighter" style="line-height:1.8">
+          <p>　入力ページの DOM を <i>T</i> とし、<i>T</i> に含まれる要素ノードの集合を <i>V</i>(<i>T</i>) と表す。また、外部リソースを参照する要素の集合を <i>E</i>(<i>T</i>) ⊆ <i>V</i>(<i>T</i>) とする。</p>
+          <p>　外部リソースのドメイン分散度 <i>d</i>(<i>T</i>) を、次式で定義する。</p>
+          <p class="noindent" style="text-align:center;margin:.4em 0">
+            <i>d</i>(<i>T</i>) = |{ dom(<i>e</i>) | <i>e</i> ∈ <i>E</i>(<i>T</i>) }| / |<i>E</i>(<i>T</i>)| 　　(1)</p>
+          <p>　ここで dom(<i>e</i>) は要素 <i>e</i> が参照する URL のホスト名を表す。</p>
+        </div>
+      </div>
+      <div>
+        <ol class="steps tight" style="margin:0">
+          <li><b>記号の対応表を自分で作る</b><br>
+            <span style="color:var(--ink-2)"><i>T</i>＝DOM、<i>E</i>(<i>T</i>)＝外部参照要素の集合、<i>d</i>(<i>T</i>)＝ドメイン分散度</span></li>
+          <li><b>式を日本語に訳す</b><br>
+            <span style="color:var(--ink-2)">式(1)＝「参照先ドメインの<b>種類数</b>を参照<b>総数</b>で割った値」</span></li>
+          <li><b>値の範囲と意味を考える</b><br>
+            <span style="color:var(--ink-2)">0 &lt; <i>d</i> ≤ 1。1 に近い＝参照先がばらばら</span></li>
+          <li><b>具体値を入れてみる</b><br>
+            <span style="color:var(--ink-2)">17 要素が 9 ドメインを参照 → <i>d</i> = 9/17 ≈ 0.53</span></li>
+        </ol>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">定義されていない記号</b>
+          前の章や参考文献で定義されていることがある。
+          探しても見つからなければ、<b>「定義されていない」と記録</b>する。推測で補わない。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>再現できるかを判断する<span class="en">Reproducibility</span></h2>
+  <p class="slide__lead">「この記述だけで、自分は同じものを実装できるか」を問いながら読む。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:12em">確認する項目</th><th>書かれていなければ</th></tr></thead>
+      <tbody>
+        <tr><th>入力の形式</th><td>何を渡せばよいか分からない</td></tr>
+        <tr><th>処理の手順</th><td>擬似コードやアルゴリズムがあるか。なければ順序が曖昧</td></tr>
+        <tr><th>ハイパーパラメータ</th><td>同じ結果は出ない。<b>学習率・エポック数・乱数シード</b></td></tr>
+        <tr><th>使用ライブラリとバージョン</th><td>挙動が変わる可能性がある</td></tr>
+        <tr><th>前処理</th><td>データの整形方法で結果は大きく変わる</td></tr>
+        <tr><th>閾値の決め方</th><td>「適切に設定した」だけでは再現できない</td></tr>
+        <tr><th>コード・データの公開</th><td>URL があるか。<b>あれば最優先で見る</b></td></tr>
+      </tbody>
+    </table>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">公開コードは最良の「続き」</b>
+      論文に書かれていない実装の詳細は、公開リポジトリにある。
+      セキュリティ分野の主要会議には <b>Artifact Evaluation</b> があり、
+      再現性が確認された論文には<b>バッジ</b>が付いていることがある。
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>「なぜそれで解決するのか」を探す<span class="en">The mechanism</span></h2>
+  <p class="slide__lead">手順が分かっただけでは、理解したことにならない。<b>効く理由が書かれているか</b>を見る。</p>
+  <div class="slide__body">
+    <div class="ng-ok">
+      <div class="ex-box ex-ng">
+        <span class="ex-box__t">手順だけ</span>
+        <p class="q tight" style="margin:.2em 0">提案手法では、HTML から 27 次元の構造特徴量を抽出し、勾配ブースティング決定木により分類する。</p>
+        <p class="tighter" style="margin:.4em 0 0">
+          <b>なぜ短縮 URL に効くのかが書かれていない。</b>
+          読者は「効く理由は本文から読み取れない」と記録する。</p>
+      </div>
+      <div class="ex-box ex-ok">
+        <span class="ex-box__t">機序が書かれている</span>
+        <p class="q tight" style="margin:.2em 0">HTML 構造特徴量は、攻撃者が使い回すテンプレートに由来するため、URL を変更しても変化しにくい。この性質により、URL 短縮によって語彙的特徴量が失われる場合でも、判別に必要な情報が保たれる。</p>
+        <p class="tighter" style="margin:.4em 0 0">
+          <b>前提（テンプレートの使い回し）と機序（URL 変更で変化しない）が明示されている。</b>
+          → この前提が崩れたら手法も崩れる、と分かる。</p>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">読者が得るもの</b>
+      機序が分かると、<b>「どんな場合にこの手法が破れるか」</b>が自分で考えられるようになる。
+      上の例なら「攻撃者がテンプレートを毎回変えたら？」という問いが立つ。
+      <b>それが、あなたの次の研究テーマになる。</b>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">提案手法の章を読み終えたら、この 3 つを書けるようにする。</p>
+  <div class="slide__body">
+    <div class="note note--rule" style="margin-top:0">
+      <b class="note__t" data-icon="◆">提案手法から取り出す 3 つ</b>
+      <p class="big" style="margin:.3em 0">
+        ① <b>入力〔　　〕を受け取り、〔　　〕して、出力〔　　〕を返す</b><br>
+        ② <b>前提としているのは〔　　　　　〕である</b><br>
+        ③ <b>この手法が効く理由は〔　　　　　〕である</b></p>
+    </div>
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li><b>前提 → 入出力 → 全体構成 → 各要素 → 動作例</b>の順に読む</li>
+        <li>前提が書かれていなければ<b>「不明」と記録</b>する</li>
+        <li>記号は<b>対応表を作り</b>、式は日本語に訳す</li>
+      </ul>
+      <ul class="ticks">
+        <li>再現に必要な情報が揃っているかを確認する</li>
+        <li><b>公開コード</b>があれば最優先で見る</li>
+        <li><b>効く理由</b>が書かれているかを見る</li>
+      </ul>
+    </div>
+    <div class="deck-end">
+      <a href="07-related.html"><b>◀ 前のトピック</b>07 関連研究の読み方</a>
+      <a href="09-evaluation.html"><b>次のトピック ▶</b>09 実験・評価の読み方</a>
+      <a href="13-security.html"><b>関連</b>13 セキュリティ分野の論文を読む</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

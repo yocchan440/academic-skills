@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>10 時間の無駄をなくす | 卒研発表の仕方</title>
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/slides.css">
+</head>
+<body class="deckbody">
+
+<header class="topbar">
+  <a class="topbar__home" href="../index.html">◀ 資料一覧</a>
+  <span class="topbar__title">10 時間の無駄をなくす</span>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__num">1 / 1</span>
+  <button type="button" data-act="toc">スライド一覧 (O)</button>
+  <button type="button" data-act="print">印刷</button>
+</header>
+<div class="progress"><div class="progress__bar"></div></div>
+
+<main class="stage">
+  <button class="navbtn navbtn--prev" type="button" aria-label="前のスライド">◀</button>
+  <div class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <div class="kicker">TOPIC 10</div>
+  <h1>時間の無駄をなくす</h1>
+  <p class="sub">削った秒数が、そのまま説明できる内容になる</p>
+  <div class="goals">
+    <ul class="ticks">
+      <li>発表の中の「無駄」を秒数で把握できる</li>
+      <li>フィラー（えー・あー）を減らせる</li>
+      <li>時間が押したときに正しく振る舞える</li>
+    </ul>
+  </div>
+  <p class="meta" style="margin-top:22px">操作：← → / Space でページ送り　O キーでスライド一覧</p>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>無駄を秒で数える<span class="en">Count the waste</span></h2>
+  <p class="slide__lead">「ちょっとくらい」が積み重なると、<b>スライド 2 枚分が消える。</b></p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:15em">無駄</th><th style="width:7em">失う時間</th><th>それは何枚分か（1 枚 48 秒）</th></tr></thead>
+      <tbody>
+        <tr><th>フィラー（0.5 秒 × 60 回）</th><td class="num"><b>30 秒</b></td><td>0.6 枚分</td></tr>
+        <tr><th>目次スライド</th><td class="num">10 秒</td><td>0.2 枚分</td></tr>
+        <tr><th>長い自己紹介・前置き</th><td class="num">20 秒</td><td>0.4 枚分</td></tr>
+        <tr><th>同じ説明の繰り返し（3 回）</th><td class="num"><b>45 秒</b></td><td>0.9 枚分</td></tr>
+        <tr><th>スライドの操作ミス・巻き戻し</th><td class="num">15 秒</td><td>0.3 枚分</td></tr>
+        <tr><th>スライドの読み上げ（書いてある文をそのまま）</th><td class="num">30 秒</td><td>0.6 枚分</td></tr>
+        <tr><th>言い訳（「うまくいかなくて…」）</th><td class="num">10 秒</td><td>0.2 枚分</td></tr>
+        <tr><th><b>合計</b></th><td class="num"><b>160 秒</b></td><td><b>スライド 3 枚分以上</b></td></tr>
+      </tbody>
+    </table>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">見方を変える</b>
+      <b>無駄を削るとは、説明できる内容が 3 枚分増えるということである。</b>
+      早口にする必要もなくなる。<b>削るほど、丁寧に話せるようになる。</b>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>フィラーをなくす<span class="en">Filler words</span></h2>
+  <p class="slide__lead"><b>「あー」「えー」「えーっと」「で」</b>。皆さんは無意識にこれらを発する。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div>
+        <div class="note note--why" style="margin-top:0">
+          <b class="note__t" data-icon="？">なぜ出るのか</b>
+          フィラーは、<b>次に何をしゃべるべきかを脳内で処理するときの「つなぎ」</b>として発声される。
+          <p class="tight" style="margin:.4em 0 0">
+            つまり、フィラーが多いということは、<b>次に何を言うかが決まっていない</b>ということである。<br>
+            <b>練習が圧倒的に足りない。</b></p>
+        </div>
+        <div class="note note--warn">
+          <b class="note__t" data-icon="▲">聴衆から見るとどうか</b>
+          <span class="q tight">「えー、この、えーっと、提案手法はですね、あー、HTML から、えー、特徴量を、その、抽出します」</span><br>
+          内容は 1 文だが、<b>聴衆はフィラーを聞かされている</b>。
+          自信がないようにも聞こえる。
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:5px solid var(--cud-blue)">
+          <div class="card__h">減らす方法</div>
+          <ol class="tight" style="margin:.2em 0 0;padding-left:1.4em">
+            <li><b>自分の発表を録画して見る</b><br>
+              <span style="color:var(--ink-2)">何回出ているか数える。想像より多い</span></li>
+            <li><b>フィラーの代わりに「黙る」</b><br>
+              <span style="color:var(--ink-2)">無音は悪いことではない。むしろ<b>間</b>になる</span></li>
+            <li><b>スライドごとの最初の 1 文を決めておく</b><br>
+              <span style="color:var(--ink-2)">書き出しが決まっていれば、つなぎは要らない</span></li>
+            <li><b>文を短く切る</b><br>
+              <span style="color:var(--ink-2)">長い文を作ろうとするからつなぎが要る</span></li>
+            <li><b>繰り返し練習する</b><br>
+              <span style="color:var(--ink-2)">結局これがいちばん効く</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">自分の発表を録画してみる</b>
+      スマートフォンで十分である。<b>いろいろとわかるようになる。</b>
+      フィラーだけでなく、姿勢・視線・速度・時間、すべてが見える（<a href="14-rehearsal.html">トピック 14</a>）。
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>同じことを何度も説明しない<span class="en">Don't repeat yourself</span></h2>
+  <p class="slide__lead">緊張すると、人は<b>同じことを繰り返す</b>。時間を最も無駄にするパターンである。</p>
+  <div class="slide__body">
+    <div class="ng-ok">
+      <div class="ex-box ex-ng">
+        <span class="ex-box__t">繰り返している</span>
+        <p class="q tighter" style="margin:.2em 0">
+          「…この特徴量は URL に依存しません。<b>URL に依存しないので</b>、短縮されても大丈夫です。
+          <b>つまり URL 文字列を使っていないということですね。</b>
+          <b>URL を使わないので</b>、短縮 URL でも性能が落ちません。」</p>
+        <p class="tighter" style="margin:.4em 0 0">
+          1 つのことを 4 回言っている。<b>25 秒が消えた。</b>
+          しかも聴衆は 2 回目で「さっき聞いた」と感じ、集中が切れる。</p>
+      </div>
+      <div class="ex-box ex-ok">
+        <span class="ex-box__t">1 回で言い切る</span>
+        <p class="q tighter" style="margin:.2em 0">
+          「この特徴量は URL 文字列を使わないため、短縮 URL が使われても性能が落ちません。」</p>
+        <p class="tighter" style="margin:.4em 0 0">
+          7 秒。<b>同じ内容が、より明確に伝わっている。</b></p>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">意図的な繰り返しは別</b>
+      <b>最も重要な主張を 1 つだけ</b>、冒頭とまとめで繰り返すのは有効である。
+      問題なのは、<b>同じ段落の中で言い換えを重ねる</b>無意識の繰り返しである。
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">直し方</b>
+      録画を書き起こして、<b>同じ意味の文に線を引く</b>。2 本以上引かれたら、1 本に減らす。
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>そのほかの無駄<span class="en">Other time sinks</span></h2>
+  <p class="slide__lead">どれも、準備の段階で消せるものである。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:13em">無駄</th><th>なぜ起きるか</th><th style="width:13em">対処</th></tr></thead>
+      <tbody>
+        <tr><th>スライドの読み上げ</th><td>スライドに文が書いてある</td><td>語だけにする（<a href="04-what-to-write.html">トピック 04</a>）</td></tr>
+        <tr><th>言い訳・前置き</th><td>「うまくいかなくて」「時間がなくて」</td><td><b>言わない。</b>結果だけ述べる</td></tr>
+        <tr><th>「ここは飛ばします」</th><td>削る判断を本番でしている</td><td>準備段階で削っておく</td></tr>
+        <tr><th>巻き戻し・操作ミス</th><td>構成が固まっていない</td><td>再掲する（<a href="08-antipatterns.html">トピック 08</a>）</td></tr>
+        <tr><th>長い自己紹介</th><td>何を言うか決めていない</td><td>所属と氏名だけ（5 秒）</td></tr>
+        <tr><th>目次の読み上げ</th><td>形式的に入れている</td><td>目次を作らない</td></tr>
+        <tr><th>「あとで説明します」</th><td>順番が整理されていない</td><td>説明する順に構成を組み直す</td></tr>
+        <tr><th>沈黙（次を考えている）</th><td>練習不足</td><td>スライドごとの最初の 1 文を決める</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">「ここは飛ばします」は言わない</b>
+      聴衆は「何を飛ばしたのだろう」と気になる。<b>そこで「？」が生まれる。</b>
+      飛ばすなら、<b>最初からスライドを外しておく</b>。
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>時間が押しているとき<span class="en">When you are running late</span></h2>
+  <p class="slide__lead">最後のスライドに達する前に「終了のベル」が鳴ることもある。<b>そのときどうするか。</b></p>
+  <div class="slide__body">
+    <div class="note note--rule" style="margin-top:0">
+      <b class="note__t" data-icon="◆">ベルが鳴ったら</b>
+      <b>速やかに発表を終える方向で進める。</b>
+      <p class="big" style="margin:.4em 0 0">
+        ベルが鳴っているのに<span class="kw">最後の「まとめ」のスライドを読み上げるということはありえない。</span></p>
+      <p class="tight" style="margin:.4em 0 0">
+        <b>「まとめ」はそれまでの総括</b>であり、すでに説明した内容である。
+        時間がないのであれば、<b>しゃべらない</b>。</p>
+    </div>
+    <div class="cols cols-2">
+      <div class="ex-box ex-ng">
+        <span class="ex-box__t">ベルが鳴ってから</span>
+        <p class="q tighter" style="margin:.2em 0">
+          「…ではまとめです。本研究では、URL 文字列に依存しない特徴量を導入し、短縮 URL を含む検体に対しても…（20 秒）…以上です。」</p>
+        <p class="tighter" style="margin:.3em 0 0">
+          <b>全部すでに話した内容。</b>次の発表者の時間を 20 秒奪っただけ。</p>
+      </div>
+      <div class="ex-box ex-ok">
+        <span class="ex-box__t">正しい終わり方</span>
+        <p class="q tighter" style="margin:.2em 0">
+          （ベル）→ まとめスライドを表示して<br>
+          「以上です。ありがとうございました。」</p>
+        <p class="tighter" style="margin:.3em 0 0">
+          <b>3 秒で終える。</b>まとめスライドは表示されているので、
+          <b>聴衆は読める</b>。質疑の間もずっと出ている。</p>
+      </div>
+    </div>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">押しているのは途中で分かる</b>
+      「半分の時間で何枚目にいるべきか」を決めておけば、途中で気づける。
+      気づいたら、<b>残りのスライドの説明を軽くして、まとめまで到達する</b>のがよい。
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>このトピックのまとめ<span class="en">Summary</span></h2>
+  <p class="slide__lead">無駄を削った分だけ、伝えられる内容が増える。</p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <ul class="ticks">
+        <li>無駄は合計で<b>スライド 3 枚分</b>になりうる</li>
+        <li><b>フィラーは練習不足の証拠。</b>録画して数える</li>
+        <li>フィラーの代わりに<b>黙る</b>（それは間になる）</li>
+        <li>スライドごとの<b>最初の 1 文</b>を決めておく</li>
+      </ul>
+      <ul class="ticks">
+        <li><b>同じことを何度も説明しない</b></li>
+        <li>読み上げ・言い訳・「飛ばします」を言わない</li>
+        <li><b>ベルが鳴ったら、まとめを読まずに終える</b></li>
+        <li>削る判断は<b>準備段階</b>で行う</li>
+      </ul>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">時間を守ることは、聴衆への配慮である</b>
+      あなたが 30 秒超過すれば、次の発表者の準備時間が消え、質疑が削られ、全体が押す。
+      <b>時間を守るのは、人間として当然である。</b>
+    </div>
+    <div class="deck-end">
+      <a href="09-backup.html"><b>◀ 前のトピック</b>09 予備スライドを用意する</a>
+      <a href="11-delivery.html"><b>次のトピック ▶</b>11 話し方</a>
+      <a href="14-rehearsal.html"><b>関連</b>14 リハーサル</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <button class="navbtn navbtn--next" type="button" aria-label="次のスライド">▶</button>
+</main>
+
+<div class="toc" role="dialog" aria-label="スライド一覧">
+  <div class="toc__h">スライド一覧</div>
+  <div class="toc__hint">クリックで移動 ／ Esc または O キーで閉じる</div>
+  <div class="toc__list"></div>
+</div>
+
+<script src="../assets/slides.js"></script>
+</body>
+</html>

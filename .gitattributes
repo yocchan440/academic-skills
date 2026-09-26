@@ -1,0 +1,13 @@
+# 改行コードはリポジトリ・作業コピーともに LF に統一する
+* text=auto eol=lf
+
+# バイナリファイルは変換しない
+*.pdf   binary
+*.zip   binary
+*.pptx  binary
+*.docx  binary
+*.png   binary
+*.jpg   binary
+*.gif   binary
+*.woff  binary
+*.woff2 binary
