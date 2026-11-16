@@ -253,3 +253,6 @@ pre.code .cm{ color:#9AA7B2; }
   :root{ --shadow:none; }
   body{ background:#fff; }
 }
+
+/* キー表記 */
+kbd{display:inline-block;padding:0 .45em;border:1px solid var(--line,#bbb);border-bottom-width:2px;border-radius:4px;background:#fff;font:inherit;font-weight:700;font-size:.92em;line-height:1.5;white-space:nowrap}

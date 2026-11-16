@@ -32,6 +32,7 @@
     <ul class="ticks">
       <li>発表者の入れ替えを迅速に行える</li>
       <li>機材の確認事項を把握している</li>
+      <li>スライドショーをキーで操作できる</li>
       <li>トラブル時に落ち着いて対応できる</li>
     </ul>
   </div>
@@ -103,6 +104,143 @@
       USB メモリとクラウドの両方に、<b>PowerPoint 版と PDF 版</b>を置いておく。
       PC が動かなくても、PDF なら会場 PC で開ける。
     </div>
+  </div>
+</section>
+
+<!-- 3b -->
+<section class="slide">
+  <h2>スライドショーの基本操作<span class="en">Keys</span></h2>
+  <p class="slide__lead">発表中に右クリックやメニュー操作をすると、<b>その画面が聴衆に見える。</b>キーで済ませる。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:12em">やりたいこと</th><th style="width:13em">キー</th><th>補足</th></tr></thead>
+      <tbody>
+        <tr><th>最初から開始</th><td><kbd>F5</kbd></td><td>開始前の最終確認にも使える</td></tr>
+        <tr><th>今のスライドから開始</th><td><kbd>Shift</kbd> + <kbd>F5</kbd></td><td>編集中のスライドから始める。途中だけ確認したいとき</td></tr>
+        <tr><th>次へ進む</th><td><kbd>→</kbd></td><td><b>送り戻しは矢印キーに統一する</b>（<kbd>↓</kbd> でも進む）</td></tr>
+        <tr><th>前へ戻る</th><td><kbd>←</kbd></td><td>（<kbd>↑</kbd> でも戻る）</td></tr>
+        <tr><th>指定のスライドへ移動</th><td>番号 + <kbd>Enter</kbd></td><td>例：<kbd>1</kbd><kbd>0</kbd><kbd>Enter</kbd> で 10 枚目。予備スライドへ飛ぶときに使う</td></tr>
+        <tr><th>スライド一覧を表示</th><td><kbd>G</kbd></td><td>質疑で、<b>質問に合うスライドを探して選ぶ</b>のに便利（<kbd>Ctrl</kbd> + <kbd>-</kbd> でも可）</td></tr>
+        <tr><th>レーザーポインター</th><td><kbd>Ctrl</kbd> + <kbd>L</kbd></td><td>マウスカーソルがレーザーポインターになる。注目させたい箇所を指す</td></tr>
+        <tr><th>スライドショーを終了</th><td><kbd>Esc</kbd></td><td><b>質疑中は終了しない</b>（前のスライドの注意を参照）</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--tip">
+      <b class="note__t" data-icon="★">質疑のときは</b>
+      質問を受けたら <kbd>G</kbd> で一覧を出し、該当スライドを選ぶ。
+      番号を覚えているなら、<b>番号 + <kbd>Enter</kbd></b> のほうが速い。
+    </div>
+  </div>
+</section>
+
+<!-- 3c -->
+<section class="slide">
+  <h2>発表者ツールが投影側に出てしまったとき<span class="en">Swap displays</span></h2>
+  <p class="slide__lead">聴衆の前にノートやタイマーが映る。<b>慌てず、その場で入れ替える。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="card" style="border-left:5px solid var(--cud-blue)">
+        <div class="card__h">A　発表中にすぐ直す</div>
+        <ol class="tight" style="margin:.2em 0 0;padding-left:1.4em">
+          <li>発表者ツール画面の左上にある <b>［表示設定］</b>（「…」）をクリック</li>
+          <li><b>［発表者ツールとスライドショーを切り替える］</b>を選ぶ</li>
+          <li>発表者ツールが手元、スライドが投影側に入れ替わる</li>
+        </ol>
+        <p class="tighter" style="margin:.4em 0 0">スライドショーを終了せずに直せる。</p>
+      </div>
+      <div class="card" style="border-left:5px solid var(--cud-green)">
+        <div class="card__h">B　始める前に設定しておく</div>
+        <ol class="tight" style="margin:.2em 0 0;padding-left:1.4em">
+          <li><kbd>Win</kbd> + <kbd>P</kbd> で <b>［拡張］</b>を選ぶ（［複製］では発表者ツールは使えない）</li>
+          <li>PowerPoint の［スライド ショー］タブを開く</li>
+          <li><b>［発表者ツールを使用する］</b>にチェックを入れる</li>
+          <li><b>［モニター］</b>で、スライドを映す側を選ぶ</li>
+        </ol>
+      </div>
+    </div>
+    <table class="t tight" style="margin-top:10px">
+      <thead><tr><th style="width:12em">［モニター］の選択</th><th>意味</th></tr></thead>
+      <tbody>
+        <tr><th>自動</th><td>PowerPoint が決める。<b>入れ替わることがある</b></td></tr>
+        <tr><th>プライマリ モニター</th><td>Windows が「メイン」としているディスプレイ（通常は PC 本体の画面）にスライドを出す</td></tr>
+        <tr><th>セカンダリ モニター</th><td>もう一方（<b>通常はプロジェクタ</b>）にスライドを出す</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">それでも直らないとき</b>
+      Windows の［設定］→［システム］→［ディスプレイ］で、映したい側を選び
+      <b>［これをメイン ディスプレイにする］</b>にチェックを入れると、プライマリとセカンダリが入れ替わる。
+      <b>会場では必ず本番前に試す。</b>
+    </div>
+  </div>
+</section>
+
+<!-- 3d -->
+<section class="slide">
+  <h2>Mac で発表する場合の注意<span class="en">Mac notes</span></h2>
+  <p class="slide__lead">考え方は Windows と同じ。<b>キーと設定の場所が違う。</b>自分の Mac を持ち込むなら確認しておく。</p>
+  <div class="slide__body">
+    <table class="t tight">
+      <thead><tr><th style="width:12em">項目</th><th>Mac の場合（Microsoft 公式サポートに基づく）</th></tr></thead>
+      <tbody>
+        <tr><th>最初から開始</th><td><kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>Return</kbd></td></tr>
+        <tr><th>今のスライドから開始</th><td><kbd>⌘</kbd> + <kbd>Return</kbd></td></tr>
+        <tr><th>発表者ツールで開始</th><td><kbd>Option</kbd> + <kbd>Return</kbd>（手元にノートとスライド、外部画面にはスライドだけが出る）</td></tr>
+        <tr><th>送り戻し・終了</th><td>矢印キーと <kbd>Esc</kbd> は Windows と同じ</td></tr>
+        <tr><th>画面の入れ替え</th><td>発表者ツール<b>左上のツールバーにある［Swap Displays（ディスプレイの入れ替え）］</b>をクリックする</td></tr>
+        <tr><th>配置がおかしいとき</th><td>PowerPoint を閉じ、［システム設定］→［ディスプレイ］の<b>配置</b>を見直してから、開き直す</td></tr>
+        <tr><th>表示が遅れるとき</th><td>Apple シリコンの Mac で発表者ツールの表示が遅れる例が報告されている。［デスクトップと Dock］の<b>［ディスプレイごとに個別の操作スペース］をオン</b>にして直った例がある</td></tr>
+        <tr><th>接続端子</th><td>多くの Mac は USB-C のみ。<b>HDMI・VGA の変換アダプタを自分で持参</b>する</td></tr>
+      </tbody>
+    </table>
+    <div class="note note--warn">
+      <b class="note__t" data-icon="▲">Mac は必ず本番前に試す</b>
+      メニュー名や挙動は macOS と PowerPoint のバージョンで変わる。
+      <b>会場のプロジェクタに実際に接続して</b>、発表者ツールの位置まで確認する。
+      <b>PDF 版</b>も必ず持っていく。
+    </div>
+    <p class="tighter" style="margin:.4em 0 0;color:var(--ink-2)">
+      出典：Microsoft サポート「<a href="https://support.microsoft.com/en-us/accessibility/powerpoint/use-keyboard-shortcuts-to-deliver-powerpoint-presentations">Use keyboard shortcuts to deliver PowerPoint presentations</a>」ほか、
+      <a href="https://discussionsjapan.apple.com/thread/255352544">Apple コミュニティの投稿</a>。</p>
+  </div>
+</section>
+
+<!-- 3e -->
+<section class="slide">
+  <h2>ハイブリッド発表：Teams・Zoom で共有する<span class="en">Hybrid</span></h2>
+  <p class="slide__lead">会場とオンラインの両方に見せる。<b>共有の仕方で、発表者ツールが見えるかどうかが決まる。</b></p>
+  <div class="slide__body">
+    <div class="cols cols-2">
+      <div class="card" style="border-left:5px solid var(--cud-blue)">
+        <div class="card__h">Teams</div>
+        <ul class="ticks tight">
+          <li>［コンテンツの共有］から<b> PowerPoint のファイルを選ぶ</b>（PowerPoint Live）</li>
+          <li>発表者には発表者ツール、参加者には<b>スライドだけ</b>が表示される</li>
+          <li>PowerPoint のウィンドウを画面共有すると、<b>発表者ツールが映る</b>ことがある</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:5px solid var(--cud-green)">
+        <div class="card__h">Zoom</div>
+        <ul class="ticks tight">
+          <li><b>モニターが 2 つ</b>：スライドショーを出している側のモニターを共有。発表者ツールは手元に残る</li>
+          <li><b>モニターが 1 つ</b>：スライドショーを<b>ウィンドウ表示</b>にして、そのウィンドウだけを共有する。チャットなどの操作も使える</li>
+          <li>共有された画面が逆なら、<b>［Swap Displays］</b>で入れ替える</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note note--rule">
+      <b class="note__t" data-icon="◆">共通の注意</b>
+      <span class="tight">
+      ・動画や音を使うなら、共有時に<b>コンピューターの音声を共有する</b>設定をオンにする<br>
+      ・共有範囲を誤ると<b>無関係な画面や通知が相手に見える</b>。必要なウィンドウだけを選ぶ<br>
+      ・<b>共有を始める前に通知を切る</b>。共有開始後に、参加者の画面で映り方を確認する<br>
+      ・会場の画面とオンラインの映りは別物。<b>事前に接続テストをして</b>、操作担当や座長と手順を決めておく</span>
+    </div>
+    <p class="tighter" style="margin:.4em 0 0;color:var(--ink-2)">
+      出典：<a href="https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0068635">Zoom「Screen sharing a PowerPoint presentation」</a>、
+      <a href="https://forest.watch.impress.co.jp/docs/news/1324/190/amp.index.html">窓の杜の Teams 解説記事</a>、
+      <a href="https://www.microsoft.com/ja-jp/biz/smb/column-teams-share-screen">Microsoft のコラム</a>。
+      画面や名称は更新で変わるため、<b>最新の操作は各サービスの公式ヘルプで確認する</b>。</p>
   </div>
 </section>
 
